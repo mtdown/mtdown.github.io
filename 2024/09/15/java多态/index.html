@@ -30,8 +30,9 @@
 <meta property="og:description" content="这个部分我觉得稍稍有点杂，毕竟函数，属性都存在多态。考虑到向上继承，向下继承这些，调用的顺序和麻烦程度都会递增。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/%E5%A4%9A%E6%80%81.png">
+<meta property="og:image" content="http://example.com/images/q2.png">
 <meta property="article:published_time" content="2024-09-15T14:42:04.000Z">
-<meta property="article:modified_time" content="2024-10-02T15:01:44.404Z">
+<meta property="article:modified_time" content="2024-10-02T15:03:40.478Z">
 <meta property="article:author" content="摄夜">
 <meta property="article:tag" content="就业准备">
 <meta name="twitter:card" content="summary">
@@ -216,7 +217,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-10-02 23:01:44" itemprop="dateModified" datetime="2024-10-02T23:01:44+08:00">2024-10-02</time>
+                <time title="修改时间：2024-10-02 23:03:40" itemprop="dateModified" datetime="2024-10-02T23:03:40+08:00">2024-10-02</time>
               </span>
 
           
@@ -232,7 +233,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.3k</span>
+              <span>1.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -255,24 +256,10 @@
 <h1 id="方法的多态"><a href="#方法的多态" class="headerlink" title="方法的多态"></a>方法的多态</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class Dog extends animal&#123;</span><br><span class="line">    private String food=&quot;骨头&quot;;</span><br><span class="line">    public Dog(String name, int age, String sex, String food) &#123;</span><br><span class="line">        super(name, age, sex);</span><br><span class="line">        this.food = food;</span><br><span class="line">    &#125;</span><br><span class="line">    public Dog(String name, int age, String sex) &#123;</span><br><span class="line">        super(name, age, sex);</span><br><span class="line">        //这里就使用了多态，通过参数的不同，调用同一个函数名但有不同的效果</span><br><span class="line">    &#125;</span><br><span class="line">    public String eat()&#123;</span><br><span class="line">        return food;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这里面的两个构造函数就是多态的一种，基于传参的多态<br>2024&#x2F;10&#x2F;2 21:19:13<br>关于编译类型增加细节<br>（1）一个对象的编译类型和运行类型可以不一致<br>（2）编译类型在定义对象时，就确定了，不能改<br>（3）运行类型是可以变的<br>（4）编译类型看定义时 &#x3D; 号的左边，运行类型看 &#x3D; 号右边。<br>（5）属性的值看编译类型，方法看运行<br>（6）继承会改变运行类型</p>
 <h1 id="多态练习："><a href="#多态练习：" class="headerlink" title="多态练习："></a>多态练习：</h1><p><img src="/images/%E5%A4%9A%E6%80%81.png" alt="练习题目" title="访问修饰符"><br>对于代码：</p>
-<pre><code class="public">    public static void main(String[] args) &#123;
-        Sub sub = new Sub();
-        System.out.println(sub.count);
-        sub.display();
-        Base b=sub;
-        System.out.println(b==sub);
-        System.out.println(b.count);
-        b.display();
-    &#125;```
-首先	
-    ```Sub sub = new Sub();
-        System.out.println(sub.count);
-        sub.display();```
-只是单纯地定义新类输出方法和属性，因此都是20.此时编译类型和运行类型都是sub```Base b=sub;```则是进行了一次向上转型，此时b的编译类型Base，运行类型Sub，方法以Sub为准，属性以Base为准，因此输出false，10，20
-结果如下图所示：
-![运行结果](/images/q2.png &quot;访问修饰符&quot;)
-对```System.out.println(b==sub);```判断失误，原因是这里的==判断对象是地址，```Base b=sub;```对象赋值，是给了b和sub指向一个空间的地址。
-</code></pre>
+<figure class="highlight plaintext"><figcaption><span>class PolyExercise02 &#123;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Sub sub = new Sub();</span><br><span class="line">    System.out.println(sub.count);</span><br><span class="line">    sub.display();</span><br><span class="line">    Base b=sub;</span><br><span class="line">    System.out.println(b==sub);</span><br><span class="line">    System.out.println(b.count);</span><br><span class="line">    b.display();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>首先	</p>
+<figure class="highlight plaintext"><figcaption><span>sub </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(sub.count);</span><br><span class="line">sub.display();</span><br></pre></td></tr></table></figure>
+<p>只是单纯地定义新类输出方法和属性，因此都是20.此时编译类型和运行类型都是sub<br><code>Base b=sub;</code><br>则是进行了一次向上转型，此时b的编译类型Base，运行类型Sub，方法以Sub为准，属性以Base为准，因此输出false，10，20<br>结果如下图所示：<br><img src="/images/q2.png" alt="运行结果" title="访问修饰符"><br>对<br><code>System.out.println(b==sub);</code><br>判断失误，原因是这里的&#x3D;&#x3D;判断对象是地址，<br><code>Base b=sub;</code><br>对象赋值，是给了b和sub指向一个空间的地址。</p>
 
     </div>
 
@@ -460,7 +447,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">6k</span>
+    <span title="站点总字数">5k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
