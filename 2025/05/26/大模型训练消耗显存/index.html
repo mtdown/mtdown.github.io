@@ -29,17 +29,17 @@
 <meta property="og:site_name" content="Nod Y Lle Delfrydol">
 <meta property="og:description" content="训练显存消耗（可估算部分）主要包括：模型参数（Model）+ 优化器状态（Optimizer status）+梯度值（Gradient）+激活值（Activation）。根据数值的变化，可将显存消耗分为静态&#x2F;动态值。训练过程中，模型参数、优化器状态一般不会变化，这两部分归属于静态值；激活值、梯度值会随着计算过程发生变化，将它们归类到动态值。  我们部署大模型的时候一般只会用到模型参数（">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/qkv.jpeg">
-<meta property="og:image" content="http://example.com/p1.png">
-<meta property="og:image" content="http://example.com/p2.png">
-<meta property="og:image" content="http://example.com/p3.png">
-<meta property="og:image" content="http://example.com/p4.png">
+<meta property="og:image" content="http://example.com/2025/05/26/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E6%B6%88%E8%80%97%E6%98%BE%E5%AD%98/qkv.jpeg">
+<meta property="og:image" content="http://example.com/2025/05/26/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E6%B6%88%E8%80%97%E6%98%BE%E5%AD%98/p1.png">
+<meta property="og:image" content="http://example.com/2025/05/26/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E6%B6%88%E8%80%97%E6%98%BE%E5%AD%98/p2.png">
+<meta property="og:image" content="http://example.com/2025/05/26/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E6%B6%88%E8%80%97%E6%98%BE%E5%AD%98/p3.png">
+<meta property="og:image" content="http://example.com/2025/05/26/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E6%B6%88%E8%80%97%E6%98%BE%E5%AD%98/p4.png">
 <meta property="article:published_time" content="2025-05-26T14:02:42.000Z">
 <meta property="article:modified_time" content="2025-06-22T07:36:20.214Z">
 <meta property="article:author" content="摄夜">
 <meta property="article:tag" content="日常记录">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/qkv.jpeg">
+<meta name="twitter:image" content="http://example.com/2025/05/26/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E6%B6%88%E8%80%97%E6%98%BE%E5%AD%98/qkv.jpeg">
 
 <link rel="canonical" href="http://example.com/2025/05/26/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E6%B6%88%E8%80%97%E6%98%BE%E5%AD%98/">
 
@@ -259,7 +259,7 @@
 <p>训练显存消耗（可估算部分）主要包括：模型参数（Model）+ 优化器状态（Optimizer status）+梯度值（Gradient）+激活值（Activation）。根据数值的变化，可将显存消耗分为静态&#x2F;动态值。训练过程中，模型参数、优化器状态一般不会变化，这两部分归属于静态值；激活值、梯度值会随着计算过程发生变化，将它们归类到动态值。</p>
 </blockquote>
 <p>我们部署大模型的时候一般只会用到模型参数（Model）+ KV缓存（激活值），其中，当我们使用MOE架构的模型时，模型参数往往是整个模型的10%-15%左右。<br> <span id="more"></span></p>
-<h1><span id="1为什么不缓存q只需要缓存kv">1.为什么不缓存Q，只需要缓存KV？</span></h1><p>对于n个token，我们假设他拥有n*n的qkv矩阵。当我们生成n+1个token时，前n行的结果都是固定的。如图所示<br><img src="/qkv.jpeg" alt="图片"><br>可以看到红色部分的结果都是一致的。只是第N+1个token在计算时需要前面保存的KV矩阵。而Q矩阵则只会使用到N+1个token对应的那个部分。</p>
+<h1><span id="1为什么不缓存q只需要缓存kv">1.为什么不缓存Q，只需要缓存KV？</span></h1><p>对于n个token，我们假设他拥有n*n的qkv矩阵。当我们生成n+1个token时，前n行的结果都是固定的。如图所示<br><img src="/2025/05/26/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E6%B6%88%E8%80%97%E6%98%BE%E5%AD%98/qkv.jpeg" alt="图片"><br>可以看到红色部分的结果都是一致的。只是第N+1个token在计算时需要前面保存的KV矩阵。而Q矩阵则只会使用到N+1个token对应的那个部分。</p>
 <p>也是因为这个原因，模型在Step0阶段才需要大量计算QKV，是计算密集型任务。到了Steo1,就只需要访问保存的KV矩阵就可以了。通过KV缓存，模型的消耗从生成N<em>N的多个矩阵变成了1</em>N的矩阵和对之前的N*N矩阵的访问，也就是访问密集型任务。</p>
 <p>总结一下：我们只需要 embedding 的最后一行，所以我们也只需要 attention 的最后一行，因此只需要 Q 矩阵的最后一行。缓存的是 K 和 V 矩阵即可。</p>
 <h1><span id="2模型的参数如何计算">2.模型的参数如何计算？</span></h1><p>关于这个问题，我们首先均考虑Float16量化的情况。在推理的过程中，我们主要的模型指出是KV缓存+模型参数。</p>
@@ -268,10 +268,10 @@
 <p>然后是KV缓存，他的计算公式是2<em>N</em>length*B.这里面的B表示批量，length表示token长度，同样的，对于Float16我们需要翻倍计算</p>
 <p>因此，最终我们算出在FLOAT16的情况下，推理单层TRANS消耗24NN+4VN+4NBlength的参数，也可以简化下来只算自注意力层</p>
 <h1><span id="3训练阶段的显存消耗如何计算">3.训练阶段的显存消耗如何计算？</span></h1><p>推理部分好像有点写错了，那个是用VN来算显存，这里是在用参数来算，EMMMMM，坏了。算了，反正改了</p>
-<p>现在跟着这位大佬的思路走，主要是做个补充说明。一个字节(B)&#x3D;8个比特（bit）,float16,float32值得就是多少个比特位来表示一个参数，因此对于floatX的参数类型，就是X&#x2F;8个字节的消耗。然后就是1024，这个是1MB&#x3D;1024KB;1KB&#x3D;1024B这个逻辑来的，因此简化计算对于X(B)，FLOAT32的模型就是32&#x2F;8 * X（B）&#x3D;4XGB的显存消耗<br><img src="/p1.png" alt="图片"></p>
-<p>这里的Momentum指的是动量，表示之前更新的内容对现在的内容的影响程度，Variance是方差，是用来使得计算波动变小，更稳定用的，一般来说这两个值都是取Float32,也就是4个字节，再加上副本就是（4+4+4）了<br><img src="/p2.png" alt="图片"></p>
-<p>梯度就是权重矩阵对每一个隐藏层的偏导，表示的是这次更新的方向。<br><img src="/p3.png" alt="图片"></p>
-<p>激活值这个我就不是很看得明白了，当作结论记住吧。<br><img src="/p4.png" alt="图片"></p>
+<p>现在跟着这位大佬的思路走，主要是做个补充说明。一个字节(B)&#x3D;8个比特（bit）,float16,float32值得就是多少个比特位来表示一个参数，因此对于floatX的参数类型，就是X&#x2F;8个字节的消耗。然后就是1024，这个是1MB&#x3D;1024KB;1KB&#x3D;1024B这个逻辑来的，因此简化计算对于X(B)，FLOAT32的模型就是32&#x2F;8 * X（B）&#x3D;4XGB的显存消耗<br><img src="/2025/05/26/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E6%B6%88%E8%80%97%E6%98%BE%E5%AD%98/p1.png" alt="图片"></p>
+<p>这里的Momentum指的是动量，表示之前更新的内容对现在的内容的影响程度，Variance是方差，是用来使得计算波动变小，更稳定用的，一般来说这两个值都是取Float32,也就是4个字节，再加上副本就是（4+4+4）了<br><img src="/2025/05/26/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E6%B6%88%E8%80%97%E6%98%BE%E5%AD%98/p2.png" alt="图片"></p>
+<p>梯度就是权重矩阵对每一个隐藏层的偏导，表示的是这次更新的方向。<br><img src="/2025/05/26/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E6%B6%88%E8%80%97%E6%98%BE%E5%AD%98/p3.png" alt="图片"></p>
+<p>激活值这个我就不是很看得明白了，当作结论记住吧。<br><img src="/2025/05/26/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E6%B6%88%E8%80%97%E6%98%BE%E5%AD%98/p4.png" alt="图片"></p>
 <h2><span id="参考文献">参考文献：</span></h2><ol>
 <li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/687226668">https://zhuanlan.zhihu.com/p/687226668</a></li>
 <li><a target="_blank" rel="noopener" href="https://ai.stackexchange.com/questions/48185/why-not-cache-the-q-query-matrix?utm_source=chatgpt.com">https://ai.stackexchange.com/questions/48185/why-not-cache-the-q-query-matrix?utm_source=chatgpt.com</a></li>
@@ -417,7 +417,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-count">24</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -468,12 +468,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">14k</span>
+    <span title="站点总字数">18k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">13 分钟</span>
+    <span title="站点阅读时长">16 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
