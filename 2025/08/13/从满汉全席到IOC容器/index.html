@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-bounce.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="记录下自己对于IOC容器的理解。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从满汉全席到IOC容器">
+<meta property="og:url" content="http://example.com/2025/08/13/%E4%BB%8E%E6%BB%A1%E6%B1%89%E5%85%A8%E5%B8%AD%E5%88%B0IOC%E5%AE%B9%E5%99%A8/index.html">
+<meta property="og:site_name" content="Nod Y Lle Delfrydol">
+<meta property="og:description" content="记录下自己对于IOC容器的理解。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2025/08/13/%E4%BB%8E%E6%BB%A1%E6%B1%89%E5%85%A8%E5%B8%AD%E5%88%B0IOC%E5%AE%B9%E5%99%A8/image-20250814142153471.png">
+<meta property="og:image" content="http://example.com/2025/08/13/%E4%BB%8E%E6%BB%A1%E6%B1%89%E5%85%A8%E5%B8%AD%E5%88%B0IOC%E5%AE%B9%E5%99%A8/image-20250814203055540.png">
+<meta property="og:image" content="http://example.com/2025/08/13/%E4%BB%8E%E6%BB%A1%E6%B1%89%E5%85%A8%E5%B8%AD%E5%88%B0IOC%E5%AE%B9%E5%99%A8/image-20250814203221804.png">
+<meta property="og:image" content="http://example.com/2025/08/13/%E4%BB%8E%E6%BB%A1%E6%B1%89%E5%85%A8%E5%B8%AD%E5%88%B0IOC%E5%AE%B9%E5%99%A8/image-20250814203551870.png">
+<meta property="article:published_time" content="2025-08-13T14:46:16.000Z">
+<meta property="article:modified_time" content="2025-08-14T13:04:08.906Z">
+<meta property="article:author" content="摄夜">
+<meta property="article:tag" content="日常学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2025/08/13/%E4%BB%8E%E6%BB%A1%E6%B1%89%E5%85%A8%E5%B8%AD%E5%88%B0IOC%E5%AE%B9%E5%99%A8/image-20250814142153471.png">
+
+<link rel="canonical" href="http://example.com/2025/08/13/%E4%BB%8E%E6%BB%A1%E6%B1%89%E5%85%A8%E5%B8%AD%E5%88%B0IOC%E5%AE%B9%E5%99%A8/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>从满汉全席到IOC容器 | Nod Y Lle Delfrydol</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Nod Y Lle Delfrydol</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">朝着理想之路前进</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/08/13/%E4%BB%8E%E6%BB%A1%E6%B1%89%E5%85%A8%E5%B8%AD%E5%88%B0IOC%E5%AE%B9%E5%99%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/knight.jpg">
+      <meta itemprop="name" content="摄夜">
+      <meta itemprop="description" content="相信的心就是你的魔法">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nod Y Lle Delfrydol">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          从满汉全席到IOC容器
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2025-08-13 22:46:16" itemprop="dateCreated datePublished" datetime="2025-08-13T22:46:16+08:00">2025-08-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-08-14 21:04:08" itemprop="dateModified" datetime="2025-08-14T21:04:08+08:00">2025-08-14</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.9k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>记录下自己对于IOC容器的理解。</p>
+<span id="more"></span>
+
+<p>在跟着网上的项目时，我经常看到@AIService可以自动调用放入到IOC容器中的对象。以此产生了多个问题：什么是IOC容器，为什么@AIService可以自动调用对象，@Bean又是什么？</p>
+<h1><span id="1第一个问题什么是ioc容器">1.第一个问题，什么是IOC容器：</span></h1><p>IOC是控制反转的意思，英文Inversion of Control。意思是原本一个创建的对象由程序员控制变成让系统控制。现在让外部容器来负责对象的创建和依赖关系的管理。通过移交控制权，我们不需要自己管理和创建对象。这一优势在对象互相依赖的情况下会表现得特别明显。更官方地来说：</p>
+<blockquote>
+<p>IOC容器是实现控制反转的具体工具，它负责：</p>
+<ul>
+<li><strong>对象创建</strong>：根据配置自动创建对象实例</li>
+<li><strong>依赖注入</strong>：自动将依赖的对象注入到需要的地方</li>
+<li><strong>生命周期管理</strong>：管理对象从创建到销毁的整个过程</li>
+<li><strong>配置管理</strong>：通过配置文件或注解来定义对象间的关系</li>
+</ul>
+</blockquote>
+<p>进一步的，我们可以从代码来理解：</p>
+<pre><code>// 传统方式 - 对象自己控制依赖
+class UserService &#123;
+    private UserRepository userRepo;
+    private EmailService emailService;
+    
+    public UserService() &#123;
+        this.userRepo = new DatabaseUserRepository(); // 硬编码依赖
+        this.emailService = new SMTPEmailService();   // 硬编码依赖
+    &#125;
+&#125;
+
+// IOC方式 - 容器控制依赖
+class UserService &#123;
+    private UserRepository userRepo;
+    private EmailService emailService;
+    
+    // 依赖通过构造函数注入，不再自己创建，相当于写了一堆接口，这个过程就是写菜单
+    public UserService(UserRepository userRepo, EmailService emailService) &#123;
+        this.userRepo = userRepo;
+        this.emailService = emailService;
+    &#125;
+&#125;
+</code></pre>
+<p>如果我们把IOC容器当作一个菜单，每一个对象就是里面的一道菜，这里的每道菜就是通过@Bean注入的对象。我们只需要先确认客户的需求（下订单），然后提供实现功能的方法（菜谱），最后交给厨师（dev.langchain4j.service.spring.AiService）。这样，程序就会根据dev.langchain4j.service.spring.AiService包里写好的方法自动组合这些方法，实现完整的功能。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class 红烧肉Service &#123;</span><br><span class="line">    // 我只要告诉厨师：&quot;我要猪肉、调料、锅&quot;</span><br><span class="line">    public 红烧肉Service(猪肉 meat, 调料 sauce, 锅 pan) &#123;</span><br><span class="line">        this.猪肉 = meat;</span><br><span class="line">        this.调料 = sauce;  </span><br><span class="line">        this.锅 = pan;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这同样也是开发的流程：1找到合适的框架   2学会框架的游戏规则   3组合框架解决问题   4专注于业务逻辑</p>
+<p><img src="/2025/08/13/%E4%BB%8E%E6%BB%A1%E6%B1%89%E5%85%A8%E5%B8%AD%E5%88%B0IOC%E5%AE%B9%E5%99%A8/image-20250814142153471.png" alt="image-20250814142153471"></p>
+<h1><span id="2aiservice-这种格式是什么">2.@AiService 这种格式是什么</span></h1><p>这种以 @ 符号开头的单词，在 Java 编程语言中有一个正式的名称，叫做 注解 (Annotation)。核心作用是为代码（比如类、方法、变量）添加额外的信息（元数据），但它本身并不直接改变代码的执行逻辑。</p>
+<p>这种做法是Java 语言自己的语法规则，当我们启动一个Spring 应用时，他会运行一个反射机制，让一个程序在运行的时候去检查和操作自己内部的结构（比如查看一个类有哪些方法、哪些字段、以及这些字段上贴了哪些注解）。</p>
+<p>具体来说Spring 的工作流程是这样的：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. 启动扫描：Spring 启动时，会扫描你项目里的所有类。</span><br><span class="line">2. 使用反射检查：当它检查到你的类时，它会通过反射机制“看”到 `myService` 这个字段上面贴着 `@Autowired` </span><br><span class="line">3. 执行特殊逻辑：Spring 的代码里写着一个规则：“一旦发现 `@Autowired` 标签，就去我的容器里，找一个类型是 `MyService` 的 Bean（原料）。”</span><br><span class="line">4. 注入依赖：找到之后，Spring 就会把那个 Bean 对象赋值给 `myService` 这个字段。这个过程就叫“依赖注入”。</span><br></pre></td></tr></table></figure>
+
+<p>回到注解这个东西上，这里我总结了下我遇到的几个：</p>
+<blockquote>
+<ol>
+<li>Spring框架核心注解</li>
+</ol>
+<ul>
+<li>@Configuration ：标记 CommonConfig 类为配置类，Spring会扫描并加载其中的Bean定义。</li>
+<li>@Autowired ：自动装配Spring容器中的Bean，如在 CommonConfig 中注入 chatMemoryStore 、 embeddingModel 等，在 ChatController 中注入 consultantService 。</li>
+<li>@Bean ：声明一个Bean，方法返回值将被注册为Spring容器中的Bean，如 chatMemoryProvider() 、 Store() 、 contentRetriever() 等方法。</li>
+<li>@RestController ：组合注解，标记 ChatController 类为REST控制器，处理HTTP请求。</li>
+<li>@RequestMapping ：指定请求路径和生产的媒体类型，如 &#x2F;chat 接口配置。</li>
+</ul>
+<ol start="2">
+<li>langchain4j框架AI服务注解</li>
+</ol>
+<ul>
+<li>@AiService ：langchain4j框架的核心注解，用于标记 ConsultantService 接口为AI服务接口，支持自动创建代理对象。<ul>
+<li>wiringMode ：指定装配模式（ EXPLICIT 表示手动装配）。</li>
+<li>streamingChatModel ：指定流式聊天模型的Bean名称（ openAiStreamingChatModel ）。</li>
+<li>chatMemoryProvider ：指定会话记忆提供者的Bean名称（ chatMemoryProvider ）。</li>
+<li>contentRetriever ：指定内容检索器的Bean名称（ contentRetriever ）。</li>
+<li>tools ：指定工具类的Bean名称（ reservationTool ）。</li>
+</ul>
+</li>
+<li>@SystemMessage ：指定系统消息，可以从资源文件加载（如 fromResource &#x3D; “system.txt” ）。</li>
+<li>@MemoryId ：标记参数为记忆ID，用于标识不同的会话。</li>
+<li>@UserMessage ：标记参数为用户消息，作为AI服务的输入。</li>
+</ul>
+</blockquote>
+<h1><span id="3如何拓展程序功能">3.如何拓展程序功能</span></h1><p>现在我们知道了JAVA里面的注释是做什么的，知道了IOC容器是什么。明确了开发流程。现在我们要开始了解一个程序应该如何进行功能上的扩展。</p>
+<p>结合之前的大模型项目，这个扩展应该分为两种，一类是langchain4j框架支持的AI扩展服务，比如说对于流式传输的支持，对于数据存储的支持。另一种是扩展工具，这类工具就不是langchain4j框架支持的AI服务，而是更大的一个框架sping里面的基础设施。</p>
+<p>对于第一类服务，我们需要先定义接口，这里会使用 @AiService 注解标记，在这里写上需要使用的接口名字，再去对应的写出方法并用@Bean注入到IOC容器中就行。</p>
+<p><img src="/2025/08/13/%E4%BB%8E%E6%BB%A1%E6%B1%89%E5%85%A8%E5%B8%AD%E5%88%B0IOC%E5%AE%B9%E5%99%A8/image-20250814203055540.png" alt="image-20250814203055540"><img src="/2025/08/13/%E4%BB%8E%E6%BB%A1%E6%B1%89%E5%85%A8%E5%B8%AD%E5%88%B0IOC%E5%AE%B9%E5%99%A8/image-20250814203221804.png" alt="image-20250814203221804"></p>
+<p>对于第二种服务，我们需要先创建一个普通的Java类，如 ReservationTool 。标记为Spring组件，并使用 @Component 注解将类标记为Spring组件，使其被Spring容器管理。</p>
+<p><img src="/2025/08/13/%E4%BB%8E%E6%BB%A1%E6%B1%89%E5%85%A8%E5%B8%AD%E5%88%B0IOC%E5%AE%B9%E5%99%A8/image-20250814203551870.png" alt="image-20250814203551870"></p>
+<p>但和第一种方法，只需要写接口和方法不一样，我们还需要写更多的执行逻辑。总结下来：</p>
+<blockquote>
+<p>核心流程总结</p>
+<ol>
+<li>第一类服务（AI服务） ：</li>
+</ol>
+<ul>
+<li>定义接口 → 配置AI组件 → 注入Spring容器</li>
+</ul>
+<ol start="2">
+<li>第二类服务（工具类） ：</li>
+</ol>
+<ul>
+<li>实现业务逻辑 → 标记为Spring组件 → 标记为AI工具 → 被AI服务引用</li>
+</ul>
+</blockquote>
+<h1><span id="4其他的ioc">4.其他的IOC</span></h1><p>这里就引用下大模型提到的其他语言的这种主流框架</p>
+<table>
+<thead>
+<tr>
+<th align="center">语言</th>
+<th align="center">主流框架</th>
+<th align="center">备选框架</th>
+<th align="center">注入方式</th>
+<th align="center">性能特点</th>
+<th align="center">学习难度</th>
+<th align="center">生态成熟度</th>
+<th align="center">适用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Java</td>
+<td align="center">Spring</td>
+<td align="center">Google Guice</td>
+<td align="center">运行时</td>
+<td align="center">中等</td>
+<td align="center">中等</td>
+<td align="center">最高</td>
+<td align="center">企业级应用</td>
+</tr>
+<tr>
+<td align="center">Python</td>
+<td align="center">dependency-injector</td>
+<td align="center">injector, FastAPI DI</td>
+<td align="center">运行时</td>
+<td align="center">中等</td>
+<td align="center">简单</td>
+<td align="center">中等</td>
+<td align="center">AI&#x2F;数据科学</td>
+</tr>
+<tr>
+<td align="center">JavaScript</td>
+<td align="center">NestJS</td>
+<td align="center">InversifyJS, Awilix</td>
+<td align="center">运行时</td>
+<td align="center">中等</td>
+<td align="center">中等</td>
+<td align="center">高</td>
+<td align="center">全栈Web应用</td>
+</tr>
+<tr>
+<td align="center">C#</td>
+<td align="center">.NET Core DI</td>
+<td align="center">Autofac, Unity</td>
+<td align="center">运行时</td>
+<td align="center">高</td>
+<td align="center">简单</td>
+<td align="center">高</td>
+<td align="center">微软生态</td>
+</tr>
+<tr>
+<td align="center">Go</td>
+<td align="center">wire</td>
+<td align="center">dig, fx</td>
+<td align="center">编译时</td>
+<td align="center">最高</td>
+<td align="center">复杂</td>
+<td align="center">中等</td>
+<td align="center">高性能服务</td>
+</tr>
+<tr>
+<td align="center">Rust</td>
+<td align="center">shaku</td>
+<td align="center">无主流替代</td>
+<td align="center">编译时</td>
+<td align="center">最高</td>
+<td align="center">复杂</td>
+<td align="center">低</td>
+<td align="center">系统级编程</td>
+</tr>
+<tr>
+<td align="center">PHP</td>
+<td align="center">Symfony DI</td>
+<td align="center">Laravel Container</td>
+<td align="center">运行时</td>
+<td align="center">中等</td>
+<td align="center">简单</td>
+<td align="center">高</td>
+<td align="center">Web开发</td>
+</tr>
+<tr>
+<td align="center">Ruby</td>
+<td align="center">dry-container</td>
+<td align="center">无主流DI</td>
+<td align="center">运行时</td>
+<td align="center">低</td>
+<td align="center">简单</td>
+<td align="center">中等</td>
+<td align="center">Web开发</td>
+</tr>
+<tr>
+<td align="center">Kotlin</td>
+<td align="center">Koin</td>
+<td align="center">Dagger</td>
+<td align="center">运行时&#x2F;编译时</td>
+<td align="center">高</td>
+<td align="center">中等</td>
+<td align="center">中等</td>
+<td align="center">Android&#x2F;后端</td>
+</tr>
+<tr>
+<td align="center">Swift</td>
+<td align="center">Swinject</td>
+<td align="center">无主流替代</td>
+<td align="center">运行时</td>
+<td align="center">高</td>
+<td align="center">中等</td>
+<td align="center">低</td>
+<td align="center">iOS&#x2F;服务端</td>
+</tr>
+</tbody></table>
+
+    </div>
+
+    
+    
+    
+    
+        <div>
+          <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+        </div>
+    
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/" rel="tag"># 日常学习</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2025/08/13/%E6%80%BB%E7%BB%93%E5%AD%A6%E4%B9%A0maven/" rel="prev" title="总结学习maven">
+      <i class="fa fa-chevron-left"></i> 总结学习maven
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+  
+      <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><br>
+
+      <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+      <span class="post-meta-divider">|</span><br>
+      <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人</span>
+      <span class="post-meta-divider">|</span><br>
+  <!-- 不蒜子计数初始值纠正 -->
+  <script>
+  $(document).ready(function() {
+
+      var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+      var countOffset = 20000;  // 初始化首次数据
+
+      function fixCount() {            
+          if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+          {
+              $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+              clearInterval(int);
+          }                  
+          if ($("#busuanzi_container_site_pv").css("display") != "none")
+          {
+              $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据 
+              clearInterval(int); // 停止检测
+          }  
+      }
+       	
+  });
+  </script> 
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">1.第一个问题，什么是IOC容器：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">2.@AiService 这种格式是什么</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">3.如何拓展程序功能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">4.其他的IOC</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="摄夜"
+      src="/images/knight.jpg">
+  <p class="site-author-name" itemprop="name">摄夜</p>
+  <div class="site-description" itemprop="description">相信的心就是你的魔法</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">32</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/mtdown" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;mtdown" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:2336107524@qq.com" title="E-Mail → mailto:2336107524@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2024 – 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">摄夜</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">27k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">24 分钟</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='255,0,0' opacity='0.5' zIndex='-1' count='120' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
