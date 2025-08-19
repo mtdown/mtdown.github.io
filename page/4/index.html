@@ -76,6 +76,7 @@
   </style>
 </noscript>
 
+  <link rel="stylesheet" href="/css/chat-widget.css">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -527,12 +528,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">27k</span>
+    <span title="站点总字数">32k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">24 分钟</span>
+    <span title="站点阅读时长">29 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
@@ -609,6 +610,22 @@
   
 
   
+
+  <button id="chat-toggle-button">AI 助手</button>
+    <div id="chat-widget-container" class="hidden">
+        <div id="chat-widget-header">
+            <h3>mtdown.top AI 助手</h3>
+            <button id="chat-close-button">&times;</button>
+        </div>
+        <div id="chat-messages">
+            <div class="message ai-message">你好！我是博主的AI助手，有什么可以帮您？</div>
+        </div>
+        <form id="chat-form">
+            <input type="text" id="chat-input" placeholder="输入您的问题..." autocomplete="off">
+            <button type="submit">发送</button>
+        </form>
+    </div>
+    <script src="/js/chat-widget.js"></script>
 
 </body>
 </html>
