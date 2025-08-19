@@ -36,7 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // 3. 构建API的URL
         // !!! 重要：请确保这里的域名和端口与您后端服务一致
         // 如果您的博客和后端不在同一个域名下，需要写完整URL，并处理CORS跨域问题
-        const apiUrl = `/chat?memoryId=${memoryId}&message=${encodeURIComponent(userMessage)}`;
+        // const apiUrl = `http://localhost:8080/chat?memoryId=${memoryId}&message=${encodeURIComponent(userMessage)}`;
+        const apiUrl = `https://model.mtdown.top/chat?memoryId=${memoryId}&message=${encodeURIComponent(userMessage)}`;
+      //为了保证博客服务和网页服务同时可用
+      //   const apiUrl = `https://model.mtdown.top/stream?memoryId=${memoryId}&message=${encodeURIComponent(userMessage)}`;
+
 
         // 4. 使用 EventSource 来接收流式响应 (Server-Sent Events)
         const eventSource = new EventSource(apiUrl);
