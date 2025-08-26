@@ -32,9 +32,11 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2025/07/06/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/image-20250820190609274.png">
 <meta property="og:image" content="http://example.com/2025/07/06/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/image-20250813220435776.png">
+<meta property="og:image" content="http://example.com/2025/07/06/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/image-20250824105524520.png">
 <meta property="og:image" content="http://example.com/2025/07/06/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/image-20250814211645812.png">
+<meta property="og:image" content="http://example.com/2025/07/06/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/image-20250825163141076.png">
 <meta property="article:published_time" content="2025-07-06T14:41:01.000Z">
-<meta property="article:modified_time" content="2025-08-22T13:58:24.948Z">
+<meta property="article:modified_time" content="2025-08-26T13:08:47.723Z">
 <meta property="article:author" content="摄夜">
 <meta property="article:tag" content="实习准备">
 <meta name="twitter:card" content="summary">
@@ -84,7 +86,9 @@
   </style>
 </noscript>
 
-  <link rel="stylesheet" href="css/chat-widget.css">
+  
+<link rel="stylesheet" href="/css/chat-widget.css">
+
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -220,7 +224,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-08-22 21:58:24" itemprop="dateModified" datetime="2025-08-22T21:58:24+08:00">2025-08-22</time>
+                <time title="修改时间：2025-08-26 21:08:47" itemprop="dateModified" datetime="2025-08-26T21:08:47+08:00">2025-08-26</time>
               </span>
 
           <br>
@@ -229,14 +233,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>7.8k</span>
+              <span>15k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>7 分钟</span>
+              <span>14 分钟</span>
             </span>
 
         </div>
@@ -267,7 +271,10 @@
 <p><img src="/2025/07/06/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/image-20250820190609274.png" alt="image-20250820190609274"></p>
 <h2><span id="12-consultantservice文件">1.2 ConsultantService文件</span></h2><p>决定了依赖，接下来就是要定义接口，也就是ConsultantService文件。其在整个项目中，负责定义AI服务，主要是通过 @AiService 注解来将多种AI功能组件整合在一起。这里重点说下里面wiringMode，它默认为 AiServiceWiringMode.AUTOMATIC ，会自己去装配 IOC 容器中已有的 chatModel。</p>
 <p><img src="/2025/07/06/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/image-20250813220435776.png" alt="image-20250813220435776"></p>
-<h2><span id="13-commonconfigjava文件">1.3 CommonConfig.java文件</span></h2><p>这个文件是用来配置项目的</p>
+<p>此外，对于langchain4j支持的东西，他们都会提供专用的属性来配置：比如：<code>chatModel</code> &#x2F; <code>streamingChatModel</code>：配置AI的“<strong>大脑</strong>”，即语言模型本身；<code>chatMemoryProvider</code>：配置AI的“<strong>内存</strong>”，负责管理对话历史。；<code>contentRetriever</code>：配置AI的“<strong>知识库检索器</strong>”，负责RAG中的信息检索。</p>
+<p>而对于自定义的外部功能，则是通过tools属性来实现，作为AI的外部工具箱。@AiService里面的对象名字是@Bean注入的容器名字。</p>
+<h2><span id="13-commonconfigjava文件">1.3 CommonConfig.java文件</span></h2><p>这个文件是用来配置项目需求运行所必须的内容的，当我们要添加一个新功能时，往往是先去找能实现对应功能的包，然后构建一个Bean对象出来。统一管理后，就是这个 CommonConfig.java文件</p>
+<p><img src="/2025/07/06/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/image-20250824105524520.png" alt="image-20250824105524520"></p>
 <h2><span id="13-applicationyml文件">1.3 application.yml文件</span></h2><p>application.yml文件是Spring Boot 应用的主配置文件，包含应用程序的各种配置项，如服务器端口、数据库连接信息、日志级别、自定义属性等。每要新接入一个组件，都需要在这个文件中写入对应的设置，比如说使用的模型名字啊，端口号这些。</p>
 <p><img src="/2025/07/06/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/image-20250814211645812.png" alt="image-20250814211645812"></p>
 <p>此外，根据情况不同，还可以按照<code>application-&#123;profile&#125;.yml</code> 格式命名使用多个配置文件: - application.yml (默认配置) - application-dev.yml (开发环境) - application-prod.yml (生产环境)</p>
@@ -286,6 +293,54 @@ public class Application &#123;
     &#125;
 &#125;
 </code></pre>
+<h2><span id="14-redis配置相关文件">1.4 redis配置相关文件</span></h2><p>在上面的几个部分，基本就是文件的核心部分，接下来梳理redis部分，在这一个部分，我要做的工作是增加长文本对话的功能，这就需要我有一个存储用的RedisChatMemoryStore，并以其为核心，我发现他同样具备简单的embedding功能，这就代表他不止是可以负责对话信息的获取，转化和存储，还可以用来做RAG。</p>
+<p>同样的，添加依赖：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--redis依赖--&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-data-redis&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<p>然后填写本地的端口：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">  data:</span><br><span class="line">    redis:</span><br><span class="line">      host: localhost</span><br><span class="line">      port: 6379</span><br></pre></td></tr></table></figure>
+
+<p>因为这里主要处理的是字符，所以选择 redisTemplate，使用里面的redisTemplate.opsForValue()方法获取String的字符串，也就是对话的结果，然后填写这个增删改查的函数。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">@Repository</span><br><span class="line">public class RedisChatMemoryStore implements ChatMemoryStore &#123;</span><br><span class="line">    //注入redis</span><br><span class="line">    @Autowired</span><br><span class="line">    private StringRedisTemplate redisTemplate;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public List&lt;ChatMessage&gt; getMessages(Object MemoryId) &#123;</span><br><span class="line">        //获取对话消息</span><br><span class="line">        String message = redisTemplate.opsForValue().get(MemoryId);</span><br><span class="line">        //还需要转换成list</span><br><span class="line">        List&lt;ChatMessage&gt; chatMessage = ChatMessageDeserializer.messagesFromJson(message);</span><br><span class="line">        return chatMessage;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void updateMessages(Object MemoryId, List&lt;ChatMessage&gt; list) &#123;</span><br><span class="line">        //更新会话消息</span><br><span class="line">        //1.list转换为json</span><br><span class="line">        String json = ChatMessageSerializer.messagesToJson(list);</span><br><span class="line">        //2.json存到redis</span><br><span class="line">        redisTemplate.opsForValue().set(MemoryId.toString(), json, Duration.ofDays(1));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void deleteMessages(Object MemoryId) &#123;</span><br><span class="line">        redisTemplate.delete(MemoryId.toString());</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后，我就需要告诉大模型去使用这个仓库，这一步就是在CommonConfig.java中去配置public ChatMemoryProvider chatMemoryProvider() 的记忆对话对象。也就是这个Bean。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@Bean</span><br><span class="line">public ChatMemoryProvider chatMemoryProvider() &#123;//构建会话记忆对象</span><br><span class="line">    ChatMemoryProvider chatMemoryProvider = new ChatMemoryProvider() &#123;</span><br><span class="line">        @Override//注意，这里的ChatMemoryProvider是一个接口，所以才能这样写</span><br><span class="line">        public ChatMemory get(Object memoryId) &#123;</span><br><span class="line">            return MessageWindowChatMemory.builder()</span><br><span class="line">                    .id(memoryId)</span><br><span class="line">                    .maxMessages(20)</span><br><span class="line">                    .chatMemoryStore(chatMemoryStore)</span><br><span class="line">                    .build();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    return chatMemoryProvider;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3><span id="14-tips">1.4 tips</span></h3><p>像是&#96;public ChatMemoryProvider chatMemoryProvider() {&#x2F;&#x2F;构建会话记忆对象</p>
+<p>​    ChatMemoryProvider chatMemoryProvider &#x3D; new ChatMemoryProvider() <code>这里面的这种重写，叫做匿名内部类特性，适用于接口、抽象类和非</code>final&#96;的普通类：</p>
+<h4><span id="1实现一个接口也就是当原本的类是一个inference时">1.实现一个接口：也就是当原本的类是一个inference时：</span></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@FunctionalInterface</span><br><span class="line">public interface ChatMemoryProvider &#123;</span><br><span class="line">    ChatMemory get(Object var1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>语法：<code>new InterfaceName() &#123; ... &#125;</code></p>
+<p>含义：这不是对接口的实例化，而是创建一个无名的新类，并且<strong>必须立即在大括号 <code>&#123;...&#125;</code> 中提供接口所有抽象方法的具体实现</strong>。</p>
+<h4><span id="2继承一个抽象类">2.继承一个抽象类</span></h4><p><strong>语法</strong>：<code>new AbstractClassName() &#123; ... &#125;</code></p>
+<p><strong>含义</strong>：创建一个继承了该抽象类的新类，同样必须立即在大括号 <code>&#123;...&#125;</code> 中提供所有抽象方法的具体实现，非抽象方法选择性重写。</p>
+<h4><span id="3继承一个普通的具体类">3.继承一个普通的具体类</span></h4><p><strong>语法</strong>：<code>new ConcreteClassName() &#123; ... &#125;</code></p>
+<p><strong>含义</strong>：您在创建一个继承了该具体类的新类，并且可以在大括号 <code>&#123;...&#125;</code> 中<strong>重写父类中已有的方法</strong>，为其提供一个一次性的、特殊的行为。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class NormalButton &#123;</span><br><span class="line">    public void onClick() &#123;</span><br><span class="line">        System.out.println(&quot;Button clicked!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 创建一个NormalButton的匿名子类，并重写它的onClick行为</span><br><span class="line">NormalButton specialButton = new NormalButton() &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void onClick() &#123;</span><br><span class="line">        System.out.println(&quot;Special button clicked with a different action!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">specialButton.onClick(); // 输出 &quot;Special button clicked with a different action!&quot;</span><br></pre></td></tr></table></figure>
+
+<h3><span id="14-tips2">1.4 tips2</span></h3><ol>
+<li>配置文件除了.properties还有,yml文件，.properties的优先级要更高一些。此外，application这部分也是不能改的，这是Spring的【约定优先于配置】原则的体现。如果一定要这样做，就得在启动Jar时用–spring.config.name来指定</li>
+<li>顺便一提，想要修改的话可以打开redis里面的编辑按钮，修改端口：</li>
+</ol>
+<p><img src="/2025/07/06/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/image-20250825163141076.png" alt="image-20250825163141076"></p>
+<p>如果是linux，就需要用到redis.conf文件，通常在&#x2F;etc&#x2F;redis&#x2F;redis.conf<code>或</code>&#x2F;usr&#x2F;local&#x2F;etc&#x2F;redis.conf。你也可以用sudo find &#x2F; -name redis进行查询，然后修改里面的port行</p>
+<h2><span id="15-rag的实现">1.5 rag的实现</span></h2><p>现在的模型支持对话记忆，但我还希望能结合我本地的知识库，毕竟本地部署最大的优势也就是私有数据集了。为了实现这个功能，我们需要一个@Bean拆分本地的文档，存储到redis里面去；需要一个@Bean读取本地的文档。前者langchain4j有提供一个</p>
+<p><code>List&lt;Document&gt; documents = FileSystemDocumentLoader.loadDocuments(&quot;/home/langchain4j/documentation&quot;);</code></p>
+<p>更进一步，我们把它注入到向量库里：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">@Component</span><br><span class="line">@ConditionalOnProperty(name = &quot;rag.ingestion.enabled&quot;, havingValue = &quot;true&quot;)</span><br><span class="line">public class DataIngestionRunner implements CommandLineRunner &#123;</span><br><span class="line"></span><br><span class="line">    private static final Logger logger = LoggerFactory.getLogger(DataIngestionRunner.class);</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private EmbeddingStore&lt;TextSegment&gt; embeddingStore; // 直接注入 EmbeddingStore</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private EmbeddingModel embeddingModel;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void run(String... args) throws Exception &#123;</span><br><span class="line">        logger.info(&quot;Starting RAG data ingestion... &#x27;rag.ingestion.enabled&#x27; is true.&quot;);</span><br><span class="line"></span><br><span class="line">        // 1. 从本地博客文章文件夹加载所有 .md 文件</span><br><span class="line">        logger.info(&quot;Loading documents from C:\\blog\\source\\_posts&quot;);</span><br><span class="line">        List&lt;Document&gt; documents = FileSystemDocumentLoader.loadDocuments(&quot;C:\\blog\\source\\_posts&quot;);</span><br><span class="line">        logger.info(&quot;Loaded &#123;&#125; documents&quot;, documents.size());</span><br><span class="line"></span><br><span class="line">        // 2. 创建 Ingestor 并注入数据</span><br><span class="line">        DocumentSplitter recursive = DocumentSplitters.recursive(500, 100);</span><br><span class="line">        EmbeddingStoreIngestor ingestor = EmbeddingStoreIngestor.builder()</span><br><span class="line">                .embeddingStore(embeddingStore)</span><br><span class="line">                .embeddingModel(embeddingModel)</span><br><span class="line">                .documentSplitter(recursive)</span><br><span class="line">                .build();</span><br><span class="line"></span><br><span class="line">        ingestor.ingest(documents);</span><br><span class="line"></span><br><span class="line">        logger.info(&quot;RAG data ingestion complete.&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>完成了这一步，接下来就是读取功能了，这里我们有负责实现的EmbeddingStoreContentRetriever，填写好对应的向量数据库和使用的embeddingmodel，还有相似度规则就可以了。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@Bean</span><br><span class="line">//构建向量数据检索对象</span><br><span class="line">public ContentRetriever contentRetriever() &#123;//有意思，这里EmbeddingStore Store如果使用了默认的embeddingStore 会导致无法读取文件内容</span><br><span class="line">    return EmbeddingStoreContentRetriever.builder()</span><br><span class="line">            .embeddingStore(redisEmbeddingStore)</span><br><span class="line">            .embeddingModel(embeddingModel)</span><br><span class="line">            .minScore(0.5)</span><br><span class="line">            .maxResults(3)</span><br><span class="line">            .build();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>由于这里需要用到embedding模型，我们还需要再pom.xml文件配置一个embedding模型</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">embedding-model:</span><br><span class="line">  #流式模型配置</span><br><span class="line">  base-url: http://localhost:11434/v1</span><br><span class="line">  api-key: &quot;N/A&quot;</span><br><span class="line">  model-name: qwen3-embedding-4B-Q6_K</span><br><span class="line">  log-requests: true</span><br><span class="line">  log-responses: true</span><br></pre></td></tr></table></figure>
+
+<h3><span id="15-tips">1.5 tips</span></h3><p>文本和向量数据的互相转化都是由embedding模型进行，相似度搜索算法则是在redis内部运行，负责快速提升搜索速度，主要是解决文档过多的问题。而Embedding模型决定的是检索的质量和效果。</p>
+<h1><span id="2项目位置">2.项目位置</span></h1><p><a target="_blank" rel="noopener" href="https://github.com/mtdown/Assistant">mtdown&#x2F;Assistant</a></p>
+<p>期待纠错和交流</p>
+<h1><span id="参考资料">参考资料：</span></h1><p>1.<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzAxMjY5NDU2Ng==&mid=2651869668&idx=1&sn=894bd454f055fa4a80d6cad8cfdf51ed&chksm=81e7bab8410a46d987098c55234834796d0ef8ffd1b3495029b33ac45807fa00364d39aeff93&scene=27">https://mp.weixin.qq.com/s?__biz=MzAxMjY5NDU2Ng==&amp;mid=2651869668&amp;idx=1&amp;sn=894bd454f055fa4a80d6cad8cfdf51ed&amp;chksm=81e7bab8410a46d987098c55234834796d0ef8ffd1b3495029b33ac45807fa00364d39aeff93&amp;scene=27</a></p>
+<p>2.[Spring Boot与Redis：整合与实战-阿里云开发者社区](<a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1629660#:~:text=%E7%AE%80%E4%BB%8B%EF%BC%9A">https://developer.aliyun.com/article/1629660#:~:text=简介：</a> 【10月更文挑战第15天】本文介绍了如何在Spring,Boot项目中整合Redis，通过一个电商商品推荐系统的案例，详细展示了从添加依赖、配置连接信息到创建配置类的具体步骤。 实战部分演示了如何利用Redis缓存提高系统响应速度，减少数据库访问压力，从而提升用户体验。 在当今的互联网时代，数据的高速读写和处理成为了系统性能的关键因素。)</p>
+<p>3.<a target="_blank" rel="noopener" href="https://springdoc.cn/spring-ai-redis-rag-app/">使用 Redis 和 Spring AI 创建 RAG（检索增强生成）应用 - spring 中文网</a></p>
 
     </div>
 
@@ -385,7 +440,7 @@ public class Application &#123;
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">1.项目文件结构展示</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 pom.xml文件设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 ConsultantService文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 CommonConfig.java文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.4.</span> <span class="nav-text">1.3 application.yml文件</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">1.项目文件结构展示</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 pom.xml文件设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 ConsultantService文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 CommonConfig.java文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.4.</span> <span class="nav-text">1.3 application.yml文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.5.</span> <span class="nav-text">1.4 redis配置相关文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.5.1.</span> <span class="nav-text">1.4 tips</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.5.1.1.</span> <span class="nav-text">1.实现一个接口：也就是当原本的类是一个inference时：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.5.1.2.</span> <span class="nav-text">2.继承一个抽象类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.5.1.3.</span> <span class="nav-text">3.继承一个普通的具体类</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.5.2.</span> <span class="nav-text">1.4 tips2</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.6.</span> <span class="nav-text">1.5 rag的实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.6.1.</span> <span class="nav-text">1.5 tips</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">2.项目位置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">参考资料：</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -452,16 +507,33 @@ public class Application &#123;
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">40k</span>
+    <span title="站点总字数">47k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">37 分钟</span>
+    <span title="站点阅读时长">43 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
+
+<button id="chat-toggle-button">AI 助手</button>
+  <div id="chat-widget-container" class="hidden">
+      <div id="chat-widget-header">
+          <h3>mtdown.top AI 助手</h3>
+          <button id="chat-close-button">&times;</button>
+      </div>
+      <div id="chat-messages">
+          <div class="message ai-message">你好！我是博主的AI助手，有什么可以帮您？</div>
+      </div>
+      <form id="chat-form">
+          <input type="text" id="chat-input" placeholder="输入您的问题..." autocomplete="off">
+          <button type="submit">发送</button>
+      </form>
+  </div>
+
+<script src="/js/chat-widget.js"></script>
 
 
         
@@ -533,21 +605,7 @@ NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
 });
 </script>
 
-  <button id="chat-toggle-button">AI 助手</button>
-    <div id="chat-widget-container" class="hidden">
-        <div id="chat-widget-header">
-            <h3>mtdown.top AI 助手</h3>
-            <button id="chat-close-button">&times;</button>
-        </div>
-        <div id="chat-messages">
-            <div class="message ai-message">你好！我是博主的AI助手，有什么可以帮您？</div>
-        </div>
-        <form id="chat-form">
-            <input type="text" id="chat-input" placeholder="输入您的问题..." autocomplete="off">
-            <button type="submit">发送</button>
-        </form>
-    </div>
-    <script src="js/chat-widget.js"></script>
+
 
 </body>
 </html>
