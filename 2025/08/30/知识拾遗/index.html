@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-bounce.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="关键词：数组">
+<meta property="og:type" content="article">
+<meta property="og:title" content="知识拾遗">
+<meta property="og:url" content="http://example.com/2025/08/30/%E7%9F%A5%E8%AF%86%E6%8B%BE%E9%81%97/index.html">
+<meta property="og:site_name" content="Nod Y Lle Delfrydol">
+<meta property="og:description" content="关键词：数组">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-08-30T12:06:13.000Z">
+<meta property="article:modified_time" content="2025-09-02T09:07:28.233Z">
+<meta property="article:author" content="摄夜">
+<meta property="article:tag" content="日常学习">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2025/08/30/%E7%9F%A5%E8%AF%86%E6%8B%BE%E9%81%97/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>知识拾遗 | Nod Y Lle Delfrydol</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  
+<link rel="stylesheet" href="/css/chat-widget.css">
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Nod Y Lle Delfrydol</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">朝着理想之路前进</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/08/30/%E7%9F%A5%E8%AF%86%E6%8B%BE%E9%81%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/knight.jpg">
+      <meta itemprop="name" content="摄夜">
+      <meta itemprop="description" content="相信的心就是你的魔法">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nod Y Lle Delfrydol">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          知识拾遗
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2025-08-30 20:06:13" itemprop="dateCreated datePublished" datetime="2025-08-30T20:06:13+08:00">2025-08-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-09-02 17:07:28" itemprop="dateModified" datetime="2025-09-02T17:07:28+08:00">2025-09-02</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.9k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>关键词：数组</p>
+<span id="more"></span>
+
+<h1><span id="1二维数组里面可以套不同类型数据吗">1.二维数组里面可以套不同类型数据吗？</span></h1><p>不可以。Java 是一种<strong>静态类型</strong>语言，这意味着一个变量或数组在声明时，它的类型就已经被严格固定了,当你声明 <code>int[][] x</code> 时，你告诉编译器：“<code>x</code> 是一个数组，它的每个元素是另一个数组，而那个数组里的每个元素<strong>必须是 <code>int</code> 类型</strong>。</p>
+<p>不过,在 Java 中，当进行赋值操作时，较小的数字类型可以自动转换为较大的数字类型,因此我们有这样一条转换链：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">byte` -&gt; `short` -&gt; `int` -&gt; `long` -&gt; `float` -&gt; `double</span><br><span class="line">char` -&gt; `int` -&gt; `long` -&gt; `float` -&gt; `double</span><br></pre></td></tr></table></figure>
+
+<h1><span id="2数组初始化的数值是多少">2.数组初始化的数值是多少？</span></h1><p>是0，此外，这是各种基本类型的数组默认值：</p>
+<table>
+<thead>
+<tr>
+<th align="center">数据类型</th>
+<th align="center">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">int<code>, </code>long<code>, </code>short<code>, </code>byte</td>
+<td align="center"><strong>&#96;&#96;****<code>0</code></strong></td>
+</tr>
+<tr>
+<td align="center">float<code>, </code>double</td>
+<td align="center">0.0</td>
+</tr>
+<tr>
+<td align="center">char</td>
+<td align="center">`&#96;&#96;’\u0000’&#96; (空字符)</td>
+</tr>
+<tr>
+<td align="center">boolean</td>
+<td align="center">false</td>
+</tr>
+<tr>
+<td align="center"><strong>所有对象类型</strong> (如 <code>String</code>, <code>Integer</code> 或其他类)</td>
+<td align="center">null</td>
+</tr>
+</tbody></table>
+<h1><span id="3对于一个二维数组int-xx3dnew-int2x2f2可以通过x00x3dnew-int2继续堆叠深度吗">3.对于一个二维数组int[][] x&#x3D;new int[2][&#x2F;2]，可以通过x[0][0]&#x3D;new int[2]继续堆叠深度吗</span></h1><p>不可以，这会导致编译错误，x的类型是是 <code>int[][]</code> (一个 <code>int</code> 数组 的 数组)。这是一开始就被决定的，这样做本质是将一个<strong>数组 (<code>int[]</code>)</strong> 赋值给一个只能存放<strong>单个整数 (<code>int</code>)</strong> 的位置。这在类型上是完全不匹配的。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 声明并创建一个 2x2x2 的三维数组</span><br><span class="line">int[][][] cube = new int[2][2][2];</span><br><span class="line"></span><br><span class="line">// 这样赋值就是合法的，因为 cube[0][0] 的类型是 int[]</span><br><span class="line">cube[0][0] = new int[5]; // 合法，这是不规则数组的特性</span><br><span class="line"></span><br><span class="line">// 访问最深处的元素</span><br><span class="line">cube[0][0][0] = 99; // 合法</span><br></pre></td></tr></table></figure>
+
+<h1><span id="4list-和-array-的核心区别">4.<code>List</code> 和 <code>Array</code>  的核心区别</span></h1><table>
+<thead>
+<tr>
+<th align="center">特性</th>
+<th align="center">List&lt;List<string>&gt; (使用 ArrayList)</string></th>
+<th align="center">String[][] (二维数组)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>大小 (Size)</strong></td>
+<td align="center"><strong>动态可变 (Dynamic)</strong></td>
+<td align="center"><strong>固定不变 (Fixed)</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>声明与初始化</strong></td>
+<td align="center">List&lt;List<string>&gt; result &#x3D; new ArrayList&lt;&gt;();<br>result.add(new ArrayList&lt;&gt;());</string></td>
+<td align="center">String[][] result &#x3D; new String[5][3];</td>
+</tr>
+<tr>
+<td align="center"><strong>说明</strong></td>
+<td align="center">你可以随时 add 新的元素（新的列表），或从列表中 remove 元素。外层和内层列表的大小都可以随时改变。</td>
+<td align="center">在创建时必须指定大小 (new String[rows][cols])，之后<strong>长度无法改变</strong>。若要扩展，必须创建一个新数组并复制旧数据。</td>
+</tr>
+<tr>
+<td align="center"><strong>类型</strong></td>
+<td align="center">**类 (Class)**，属于 Java 集合框架 (Collections Framework) 的一部分。</td>
+<td align="center"><strong>基础数据结构</strong>，是 Java 语言内置的一部分。</td>
+</tr>
+<tr>
+<td align="center"><strong>功能&#x2F;方法</strong></td>
+<td align="center"><strong>功能丰富</strong>。提供了大量便利的方法，如 add(), remove(), get(), size(), isEmpty(), contains(), sort() 等。</td>
+<td align="center"><strong>功能基础</strong>。只有一个 .length 属性来获取长度。所有操作（如新增、删除）都需要手动处理索引和数据复制。</td>
+</tr>
+<tr>
+<td align="center"><strong>性能</strong></td>
+<td align="center">- <strong>访问</strong>: get(i) 速度很快，为 O(1)。<br>- <strong>新增&#x2F;删除</strong>: 在末尾新增很快 (摊销 O(1))，但在中间插入&#x2F;删除较慢 (O(n))。</td>
+<td align="center">- <strong>访问</strong>: array[i] 速度极快，为 O(1)。<br>- <strong>新增&#x2F;删除</strong>: 非常慢，因为需要创建新数组和复制数据 (O(n))。</td>
+</tr>
+<tr>
+<td align="center"><strong>泛型 (Generics)</strong></td>
+<td align="center"><strong>必须使用泛型</strong> (<string>) 来指定存储的对象类型。不能存储基本数据类型 (如 int)，需使用其包装类 (Integer)。</string></td>
+<td align="center">可以直接存储<strong>基本数据类型</strong> (如 int[][]) 或<strong>对象类型</strong> (如 String[][])。</td>
+</tr>
+</tbody></table>
+<h1><span id="4常见泛型函数记录">4.常见泛型函数记录</span></h1><table>
+<thead>
+<tr>
+<th>泛型接口&#x2F;类</th>
+<th>常用实现类</th>
+<th>描述</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>List<e></e></td>
+<td>ArrayList<e><br>LinkedList<e></e></e></td>
+<td>列表：一个有序的集合，允许元素重复。</td>
+<td>List<string> names &#x3D; new ArrayList&lt;&gt;();<br>names.add(“张三”);<br>names.add(“李四”);</string></td>
+</tr>
+<tr>
+<td>Set<e></e></td>
+<td>HashSet<e><br>TreeSet<e></e></e></td>
+<td>集：一个无序（HashSet）或有序（TreeSet）的集合，不允许元素重复。</td>
+<td>Set<integer> uniqueNumbers &#x3D; new HashSet&lt;&gt;();<br>uniqueNumbers.add(10);<br>uniqueNumbers.add(20);<br>uniqueNumbers.add(10); &#x2F;&#x2F; 添加失败，因为10已存在</integer></td>
+</tr>
+<tr>
+<td>Map&lt;K, V&gt;</td>
+<td>HashMap&lt;K, V&gt;<br>TreeMap&lt;K, V&gt;</td>
+<td>映射（键值对）：存储键（Key）到值（Value）的映射关系，键是唯一的。</td>
+<td>Map&lt;Integer, String&gt; userMap &#x3D; new HashMap&lt;&gt;();<br>userMap.put(1, “张三”);<br>userMap.put(2, “李四”);</td>
+</tr>
+<tr>
+<td>Queue<e></e></td>
+<td>LinkedList<e><br>ArrayDeque<e></e></e></td>
+<td>队列：一种先进先出 (FIFO) 的数据结构。</td>
+<td>Queue<string> tasks &#x3D; new LinkedList&lt;&gt;();<br>tasks.offer(“任务1”);<br>tasks.poll(); &#x2F;&#x2F; 取出”任务1”</string></td>
+</tr>
+<tr>
+<td>Deque<e></e></td>
+<td>ArrayDeque<e><br>LinkedList<e></e></e></td>
+<td>双端队列：队列的两端（头和尾）都可以进行添加和删除操作。</td>
+<td>Deque<integer> deque &#x3D; new ArrayDeque&lt;&gt;();<br>deque.addFirst(1);<br>deque.addLast(2);</integer></td>
+</tr>
+<tr>
+<td>Stack<e></e></td>
+<td>Stack<e>（旧类）<br>推荐用Deque<e></e></e></td>
+<td>栈：一种后进先出 (LIFO) 的数据结构。</td>
+<td>Deque<string> stack &#x3D; new ArrayDeque&lt;&gt;();<br>stack.push(“A”);<br>stack.push(“B”);<br>stack.pop(); &#x2F;&#x2F; 取出”B”</string></td>
+</tr>
+</tbody></table>
+<h1><span id="5java的八大基本类型">5.java的八大基本类型</span></h1><p>既然聊到了 数组和列表，这里我们也顺便复习下八大基本类型：</p>
+<table>
+<thead>
+<tr>
+<th align="center">分类</th>
+<th align="center">类型</th>
+<th align="center">包装类</th>
+<th align="center">大小 (位)</th>
+<th align="center">默认值</th>
+<th align="center">范围&#x2F;示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>整数类型</strong></td>
+<td align="center">byte</td>
+<td align="center">Byte</td>
+<td align="center">8</td>
+<td align="center">0</td>
+<td align="center">-128 到 127</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">short</td>
+<td align="center">Short</td>
+<td align="center">16</td>
+<td align="center">0</td>
+<td align="center">-32,768 到 32,767</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">int</td>
+<td align="center">Integer</td>
+<td align="center">32</td>
+<td align="center">0</td>
+<td align="center">约 -21亿 到 21亿 (最常用)</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">long</td>
+<td align="center">Long</td>
+<td align="center">64</td>
+<td align="center">0L</td>
+<td align="center">非常大的整数 (结尾加 L, 如 123L)</td>
+</tr>
+<tr>
+<td align="center"><strong>浮点类型</strong></td>
+<td align="center">float</td>
+<td align="center">Float</td>
+<td align="center">32</td>
+<td align="center">0.0f</td>
+<td align="center">单精度浮点数 (结尾加 f, 如 3.14f)</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">double</td>
+<td align="center">Double</td>
+<td align="center">64</td>
+<td align="center">0.0d</td>
+<td align="center">双精度浮点数 (最常用的小数类型)</td>
+</tr>
+<tr>
+<td align="center"><strong>字符类型</strong></td>
+<td align="center">char</td>
+<td align="center">Character</td>
+<td align="center">16</td>
+<td align="center">‘\u0000’</td>
+<td align="center">存储单个字符, 如 ‘A’, ‘中’</td>
+</tr>
+<tr>
+<td align="center"><strong>布尔类型</strong></td>
+<td align="center">boolean</td>
+<td align="center">Boolean</td>
+<td align="center">1</td>
+<td align="center">false</td>
+<td align="center">只有两个值: true 和 false</td>
+</tr>
+</tbody></table>
+<p>之前提到的类型转换规则和这里的位也有关系，当然，我们更常用字节B来描述</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">byte` -&gt; `short` -&gt; `int` -&gt; `long` -&gt; `float` -&gt; `double</span><br><span class="line">char` -&gt; `int` -&gt; `long` -&gt; `float` -&gt; `double</span><br></pre></td></tr></table></figure>
+
+<h1><span id="6string到基本类型的转换">6.String到基本类型的转换</span></h1><p>指的注意的是，String作为我们常用的类型，它实际上不是基本类型，而应该算是包装类，对于除了char以外都有parseXXX这样的格式转化为对应的类型。</p>
+<table>
+<thead>
+<tr>
+<th>目标基本类型</th>
+<th>使用方法</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>int</strong></td>
+<td>Integer.parseInt(String s)</td>
+<td>int i &#x3D; Integer.parseInt(“123”);</td>
+</tr>
+<tr>
+<td><strong>long</strong></td>
+<td>Long.parseLong(String s)</td>
+<td>long l &#x3D; Long.parseLong(“1234567890”);</td>
+</tr>
+<tr>
+<td><strong>double</strong></td>
+<td>Double.parseDouble(String s)</td>
+<td>double d &#x3D; Double.parseDouble(“3.14”);</td>
+</tr>
+<tr>
+<td><strong>float</strong></td>
+<td>Float.parseFloat(String s)</td>
+<td>float f &#x3D; Float.parseFloat(“1.23f”);</td>
+</tr>
+<tr>
+<td><strong>boolean</strong></td>
+<td>Boolean.parseBoolean(String s)</td>
+<td>boolean b &#x3D; Boolean.parseBoolean(“true”);¹</td>
+</tr>
+<tr>
+<td><strong>byte</strong></td>
+<td>Byte.parseByte(String s)</td>
+<td>byte by &#x3D; Byte.parseByte(“120”);</td>
+</tr>
+<tr>
+<td><strong>short</strong></td>
+<td>Short.parseShort(String s)</td>
+<td>short sh &#x3D; Short.parseShort(“30000”);</td>
+</tr>
+<tr>
+<td><strong>char</strong></td>
+<td><strong>(特殊情况)</strong></td>
+<td>char c &#x3D; “hello”.charAt(0);²</td>
+</tr>
+</tbody></table>
+
+    </div>
+
+    
+    
+    
+    
+        <div>
+          <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+        </div>
+    
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/" rel="tag"># 日常学习</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2025/08/30/web%E9%80%9A%E8%AE%AF%E7%9A%84%E5%9B%9B%E7%A7%8D%E6%96%B9%E5%BC%8F/" rel="prev" title="web通讯的四种方式">
+      <i class="fa fa-chevron-left"></i> web通讯的四种方式
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC82MDg3Mi8zNzM0Mg=="></div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">1.二维数组里面可以套不同类型数据吗？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">2.数组初始化的数值是多少？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">3.对于一个二维数组int[][] x&#x3D;new int[2][&#x2F;2]，可以通过x[0][0]&#x3D;new int[2]继续堆叠深度吗</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">4.List 和 Array  的核心区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">4.常见泛型函数记录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">6.</span> <span class="nav-text">5.java的八大基本类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">7.</span> <span class="nav-text">6.String到基本类型的转换</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="摄夜"
+      src="/images/knight.jpg">
+  <p class="site-author-name" itemprop="name">摄夜</p>
+  <div class="site-description" itemprop="description">相信的心就是你的魔法</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">39</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/mtdown" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;mtdown" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:2336107524@qq.com" title="E-Mail → mailto:2336107524@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2024 – 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">摄夜</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">55k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">50 分钟</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+
+<button id="chat-toggle-button">AI 助手</button>
+  <div id="chat-widget-container" class="hidden">
+      <div id="chat-widget-header">
+          <h3>mtdown.top AI 助手</h3>
+          <button id="chat-close-button">&times;</button>
+      </div>
+      <div id="chat-messages">
+          <div class="message ai-message">你好！我是博主的AI助手，有什么可以帮您？</div>
+      </div>
+      <form id="chat-form">
+          <input type="text" id="chat-input" placeholder="输入您的问题..." autocomplete="off">
+          <button type="submit">发送</button>
+      </form>
+  </div>
+
+<script src="/js/chat-widget.js"></script>
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='255,0,0' opacity='0.5' zIndex='-1' count='120' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+});
+</script>
+
+
+
+</body>
+</html>
