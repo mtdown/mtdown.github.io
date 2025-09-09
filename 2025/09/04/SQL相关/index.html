@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-bounce.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="数据库相关知识整理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SQL相关">
+<meta property="og:url" content="http://example.com/2025/09/04/SQL%E7%9B%B8%E5%85%B3/index.html">
+<meta property="og:site_name" content="Nod Y Lle Delfrydol">
+<meta property="og:description" content="数据库相关知识整理">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2025/09/04/SQL%E7%9B%B8%E5%85%B3/image-20250906220943591.png">
+<meta property="article:published_time" content="2025-09-04T07:24:56.000Z">
+<meta property="article:modified_time" content="2025-09-09T03:20:16.557Z">
+<meta property="article:author" content="摄夜">
+<meta property="article:tag" content="日常学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2025/09/04/SQL%E7%9B%B8%E5%85%B3/image-20250906220943591.png">
+
+<link rel="canonical" href="http://example.com/2025/09/04/SQL%E7%9B%B8%E5%85%B3/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>SQL相关 | Nod Y Lle Delfrydol</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  
+<link rel="stylesheet" href="/css/chat-widget.css">
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Nod Y Lle Delfrydol</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">朝着理想之路前进</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/09/04/SQL%E7%9B%B8%E5%85%B3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/knight.jpg">
+      <meta itemprop="name" content="摄夜">
+      <meta itemprop="description" content="相信的心就是你的魔法">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nod Y Lle Delfrydol">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          SQL相关
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2025-09-04 15:24:56" itemprop="dateCreated datePublished" datetime="2025-09-04T15:24:56+08:00">2025-09-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-09-09 11:20:16" itemprop="dateModified" datetime="2025-09-09T11:20:16+08:00">2025-09-09</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>5.8k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>5 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>数据库相关知识整理</p>
+<span id="more"></span>
+
+<h1><span id="1什么是crud">1.什么是CRUD</span></h1><p><strong>CRUD</strong> 是一个缩写，代表了在处理持久化存储（最常见的就是数据库）时，四种最基本、最核心的操作。也就是所谓的增删改查,这是一个统称，不止是用在mysql，web服务器里也是有的。</p>
+<table>
+<thead>
+<tr>
+<th align="center">英文</th>
+<th align="center">功能</th>
+<th align="center">SQL命令</th>
+<th align="center">Web 服务</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Create</td>
+<td align="center">创建数据</td>
+<td align="center">Insert</td>
+<td align="center">POST</td>
+</tr>
+<tr>
+<td align="center">Delete</td>
+<td align="center">删除数据</td>
+<td align="center">delete</td>
+<td align="center">DELETE</td>
+</tr>
+<tr>
+<td align="center">Update</td>
+<td align="center">修改数据</td>
+<td align="center">update</td>
+<td align="center">PUT<code>或</code>PATCH</td>
+</tr>
+<tr>
+<td align="center">Read</td>
+<td align="center">查找数据</td>
+<td align="center">select</td>
+<td align="center">GET</td>
+</tr>
+</tbody></table>
+<h1><span id="2join的方式">2.join的方式</span></h1><h2><span id="1-内连接-inner-join">1. 内连接 (INNER JOIN)</span></h2><p>这是最常用的一种JOIN，它只返回两个表中连接字段相匹配的行。可以理解为取两个表的“交集”。实际使用上好像就写个JOIN就行</p>
+<h2><span id="2左连接-left-join-x2f-left-outer-join">2.左连接 (LEFT JOIN &#x2F; LEFT OUTER JOIN)</span></h2><p>以左边的表（<code>FROM</code>后面的第一个表）为基础，返回左表的所有行。对于右表中没有匹配记录的行，结果集中右表的列会显示为 <code>NULL</code>。</p>
+<h2><span id="3-全外连接-full-outer-join">3. 全外连接 (FULL OUTER JOIN)</span></h2><p>这是左连接和右连接的并集。它会返回两个表中的所有行。如果某一行在另一个表中没有匹配，那么另一个表的列将显示为 <code>NULL</code>。</p>
+<h2><span id="4自然连接-natural-join">4.自然连接 (NATURAL JOIN)</span></h2><p>它是一个简化的内连接，SQL会自动寻找两个表中<strong>所有同名且数据类型相同的列</strong>作为连接条件，然后进行内连接。</p>
+<h2><span id="5交叉连接-cross-join">5交叉连接 (CROSS JOIN)</span></h2><p>也称为笛卡尔积。它会返回左表中的每一行与右表中每一行的所有可能组合。结果行数等于 <code>左表行数 × 右表行数</code>。</p>
+<p>总结</p>
+<table>
+<thead>
+<tr>
+<th>JOIN类型</th>
+<th>关键字</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>内连接</strong></td>
+<td>INNER JOIN</td>
+<td>只返回两个表中能匹配上的行（交集）。</td>
+</tr>
+<tr>
+<td><strong>左连接</strong></td>
+<td>LEFT JOIN</td>
+<td>返回左表的所有行，以及右表中匹配的行。</td>
+</tr>
+<tr>
+<td><strong>右连接</strong></td>
+<td>RIGHT JOIN</td>
+<td>返回右表的所有行，以及左表中匹配的行。</td>
+</tr>
+<tr>
+<td><strong>全外连接</strong></td>
+<td>FULL OUTER JOIN</td>
+<td>返回左表和右表中的所有行（并集）。</td>
+</tr>
+<tr>
+<td><strong>自然连接</strong></td>
+<td>NATURAL JOIN</td>
+<td>自动以内连接方式合并所有同名的列。</td>
+</tr>
+<tr>
+<td><strong>交叉连接</strong></td>
+<td>CROSS JOIN</td>
+<td>返回两个表的笛卡尔积，即所有可能的组合。</td>
+</tr>
+</tbody></table>
+<h1><span id="3mysql里面的explain指令">3.Mysql里面的explain指令</span></h1><h1><span id="4数据库里面的运算符">4.数据库里面的运算符</span></h1><p>标准的比较运算符 (<code>=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&lt;&gt;</code>) 只能用于一个值对一个值的比较。当你的子查询有可能返回超过一行的结果时，直接使用这些比较符就会导致错误。这在SQL中被称为“Subquery returns more than 1 row”的经典错误。</p>
+<p><img src="/2025/09/04/SQL%E7%9B%B8%E5%85%B3/image-20250906220943591.png" alt="image-20250906220943591"></p>
+<p>在这个例子中，这个比较方法就会面对一个问题：单个salary要和多个集合比较</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SELECT name AS Employee</span><br><span class="line">FROM Employee ee</span><br><span class="line">WHERE ee.managerId ！= NULL AND ee.salary&gt;(</span><br><span class="line">    SELECT Employee.salary</span><br><span class="line">    FROM Employee</span><br><span class="line">    WHERE Employee.Id=ee.managerId</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>总结一下情况：</p>
+<p>一。当子查询只返回单个值时：</p>
+<ol>
+<li><p>比如子查询使用了<code>MAX()</code>, <code>MIN()</code>, <code>AVG()</code>等聚合函數（且沒有<code>GROUP BY</code>）。</p>
+</li>
+<li><p>子查询的<code>WHERE</code>条件是基于主键的精确查找</p>
+<p>在这个情况下，可以使用&#x3D;,&gt;,&lt;,&gt;&#x3D;,&lt;&#x3D;等</p>
+</li>
+</ol>
+<p>二。当子查询返回一列值或者集合时：</p>
+<p>使用IN,NOT IN,ANY,SOME,ALL等</p>
+<table>
+<thead>
+<tr>
+<th align="center">类别</th>
+<th align="center">运算符</th>
+<th align="center">通俗解释 (“读作”)</th>
+<th align="center">核心使用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">单值比较</td>
+<td align="center">&#x3D;,&gt;,&lt;,&gt;&#x3D;,&lt;&#x3D;</td>
+<td align="center">一个值 对比 一个值</td>
+<td align="center">子查询确保只返回一个标量值时使用。</td>
+</tr>
+<tr>
+<td align="center">集合成员</td>
+<td align="center">IN &#x2F; NOT IN</td>
+<td align="center">值是否 存在于 &#x2F; 不存在于 列表之中？</td>
+<td align="center">检查一个值是否是子查询返回的多个结果中的一员。</td>
+</tr>
+<tr>
+<td align="center">集合比较</td>
+<td align="center">&gt; ANY 或 &gt; SOME</td>
+<td align="center">是否比列表中的 至少一个 大？ (即 &gt; 最小值)</td>
+<td align="center">与集合中的“最低门槛”比较。</td>
+</tr>
+<tr>
+<td align="center">集合比较</td>
+<td align="center">&lt; ANY 或 &lt; SOME</td>
+<td align="center">是否比列表中的 至少一个 小？ (即 &lt; 最大值)</td>
+<td align="center">与集合中的“最高门槛”比较。</td>
+</tr>
+<tr>
+<td align="center">集合比较</td>
+<td align="center">&gt; ALL</td>
+<td align="center">是否比列表中的 每一个 都大？ (即 &gt; 最大值)</td>
+<td align="center">超越集合中的“最高标准”。</td>
+</tr>
+<tr>
+<td align="center">集合比较</td>
+<td align="center">&lt; ALL</td>
+<td align="center">是否比列表中的 每一个 都小？ (即 &lt; 最小值)</td>
+<td align="center">低于集合中的“最低标准”。</td>
+</tr>
+<tr>
+<td align="center">集合比较</td>
+<td align="center">NOT EXISTS</td>
+<td align="center">不存在于列表中</td>
+<td align="center"><strong>通常性能最好</strong>，利用索引且有短路特性。<strong>对<code>NULL</code>免疫</strong>。IN和NOT IN在这方面有问题</td>
+</tr>
+</tbody></table>
+<h1><span id="5minmax函数适用范围">5.MINMAX函数适用范围</span></h1><p>适用范围：任何可以被排序 (<code>ORDER BY</code>) 的数据类型，都可以使用 <code>MIN()</code> 和 <code>MAX()</code></p>
+<p>根据这条黄金法则，我们来看看<code>MIN()</code>和<code>MAX()</code>都能用在哪些具体的数据类型上：</p>
+<h2><span id="1-所有数值类型-numeric-types"><strong>1. 所有数值类型 (Numeric Types)</strong></span></h2><ul>
+<li><strong>类型：</strong> <code>INT</code>, <code>BIGINT</code>, <code>DECIMAL</code>, <code>FLOAT</code>, <code>DOUBLE</code> 等。</li>
+<li><strong>排序逻辑：</strong> 按数字大小排序。</li>
+<li><strong>示例：</strong> <code>MIN(salary)</code> 返回最低薪水，<code>MAX(age)</code> 返回最大年龄。这是最直观的用法。</li>
+</ul>
+<h2><span id="2-所有日期和时间类型-date-and-time-types"><strong>2. 所有日期和时间类型 (Date and Time Types)</strong></span></h2><ul>
+<li><strong>类型：</strong> <code>DATE</code>, <code>DATETIME</code>, <code>TIMESTAMP</code>, <code>TIME</code>。</li>
+<li><strong>排序逻辑：</strong> 按时间先后顺序排序。<strong>更早的日期&#x2F;时间被认为是“更小”的</strong>。</li>
+<li><strong>示例：</strong> <code>MIN(event_date)</code> 返回“最早”的日期，<code>MAX(login_time)</code> 返回“最晚”的登录时间。这完美地解答了你上一题的疑惑。</li>
+</ul>
+<h2><span id="3-所有字符串类型-string-types"><strong>3. 所有字符串类型 (String Types)</strong></span></h2><ul>
+<li><strong>类型：</strong> <code>CHAR</code>, <code>VARCHAR</code>, <code>TEXT</code>。</li>
+<li><strong>排序逻辑：</strong> 按<strong>字典顺序 (Lexicographical Order)</strong> 排序。这个顺序取决于数据库的字符集和排序规则（Collation）。</li>
+<li><strong>示例：</strong><ul>
+<li>对于 <code>&#123;&#39;a&#39;, &#39;c&#39;, &#39;b&#39;&#125;</code> 这一组值，<code>MIN()</code> 返回 <code>&#39;a&#39;</code>，<code>MAX()</code> 返回 <code>&#39;c&#39;</code>。</li>
+<li>对于 <code>&#123;&#39;Apple&#39;, &#39;Banana&#39;, &#39;apple&#39;&#125;</code> 这一组值，<code>MIN()</code> 通常返回 <code>&#39;Apple&#39;</code>（大写字母在前），<code>MAX()</code> 返回 <code>&#39;apple&#39;</code>。</li>
+</ul>
+</li>
+<li><strong>一个重要的陷阱：</strong> 当数字被存为字符串时，排序结果可能出乎你的意料。<ul>
+<li>对于字符串 <code>&#123;&#39;10&#39;, &#39;2&#39;, &#39;100&#39;&#125;</code>，<code>MIN()</code> 返回的是 **<code>&#39;10&#39;</code>**，<code>MAX()</code> 返回的是 **<code>&#39;2&#39;</code>**！因为它是一位一位地按字典顺序比较，<code>&#39;1&#39;</code> 开头的比<code>&#39;2&#39;</code>开头的要“小”。</li>
+</ul>
+</li>
+</ul>
+<h2><span id="4-枚举类型-enum"><strong>4. 枚举类型 (ENUM)</strong></span></h2><ul>
+<li><strong>类型：</strong> <code>ENUM(&#39;small&#39;, &#39;medium&#39;, &#39;large&#39;)</code>。</li>
+<li><strong>排序逻辑：</strong> 按你在定义<code>ENUM</code>类型时列出的值的<strong>先后顺序</strong>排序。</li>
+<li><strong>示例：</strong> 对于上面的<code>ENUM</code>，<code>MIN()</code>会返回<code>&#39;small&#39;</code>，<code>MAX()</code>会返回<code>&#39;large&#39;</code>。</li>
+</ul>
+<h2><span id="5不适用的类型">5.<strong>不适用的类型</strong></span></h2><p>根据黄金法则，那些<strong>不具有天然排序逻辑</strong>的数据类型，就无法使用<code>MIN()</code>和<code>MAX()</code>。</p>
+<ul>
+<li><strong>二进制&#x2F;大对象类型 (Binary&#x2F;BLOB Types):</strong><ul>
+<li><strong>类型：</strong> <code>BLOB</code>, <code>BINARY</code>, <code>VARBINARY</code> 等。</li>
+<li><strong>原因：</strong> 这些类型通常用来存储图片、文件等二进制数据。数据库不知道一张图片和另一张图片哪个“更大”或“更小”，它们没有可比较性。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2><span id="结论能排序就能取最值"><strong>结论</strong>：<strong>“能排序，就能取最值。”</strong></span></h2><h1><span id="6sql子句分类">6.SQL子句分类</span></h1><p><strong>DQL (Data Query Language) - 数据查询语言</strong></p>
+<ul>
+<li><strong>核心</strong>: <code>SELECT</code></li>
+<li><strong>作用</strong>: 用于从数据库中查询和检索数据，是你目前接触最多的部分。它不改变数据库中的任何数据，只是读取。</li>
+</ul>
+<p><strong>DML (Data Manipulation Language) - 数据操作语言</strong></p>
+<ul>
+<li><strong>核心</strong>: <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code></li>
+<li><strong>作用</strong>: 用于操作（增、删、改）数据库表中的数据。<ul>
+<li><code>INSERT</code>: 插入新数据行。</li>
+<li><code>UPDATE</code>: 更新已存在的数据行。</li>
+<li><code>DELETE</code>: 删除数据行。</li>
+</ul>
+</li>
+</ul>
+<p><strong>DDL (Data Definition Language) - 数据定义语言</strong></p>
+<ul>
+<li><strong>核心</strong>: <code>CREATE</code>, <code>ALTER</code>, <code>DROP</code>, <code>TRUNCATE</code></li>
+<li><strong>作用</strong>: 用于定义和管理数据库的结构（模式，Schema）。它操作的对象是表、索引、视图等数据库对象本身，而不是里面的数据。<ul>
+<li><code>CREATE</code>: 创建新的数据库、表、视图等。</li>
+<li><code>ALTER</code>: 修改已存在的数据库对象的结构。</li>
+<li><code>DROP</code>: 完全删除一个数据库对象。</li>
+</ul>
+</li>
+</ul>
+<p><strong>DCL (Data Control Language) - 数据控制语言</strong></p>
+<ul>
+<li><strong>核心</strong>: <code>GRANT</code>, <code>REVOKE</code></li>
+<li><strong>作用</strong>: 用于管理数据库的访问权限和安全级别。<ul>
+<li><code>GRANT</code>: 授予用户或角色权限。</li>
+<li><code>REVOKE</code>: 撤销用户或角色的权限。</li>
+</ul>
+</li>
+</ul>
+<p><strong>TCL (Transaction Control Language) - 事务控制语言</strong></p>
+<ul>
+<li><strong>核心</strong>: <code>COMMIT</code>, <code>ROLLBACK</code>, <code>SAVEPOINT</code></li>
+<li><strong>作用</strong>: 用于管理事务，确保数据操作的原子性和一致性。<ul>
+<li><code>COMMIT</code>: 提交事务，将事务所做的所有修改永久保存。</li>
+<li><code>ROLLBACK</code>: 回滚事务，撤销当前事务中所有未提交的修改。</li>
+</ul>
+</li>
+</ul>
+<h1><span id="7sql常用函数记录">7.SQL常用函数记录</span></h1><h2><span id="1聚合函数-aggregate-functions">1.聚合函数 (Aggregate Functions)</span></h2><p>聚合函数对一组值进行计算，并返回一个单一的值。它们通常与 GROUP BY 子句一起使用，用于数据统计和汇总。</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>描述</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>COUNT()</td>
+<td>计算行数。COUNT(*) 计算所有行，COUNT(column) 计算该列非NULL值的行数。</td>
+<td>SELECT COUNT(*) FROM Users; (统计用户总数)</td>
+</tr>
+<tr>
+<td>SUM()</td>
+<td>计算数值列的总和。</td>
+<td>SELECT SUM(price) FROM Orders; (计算订单总金额)</td>
+</tr>
+<tr>
+<td>AVG()</td>
+<td>计算数值列的平均值。</td>
+<td>SELECT AVG(score) FROM Grades; (计算平均分)</td>
+</tr>
+<tr>
+<td>MAX()</td>
+<td>找出列中的最大值。</td>
+<td>SELECT MAX(salary) FROM Employees; (查找最高工资)</td>
+</tr>
+<tr>
+<td>MIN()</td>
+<td>找出列中的最小值。</td>
+<td>SELECT MIN(birth_date) FROM Users; (查找最早的出生日期)</td>
+</tr>
+</tbody></table>
+<h2><span id="2字符串函数-string-functions">2.字符串函数 (String Functions)</span></h2><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>描述</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CONCAT()</td>
+<td>连接两个或多个字符串。</td>
+<td>SELECT CONCAT(first_name, ‘ ‘, last_name) FROM Users; (拼接姓名)</td>
+</tr>
+<tr>
+<td>LENGTH() &#x2F; CHAR_LENGTH()</td>
+<td>获取字符串的长度。LENGTH 是字节长度，CHAR_LENGTH 是字符长度。</td>
+<td>SELECT CHAR_LENGTH(‘你好世界’); (返回 4)</td>
+</tr>
+<tr>
+<td>UPPER() &#x2F; LOWER()</td>
+<td>将字符串转换为大写或小写。</td>
+<td>SELECT UPPER(username) FROM Users;</td>
+</tr>
+<tr>
+<td>SUBSTRING()</td>
+<td>提取字符串的子串。</td>
+<td>SELECT SUBSTRING(‘hello world’, 1, 5); (返回 ‘hello’)</td>
+</tr>
+<tr>
+<td>REPLACE()</td>
+<td>替换字符串中的子串。</td>
+<td>SELECT REPLACE(‘hello world’, ‘world’, ‘MySQL’); (返回 ‘hello MySQL’)</td>
+</tr>
+<tr>
+<td>TRIM()</td>
+<td>去除字符串两端的空格。</td>
+<td>SELECT TRIM(‘ hello ‘); (返回 ‘hello’)</td>
+</tr>
+</tbody></table>
+<h2><span id="3数值函数-numeric-functions">3.数值函数 (Numeric Functions)</span></h2><p>用于对数值数据执行数学运算。</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>描述</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ROUND()</td>
+<td>对数字进行四舍五入到指定的小数位数。</td>
+<td>SELECT ROUND(123.456, 2); (返回 123.46)</td>
+</tr>
+<tr>
+<td>CEIL() &#x2F; CEILING()</td>
+<td>向上取整，返回大于或等于参数的最小整数。</td>
+<td>SELECT CEIL(4.1); (返回 5)</td>
+</tr>
+<tr>
+<td>FLOOR()</td>
+<td>向下取整，返回小于或等于参数的最大整数。</td>
+<td>SELECT FLOOR(4.9); (返回 4)</td>
+</tr>
+<tr>
+<td>ABS()</td>
+<td>返回一个数的绝对值。</td>
+<td>SELECT ABS(-100); (返回 100)</td>
+</tr>
+<tr>
+<td>MOD()</td>
+<td>返回两数相除的余数。</td>
+<td>SELECT MOD(10, 3); (返回 1)</td>
+</tr>
+</tbody></table>
+<h2><span id="4日期与时间函数">4.日期与时间函数</span></h2><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>描述</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>NOW()</td>
+<td>返回当前的日期和时间。</td>
+<td>SELECT NOW(); (例如: ‘2025-09-09 10:55:00’)</td>
+</tr>
+<tr>
+<td>CURDATE()</td>
+<td>返回当前日期。</td>
+<td>SELECT CURDATE(); (例如: ‘2025-09-09’)</td>
+</tr>
+<tr>
+<td>CURTIME()</td>
+<td>返回当前时间。</td>
+<td>SELECT CURTIME(); (例如: ‘10:55:00’)</td>
+</tr>
+<tr>
+<td>YEAR() &#x2F; MONTH() &#x2F; DAY()</td>
+<td>从日期中提取年、月、日。</td>
+<td>SELECT YEAR(‘2025-01-20’); (返回 2025)</td>
+</tr>
+<tr>
+<td>DATE_FORMAT()</td>
+<td>格式化日期。</td>
+<td>SELECT DATE_FORMAT(NOW(), ‘%Y年%m月%d日’); (返回 ‘2025年09月09日’)</td>
+</tr>
+<tr>
+<td>DATEDIFF()</td>
+<td>计算两个日期之间的天数差。</td>
+<td>SELECT DATEDIFF(‘2025-10-01’, ‘2025-09-01’); (返回 30)</td>
+</tr>
+</tbody></table>
+<h2><span id="5控制流函数-control-flow-functions">5.控制流函数 (Control Flow Functions)</span></h2><p>允许在SQL查询中实现 if-then-else 逻辑。</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>描述</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CASE</td>
+<td>SQL中的 if-else 语句，非常强大和常用。</td>
+<td>见下方示例</td>
+</tr>
+<tr>
+<td>IF()</td>
+<td>CASE 的简化版，用于简单的二元判断。</td>
+<td>SELECT IF(score &gt;&#x3D; 60, ‘及格’, ‘不及格’) FROM Grades;</td>
+</tr>
+<tr>
+<td>IFNULL() &#x2F; COALESCE()</td>
+<td>如果第一个表达式为NULL，则返回第二个表达式的值。COALESCE 可以接受多个参数。</td>
+<td>SELECT IFNULL(nickname, ‘无昵称’) FROM Users;</td>
+</tr>
+</tbody></table>
+
+    </div>
+
+    
+    
+    
+    
+        <div>
+          <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+        </div>
+    
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/" rel="tag"># 日常学习</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2025/08/30/%E7%9F%A5%E8%AF%86%E6%8B%BE%E9%81%97/" rel="prev" title="知识拾遗">
+      <i class="fa fa-chevron-left"></i> 知识拾遗
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2025/09/08/java%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E6%B1%87%E6%80%BB/" rel="next" title="java相关知识汇总">
+      java相关知识汇总 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC82MDg3Mi8zNzM0Mg=="></div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">1.什么是CRUD</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">2.join的方式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.1.</span> <span class="nav-text">1. 内连接 (INNER JOIN)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.2.</span> <span class="nav-text">2.左连接 (LEFT JOIN &#x2F; LEFT OUTER JOIN)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.3.</span> <span class="nav-text">3. 全外连接 (FULL OUTER JOIN)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.4.</span> <span class="nav-text">4.自然连接 (NATURAL JOIN)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.5.</span> <span class="nav-text">5交叉连接 (CROSS JOIN)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">3.Mysql里面的explain指令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">4.数据库里面的运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">5.MINMAX函数适用范围</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.1.</span> <span class="nav-text">1. 所有数值类型 (Numeric Types)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.2.</span> <span class="nav-text">2. 所有日期和时间类型 (Date and Time Types)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.3.</span> <span class="nav-text">3. 所有字符串类型 (String Types)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.4.</span> <span class="nav-text">4. 枚举类型 (ENUM)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.5.</span> <span class="nav-text">5.不适用的类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.6.</span> <span class="nav-text">结论：“能排序，就能取最值。”</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">6.</span> <span class="nav-text">6.SQL子句分类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">7.</span> <span class="nav-text">7.SQL常用函数记录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.1.</span> <span class="nav-text">1.聚合函数 (Aggregate Functions)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.2.</span> <span class="nav-text">2.字符串函数 (String Functions)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.3.</span> <span class="nav-text">3.数值函数 (Numeric Functions)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.4.</span> <span class="nav-text">4.日期与时间函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.5.</span> <span class="nav-text">5.控制流函数 (Control Flow Functions)</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="摄夜"
+      src="/images/knight.jpg">
+  <p class="site-author-name" itemprop="name">摄夜</p>
+  <div class="site-description" itemprop="description">相信的心就是你的魔法</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">42</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/mtdown" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;mtdown" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:2336107524@qq.com" title="E-Mail → mailto:2336107524@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2024 – 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">摄夜</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">65k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">59 分钟</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+
+<button id="chat-toggle-button">AI 助手</button>
+  <div id="chat-widget-container" class="hidden">
+      <div id="chat-widget-header">
+          <h3>mtdown.top AI 助手</h3>
+          <button id="chat-close-button">&times;</button>
+      </div>
+      <div id="chat-messages">
+          <div class="message ai-message">你好！我是博主的AI助手，有什么可以帮您？</div>
+      </div>
+      <form id="chat-form">
+          <input type="text" id="chat-input" placeholder="输入您的问题..." autocomplete="off">
+          <button type="submit">发送</button>
+      </form>
+  </div>
+
+<script src="/js/chat-widget.js"></script>
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='255,0,0' opacity='0.5' zIndex='-1' count='120' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+});
+</script>
+
+
+
+</body>
+</html>

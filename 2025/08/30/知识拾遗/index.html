@@ -23,15 +23,15 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="关键词：数组">
+  <meta name="description" content="关键词：数组,泛型，基本函数类型的定义">
 <meta property="og:type" content="article">
 <meta property="og:title" content="知识拾遗">
 <meta property="og:url" content="http://example.com/2025/08/30/%E7%9F%A5%E8%AF%86%E6%8B%BE%E9%81%97/index.html">
 <meta property="og:site_name" content="Nod Y Lle Delfrydol">
-<meta property="og:description" content="关键词：数组">
+<meta property="og:description" content="关键词：数组,泛型，基本函数类型的定义">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-08-30T12:06:13.000Z">
-<meta property="article:modified_time" content="2025-09-02T09:07:28.233Z">
+<meta property="article:modified_time" content="2025-09-09T03:06:27.700Z">
 <meta property="article:author" content="摄夜">
 <meta property="article:tag" content="日常学习">
 <meta name="twitter:card" content="summary">
@@ -218,7 +218,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-09-02 17:07:28" itemprop="dateModified" datetime="2025-09-02T17:07:28+08:00">2025-09-02</time>
+                <time title="修改时间：2025-09-09 11:06:27" itemprop="dateModified" datetime="2025-09-09T11:06:27+08:00">2025-09-09</time>
               </span>
 
           <br>
@@ -227,14 +227,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.9k</span>
+              <span>7.6k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
+              <span>7 分钟</span>
             </span>
 
         </div>
@@ -246,7 +246,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>关键词：数组</p>
+        <p>关键词：数组,泛型，基本函数类型的定义</p>
 <span id="more"></span>
 
 <h1><span id="1二维数组里面可以套不同类型数据吗">1.二维数组里面可以套不同类型数据吗？</span></h1><p>不可以。Java 是一种<strong>静态类型</strong>语言，这意味着一个变量或数组在声明时，它的类型就已经被严格固定了,当你声明 <code>int[][] x</code> 时，你告诉编译器：“<code>x</code> 是一个数组，它的每个元素是另一个数组，而那个数组里的每个元素<strong>必须是 <code>int</code> 类型</strong>。</p>
@@ -329,7 +329,16 @@
 <td align="center">可以直接存储<strong>基本数据类型</strong> (如 int[][]) 或<strong>对象类型</strong> (如 String[][])。</td>
 </tr>
 </tbody></table>
-<h1><span id="4常见泛型函数记录">4.常见泛型函数记录</span></h1><table>
+<h1><span id="4常见泛型函数记录">4.常见泛型函数记录</span></h1><p>首先我们定义下 泛型：这是一种程序设计特性，它允许在定义类别，界面和方法时采用【类型参数】，使用参数化模型的核心目的是增强编译时的类型检查，减少执行时的错误。</p>
+<ul>
+<li><strong>T</strong> - Type (表示一个通用的“类型”)</li>
+<li><strong>E</strong> - Element (常用于集合框架，如 <code>List&lt;E&gt;</code>)</li>
+<li><strong>K</strong> - Key (用于表示Map中的“键”)</li>
+<li><strong>V</strong> - Value (用于表示Map中的“值”)</li>
+<li><strong>N</strong> - Number (用于表示数字类型)</li>
+<li><strong>S, U, V 等</strong> - 用于表示第二、三、四个类型参数</li>
+</ul>
+<table>
 <thead>
 <tr>
 <th>泛型接口&#x2F;类</th>
@@ -455,7 +464,7 @@
 <p>之前提到的类型转换规则和这里的位也有关系，当然，我们更常用字节B来描述</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">byte` -&gt; `short` -&gt; `int` -&gt; `long` -&gt; `float` -&gt; `double</span><br><span class="line">char` -&gt; `int` -&gt; `long` -&gt; `float` -&gt; `double</span><br></pre></td></tr></table></figure>
 
-<h1><span id="6string到基本类型的转换">6.String到基本类型的转换</span></h1><p>指的注意的是，String作为我们常用的类型，它实际上不是基本类型，而应该算是包装类，对于除了char以外都有parseXXX这样的格式转化为对应的类型。</p>
+<h1><span id="6string到基本类型的转换">6.String到基本类型的转换</span></h1><p>指的注意的是，String作为我们常用的类型，它实际上不是基本类型，而应该算是包装类，对于除了char以外都有parseXXX这样的格式转化为对应的类型。当我们使用list或者泛型函数时，就得用这种包装类</p>
 <table>
 <thead>
 <tr>
@@ -505,6 +514,56 @@
 <td>char c &#x3D; “hello”.charAt(0);²</td>
 </tr>
 </tbody></table>
+<p>char[] example&#x3D;Stringexample.tocharArray();</p>
+<p>包装类的空值可以是null表示不存在，基本类型就不行，此外从 Java 5 开始，引入了自动装箱和拆箱的特性：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 在旧版 Java 中，你需要手动创建对象: Integer num = new Integer(100);</span><br><span class="line">// 现在，可以自动装箱：</span><br><span class="line">Integer num = 100; // 编译器会自动转换为 Integer.valueOf(100)</span><br></pre></td></tr></table></figure>
+
+<p>自动拆箱：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Integer num = 100;</span><br><span class="line"></span><br><span class="line">// 在旧版 Java 中，你需要手动取值: int result = num.intValue() + 1;</span><br><span class="line">// 现在，可以自动拆箱：</span><br><span class="line">int result = num + 1; // num 会被自动拆箱为 int 100，然后进行计算</span><br></pre></td></tr></table></figure>
+
+<h1><span id="7maplengthlength等等的使用条件">7.map,length,length()等等的使用条件</span></h1><p>在Java中，获取不同数据结构“长度”或“大小”的方式反映了它们在语言中的本质设计。</p>
+<p>我们将从三个主要类别来探讨：<strong>数组</strong>、<strong>Java集合框架</strong>、以及<strong>字符串相关类</strong>。</p>
+<h2><span id="1数组是最基本的数据结构基本数据类型-x3dnew-基本数据类型的方式创建创建时需要指定数组大小">1.数组是最基本的数据结构，基本数据类型[] &#x3D;new 基本数据类型的方式创建，创建时需要指定数组大小。</span></h2><p>获取方式：.length</p>
+<p>概念：</p>
+<ul>
+<li><strong>固定容量</strong>: 数组一旦被创建，其容量就<strong>固定不变</strong>。<code>.length</code> 存储的就是这个固定容量，因为这个原因，我们认为数组是静态的。</li>
+<li><strong>不是方法</strong>: 注意 <code>length</code> 后面**没有括号 <code>()</code>**。因为它是一个直接访问的属性，而不是一个需要执行计算的方法调用。你只是在读取一个对象的元数据。</li>
+<li><strong>多维数组</strong>: 对于二维数组 <code>type[][]</code>，<code>array.length</code> 给出的是<strong>行数</strong>（即其中包含多少个一维数组）。要获取某一行的列数，你需要指定行号，例如 <code>array[0].length</code>。这也代表一件事，数组不一定是n*m的，里面的子数组长度并不固定</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// 一维数组</span><br><span class="line">int[] intArray = new int[10];</span><br><span class="line">System.out.println(&quot;intArray 的长度: &quot; + intArray.length); // 输出 10</span><br><span class="line"></span><br><span class="line">String[] stringArray = &#123;&quot;Apple&quot;, &quot;Banana&quot;, &quot;Cherry&quot;&#125;;</span><br><span class="line">System.out.println(&quot;stringArray 的长度: &quot; + stringArray.length); // 输出 3</span><br><span class="line"></span><br><span class="line">// 二维数组</span><br><span class="line">int[][] matrix = new int[4][5]; // 4行5列的矩阵</span><br><span class="line">System.out.println(&quot;matrix 的行数: &quot; + matrix.length);      // 输出 4</span><br><span class="line">System.out.println(&quot;matrix 第一行的列数: &quot; + matrix[0].length); // 输出 5</span><br><span class="line"></span><br><span class="line">// 不规则二维数组 (Jagged Array)</span><br><span class="line">int[][] jaggedArray = &#123;&#123;1, 2&#125;, &#123;3, 4, 5&#125;, &#123;6&#125;&#125;;</span><br><span class="line">System.out.println(&quot;jaggedArray 的行数: &quot; + jaggedArray.length);      // 输出 3</span><br><span class="line">System.out.println(&quot;jaggedArray 第二行的长度: &quot; + jaggedArray[1].length); // 输出 3</span><br></pre></td></tr></table></figure>
+
+<h2><span id="2java-集合框架-java-collections-framework-jcf">2.Java 集合框架 (Java Collections Framework, JCF)</span></h2><p>这包括了 <code>List</code>, <code>Set</code>, <code>Queue</code>, <code>Map</code> 等所有我们常用的高级数据结构。它们都是<strong>类或接口</strong>。</p>
+<p>获取方式: <code>.size()</code>，本质上代表一个公共的方法（Method）。</p>
+<p><strong>概念</strong>:</p>
+<ul>
+<li><strong>动态大小</strong>: 集合框架中的类被设计为<strong>大小可变</strong>的。<code>.size()</code> 方法返回的是集合中<strong>当前实际存储的元素数量</strong>。</li>
+<li><strong>接口定义</strong>: <code>size()</code> 这个方法是在顶层接口 <code>Collection</code> 和 <code>Map</code> 中定义的。所有实现了这些接口的类（如 <code>ArrayList</code>, <code>HashSet</code>, <code>HashMap</code>）都必须提供这个方法的具体实现。</li>
+<li><strong>需要括号</strong>: <code>size()</code> 后面**必须有括号 <code>()</code>**，因为它是一个方法调用。</li>
+<li><strong><code>Collection</code> 接口的实现 (List, Set, Queue)</strong><ul>
+<li><code>List</code> (如 <code>ArrayList</code>, <code>LinkedList</code>): <code>.size()</code> 返回列表中的元素个数，允许重复。</li>
+<li><code>Set</code> (如 <code>HashSet</code>, <code>TreeSet</code>): <code>.size()</code> 返回集合中的元素个数，不允许重复。</li>
+<li><code>Queue</code> (如 <code>LinkedList</code>, <code>PriorityQueue</code>): <code>.size()</code> 返回队列中等待处理的元素个数。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import java.util.ArrayList;</span><br><span class="line">import java.util.HashSet;</span><br><span class="line">import java.util.List;</span><br><span class="line">import java.util.Set;</span><br><span class="line"></span><br><span class="line">List&lt;String&gt; fruitList = new ArrayList&lt;&gt;();</span><br><span class="line">fruitList.add(&quot;Apple&quot;);</span><br><span class="line">fruitList.add(&quot;Banana&quot;);</span><br><span class="line">fruitList.add(&quot;Apple&quot;); // List允许重复</span><br><span class="line">System.out.println(&quot;fruitList 的大小: &quot; + fruitList.size()); // 输出 3</span><br><span class="line"></span><br><span class="line">Set&lt;String&gt; fruitSet = new HashSet&lt;&gt;();</span><br><span class="line">fruitSet.add(&quot;Apple&quot;);</span><br><span class="line">fruitSet.add(&quot;Banana&quot;);</span><br><span class="line">fruitSet.add(&quot;Apple&quot;); // Set不允许重复，这次添加无效</span><br><span class="line">System.out.println(&quot;fruitSet 的大小: &quot; + fruitSet.size()); // 输出 2</span><br></pre></td></tr></table></figure>
+
+<p> <strong><code>Map</code> 接口的实现 (HashMap, TreeMap)</strong></p>
+<ul>
+<li><code>Map</code> (如 <code>HashMap</code>): <code>.size()</code> 返回的是 <strong>键值对 (key-value pair)</strong> 的数量。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import java.util.HashMap;</span><br><span class="line">import java.util.Map;</span><br><span class="line"></span><br><span class="line">Map&lt;String, Integer&gt; studentScores = new HashMap&lt;&gt;();</span><br><span class="line">studentScores.put(&quot;Alice&quot;, 95);</span><br><span class="line">studentScores.put(&quot;Bob&quot;, 88);</span><br><span class="line">System.out.println(&quot;studentScores 的大小: &quot; + studentScores.size()); // 输出 2</span><br></pre></td></tr></table></figure>
+
+<h2><span id="3-字符串相关类-string-stringbuilder-stringbuffer">3. 字符串相关类 (String, StringBuilder, StringBuffer)</span></h2><p>这是一个特殊的类别，需要单独记忆。</p>
+<p><strong>获取方式</strong>: .length() ，同样属于一个公共的方法（Method）。</p>
+<p><strong>概念</strong>:</p>
+<ul>
+<li><strong>与数组 <code>length</code> 的区别</strong>: 虽然名字相似，但字符串的 <code>length()</code> **有括号 <code>()</code>**，因为它是一个方法，而不是属性。<ul>
+<li><code>String</code> <strong>不可变</strong>: <code>String</code> 对象一旦创建，其内容和长度就固定了。这一点和前面的java集合框架不一样，需要特别注意，不如说字符串很多时候都会带来异常的变化</li>
+</ul>
+</li>
+<li><code>StringBuilder</code> &#x2F; <code>StringBuffer</code> <strong>可变</strong>: 这两个类的对象长度是动态变化的，<code>.length()</code> 方法返回它们当前包含的字符数量。</li>
+</ul>
 
     </div>
 
@@ -536,7 +595,10 @@
     <a href="/2025/08/30/web%E9%80%9A%E8%AE%AF%E7%9A%84%E5%9B%9B%E7%A7%8D%E6%96%B9%E5%BC%8F/" rel="prev" title="web通讯的四种方式">
       <i class="fa fa-chevron-left"></i> web通讯的四种方式
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2025/09/04/SQL%E7%9B%B8%E5%85%B3/" rel="next" title="SQL相关">
+      SQL相关 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -601,7 +663,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">1.二维数组里面可以套不同类型数据吗？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">2.数组初始化的数值是多少？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">3.对于一个二维数组int[][] x&#x3D;new int[2][&#x2F;2]，可以通过x[0][0]&#x3D;new int[2]继续堆叠深度吗</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">4.List 和 Array  的核心区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">4.常见泛型函数记录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">6.</span> <span class="nav-text">5.java的八大基本类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">7.</span> <span class="nav-text">6.String到基本类型的转换</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">1.二维数组里面可以套不同类型数据吗？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">2.数组初始化的数值是多少？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">3.对于一个二维数组int[][] x&#x3D;new int[2][&#x2F;2]，可以通过x[0][0]&#x3D;new int[2]继续堆叠深度吗</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">4.List 和 Array  的核心区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">4.常见泛型函数记录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">6.</span> <span class="nav-text">5.java的八大基本类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">7.</span> <span class="nav-text">6.String到基本类型的转换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">8.</span> <span class="nav-text">7.map,length,length()等等的使用条件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.1.</span> <span class="nav-text">1.数组是最基本的数据结构，基本数据类型[] &#x3D;new 基本数据类型的方式创建，创建时需要指定数组大小。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.2.</span> <span class="nav-text">2.Java 集合框架 (Java Collections Framework, JCF)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.3.</span> <span class="nav-text">3. 字符串相关类 (String, StringBuilder, StringBuffer)</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -617,14 +679,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">39</span>
+          <span class="site-state-item-count">42</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -668,12 +730,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">55k</span>
+    <span title="站点总字数">65k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">50 分钟</span>
+    <span title="站点阅读时长">59 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
