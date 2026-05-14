@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-bounce.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="一、位运算速查表   符号 描述 运算 (A ? B) 结果 说明    &amp; 与 0011 1100 &amp; 0000 1101 0000 1100 (12) 同1为1   **&#96; &#96;** 或 &#96;0011 1100 0000 1101&#96;   ^ 异或 0011 1100 ^ 0000 1101 0011 0001 (49) 同0异1   ~ 取反 ~00">
+<meta property="og:type" content="article">
+<meta property="og:title" content="位运算">
+<meta property="og:url" content="http://example.com/2026/01/18/%E4%BD%8D%E8%BF%90%E7%AE%97/index.html">
+<meta property="og:site_name" content="Nod Y Lle Delfrydol">
+<meta property="og:description" content="一、位运算速查表   符号 描述 运算 (A ? B) 结果 说明    &amp; 与 0011 1100 &amp; 0000 1101 0000 1100 (12) 同1为1   **&#96; &#96;** 或 &#96;0011 1100 0000 1101&#96;   ^ 异或 0011 1100 ^ 0000 1101 0011 0001 (49) 同0异1   ~ 取反 ~00">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-01-18T07:09:04.000Z">
+<meta property="article:modified_time" content="2026-01-18T07:14:48.550Z">
+<meta property="article:author" content="摄夜">
+<meta property="article:tag" content="日常学习">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2026/01/18/%E4%BD%8D%E8%BF%90%E7%AE%97/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>位运算 | Nod Y Lle Delfrydol</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  
+<link rel="stylesheet" href="/css/chat-widget.css">
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Nod Y Lle Delfrydol</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">朝着理想之路前进</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/01/18/%E4%BD%8D%E8%BF%90%E7%AE%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/knight.jpg">
+      <meta itemprop="name" content="摄夜">
+      <meta itemprop="description" content="相信的心就是你的魔法">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nod Y Lle Delfrydol">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          位运算
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2026-01-18 15:09:04 / 修改时间：15:14:48" itemprop="dateCreated datePublished" datetime="2026-01-18T15:09:04+08:00">2026-01-18</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>964</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1><span id="一-位运算速查表">一、位运算速查表</span></h1><table>
+<thead>
+<tr>
+<th align="center">符号</th>
+<th align="center">描述</th>
+<th align="center">运算 (A ? B)</th>
+<th align="center">结果</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&amp;</td>
+<td align="center">与</td>
+<td align="center">0011 1100 &amp; 0000 1101</td>
+<td align="center">0000 1100 (12)</td>
+<td align="center">同1为1</td>
+</tr>
+<tr>
+<td align="center">**&#96;</td>
+<td align="center">&#96;**</td>
+<td align="center">或</td>
+<td align="center">&#96;0011 1100</td>
+<td align="center">0000 1101&#96;</td>
+</tr>
+<tr>
+<td align="center">^</td>
+<td align="center">异或</td>
+<td align="center">0011 1100 ^ 0000 1101</td>
+<td align="center">0011 0001 (49)</td>
+<td align="center">同0异1</td>
+</tr>
+<tr>
+<td align="center">~</td>
+<td align="center">取反</td>
+<td align="center">~0011 1100</td>
+<td align="center">1100 0011</td>
+<td align="center">0变1，1变0</td>
+</tr>
+<tr>
+<td align="center">&lt;&lt;</td>
+<td align="center">左移</td>
+<td align="center">A &lt;&lt; 2</td>
+<td align="center">1111 0000 (240)</td>
+<td align="center">乘以 4</td>
+</tr>
+<tr>
+<td align="center">&gt;&gt;</td>
+<td align="center">右移</td>
+<td align="center">A &gt;&gt; 2</td>
+<td align="center">0000 1111 (15)</td>
+<td align="center">除以 4</td>
+</tr>
+</tbody></table>
+<h1><span id="二-异或的性质">二、异或的性质</span></h1><p>异或是位运算中的重点操作，满足以下定律：</p>
+<ol>
+<li>归零律：x ^ x &#x3D; 0 (任何数与自己异或都是0)</li>
+<li>恒等律：x ^ 0 &#x3D; x (任何数与0异或保持不变)</li>
+<li>交换律与结合律：a ^ b ^ c &#x3D; a ^ c ^ b</li>
+</ol>
+<h1><span id="三-必背的高阶技巧">三、 必背的高阶技巧</span></h1><ol>
+<li><h2><span id="消除二进制中最低位的-1-brian-kernighan-算法">消除二进制中最低位的 1 (Brian Kernighan 算法)</span></h2></li>
+</ol>
+<ul>
+<li><strong>公式</strong>：<code>n &amp; (n - 1)</code></li>
+<li><strong>原理</strong>：<code>n-1</code> 会把 <code>n</code> 最右边的 1 变成 0，并将该位右边的所有 0 变成 1。再和 <code>n</code> 做与运算，那部分就全部抵消了。</li>
+<li><strong>应用</strong>：统计 1 的个数、判断是否为 2 的幂。</li>
+</ul>
+<p>Java</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 统计 1 的个数</span><br><span class="line">int count = 0;</span><br><span class="line">while (n != 0) &#123;</span><br><span class="line">    n = n &amp; (n - 1);</span><br><span class="line">    count++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2><span id="2-获取最低位的-1-lowbit">2. 获取最低位的 1 (Lowbit)</span></h2><ul>
+<li><strong>公式</strong>：<code>n &amp; -n</code></li>
+<li><strong>原理</strong>：利用补码特性，<code>-n</code> 实际上是 <code>~n + 1</code>。</li>
+<li><strong>示例</strong>：<code>x = 10100</code> -&gt; <code>lowbit = 00100</code></li>
+<li><strong>应用</strong>：树状数组（Fenwick Tree）、Diff 比较。</li>
+</ul>
+<ol start="3">
+<li><h2><span id="判断-n-是否是-2-的幂">判断 n 是否是 2 的幂</span></h2></li>
+</ol>
+<ul>
+<li><strong>公式</strong>：<code>n &gt; 0 &amp;&amp; (n &amp; (n - 1)) == 0</code></li>
+<li><strong>原理</strong>：2 的幂次在二进制中只有一个 1。消掉这个 1 后应该等于 0。</li>
+</ul>
+<h2><span id="4-异或实现变量交换不使用临时变量">4. 异或实现变量交换（不使用临时变量）</span></h2><ul>
+<li><p><strong>代码</strong>：</p>
+<p>Java</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = a ^ b;</span><br><span class="line">b = a ^ b;</span><br><span class="line">a = a ^ b;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>评价</strong>：虽然很帅，但实际工程中不如 <code>int temp</code> 快（现代编译器优化），主要用于面试展示对性质的理解。</p>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+    
+        <div>
+          <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+        </div>
+    
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/" rel="tag"># 日常学习</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2025/10/23/%E5%9B%BE%E7%89%87%E4%BC%98%E5%8C%96%E6%80%9D%E8%B7%AF/" rel="prev" title="图片优化思路">
+      <i class="fa fa-chevron-left"></i> 图片优化思路
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2026/01/18/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" rel="next" title="背包问题">
+      背包问题 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC82MDg3Mi8zNzM0Mg=="></div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">一、位运算速查表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">二、异或的性质</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">三、 必背的高阶技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.1.</span> <span class="nav-text">消除二进制中最低位的 1 (Brian Kernighan 算法)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.2.</span> <span class="nav-text">2. 获取最低位的 1 (Lowbit)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.3.</span> <span class="nav-text">判断 n 是否是 2 的幂</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.4.</span> <span class="nav-text">4. 异或实现变量交换（不使用临时变量）</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="摄夜"
+      src="/images/knight.jpg">
+  <p class="site-author-name" itemprop="name">摄夜</p>
+  <div class="site-description" itemprop="description">相信的心就是你的魔法</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">55</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/mtdown" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;mtdown" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:2336107524@qq.com" title="E-Mail → mailto:2336107524@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2024 – 
+  <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">摄夜</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">91k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:23</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+
+<button id="chat-toggle-button">AI 助手</button>
+  <div id="chat-widget-container" class="hidden">
+      <div id="chat-widget-header">
+          <h3>mtdown.top AI 助手</h3>
+          <button id="chat-close-button">&times;</button>
+      </div>
+      <div id="chat-messages">
+          <div class="message ai-message">你好！我是博主的AI助手，有什么可以帮您？</div>
+      </div>
+      <form id="chat-form">
+          <input type="text" id="chat-input" placeholder="输入您的问题..." autocomplete="off">
+          <button type="submit">发送</button>
+      </form>
+  </div>
+
+<script src="/js/chat-widget.js"></script>
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='255,0,0' opacity='0.5' zIndex='-1' count='120' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+});
+</script>
+
+
+
+</body>
+</html>

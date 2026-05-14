@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-bounce.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Http协议存在九种请求方式，GET,POST,PUT,PATCH,HEAD,OPTION,CONNECT,TRACE,DELETE.其中用的多的是GET,POST,PUT,HEAD">
+<meta property="og:type" content="article">
+<meta property="og:title" content="http请求">
+<meta property="og:url" content="http://example.com/2025/09/18/http%E8%AF%B7%E6%B1%82/index.html">
+<meta property="og:site_name" content="Nod Y Lle Delfrydol">
+<meta property="og:description" content="Http协议存在九种请求方式，GET,POST,PUT,PATCH,HEAD,OPTION,CONNECT,TRACE,DELETE.其中用的多的是GET,POST,PUT,HEAD">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-09-18T06:44:55.000Z">
+<meta property="article:modified_time" content="2025-09-27T12:05:15.821Z">
+<meta property="article:author" content="摄夜">
+<meta property="article:tag" content="就业准备">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2025/09/18/http%E8%AF%B7%E6%B1%82/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>http请求 | Nod Y Lle Delfrydol</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  
+<link rel="stylesheet" href="/css/chat-widget.css">
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Nod Y Lle Delfrydol</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">朝着理想之路前进</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/09/18/http%E8%AF%B7%E6%B1%82/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/knight.jpg">
+      <meta itemprop="name" content="摄夜">
+      <meta itemprop="description" content="相信的心就是你的魔法">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nod Y Lle Delfrydol">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          http请求
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2025-09-18 14:44:55" itemprop="dateCreated datePublished" datetime="2025-09-18T14:44:55+08:00">2025-09-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-09-27 20:05:15" itemprop="dateModified" datetime="2025-09-27T20:05:15+08:00">2025-09-27</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Http协议存在九种请求方式，GET,POST,PUT,PATCH,HEAD,OPTION,CONNECT,TRACE,DELETE.其中用的多的是GET,POST,PUT,HEAD</p>
+<span id="more"></span>
+
+<h1><span id="1http文件的九种请求方式">1,HTTP文件的九种请求方式</span></h1><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>方法</th>
+<th>描述用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>GET</td>
+<td>【<strong>获取资源</strong>】本质就是发送一个请求来取得服务器上的某一资源。资源通过一组HTTP头和呈现数据（如HTML文本，或者图片或者视频等）返回给客户端。GET请求中，永远不会包含呈现数据。 即GET请求只用来向服务器获取资源，而GET请求本身不应该携带任何呈现数据。  1. 登录时GET获取服务器数据库用户名和密码进行验证。 2.下载文本、图片、音视频等时获取服务器资源。</td>
+</tr>
+<tr>
+<td>2</td>
+<td>POST</td>
+<td>【<strong>传输实体文本</strong>】向指定资源提交数据进行处理请求（例如提交表单或者上传文件）。数据被包含在POST请求体中。POST 请求可能会导致新的资源的建立或已有资源的修改。  1. 提交用户注册信息。 2. 提交修改的用户信息。</td>
+</tr>
+<tr>
+<td>3</td>
+<td>HEAD</td>
+<td>【<strong>获得报文首部</strong>】类似于 GET 请求，只不过返回的响应中没有具体的内容，用于获取报头。欲判断某个资源是否存在，我们通常使用GET，但这里用HEAD则意义更加明确。  1. 向服务器获取某些易过期或丢失大型文件时，可用HEAD方式查询资源是否存在。</td>
+</tr>
+<tr>
+<td>4</td>
+<td>OPTIONS</td>
+<td>【<strong>询问支持的方法</strong>】客户端询问服务器可以提交哪些请求方法。这个方法很有趣，它用于获取当前URL所支持的方法。若请求成功，则它会在HTTP头中包含一个名为“Allow”的头，值是所支持的方法，如“GET, POST”。  极少使用。</td>
+</tr>
+<tr>
+<td>5</td>
+<td>PUT</td>
+<td>【<strong>传输文件</strong>】从客户端向服务器传送的数据取代指定的文档的内容，即指定上传资源存放路径。这个方法比较少见。HTML表单也不支持这个。本质上来讲， PUT和POST极为相似，都是向服务器发送数据，但它们之间有一个重要区别，PUT通常指定了资源的存放位置，而POST则没有，POST的数据存放位置由服务器自己决定。  如一个用于提交博文的URL，&#x2F;addBlog。如果用PUT，则提交的URL会是像这样的”&#x2F;addBlog&#x2F;abc123”，其中abc123就是这个博文的地址。而如果用POST，则这个地址会在提交后由服务器告知客户端。目前大部分博客都是这样的。显然，PUT和POST用途是不一样的。具体用哪个还取决于当前的业务场景。</td>
+</tr>
+<tr>
+<td>6</td>
+<td>PATCH</td>
+<td>【<strong>局部更新文件</strong>】是对 PUT 方法的补充，用来对已知资源进行局部更新 。  极少使用。</td>
+</tr>
+<tr>
+<td>7</td>
+<td>DELETE</td>
+<td>【<strong>删除文件</strong>】请求服务器删除指定的资源。  基本上这个也很少见，不过还是有一些地方比如amazon的S3云服务里面就用的这个方法来删除资源。</td>
+</tr>
+<tr>
+<td>8</td>
+<td>TRACE</td>
+<td>【<strong>追踪路径</strong>】回显服务器收到的请求，客户端可以对请求消息的传输路径进行追踪，TRACE方法是让Web服务器端将之前的请求通信还给客户端的方法。主要用于测试或诊断。  极少使用。</td>
+</tr>
+<tr>
+<td>9</td>
+<td>CONNECT</td>
+<td>【<strong>要求用隧道协议连接代理</strong>】HTTP&#x2F;1.1 协议中预留给能够将连接改为管道方式的代理服务器。CONNECT方法要求在与代理服务器通信时建立隧道，实现用隧道协议进行TCP通信。主要使用SSL（安全套接层）和TLS（传输层安全）协议把通信内容加密后经网络隧道传输。  极少使用。****</td>
+</tr>
+</tbody></table>
+<h1><span id="2http的102030">2.HTTP的1.0，2.0，3.0</span></h1><p>HTTP最早有0.9的版本。这个版本只有GET的请求方式，那时候的人们只在乎他传输文本的功能。到了1.0，增加了POST和HEAD的用法。此外，为了改进0.9版本HTTP必须要等到传输完才能进行下一个操作的问题，1.0使用了pineline。在这个阶段，都还是文本字符，使用的都是短链接。</p>
+<p>到了2.0版本，多路复用支持并发任务，这是因为2.0版本将请求和相应分割为更小的二进制帧和 流ID。这样，多个请求和响应就可以在同一个连接上同时、交错地传输，彻底解决了队头阻塞问题。在传输上，为了加快传输速度，使用了HPACK对内容进行压缩，他们有一个61字符的哈希表和一个动态的表格来存储常用的内容，HPACK就是靠此，不传输文本而是传输索引。</p>
+<p>到了3.0版本，他迭代了TCP，改为使用以UDP为主的QUIC协议传输文件。将 TCP 和 TLS 的握手过程合并了。对于首次连接，只需要 1-RTT 即可建立安全连接。在会话恢复的情况下，甚至可以做到0RTT。此外，因为QUIC是使用连接ID（Connection ID）来标识连接，而不是传统的IP地址和端口。当网络切换时，IP地址虽然变了，但连接ID保持不变，可以实现无缝的连接迁移，不会中断数据传输。</p>
+<h1><span id="3tcp的三次握手">3.TCP的三次握手</span></h1><p>TCP的三次握手是服务器端和客户端确认彼此接收能力的过程。第一次客户端传输服务器端SYN，服务器端口确认了客户端的发送能力。第二次服务器段传回来，让客户端确认了服务器端的收发能力，这时候就返回ACK和SYN+1,如此服务器端就知道客户端是收发能力具备的。</p>
+<p>不过断开联机的的时候我们会用到四次挥手，这是因为服务器端在收到关闭请求后，除开返回一个确认信号，还需要再自己的文件发送完后再给个FIN信号。这就是多出来的一次挥手</p>
+<h1><span id="4网络设备四兄弟">4.网络设备四兄弟</span></h1><h4><span id="1-集线器-hub"><strong>1. 集线器 (Hub)</strong></span></h4><ul>
+<li><strong>工作层次：</strong> OSI 第1层 - <strong>物理层</strong></li>
+<li><strong>核心功能：</strong> 信号放大与<strong>广播</strong>。</li>
+<li><strong>工作原理：</strong> 这是最“傻瓜”的设备。它只有一个功能：当一个端口收到数据信号（二进制比特流）后，它不关心内容，不看地址，直接把这个信号复制并放大，然后发送给<strong>所有其他</strong>的端口。</li>
+<li><strong>关键特征：</strong> 所有连接到集线器的设备，共享同一个<strong>冲突域 (Collision Domain)</strong> 和同一个**广播域 (Broadcast Domain)**。这意味着在任何时刻，只有一个设备可以发送数据，否则就会发生“冲突”（Collision），导致数据损坏，需要重传。这使得网络效率非常低下。</li>
+<li><strong>通俗类比：</strong> 一个<strong>大喇叭</strong>或<strong>广播站</strong>。一个人对着喇叭喊话，整个房间（网络）的所有人都会听到，不管是不是说给他听的。</li>
+</ul>
+<h4><span id="2-网桥-bridge"><strong>2. 网桥 (Bridge)</strong></span></h4><ul>
+<li><strong>工作层次：</strong> OSI 第2层 - <strong>数据链路层</strong></li>
+<li><strong>核心功能：</strong> 连接两个网络<strong>段</strong>，并根据<strong>MAC地址</strong>对数据帧进行过滤转发。</li>
+<li><strong>工作原理：</strong> 网桥比集线器聪明了一点。它会查看数据帧的目标MAC地址。通过学习，它知道哪些MAC地址的设备在哪个网段。<ul>
+<li>如果目标MAC地址和源MAC地址在<strong>同一个网段</strong>，它就<strong>不会</strong>转发这个数据帧。</li>
+<li>如果目标MAC地址在<strong>另一个网段</strong>，它才把数据帧转发过去。</li>
+</ul>
+</li>
+<li><strong>关键特征：</strong> 网桥可以<strong>隔离冲突域</strong>。连接在网桥两端的两个网段，分属不同的冲突域，可以同时进行通信而互不干扰。但它<strong>不能</strong>隔离广播域。</li>
+<li><strong>通俗类比：</strong> 两个办公室之间的<strong>门卫</strong>。门卫会看信件的收件人部门（MAC地址），如果收件人就在发信人所在的这个办公室，门卫就把信拦下，不让它传到另一个办公室去，减少了不必要的干扰。</li>
+</ul>
+<h4><span id="3-交换机-switch"><strong>3. 交换机 (Switch)</strong></span></h4><ul>
+<li><strong>工作层次：</strong> OSI 第2层 - <strong>数据链路层</strong></li>
+<li><strong>核心功能：</strong> 可以看作是网桥的“超级进化版”，是一个<strong>多端口的网桥</strong>。</li>
+<li><strong>工作原理：</strong> 交换机内部有一个<strong>MAC地址表</strong>，它能学习并记录连接在每个端口上的设备的MAC地址。当一个数据帧进来时，交换机会读取其目标MAC地址，然后直接在MAC地址表中查找对应的端口，并<strong>只将该数据帧发送到那个特定的端口</strong>。<ul>
+<li>（只有当目标MAC地址未知，或者这是一个广播帧时，交换机才会像集线器一样向所有端口发送。）</li>
+</ul>
+</li>
+<li><strong>关键特征：</strong> 交换机的<strong>每一个端口都是一个独立的冲突域</strong>。这意味着连接在交换机上的所有设备都可以同时收发数据，互不影响，极大地提高了网络效率。但默认情况下，所有端口仍属于同一个<strong>广播域</strong>。</li>
+<li><strong>通俗类比：</strong> 一个<strong>电话总机接线员</strong>。当A要打电话给B时，接线员会为他们俩建立一条专属的、点对点的线路。他们的通话内容（数据）不会被C和D听到。</li>
+</ul>
+<h4><span id="4-路由器-router"><strong>4. 路由器 (Router)</strong></span></h4><ul>
+<li><strong>工作层次：</strong> OSI 第3层 - <strong>网络层</strong></li>
+<li><strong>核心功能：</strong> 连接<strong>不同的网络</strong>（比如你家的局域网和广阔的互联网），并根据<strong>IP地址</strong>进行路径选择和数据包转发。</li>
+<li><strong>工作原理：</strong> 路由器是这四者中最“天才”的。它不关心MAC地址，而是读取数据包的<strong>目标IP地址</strong>。它内部维护着一张<strong>路由表</strong>，这张表就像一张地图，告诉它要去往某个IP地址段，应该把数据包从哪个“出口”（端口）发出去才是最佳路径。</li>
+<li><strong>关键特征：</strong> 路由器既可以<strong>隔离冲突域</strong>，也可以<strong>隔离广播域</strong>。它的每一个端口都连接着一个独立的网络，从而形成一个独立的广播域。这是管理大型网络、防止“广播风暴”的关键设备。</li>
+<li><strong>通俗类比：</strong> 一个<strong>国际机场的航站楼</strong>或<strong>大型快递中转枢纽</strong>。它根据包裹上的最终城市地址（IP地址），而不是具体的街道门牌号（MAC地址），来决定这个包裹应该上哪一架飞机、走哪条航线（路由）。</li>
+</ul>
+<h3><span id="总结表"><strong>总结表</strong></span></h3><table>
+<thead>
+<tr>
+<th align="center">特性</th>
+<th align="center">集线器 (Hub)</th>
+<th align="center">网桥 (Bridge)</th>
+<th align="center">交换机 (Switch)</th>
+<th align="center">路由器 (Router)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>工作层次</strong></td>
+<td align="center"><strong>物理层 (L1)</strong></td>
+<td align="center"><strong>数据链路层 (L2)</strong></td>
+<td align="center"><strong>数据链路层 (L2)</strong></td>
+<td align="center"><strong>网络层 (L3)</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>使用地址</strong></td>
+<td align="center">不使用地址</td>
+<td align="center"><strong>MAC地址</strong></td>
+<td align="center"><strong>MAC地址</strong></td>
+<td align="center"><strong>IP地址</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>工作模式</strong></td>
+<td align="center">广播</td>
+<td align="center">过滤转发</td>
+<td align="center"><strong>点对点转发</strong></td>
+<td align="center"><strong>路径选择转发</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>连接对象</strong></td>
+<td align="center">将设备连接成网段</td>
+<td align="center">连接两个网段</td>
+<td align="center">连接多个设备或网段</td>
+<td align="center">连接<strong>不同网络</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>冲突域</strong></td>
+<td align="center">整体是一个冲突域</td>
+<td align="center">每个端口是一个冲突域</td>
+<td align="center"><strong>每个端口是一个冲突域</strong></td>
+<td align="center">每个端口是一个冲突域</td>
+</tr>
+<tr>
+<td align="center"><strong>广播域</strong></td>
+<td align="center">整体是一个广播域</td>
+<td align="center">整体是一个广播域</td>
+<td align="center">整体是一个广播域</td>
+<td align="center"><strong>每个端口是一个广播域</strong></td>
+</tr>
+</tbody></table>
+<h1><span id="5h1-到-h6-的层级关系">5.<code>h1</code> 到 <code>h6</code> 的层级关系</span></h1><p>HTML 提供了六个级别的标题，从 <code>&lt;h1&gt;</code> 到 <code>&lt;h6&gt;</code>，重要性依次递减：</p>
+<ul>
+<li><strong><code>&lt;h1&gt;</code></strong>: <strong>最高级别的标题</strong>。通常用于页面的主标题，比如一篇文章的题目或网站的名称。 **一个页面最好只有一个 <code>&lt;h1&gt;</code>**。<ul>
+<li><em>例子</em>：<code>&lt;h1&gt;海东文库项目介绍&lt;/h1&gt;</code></li>
+</ul>
+</li>
+<li><strong><code>&lt;h2&gt;</code></strong>: <strong>二级标题</strong>。用于表示页面主要章节或区域的标题。<ul>
+<li><em>例子</em>：<code>&lt;h2&gt;用户模块功能&lt;/h2&gt;</code></li>
+</ul>
+</li>
+<li><strong><code>&lt;h3&gt;</code></strong>: <strong>三级标题</strong>。用于二级标题下的子标题。<ul>
+<li><em>例子</em>：<code>&lt;h3&gt;用户登录功能&lt;/h3&gt;</code></li>
+</ul>
+</li>
+<li><strong><code>&lt;h4&gt;</code>, <code>&lt;h5&gt;</code>, <code>&lt;h6&gt;</code></strong>: 重要性更低的子标题，以此类推。</li>
+</ul>
+<h1><span id="6http请求">6.HTTP请求</span></h1><p>注解和HTTP请求的各个部分对应起来：</p>
+<table>
+<thead>
+<tr>
+<th>注解</th>
+<th>读取HTTP请求的哪个部分？</th>
+<th>主要用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong><code>@PathVariable</code></strong></td>
+<td><strong>请求行</strong> (URL路径)</td>
+<td>获取RESTful风格的路径变量，如 <code>/users/&#123;id&#125;</code></td>
+</tr>
+<tr>
+<td><strong><code>@RequestParam</code></strong></td>
+<td><strong>请求行</strong> (URL查询参数) 或 <strong>请求体</strong> (表单数据)</td>
+<td>获取简单的键值对参数或文件</td>
+</tr>
+<tr>
+<td><strong><code>@RequestBody</code></strong></td>
+<td><strong>请求体</strong> (整个Body)</td>
+<td>将JSON&#x2F;XML等格式的请求体完整地转为一个Java对象</td>
+</tr>
+<tr>
+<td><strong><code>@RequestPart</code></strong></td>
+<td><strong>请求体</strong> (<code>multipart/form-data</code>的某个部分)</td>
+<td>获取文件或与文件混合的复杂数据（如JSON）</td>
+</tr>
+<tr>
+<td><strong><code>@RequestHeader</code></strong></td>
+<td><strong>请求头</strong></td>
+<td>获取Header信息，如 <code>Authorization</code>, <code>Content-Type</code></td>
+</tr>
+<tr>
+<td><strong><code>@CookieValue</code></strong></td>
+<td><strong>请求头</strong> (Cookie信息)</td>
+<td>获取特定的Cookie值</td>
+</tr>
+</tbody></table>
+
+    </div>
+
+    
+    
+    
+    
+        <div>
+          <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+        </div>
+    
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%B0%B1%E4%B8%9A%E5%87%86%E5%A4%87/" rel="tag"># 就业准备</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2025/09/17/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86-Q-A/" rel="prev" title="数据库并发控制核心知识 Q&A">
+      <i class="fa fa-chevron-left"></i> 数据库并发控制核心知识 Q&A
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2025/10/01/java%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/" rel="next" title="java开发记录">
+      java开发记录 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC82MDg3Mi8zNzM0Mg=="></div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">1,HTTP文件的九种请求方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">2.HTTP的1.0，2.0，3.0</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">3.TCP的三次握手</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">4.网络设备四兄弟</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">4.0.0.1.</span> <span class="nav-text">1. 集线器 (Hub)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">4.0.0.2.</span> <span class="nav-text">2. 网桥 (Bridge)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">4.0.0.3.</span> <span class="nav-text">3. 交换机 (Switch)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">4.0.0.4.</span> <span class="nav-text">4. 路由器 (Router)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">4.0.1.</span> <span class="nav-text">总结表</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">5.h1 到 h6 的层级关系</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">6.</span> <span class="nav-text">6.HTTP请求</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="摄夜"
+      src="/images/knight.jpg">
+  <p class="site-author-name" itemprop="name">摄夜</p>
+  <div class="site-description" itemprop="description">相信的心就是你的魔法</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">55</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/mtdown" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;mtdown" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:2336107524@qq.com" title="E-Mail → mailto:2336107524@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2024 – 
+  <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">摄夜</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">91k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:23</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+
+<button id="chat-toggle-button">AI 助手</button>
+  <div id="chat-widget-container" class="hidden">
+      <div id="chat-widget-header">
+          <h3>mtdown.top AI 助手</h3>
+          <button id="chat-close-button">&times;</button>
+      </div>
+      <div id="chat-messages">
+          <div class="message ai-message">你好！我是博主的AI助手，有什么可以帮您？</div>
+      </div>
+      <form id="chat-form">
+          <input type="text" id="chat-input" placeholder="输入您的问题..." autocomplete="off">
+          <button type="submit">发送</button>
+      </form>
+  </div>
+
+<script src="/js/chat-widget.js"></script>
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='255,0,0' opacity='0.5' zIndex='-1' count='120' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+});
+</script>
+
+
+
+</body>
+</html>

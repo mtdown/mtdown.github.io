@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-bounce.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="这一个部分还是需要仔细思考，想来应该也不止是用在图片优化上，我认为在更多的地方都是可以使用这个技术的。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="图片优化思路">
+<meta property="og:url" content="http://example.com/2025/10/23/%E5%9B%BE%E7%89%87%E4%BC%98%E5%8C%96%E6%80%9D%E8%B7%AF/index.html">
+<meta property="og:site_name" content="Nod Y Lle Delfrydol">
+<meta property="og:description" content="这一个部分还是需要仔细思考，想来应该也不止是用在图片优化上，我认为在更多的地方都是可以使用这个技术的。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-10-23T13:41:05.000Z">
+<meta property="article:modified_time" content="2025-10-26T03:49:02.406Z">
+<meta property="article:author" content="摄夜">
+<meta property="article:tag" content="就业准备">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2025/10/23/%E5%9B%BE%E7%89%87%E4%BC%98%E5%8C%96%E6%80%9D%E8%B7%AF/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>图片优化思路 | Nod Y Lle Delfrydol</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  
+<link rel="stylesheet" href="/css/chat-widget.css">
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Nod Y Lle Delfrydol</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">朝着理想之路前进</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/10/23/%E5%9B%BE%E7%89%87%E4%BC%98%E5%8C%96%E6%80%9D%E8%B7%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/knight.jpg">
+      <meta itemprop="name" content="摄夜">
+      <meta itemprop="description" content="相信的心就是你的魔法">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nod Y Lle Delfrydol">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          图片优化思路
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2025-10-23 21:41:05" itemprop="dateCreated datePublished" datetime="2025-10-23T21:41:05+08:00">2025-10-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-10-26 11:49:02" itemprop="dateModified" datetime="2025-10-26T11:49:02+08:00">2025-10-26</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>这一个部分还是需要仔细思考，想来应该也不止是用在图片优化上，我认为在更多的地方都是可以使用这个技术的。</p>
+<span id="more"></span>
+
+<h1><span id="一-图片查询优化">一、图片查询优化</span></h1><p>首先确定什么样的数据适合缓存：</p>
+<ol>
+<li>高频访问的数据：如系统首页、热门推荐内容等。</li>
+<li>计算成本较高的数据：如复杂查询结果、大量数据的统计结果。</li>
+<li>允许短时间延迟的数据：如不需要实时更新的排行榜、图片列表等。</li>
+</ol>
+<h2><span id="redis-分布式缓存">Redis 分布式缓存</span></h2><p>分布式是指将缓存数据储存在多台服务器上，以便在高并发场景下实现更高的吞吐量和容错性。也可以把同一份数据存储到多个服务器去，以实现数据的安全性.</p>
+<p>作为分布式缓存的主流方案，REDIS具备以下几个优势：</p>
+<ul>
+<li><p>高性能：基于内存操作，访问速度极快。<strong>单节点 Redis 的读写 QPS 可达 10w 次每秒！</strong>而且<strong>Redis 的核心网络I&#x2F;O和命令执行是单线程的</strong>，避免了多线程上下文切换和锁竞争所带来的巨大性能开销。——我的理解是单线程执行不是重点，这个线程运行的方式，只询问不等待才是重点。从而让Redis 具备了用一个线程同时处理成千上万个网络连接的能力。</p>
+</li>
+<li><p>丰富的数据结构：支持字符串、列表、集合、哈希、位图等，适用于各种数据结构存储。</p>
+</li>
+<li><p>分布式支持：<strong>高可用和高扩展</strong>可以通过 Redis Cluster 构建高可用、高性能的分布式缓存，还提供哨兵集群机制提升可用性、提供分片集群机制提高可扩展性。</p>
+<p>这里的可扩展性指的是系统应对“增长”的能力。可以是用户量暴增、数据量暴增、或请求量暴增。我们可以增加机器或者机器升级来解决</p>
+<p>高可用性指的是系统抵抗故障的能力，解决的核心手段是冗余</p>
+</li>
+</ul>
+<h2><span id="什么是-redis-cluster">什么是 Redis Cluster？</span></h2><p><strong>Redis Cluster (集群模式)</strong> 是 Redis 官方提供的<strong>分布式解决方案</strong>。</p>
+<p>它的核心目标是解决两个问题：</p>
+<ol>
+<li>**数据分片 (Sharding)**：将海量数据分散存储到多个 Redis 节点上，突破单台服务器的内存和性能瓶颈。</li>
+<li>**高可用 (High Availability)**：当集群中的某个主节点宕机时，它的从节点可以自动顶上，保证服务继续可用。</li>
+</ol>
+<p>为了实现这个目标，Redis Cluster 采用了“**哈希槽 (Hash Slot)**”的设计：</p>
+<ul>
+<li><strong>16384 个哈希槽</strong>：Redis Cluster 将整个数据库（逻辑上）分成了 16384 （2的14次方）个哈希槽。</li>
+<li><strong>Key 与槽的映射</strong>：当你存入一个 key 时，Redis 会用 <code>CRC16(key) % 16384</code> 算法计算这个 key 应该属于哪个槽。</li>
+<li><strong>槽与节点的分配</strong>：集群启动时，这 16384 个槽会被分配给集群中所有的**主节点 (Master)**。例如，3 个主节点，可能节点 A 负责 0-5500 槽，节点 B 负责 5501-11000 槽，节点 C 负责 11001-16383 槽。</li>
+<li><strong>高可用（主从）</strong>：每个主节点都会有至少一个<strong>从节点 (Slave)</strong> 来复制它的数据。当主节点 A 宕机，它的从节点 A1 会被集群选举为新的主节点，接管 0-5500 槽，服务不会中断。</li>
+<li><strong>去中心化</strong>：集群中的所有节点都互相连接（通过Gossip协议），它们都知道哪个槽由哪个节点负责。当客户端连接任意一个节点并尝试操作一个不归它管的 key 时，它会告诉客户端“请重定向到 XX 节点”，整个过程对客户端是透明的。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>方案</strong></th>
+<th><strong>Memcached</strong></th>
+<th>**Redis **</th>
+<th><strong>Hazelcast</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>定位</strong></td>
+<td>纯内存对象缓存</td>
+<td>数据结构服务器</td>
+<td>内存数据网格 (IMDG)</td>
+</tr>
+<tr>
+<td><strong>数据结构</strong></td>
+<td>仅字符串 (Key-Value)</td>
+<td>丰富 (String, Hash, List, Set…)</td>
+<td>丰富 (Map, Queue, Set, Topic…)</td>
+</tr>
+<tr>
+<td><strong>持久化</strong></td>
+<td><strong>不支持</strong></td>
+<td>支持 (RDB &#x2F; AOF)</td>
+<td>支持</td>
+</tr>
+<tr>
+<td><strong>集群</strong></td>
+<td>客户端实现（简单）</td>
+<td>需专门配置 (Cluster &#x2F; Sentinel)</td>
+<td><strong>自动发现，P2P 组网</strong></td>
+</tr>
+<tr>
+<td><strong>核心优点</strong></td>
+<td>简单、高性能 (多线程 Get&#x2F;Set)</td>
+<td>功能全面、生态强大</td>
+<td>Java 原生、集群管理简单</td>
+</tr>
+<tr>
+<td><strong>适用场景</strong></td>
+<td>数据库查询、API 响应的纯缓存</td>
+<td>缓存、分布式锁、消息队列、计数器</td>
+<td>Java 微服务、分布式计算</td>
+</tr>
+</tbody></table>
+<p>顺便列一下都是数据库且用得比较多的MYSQL，这两个的一切区别就是存放位置，这直接导致了他们在性能，数据持久和用途上的差异：MySQL 遵循 ACID 原则，能保证事务的原子性和一致性，数据可靠性高；Redis专为高速缓存和实时操作设计‌。</p>
+<table>
+<thead>
+<tr>
+<th><strong>特性</strong></th>
+<th><strong>MySQL (关系型数据库)</strong></th>
+<th><strong>Redis (内存数据库)</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>存储位置</strong></td>
+<td><strong>磁盘 (Disk-based)</strong></td>
+<td><strong>内存 (In-Memory)</strong></td>
+</tr>
+<tr>
+<td><strong>性能&#x2F;速度</strong></td>
+<td>较慢（受限于磁盘 I&#x2F;O）</td>
+<td><strong>极快</strong>（受限于内存速度）</td>
+</tr>
+<tr>
+<td><strong>数据持久化</strong></td>
+<td><strong>强持久化</strong>（数据默认永久保存）</td>
+<td>弱持久化（默认是临时的，需配置 RDB&#x2F;AOF 才能重启后恢复）</td>
+</tr>
+<tr>
+<td><strong>数据模型</strong></td>
+<td>结构化 (表、行、列)，使用 <code>SQL</code></td>
+<td>键值对 (Key-Value)，支持丰富的数据结构 (String, Hash, List)</td>
+</tr>
+<tr>
+<td><strong>容量限制</strong></td>
+<td>巨大（受限于硬盘大小, TB 级）</td>
+<td>有限（受限于内存大小, GB 级）</td>
+</tr>
+<tr>
+<td><strong>主要角色</strong></td>
+<td><strong>“数据仓库” (System of Record)</strong></td>
+<td><strong>“高速缓存” (Cache) &#x2F; “工作台”</strong></td>
+</tr>
+</tbody></table>
+<p>自己测试了下，使用带缓存的查询，第一次是470ms，第二次是7ms。不使用带缓存的查询是50ms，第二次是10ms，之所以会有这种情况，是因为mysql也有自己的缓存。</p>
+<h1><span id="解决缓存常见问题">解决缓存常见问题</span></h1><p>使用缓存时，一般要注意下面几个问题：</p>
+<ol>
+<li>缓存击穿：某些 <strong>热点数据</strong> 在缓存过期后，大量请求直接打到数据库。</li>
+</ol>
+<p>​	解决方案：设置热点数据的超长过期时间，或使用互斥锁（如 Redisson）控制缓存刷新。</p>
+<ol start="2">
+<li>缓存穿透：用户频繁请求不存在的数据，导致大量的请求直接触发数据库查询。</li>
+</ol>
+<p>​	解决方案：对无效查询结果也进行缓存（如设置空值缓存），或者使用布隆过滤器。</p>
+<ol start="3">
+<li>缓存雪崩：大量缓存同时过期，导致请求打到数据库，系统崩溃。</li>
+</ol>
+<ol start="4">
+<li>缓存一致性:你在“写”（增、删、改）操作时，只更新了数据库，但<strong>忘记</strong>了去处理缓存。</li>
+</ol>
+<p>​	解决方案: 先更新数据库，再删除缓存</p>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>问题</strong></th>
+<th align="center"><strong>现象</strong></th>
+<th align="center"><strong>解决方案</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>缓存穿透</strong></td>
+<td align="center">查一个<strong>不存在</strong>的数据</td>
+<td align="center">1. 缓存空值  2. 布隆过滤器</td>
+</tr>
+<tr>
+<td align="center"><strong>缓存击穿</strong></td>
+<td align="center"><strong>一个热点</strong>数据过期</td>
+<td align="center">1. 分布式锁 (Mutex)  2. 逻辑过期</td>
+</tr>
+<tr>
+<td align="center"><strong>缓存雪崩</strong></td>
+<td align="center"><strong>一大片</strong>数据同时过期 &#x2F; Redis 宕机</td>
+<td align="center">1. <strong>随机过期时间</strong> (你已在用)  2. Redis 高可用 (集群&#x2F;哨兵)</td>
+</tr>
+<tr>
+<td align="center"><strong>缓存一致性</strong></td>
+<td align="center">数据库和缓存<strong>数据不同</strong></td>
+<td align="center">1. <strong>先更新数据库，再删除缓存</strong></td>
+</tr>
+</tbody></table>
+
+    </div>
+
+    
+    
+    
+    
+        <div>
+          <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+        </div>
+    
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%B0%B1%E4%B8%9A%E5%87%86%E5%A4%87/" rel="tag"># 就业准备</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2025/10/01/java%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/" rel="prev" title="java开发记录">
+      <i class="fa fa-chevron-left"></i> java开发记录
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2026/01/18/%E4%BD%8D%E8%BF%90%E7%AE%97/" rel="next" title="位运算">
+      位运算 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC82MDg3Mi8zNzM0Mg=="></div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">一、图片查询优化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.1.</span> <span class="nav-text">Redis 分布式缓存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.2.</span> <span class="nav-text">什么是 Redis Cluster？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">解决缓存常见问题</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="摄夜"
+      src="/images/knight.jpg">
+  <p class="site-author-name" itemprop="name">摄夜</p>
+  <div class="site-description" itemprop="description">相信的心就是你的魔法</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">55</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/mtdown" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;mtdown" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:2336107524@qq.com" title="E-Mail → mailto:2336107524@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2024 – 
+  <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">摄夜</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">91k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:23</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+
+<button id="chat-toggle-button">AI 助手</button>
+  <div id="chat-widget-container" class="hidden">
+      <div id="chat-widget-header">
+          <h3>mtdown.top AI 助手</h3>
+          <button id="chat-close-button">&times;</button>
+      </div>
+      <div id="chat-messages">
+          <div class="message ai-message">你好！我是博主的AI助手，有什么可以帮您？</div>
+      </div>
+      <form id="chat-form">
+          <input type="text" id="chat-input" placeholder="输入您的问题..." autocomplete="off">
+          <button type="submit">发送</button>
+      </form>
+  </div>
+
+<script src="/js/chat-widget.js"></script>
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='255,0,0' opacity='0.5' zIndex='-1' count='120' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+});
+</script>
+
+
+
+</body>
+</html>

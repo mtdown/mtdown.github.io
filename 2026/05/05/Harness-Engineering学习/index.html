@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-bounce.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="学习最近爆火的 Harness Engineering 到底是啥？一期讲透！_哔哩哔哩_bilibili中，发现一些思路非常有用，在此记录">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Harness Engineering学习">
+<meta property="og:url" content="http://example.com/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:site_name" content="Nod Y Lle Delfrydol">
+<meta property="og:description" content="学习最近爆火的 Harness Engineering 到底是啥？一期讲透！_哔哩哔哩_bilibili中，发现一些思路非常有用，在此记录">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/image-20260505110651809.png">
+<meta property="og:image" content="http://example.com/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/image-20260505111057016.png">
+<meta property="og:image" content="http://example.com/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/image-20260505111209746.png">
+<meta property="og:image" content="http://example.com/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/image-20260505111426279.png">
+<meta property="og:image" content="http://example.com/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/image-20260505111532605.png">
+<meta property="og:image" content="http://example.com/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/image-20260505111824470.png">
+<meta property="og:image" content="http://example.com/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/image-20260505111902614.png">
+<meta property="og:image" content="http://example.com/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/image-20260505112015278.png">
+<meta property="og:image" content="http://example.com/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/image-20260505112028690.png">
+<meta property="og:image" content="http://example.com/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/image-20260505112119769.png">
+<meta property="og:image" content="http://example.com/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/image-20260505112108275.png">
+<meta property="og:image" content="http://example.com/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/image-20260505152925290.png">
+<meta property="og:image" content="http://example.com/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/image-20260505152944115.png">
+<meta property="og:image" content="http://example.com/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/image-20260505153116118.png">
+<meta property="article:published_time" content="2026-05-05T02:53:21.000Z">
+<meta property="article:modified_time" content="2026-05-05T07:41:00.660Z">
+<meta property="article:author" content="摄夜">
+<meta property="article:tag" content="日常学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/image-20260505110651809.png">
+
+<link rel="canonical" href="http://example.com/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Harness Engineering学习 | Nod Y Lle Delfrydol</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  
+<link rel="stylesheet" href="/css/chat-widget.css">
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Nod Y Lle Delfrydol</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">朝着理想之路前进</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/knight.jpg">
+      <meta itemprop="name" content="摄夜">
+      <meta itemprop="description" content="相信的心就是你的魔法">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nod Y Lle Delfrydol">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Harness Engineering学习
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2026-05-05 10:53:21 / 修改时间：15:41:00" itemprop="dateCreated datePublished" datetime="2026-05-05T10:53:21+08:00">2026-05-05</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>学习<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Zk9FBwELs/?spm_id_from=333.337.search-card.all.click&vd_source=ecbe42ffb25fea0da636165433fb75d6">最近爆火的 Harness Engineering 到底是啥？一期讲透！_哔哩哔哩_bilibili</a>中，发现一些思路非常有用，在此记录</p>
+<span id="more"></span>
+
+<h2><span id="1提示词的功能和局限是什么">1.提示词的功能和局限是什么？</span></h2><p>提示词的功能是定义一个局部概率空间，作用是锁定范围。因为大模型是一个上下文敏感的概率输出模型，你给出它样例，他就会根据样例的范式补全，你给他什么身份，他就会沿着那个身份回答。但这终究只是对语言的设计，他不能弥补缺失的知识。</p>
+<p><img src="/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/image-20260505110651809.png" alt="image-20260505110651809"></p>
+<p><img src="/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/image-20260505111057016.png" alt="image-20260505111057016"></p>
+<p>提示词解决表达问题，不解决信息问题。因此聊天机器人时代任务短链路少，所以提示词足够，但这在下一个智能体时代就不行了</p>
+<h2><span id="2为什么我们需要context-energing">2.为什么我们需要context energing</span></h2><p>RAG是一个典型的实践，他补全了模型在专业知识领域的空白。但视频制作者又指出——完整的Context Engineering应该具备一个完整链路。他认为SKill就是一个很好的例子。采用了渐进式披露的方式。</p>
+<p><img src="/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/image-20260505111209746.png" alt="image-20260505111209746"></p>
+<p><img src="/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/image-20260505111426279.png" alt="image-20260505111426279"></p>
+<p>因此，视频制作者又给出了一个建议：</p>
+<p><img src="/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/image-20260505111532605.png" alt="image-20260505111532605"></p>
+<p>但更进一步的，这种长链路的运行过程中是存在意外的，而之前的promt优化了意图表达，context优化了信息供给，都属于一个输入侧问题的解决。缺少对输出侧的纠错分析</p>
+<p><img src="/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/image-20260505111824470.png" alt="image-20260505111824470"></p>
+<h2><span id="3harnesss-engineering">3.Harnesss Engineering</span></h2><p><strong><img src="/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/image-20260505111902614.png" alt="image-20260505111902614"></strong></p>
+<p>作者用了一个新人做客户拜访的例子来讲解，一图流如下：</p>
+<p><img src="/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/image-20260505112015278.png" alt="image-20260505112015278"></p>
+<p><img src="/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/image-20260505112028690.png" alt="image-20260505112028690"></p>
+<p><img src="/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/image-20260505112119769.png" alt="image-20260505112119769"></p>
+<p><img src="/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/image-20260505112108275.png" alt="image-20260505112108275"></p>
+<p>这三个是根据大模型的能力提升，而逐渐进步的过程，而不是替代关系，汇总如下：</p>
+<h2><span id="ai-工程的三阶段演进">AI 工程的三阶段演进</span></h2><table>
+<thead>
+<tr>
+<th align="left">阶段</th>
+<th align="left">核心问题</th>
+<th align="left">解决思路</th>
+<th align="left">技术重点</th>
+<th align="left">局限性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Prompt Engineering</strong><br>(提示词工程)</td>
+<td align="left">模型是否听懂指令</td>
+<td align="left">优化意图表达</td>
+<td align="left">角色定义、风格约束、示例引导</td>
+<td align="left">无法应对长时链路，单次结果稳定性差</td>
+</tr>
+<tr>
+<td align="left"><strong>Context Engineering</strong><br>(上下文工程)</td>
+<td align="left">模型是否获得正确信息</td>
+<td align="left">优化数据供给</td>
+<td align="left">向量检索 (RAG)、语义过滤、信息分层</td>
+<td align="left">无法解决执行过程中的逻辑偏离问题</td>
+</tr>
+<tr>
+<td align="left"><strong>Harness Engineering</strong><br>(驾驭工程)</td>
+<td align="left">模型是否稳定执行任务</td>
+<td align="left">优化运行条件</td>
+<td align="left">执行编排、环路反馈、错误恢复</td>
+<td align="left">-</td>
+</tr>
+</tbody></table>
+<h1><span id="成熟-harness-的六层架构">成熟 Harness 的六层架构</span></h1><h3><span id="一-上下文边界层">一、上下文边界层</span></h3><ul>
+<li><strong>核心功能：</strong> 确保模型在正确边界内思考</li>
+<li><strong>关键组件：</strong><ol>
+<li><strong>角色与目标定义：</strong> 明确模型身份、任务范围及底线限制</li>
+<li><strong>信息脱敏与过滤：</strong> 确保上下文安全性（去除敏感信息）</li>
+<li><strong>结构化提示：</strong> 分层&#x2F;逻辑控制，提高表达、理解效率</li>
+</ol>
+</li>
+</ul>
+<h3><span id="二-工具寻址层">二、工具寻址层</span></h3><ul>
+<li><strong>核心功能：</strong> 连接模型与现实世界的能力</li>
+<li><strong>关键模块：</strong><ol>
+<li><strong>工具注册：</strong> 声明能力及使用规则与规范</li>
+<li><strong>调用时机：</strong> 避免不安全的调用（不乱用）与过度调用（防死循环）</li>
+<li><strong>结果处理：</strong> 结果二次加工&#x2F;精简，保障传给模型的信噪比</li>
+</ol>
+</li>
+</ul>
+<h3><span id="三-执行编排层">三、执行编排层</span></h3><ul>
+<li><strong>核心功能：</strong> 将复杂任务拆解执行闭环</li>
+<li><strong>典型流程：</strong> 目标理解 ➔ 任务拆解 ➔ 步骤处理 ➔ 结果组装 ➔ 反思检查 ➔ 容错迭代</li>
+<li><strong>价值：</strong> 解决Agent长步推理的幻觉和执行失败问题，确保任务闭环</li>
+</ul>
+<h3><span id="四-记忆与状态层">四、记忆与状态层</span></h3><ul>
+<li><strong>核心功能：</strong> 赋予Agent“个性化”能力</li>
+<li><strong>记忆分类：</strong><ol>
+<li>临时任务状态</li>
+<li>会话中间状态</li>
+<li>长期累积偏好&#x2F;画像</li>
+</ol>
+</li>
+<li><strong>管理原则：</strong> 持久存储、精准召回且不干扰当前执行逻辑</li>
+</ul>
+<h3><span id="五-评估与观测层">五、评估与观测层</span></h3><ul>
+<li><strong>核心功能：</strong> 建立系统反馈机制</li>
+<li><strong>关键组件：</strong><ol>
+<li>核心指标监控板</li>
+<li>自动化测试用例</li>
+<li>异常声报与定位</li>
+<li>错误归因分析</li>
+</ol>
+</li>
+<li><strong>价值：</strong> 避免Agent“自我感觉良好”的认知偏差</li>
+</ul>
+<h3><span id="六-约束控制与兜底层">六、约束控制与兜底层</span></h3><ul>
+<li><strong>核心功能：</strong> 防范系统崩溃性</li>
+<li><strong>三大机制：</strong><ol>
+<li><strong>约束规则：</strong> 明确能力边界（规定什么&#x2F;不能做什么）</li>
+<li><strong>兜底规则：</strong> 发生异常的处理路径</li>
+<li><strong>恢复机制：</strong> 失败后的重试、回滚策略</li>
+</ol>
+</li>
+<li><strong>重要性：</strong> 是业务商业落地的底线，保障在极端情况的可用性</li>
+</ul>
+<h1><span id="使用成果">使用成果：</span></h1><p><img src="/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/image-20260505152925290.png" alt="image-20260505152925290"></p>
+<p><img src="/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/image-20260505152944115.png" alt="image-20260505152944115"></p>
+<p><img src="/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/image-20260505153116118.png" alt="image-20260505153116118"></p>
+
+    </div>
+
+    
+    
+    
+    
+        <div>
+          <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+        </div>
+    
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/" rel="tag"># 日常学习</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2026/05/03/Andrej-Lets-build-GPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="prev" title="Andrej Lets build GPT学习笔记">
+      <i class="fa fa-chevron-left"></i> Andrej Lets build GPT学习笔记
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC82MDg3Mi8zNzM0Mg=="></div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">1.提示词的功能和局限是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">2.为什么我们需要context energing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">3.Harnesss Engineering</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">AI 工程的三阶段演进</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number"></span> <span class="nav-text">成熟 Harness 的六层架构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">0.1.</span> <span class="nav-text">一、上下文边界层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">0.2.</span> <span class="nav-text">二、工具寻址层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">0.3.</span> <span class="nav-text">三、执行编排层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">0.4.</span> <span class="nav-text">四、记忆与状态层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">0.5.</span> <span class="nav-text">五、评估与观测层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">0.6.</span> <span class="nav-text">六、约束控制与兜底层</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number"></span> <span class="nav-text">使用成果：</span></a></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="摄夜"
+      src="/images/knight.jpg">
+  <p class="site-author-name" itemprop="name">摄夜</p>
+  <div class="site-description" itemprop="description">相信的心就是你的魔法</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">55</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/mtdown" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;mtdown" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:2336107524@qq.com" title="E-Mail → mailto:2336107524@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2024 – 
+  <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">摄夜</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">91k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:23</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+
+<button id="chat-toggle-button">AI 助手</button>
+  <div id="chat-widget-container" class="hidden">
+      <div id="chat-widget-header">
+          <h3>mtdown.top AI 助手</h3>
+          <button id="chat-close-button">&times;</button>
+      </div>
+      <div id="chat-messages">
+          <div class="message ai-message">你好！我是博主的AI助手，有什么可以帮您？</div>
+      </div>
+      <form id="chat-form">
+          <input type="text" id="chat-input" placeholder="输入您的问题..." autocomplete="off">
+          <button type="submit">发送</button>
+      </form>
+  </div>
+
+<script src="/js/chat-widget.js"></script>
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='255,0,0' opacity='0.5' zIndex='-1' count='120' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+});
+</script>
+
+
+
+</body>
+</html>
