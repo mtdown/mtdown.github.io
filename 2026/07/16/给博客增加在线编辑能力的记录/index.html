@@ -23,23 +23,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="不得不说，Typora确实是要好用很多，这里说说我是怎么修改Typora设置，能够直接从剪切板复制图片到MD文件的，">
+  <meta name="description" content="这次对博客做了一次小改造：我希望它不只是一个需要在本地手动改文件、手动生成、手动发布的静态页面，而是能够有一个在线编辑入口。最后采用的方案是保留 Hexo 静态博客本身，再加上 Decap CMS、GitHub OAuth 和自动部署流程。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何使用Typora快速在博客插入图片">
-<meta property="og:url" content="http://example.com/2025/06/22/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%BF%AB%E9%80%9F%E5%9C%A8%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/index.html">
+<meta property="og:title" content="给博客增加在线编辑能力的记录">
+<meta property="og:url" content="http://example.com/2026/07/16/%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%BE%91%E8%83%BD%E5%8A%9B%E7%9A%84%E8%AE%B0%E5%BD%95/index.html">
 <meta property="og:site_name" content="Nod Y Lle Delfrydol">
-<meta property="og:description" content="不得不说，Typora确实是要好用很多，这里说说我是怎么修改Typora设置，能够直接从剪切板复制图片到MD文件的，">
+<meta property="og:description" content="这次对博客做了一次小改造：我希望它不只是一个需要在本地手动改文件、手动生成、手动发布的静态页面，而是能够有一个在线编辑入口。最后采用的方案是保留 Hexo 静态博客本身，再加上 Decap CMS、GitHub OAuth 和自动部署流程。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2025/06/22/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%BF%AB%E9%80%9F%E5%9C%A8%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/image-20250622160718684.png">
-<meta property="og:image" content="http://example.com/2025/06/22/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%BF%AB%E9%80%9F%E5%9C%A8%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/image-20250622160805526.png">
-<meta property="article:published_time" content="2025-06-22T08:05:20.000Z">
-<meta property="article:modified_time" content="2025-06-22T08:13:56.486Z">
+<meta property="article:published_time" content="2026-07-16T10:26:22.000Z">
+<meta property="article:modified_time" content="2026-07-16T10:26:52.056Z">
 <meta property="article:author" content="摄夜">
 <meta property="article:tag" content="日常学习">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2025/06/22/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%BF%AB%E9%80%9F%E5%9C%A8%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/image-20250622160718684.png">
 
-<link rel="canonical" href="http://example.com/2025/06/22/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%BF%AB%E9%80%9F%E5%9C%A8%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/">
+<link rel="canonical" href="http://example.com/2026/07/16/%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%BE%91%E8%83%BD%E5%8A%9B%E7%9A%84%E8%AE%B0%E5%BD%95/">
 
 
 <script id="page-configurations">
@@ -52,7 +49,7 @@
   };
 </script>
 
-  <title>如何使用Typora快速在博客插入图片 | Nod Y Lle Delfrydol</title>
+  <title>给博客增加在线编辑能力的记录 | Nod Y Lle Delfrydol</title>
   
 
 
@@ -219,7 +216,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/06/22/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%BF%AB%E9%80%9F%E5%9C%A8%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/07/16/%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%BE%91%E8%83%BD%E5%8A%9B%E7%9A%84%E8%AE%B0%E5%BD%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/knight.jpg">
@@ -232,7 +229,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          如何使用Typora快速在博客插入图片
+          给博客增加在线编辑能力的记录
         </h1>
 
         <div class="post-meta">
@@ -243,7 +240,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2025-06-22 16:05:20 / 修改时间：16:13:56" itemprop="dateCreated datePublished" datetime="2025-06-22T16:05:20+08:00">2025-06-22</time>
+              <time title="创建时间：2026-07-16 18:26:22 / 修改时间：18:26:52" itemprop="dateCreated datePublished" datetime="2026-07-16T18:26:22+08:00">2026-07-16</time>
             </span>
 
           <br>
@@ -252,14 +249,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>349</span>
+              <span>2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -271,16 +268,69 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>不得不说，Typora确实是要好用很多，这里说说我是怎么修改Typora设置，能够直接从剪切板复制图片到MD文件的，</p>
- <span id="more"></span>
+        <p>这次对博客做了一次小改造：我希望它不只是一个需要在本地手动改文件、手动生成、手动发布的静态页面，而是能够有一个在线编辑入口。最后采用的方案是保留 Hexo 静态博客本身，再加上 Decap CMS、GitHub OAuth 和自动部署流程。</p>
+<span id="more"></span>
 
-<p><img src="/2025/06/22/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%BF%AB%E9%80%9F%E5%9C%A8%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/image-20250622160718684.png" alt="打开偏好设置"></p>
-<p>第一步是打开偏好设置，这里面的修改两个地方就行：</p>
-<p>1.插入图片时选择【复制到指定路径】，这个你选择后他会默认给你填好，意思是你复制时会把图片保存到你同文件夹【.&#x2F;】的你的文件名对应的文件夹【{filename}】下去</p>
-<p>2.修改图片语法偏好里面，点击【优先使用相对路径】</p>
-<p><img src="/2025/06/22/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%BF%AB%E9%80%9F%E5%9C%A8%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/image-20250622160805526.png" alt="偏好设置修改"></p>
-<p>修改这两处是因为Hexo搭建博客时，它使用的图片一定是和博文对应的那个文件夹里面的图片。而且使用相对路径时才能正常上传。需要注意，使用相对路径才能上传这一点是我遇到的问题；可能其他人遇到的情况不一样</p>
-<p>参考文献：<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_43401436/article/details/107191688">hexo博客中插入图片失败——解决思路及个人最终解决办法_hexo 文章插入图片失败-CSDN博客</a></p>
+<h2><span id="一开始的问题">一开始的问题</span></h2><p>我原来的博客本质上是一个静态站点。文章写在本地的 Markdown 文件里，Hexo 负责把这些 Markdown 生成网页，然后发布到 GitHub Pages。</p>
+<p>这种方式很稳定，也很适合个人博客，但缺点也很明显：</p>
+<ol>
+<li>每次写文章都要回到本地项目里改文件。</li>
+<li>如果换一台电脑，编辑体验就不方便。</li>
+<li>标签、分类这些内容虽然 Hexo 支持，但也需要自己手动维护。</li>
+<li>没有一个像后台一样的地方，可以直接新建、编辑、保存文章。</li>
+</ol>
+<p>所以这次的目标不是把博客改成完整的后端系统，而是加一个轻量的在线编辑能力。</p>
+<h2><span id="最后采用的方案">最后采用的方案</span></h2><p>这次选择的是 Decap CMS。它不是传统意义上的数据库后台，而是一个适合静态博客的内容管理工具。</p>
+<p>整个流程可以理解为：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">访问博客后台 /admin/</span><br><span class="line">  -&gt; 使用 Decap CMS 编辑文章</span><br><span class="line">  -&gt; 通过 GitHub OAuth 登录</span><br><span class="line">  -&gt; 把文章保存到博客源码仓库</span><br><span class="line">  -&gt; GitHub Actions 自动构建 Hexo</span><br><span class="line">  -&gt; 发布到 GitHub Pages</span><br><span class="line">  -&gt; mtdown.top 更新</span><br></pre></td></tr></table></figure>
+
+<p>也就是说，博客最终仍然是静态网页，但是编辑文章这件事被搬到了浏览器里。</p>
+<h2><span id="我们具体做了什么">我们具体做了什么</span></h2><p>第一步是在博客里增加了一个后台入口：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mtdown.top/admin/</span><br></pre></td></tr></table></figure>
+
+<p>这个页面加载 Decap CMS。进入后可以看到文章列表，也可以新建文章、编辑标题、发布时间、标签、分类和正文。</p>
+<p>第二步是配置 Decap CMS，让它知道文章应该保存到哪里。这里连接的是博客源码仓库：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mtdown/blog-source</span><br></pre></td></tr></table></figure>
+
+<p>这一步很重要，因为在线编辑时修改的不是最终生成出来的网页，而是 Hexo 的源码。只有源码变了，后面才可以重新生成完整博客。</p>
+<p>第三步是处理 GitHub 登录。静态网页不能直接安全地保存 GitHub 的密钥，所以需要一个 OAuth 代理服务。这里用 Render 部署了一个小服务：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mtdown-blog-oauth.onrender.com</span><br></pre></td></tr></table></figure>
+
+<p>它负责完成 GitHub 授权。登录成功后，Decap CMS 才能代表我把文章保存回源码仓库。</p>
+<p>第四步是修改 GitHub OAuth App 的回调地址。这里一开始容易填错。正确的回调地址应该是 OAuth 代理服务自己的地址：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mtdown-blog-oauth.onrender.com/callback</span><br></pre></td></tr></table></figure>
+
+<p>而不是：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mtdown.top/callback</span><br></pre></td></tr></table></figure>
+
+<p>原因是 GitHub 登录完成后，需要先回到 Render 上的 OAuth 代理，由它完成最后的授权交换，再把结果交给博客后台。</p>
+<p>第五步是配置自动发布。以后只要后台保存文章，源码仓库产生变化，GitHub Actions 就会自动执行：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">安装依赖</span><br><span class="line">生成 Hexo 静态文件</span><br><span class="line">发布到 mtdown.github.io</span><br><span class="line">更新 mtdown.top</span><br></pre></td></tr></table></figure>
+
+<p>这样编辑和发布就连起来了。</p>
+<h2><span id="这套方案的特点">这套方案的特点</span></h2><p>我觉得这套方案比较适合个人博客，因为它没有引入太重的后端。</p>
+<p>它的好处是：</p>
+<ol>
+<li>博客访问速度仍然是静态站的速度。</li>
+<li>不需要自己维护数据库。</li>
+<li>文章仍然是 Markdown 文件，长期可迁移。</li>
+<li>可以在浏览器里编辑文章，不必每次打开本地项目。</li>
+<li>GitHub 仍然保存完整历史记录，出问题可以追溯。</li>
+</ol>
+<p>它的限制也很清楚：</p>
+<ol>
+<li>登录依赖 GitHub OAuth。</li>
+<li>Render 免费服务可能会休眠，第一次打开登录会慢一点。</li>
+<li>自动发布依赖 GitHub Actions。</li>
+<li>这不是给所有访客使用的后台，只适合自己编辑内容。</li>
+</ol>
+<h2><span id="关于评论功能">关于评论功能</span></h2><p>这次暂时没有做评论功能。评论和在线编辑不一样，评论是给所有访客使用的交互能力，会涉及防垃圾评论、权限、存储和展示。</p>
+<p>如果以后要做评论，我更倾向于单独处理，比如使用 Giscus 这类基于 GitHub Discussions 的方案。这样可以避免自己维护数据库，也能保留静态博客的简单性。</p>
+<h2><span id="总结">总结</span></h2><p>这次改造让我对静态博客有了一个更清晰的认识：静态博客并不一定只能手动维护。它可以仍然保持静态发布，同时把编辑、授权、构建这些动作交给外部服务完成。</p>
+<p>最终得到的是一个比较轻量的内容管理流程：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Hexo 负责生成博客</span><br><span class="line">Decap CMS 负责在线编辑</span><br><span class="line">GitHub 负责保存源码</span><br><span class="line">Render 负责登录授权</span><br><span class="line">GitHub Actions 负责自动发布</span><br><span class="line">GitHub Pages 负责展示网站</span><br></pre></td></tr></table></figure>
+
+<p>这样博客还是我的 Markdown 仓库，但编辑体验已经更接近一个真正的个人内容后台了。</p>
 
     </div>
 
@@ -312,13 +362,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2025/06/22/%E9%80%9A%E8%BF%87Tailscale%E7%AA%81%E7%A0%B4%E5%86%85%E7%BD%91%E9%99%90%E5%88%B6%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="prev" title="通过Tailscale突破内网限制连接服务器">
-      <i class="fa fa-chevron-left"></i> 通过Tailscale突破内网限制连接服务器
+    <a href="/2026/05/05/Harness-Engineering%E5%AD%A6%E4%B9%A0/" rel="prev" title="Harness Engineering学习">
+      <i class="fa fa-chevron-left"></i> Harness Engineering学习
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/" rel="next" title="AI行业共识观后感">
-      AI行业共识观后感 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -383,6 +430,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">一开始的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">最后采用的方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">我们具体做了什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">这套方案的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">关于评论功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

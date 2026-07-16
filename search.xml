@@ -245,6 +245,19 @@
 ]]></content>
   </entry>
   <entry>
+    <title>RAG扩展学习</title>
+    <url>/2025/07/18/RAG%E6%89%A9%E5%B1%95%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<p>RAG，检索增强，生成是处理大模型需要根据自有数据库回答问题，矫正语言习惯使用的技术，其分块效果在帮助大模型上也有着良好的效果。今天看到B站有一个视频总结了整整16种RAG方案。我决定跟着他，总结RAG的内容。</p>
+<span id="more"></span>
+
+<p><img src="/2025/07/18/RAG%E6%89%A9%E5%B1%95%E5%AD%A6%E4%B9%A0/image-20250820152236814.png" alt="image-20250820152236814"></p>
+<h1><span id="参考资料">参考资料：</span></h1><p><a href="https://www.bilibili.com/video/BV1wVeTz4ENJ/?spm_id_from=333.337.search-card.all.click&vd_source=ecbe42ffb25fea0da636165433fb75d6">【大模型RAG】16种RAG方案大比拼，谁才是RAG最佳选择？30分钟带你搞懂这16种RAG方案，全程干货！少走99%的弯路！大模型&#x2F;LLM&#x2F;RAG_哔哩哔哩_bilibili</a></p>
+]]></content>
+      <tags>
+        <tag>日常学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>SQL相关</title>
     <url>/2025/09/04/SQL%E7%9B%B8%E5%85%B3/</url>
     <content><![CDATA[<p>数据库相关知识整理</p>
@@ -659,35 +672,6 @@
       </tags>
   </entry>
   <entry>
-    <title>RAG扩展学习</title>
-    <url>/2025/07/18/RAG%E6%89%A9%E5%B1%95%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<p>RAG，检索增强，生成是处理大模型需要根据自有数据库回答问题，矫正语言习惯使用的技术，其分块效果在帮助大模型上也有着良好的效果。今天看到B站有一个视频总结了整整16种RAG方案。我决定跟着他，总结RAG的内容。</p>
-<span id="more"></span>
-
-<p><img src="/2025/07/18/RAG%E6%89%A9%E5%B1%95%E5%AD%A6%E4%B9%A0/image-20250820152236814.png" alt="image-20250820152236814"></p>
-<h1><span id="参考资料">参考资料：</span></h1><p><a href="https://www.bilibili.com/video/BV1wVeTz4ENJ/?spm_id_from=333.337.search-card.all.click&vd_source=ecbe42ffb25fea0da636165433fb75d6">【大模型RAG】16种RAG方案大比拼，谁才是RAG最佳选择？30分钟带你搞懂这16种RAG方案，全程干货！少走99%的弯路！大模型&#x2F;LLM&#x2F;RAG_哔哩哔哩_bilibili</a></p>
-]]></content>
-      <tags>
-        <tag>日常学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java多态</title>
-    <url>/2024/09/15/java%E5%A4%9A%E6%80%81/</url>
-    <content><![CDATA[<p>这个部分我觉得稍稍有点杂，毕竟函数，属性都存在多态。考虑到向上继承，向下继承这些，调用的顺序和麻烦程度都会递增。<br> <span id="more"></span></p>
-<h1><span id="方法的多态">方法的多态</span></h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Dog extends animal&#123;</span><br><span class="line">    private String food=&quot;骨头&quot;;</span><br><span class="line">    public Dog(String name, int age, String sex, String food) &#123;</span><br><span class="line">        super(name, age, sex);</span><br><span class="line">        this.food = food;</span><br><span class="line">    &#125;</span><br><span class="line">    public Dog(String name, int age, String sex) &#123;</span><br><span class="line">        super(name, age, sex);</span><br><span class="line">        //这里就使用了多态，通过参数的不同，调用同一个函数名但有不同的效果</span><br><span class="line">    &#125;</span><br><span class="line">    public String eat()&#123;</span><br><span class="line">        return food;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这里面的两个构造函数就是多态的一种，基于传参的多态<br>2024&#x2F;10&#x2F;2 21:19:13<br>关于编译类型增加细节<br>（1）一个对象的编译类型和运行类型可以不一致<br>（2）编译类型在定义对象时，就确定了，不能改<br>（3）运行类型是可以变的<br>（4）编译类型看定义时 &#x3D; 号的左边，运行类型看 &#x3D; 号右边。<br>（5）属性的值看编译类型，方法看运行<br>（6）继承会改变运行类型</p>
-<h1><span id="多态练习1">多态练习1</span></h1><p><img src="/images/%E5%A4%9A%E6%80%81.png" alt="练习题目" title="练习题"><br>对于代码：</p>
-<figure class="highlight plaintext"><figcaption><span>class PolyExercise02 &#123;</span></figcaption><table><tr><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Sub sub = new Sub();</span><br><span class="line">    System.out.println(sub.count);</span><br><span class="line">    sub.display();</span><br><span class="line">    Base b=sub;</span><br><span class="line">    System.out.println(b==sub);</span><br><span class="line">    System.out.println(b.count);</span><br><span class="line">    b.display();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>首先123都只是单纯地定义新类输出方法和属性，因此都是20.此时编译类型和运行类型都是sub</p>
-<figure class="highlight plaintext"><figcaption><span>sub </span></figcaption><table><tr><td class="code"><pre><span class="line">      System.out.println(sub.count);</span><br><span class="line">      sub.display();</span><br><span class="line">Base b=sub;</span><br></pre></td></tr></table></figure>
-<p>直到4进行了一次向上转型，此时b的编译类型Base，运行类型Sub，方法以Sub为准，属性以Base为准，因此我认为输出时false，10，20。结果如下图所示：<br><img src="/images/q2.png" alt="运行结果" title="结果"><br>对System.out.println(b&#x3D;&#x3D;sub)判断失误，原因是这里的&#x3D;&#x3D;判断对象是地址，代码：Base b&#x3D;sub 的对象赋值的本质是给了b和sub指向一个空间的地址。我姑且理解为以后在对两个对象进行判断时，考虑地址是否指向同一个东西<br>#多态练习2#<br>这里提到了个很重要的动态绑定机制，</p>
-]]></content>
-      <tags>
-        <tag>就业准备</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Vue Vben Admin 安装踩坑复盘：Windows + nvm 环境下 pnpm / catalog: 依赖问题</title>
     <url>/2026/02/27/Vue-Vben-Admin-%E5%AE%89%E8%A3%85%E8%B8%A9%E5%9D%91%E5%A4%8D%E7%9B%98%EF%BC%9AWindows-nvm-%E7%8E%AF%E5%A2%83%E4%B8%8B-pnpm-catalog-%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<h2><span id="背景">背景</span></h2><p>我准备使用 <strong>vue-vben-admin（Vue3 后台模板）</strong>作为 MotorHub 项目的管理后台。按照官方文档 clone 后执行安装：</p>
@@ -787,6 +771,49 @@
 ]]></content>
       <tags>
         <tag>日常学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java封装</title>
+    <url>/2024/09/14/java%E5%B0%81%E8%A3%85/</url>
+    <content><![CDATA[<p>本文的目的在于复习一些学习JAVA过程时难以理解或者是忘却的部分，<br> <span id="more"></span><br>封装：这个部分比较好理解，其实就是设置个接口然后调用函数就行.目的在于保护一些私密的属性，只能用事先确定的函数进行修改，从而提高程序的安全性</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package train.com.example1;</span><br><span class="line"></span><br><span class="line">public class ex1 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Person person = new Person();</span><br><span class="line">        System.out.println(person.name);</span><br><span class="line">        System.out.println(person.getMoney());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Person&#123;</span><br><span class="line">    private int age=10;</span><br><span class="line">    protected int money=100;</span><br><span class="line">    public String name =&quot;小张&quot;;</span><br><span class="line">    int lucknumber=7;</span><br><span class="line">    public int getMoney() &#123;</span><br><span class="line">        return money;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里面Person类的getMoney就算是最初级的封装，借此可以访问到被private限制，不能直接访问的类型。<br>访问修饰符格式如下：<br><img src="/images/%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6.png" alt="访问修饰符" title="访问修饰符"><br>比较需要注意的是这里面的包和类存在重叠的情况，对于文件：</p>
+<pre><code>class Dog&#123;
+    private String name=&quot;小黄&quot;;
+    public String getName() &#123;
+        return name;
+    &#125;
+&#125;
+
+class Dog2 extends Dog&#123;
+    String name=&quot;小小&quot;;
+    @Override
+    public String getName() &#123;
+        return super.name;
+    &#125;
+&#125;
+```这俩就是一类，且同包，当访问修饰符号为默认时，Dog2就能访问到父类的name，只会在私有的情况下报错。因此，当具备多个身份，即又是子类又是同包时，会采用同包的规则。
+</code></pre>
+]]></content>
+      <tags>
+        <tag>就业准备</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java多态</title>
+    <url>/2024/09/15/java%E5%A4%9A%E6%80%81/</url>
+    <content><![CDATA[<p>这个部分我觉得稍稍有点杂，毕竟函数，属性都存在多态。考虑到向上继承，向下继承这些，调用的顺序和麻烦程度都会递增。<br> <span id="more"></span></p>
+<h1><span id="方法的多态">方法的多态</span></h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Dog extends animal&#123;</span><br><span class="line">    private String food=&quot;骨头&quot;;</span><br><span class="line">    public Dog(String name, int age, String sex, String food) &#123;</span><br><span class="line">        super(name, age, sex);</span><br><span class="line">        this.food = food;</span><br><span class="line">    &#125;</span><br><span class="line">    public Dog(String name, int age, String sex) &#123;</span><br><span class="line">        super(name, age, sex);</span><br><span class="line">        //这里就使用了多态，通过参数的不同，调用同一个函数名但有不同的效果</span><br><span class="line">    &#125;</span><br><span class="line">    public String eat()&#123;</span><br><span class="line">        return food;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里面的两个构造函数就是多态的一种，基于传参的多态<br>2024&#x2F;10&#x2F;2 21:19:13<br>关于编译类型增加细节<br>（1）一个对象的编译类型和运行类型可以不一致<br>（2）编译类型在定义对象时，就确定了，不能改<br>（3）运行类型是可以变的<br>（4）编译类型看定义时 &#x3D; 号的左边，运行类型看 &#x3D; 号右边。<br>（5）属性的值看编译类型，方法看运行<br>（6）继承会改变运行类型</p>
+<h1><span id="多态练习1">多态练习1</span></h1><p><img src="/images/%E5%A4%9A%E6%80%81.png" alt="练习题目" title="练习题"><br>对于代码：</p>
+<figure class="highlight plaintext"><figcaption><span>class PolyExercise02 &#123;</span></figcaption><table><tr><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Sub sub = new Sub();</span><br><span class="line">    System.out.println(sub.count);</span><br><span class="line">    sub.display();</span><br><span class="line">    Base b=sub;</span><br><span class="line">    System.out.println(b==sub);</span><br><span class="line">    System.out.println(b.count);</span><br><span class="line">    b.display();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>首先123都只是单纯地定义新类输出方法和属性，因此都是20.此时编译类型和运行类型都是sub</p>
+<figure class="highlight plaintext"><figcaption><span>sub </span></figcaption><table><tr><td class="code"><pre><span class="line">      System.out.println(sub.count);</span><br><span class="line">      sub.display();</span><br><span class="line">Base b=sub;</span><br></pre></td></tr></table></figure>
+<p>直到4进行了一次向上转型，此时b的编译类型Base，运行类型Sub，方法以Sub为准，属性以Base为准，因此我认为输出时false，10，20。结果如下图所示：<br><img src="/images/q2.png" alt="运行结果" title="结果"><br>对System.out.println(b&#x3D;&#x3D;sub)判断失误，原因是这里的&#x3D;&#x3D;判断对象是地址，代码：Base b&#x3D;sub 的对象赋值的本质是给了b和sub指向一个空间的地址。我姑且理解为以后在对两个对象进行判断时，考虑地址是否指向同一个东西<br>#多态练习2#<br>这里提到了个很重要的动态绑定机制，</p>
+]]></content>
+      <tags>
+        <tag>就业准备</tag>
       </tags>
   </entry>
   <entry>
@@ -1004,6 +1031,18 @@
       </tags>
   </entry>
   <entry>
+    <title>“java算法题目”</title>
+    <url>/2025/09/09/java%E7%AE%97%E6%B3%95%E9%A2%98%E7%9B%AE/</url>
+    <content><![CDATA[<p>我觉得还是要给自己的算法题一些分类，这有利于我以后求职，也是自己梳理一下。我从力扣100一遍遍做，遇到什么就补充什么进去，今天先这样。</p>
+<span id="more"></span>
+
+<p><img src="/2025/09/09/java%E7%AE%97%E6%B3%95%E9%A2%98%E7%9B%AE/image-20250909181704696.png" alt="image-20250909181704696"></p>
+]]></content>
+      <tags>
+        <tag>就业准备</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>java开发记录</title>
     <url>/2025/10/01/java%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<p>这里记录的是我学习java的时候，了解到的一些细节的知识。这些内容会比较细碎</p>
@@ -1066,44 +1105,6 @@
       </tags>
   </entry>
   <entry>
-    <title>java封装</title>
-    <url>/2024/09/14/java%E5%B0%81%E8%A3%85/</url>
-    <content><![CDATA[<p>本文的目的在于复习一些学习JAVA过程时难以理解或者是忘却的部分，<br> <span id="more"></span><br>封装：这个部分比较好理解，其实就是设置个接口然后调用函数就行.目的在于保护一些私密的属性，只能用事先确定的函数进行修改，从而提高程序的安全性</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package train.com.example1;</span><br><span class="line"></span><br><span class="line">public class ex1 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Person person = new Person();</span><br><span class="line">        System.out.println(person.name);</span><br><span class="line">        System.out.println(person.getMoney());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Person&#123;</span><br><span class="line">    private int age=10;</span><br><span class="line">    protected int money=100;</span><br><span class="line">    public String name =&quot;小张&quot;;</span><br><span class="line">    int lucknumber=7;</span><br><span class="line">    public int getMoney() &#123;</span><br><span class="line">        return money;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这里面Person类的getMoney就算是最初级的封装，借此可以访问到被private限制，不能直接访问的类型。<br>访问修饰符格式如下：<br><img src="/images/%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6.png" alt="访问修饰符" title="访问修饰符"><br>比较需要注意的是这里面的包和类存在重叠的情况，对于文件：</p>
-<pre><code>class Dog&#123;
-    private String name=&quot;小黄&quot;;
-    public String getName() &#123;
-        return name;
-    &#125;
-&#125;
-
-class Dog2 extends Dog&#123;
-    String name=&quot;小小&quot;;
-    @Override
-    public String getName() &#123;
-        return super.name;
-    &#125;
-&#125;
-```这俩就是一类，且同包，当访问修饰符号为默认时，Dog2就能访问到父类的name，只会在私有的情况下报错。因此，当具备多个身份，即又是子类又是同包时，会采用同包的规则。
-</code></pre>
-]]></content>
-      <tags>
-        <tag>就业准备</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java相关知识汇总</title>
-    <url>/2025/09/08/java%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E6%B1%87%E6%80%BB/</url>
-    <content><![CDATA[<p>根据java刷题知识路线归纳总结，以期能流畅背诵</p>
-<span id="more"></span>
-
-<h1><span id="1java基本语法与数据类型">1.java基本语法与数据类型</span></h1><h2><span id="11java的基本语法结构">1.1java的基本语法结构</span></h2><h2><span id="12基本数据类型与引用数据类型的区别">1.2基本数据类型与引用数据类型的区别</span></h2><h2><span id="13常用运算符的应用">1.3常用运算符的应用</span></h2>]]></content>
-      <tags>
-        <tag>就业准备</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>java继承</title>
     <url>/2024/09/15/java%E7%BB%A7%E6%89%BF/</url>
     <content><![CDATA[<p>继承的作用是解决代码复用的问题，在公用属性的基础上进行添加特有的操作。<br> <span id="more"></span><br>写法如下：</p>
@@ -1121,51 +1122,14 @@ class Dog2 extends Dog&#123;
       </tags>
   </entry>
   <entry>
-    <title>“java算法题目”</title>
-    <url>/2025/09/09/java%E7%AE%97%E6%B3%95%E9%A2%98%E7%9B%AE/</url>
-    <content><![CDATA[<p>我觉得还是要给自己的算法题一些分类，这有利于我以后求职，也是自己梳理一下。我从力扣100一遍遍做，遇到什么就补充什么进去，今天先这样。</p>
+    <title>java相关知识汇总</title>
+    <url>/2025/09/08/java%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E6%B1%87%E6%80%BB/</url>
+    <content><![CDATA[<p>根据java刷题知识路线归纳总结，以期能流畅背诵</p>
 <span id="more"></span>
 
-<p><img src="/2025/09/09/java%E7%AE%97%E6%B3%95%E9%A2%98%E7%9B%AE/image-20250909181704696.png" alt="image-20250909181704696"></p>
-]]></content>
+<h1><span id="1java基本语法与数据类型">1.java基本语法与数据类型</span></h1><h2><span id="11java的基本语法结构">1.1java的基本语法结构</span></h2><h2><span id="12基本数据类型与引用数据类型的区别">1.2基本数据类型与引用数据类型的区别</span></h2><h2><span id="13常用运算符的应用">1.3常用运算符的应用</span></h2>]]></content>
       <tags>
         <tag>就业准备</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>langchain学习记录</title>
-    <url>/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<p>​			记录一下自己学习langchain的过程。首先是模型安装和部署。</p>
-<span id="more"></span>
-
-<h1><span id="1安装conda-环境">1.安装conda 环境</span></h1><p>​				这一步没啥好说的，首先登陆官网<a href="https://www.anaconda.com/download/success">Download Now | Anaconda</a>根据你的系统选择合适的本本，这里左边Distribution Installers是指图形界面安装程序，Miniconda Installers是命令行安装程序。根据自己习惯选就行。</p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250701195719017.png" alt="image-20250701195719017"></p>
-<p>​			安装完成后会有一个anaconda的界面，输入<code>conda --version</code>和<code>python --version</code>检查版本，这俩都是安装时自带的 Python 版本，Base表示你处于默认的激活环境，一般来说我们不会在这个环境下操作，而是自己创建一个。</p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250701200720245.png" alt="image-20250701200720245"></p>
-<p>​			创建的环境的命令是<code>conda create --name ml_env python=3.9,</code>意思是创建名为ml_env的环境，使用Python 3.9；然后使用<code>conda env list</code>可以检查你拥有的环境，<code>conda activate ml_env</code>表示激活ml_env环境。</p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250701201412106.png" alt="image-20250701201412106"></p>
-<p>​			创建好了新环境，我们就激活它，然后在那个环境里解决大模型的部署问题。</p>
-<h1><span id="2ollama部署qwen">2.ollama部署qwen</span></h1><p>​			这里就直接跟着教程走吧，登录官网<a href="https://ollama.com/library/qwen3:8b">qwen3:8b</a>，下载ollama，然后搜索你需要的模型，Qwen3会有一堆这样的模型和词条，你需要哪个版本就直接用那个版本下面的代码就行，首次运行他会自动给你下载：</p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702121036039.png" alt="image-20250702121036039"></p>
-<p>​			<code>ollama run qwen3:8b</code>这一步运行完后就能正常操作了。但这里需要注意一一点：ollama给你的模型基本都是量化后的，这是为了方便你本地运行：<img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702121239065.png" alt="image-20250702121239065"></p>
-<p>​			输入<code>curl http://localhost:11434/api/tags</code>代码，你也会看到<code>&quot;quantization_level&quot;:&quot;Q4_K_M&quot;&#125;</code>，这证明我们下载的是个四位量化的模型，全量的模型应该是：<code>quantize: none</code><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702122414057.png" alt="image-20250702122414057"></p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702122150980.png" alt="image-20250702122150980"></p>
-<p>​			如果你要使用全量化的模型，那就需要到huggingface这种模型网站去他们<a href="https://huggingface.co/Qwen/collections">Qwen (Qwen)</a>的GGUF格式文件，而这个可就要大得多了：</p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702134841259.png" alt="image-20250702134841259"></p>
-<p>​			此外，你还需要根据<a href="https://qwen.readthedocs.io/zh-cn/latest/run_locally/ollama.html">Ollama - Qwen</a>的流程创建文件：</p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702134931270.png" alt="image-20250702134931270"></p>
-<p>​				然后这里我们说一下ollama调用API时的几个默认接口：</p>
-<p>​				在本地部署时有个基础的：<a href="http://localhost:11434，然后根据你的需求，额外增加生成文本补全端点：POST">http://localhost:11434，然后根据你的需求，额外增加生成文本补全端点：POST</a> &#x2F;api&#x2F;generate；对话式交互端点：POST &#x2F;api&#x2F;chat；我们这里首先点开1.新建接口，换成POST，并填写<a href="http://localhost:11434/api/chat">http://localhost:11434/api/chat</a></p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250703205010332.png" alt="image-20250703205010332"></p>
-<p>​			然后我们这里就点击Body，选择里面的json格式，并参考这样的格式添加一个示例。请注意，json格式不支持注释，我这里是为了方便理解和后续替换对应的块。<img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250703205111334.png" alt="image-20250703205111334"></p>
-<p>​			这里面的流式传输需要额外说明一下，流式传输是一种将数据分割成多个连续的小块（chunk）实时传输的方式，如果你选择了流式传输，那他就会一个字一个字（Token）的给你反馈：<img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250703205346011.png" alt="image-20250703205346011"></p>
-<p>此外 ，关于这个部分，在我看的网课里面有一张很好的图概括：</p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250706232003714.png" alt="image-20250706232003714"></p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250706233801408.png" alt="image-20250706233801408"></p>
-<h1><span id="参考目录">参考目录</span></h1><p>1.<a href="https://ollama.com/blog/thinking">思考 ·Ollama 博客</a></p>
-]]></content>
-      <tags>
-        <tag>实习准备</tag>
       </tags>
   </entry>
   <entry>
@@ -1244,6 +1208,42 @@ class Dog2 extends Dog&#123;
 ]]></content>
       <tags>
         <tag>日常学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>langchain学习记录</title>
+    <url>/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p>​			记录一下自己学习langchain的过程。首先是模型安装和部署。</p>
+<span id="more"></span>
+
+<h1><span id="1安装conda-环境">1.安装conda 环境</span></h1><p>​				这一步没啥好说的，首先登陆官网<a href="https://www.anaconda.com/download/success">Download Now | Anaconda</a>根据你的系统选择合适的本本，这里左边Distribution Installers是指图形界面安装程序，Miniconda Installers是命令行安装程序。根据自己习惯选就行。</p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250701195719017.png" alt="image-20250701195719017"></p>
+<p>​			安装完成后会有一个anaconda的界面，输入<code>conda --version</code>和<code>python --version</code>检查版本，这俩都是安装时自带的 Python 版本，Base表示你处于默认的激活环境，一般来说我们不会在这个环境下操作，而是自己创建一个。</p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250701200720245.png" alt="image-20250701200720245"></p>
+<p>​			创建的环境的命令是<code>conda create --name ml_env python=3.9,</code>意思是创建名为ml_env的环境，使用Python 3.9；然后使用<code>conda env list</code>可以检查你拥有的环境，<code>conda activate ml_env</code>表示激活ml_env环境。</p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250701201412106.png" alt="image-20250701201412106"></p>
+<p>​			创建好了新环境，我们就激活它，然后在那个环境里解决大模型的部署问题。</p>
+<h1><span id="2ollama部署qwen">2.ollama部署qwen</span></h1><p>​			这里就直接跟着教程走吧，登录官网<a href="https://ollama.com/library/qwen3:8b">qwen3:8b</a>，下载ollama，然后搜索你需要的模型，Qwen3会有一堆这样的模型和词条，你需要哪个版本就直接用那个版本下面的代码就行，首次运行他会自动给你下载：</p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702121036039.png" alt="image-20250702121036039"></p>
+<p>​			<code>ollama run qwen3:8b</code>这一步运行完后就能正常操作了。但这里需要注意一一点：ollama给你的模型基本都是量化后的，这是为了方便你本地运行：<img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702121239065.png" alt="image-20250702121239065"></p>
+<p>​			输入<code>curl http://localhost:11434/api/tags</code>代码，你也会看到<code>&quot;quantization_level&quot;:&quot;Q4_K_M&quot;&#125;</code>，这证明我们下载的是个四位量化的模型，全量的模型应该是：<code>quantize: none</code><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702122414057.png" alt="image-20250702122414057"></p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702122150980.png" alt="image-20250702122150980"></p>
+<p>​			如果你要使用全量化的模型，那就需要到huggingface这种模型网站去他们<a href="https://huggingface.co/Qwen/collections">Qwen (Qwen)</a>的GGUF格式文件，而这个可就要大得多了：</p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702134841259.png" alt="image-20250702134841259"></p>
+<p>​			此外，你还需要根据<a href="https://qwen.readthedocs.io/zh-cn/latest/run_locally/ollama.html">Ollama - Qwen</a>的流程创建文件：</p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702134931270.png" alt="image-20250702134931270"></p>
+<p>​				然后这里我们说一下ollama调用API时的几个默认接口：</p>
+<p>​				在本地部署时有个基础的：<a href="http://localhost:11434，然后根据你的需求，额外增加生成文本补全端点：POST">http://localhost:11434，然后根据你的需求，额外增加生成文本补全端点：POST</a> &#x2F;api&#x2F;generate；对话式交互端点：POST &#x2F;api&#x2F;chat；我们这里首先点开1.新建接口，换成POST，并填写<a href="http://localhost:11434/api/chat">http://localhost:11434/api/chat</a></p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250703205010332.png" alt="image-20250703205010332"></p>
+<p>​			然后我们这里就点击Body，选择里面的json格式，并参考这样的格式添加一个示例。请注意，json格式不支持注释，我这里是为了方便理解和后续替换对应的块。<img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250703205111334.png" alt="image-20250703205111334"></p>
+<p>​			这里面的流式传输需要额外说明一下，流式传输是一种将数据分割成多个连续的小块（chunk）实时传输的方式，如果你选择了流式传输，那他就会一个字一个字（Token）的给你反馈：<img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250703205346011.png" alt="image-20250703205346011"></p>
+<p>此外 ，关于这个部分，在我看的网课里面有一张很好的图概括：</p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250706232003714.png" alt="image-20250706232003714"></p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250706233801408.png" alt="image-20250706233801408"></p>
+<h1><span id="参考目录">参考目录</span></h1><p>1.<a href="https://ollama.com/blog/thinking">思考 ·Ollama 博客</a></p>
+]]></content>
+      <tags>
+        <tag>实习准备</tag>
       </tags>
   </entry>
   <entry>
@@ -1522,6 +1522,11 @@ public class Application &#123;
       </tags>
   </entry>
   <entry>
+    <title>n8n项目试做</title>
+    <url>/2025/08/29/n8n%E9%A1%B9%E7%9B%AE%E8%AF%95%E5%81%9A/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>node js基础</title>
     <url>/2026/04/10/node-js%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<p>Node.js 是一个基于 Chrome V8 引擎的 <strong>JavaScript 运行环境</strong></p>
@@ -1529,11 +1534,6 @@ public class Application &#123;
       <tags>
         <tag>日常学习</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>n8n项目试做</title>
-    <url>/2025/08/29/n8n%E9%A1%B9%E7%9B%AE%E8%AF%95%E5%81%9A/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>qwen3模型的效果记录</title>
@@ -1932,6 +1932,146 @@ class UserService &#123;
 ]]></content>
   </entry>
   <entry>
+    <title>力扣学习记录lambda表达式</title>
+    <url>/2026/01/22/%E5%8A%9B%E6%89%A3%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+    <content><![CDATA[<p>在做 LeetCode 347（前 K 个高频元素）时，我最开始的思路是简单的“统计频率 -&gt; 找出频率大于 k 的数”。但后来发现题目要求的是<strong>“频率最高的 k 个数”</strong>，这是一个经典的 Top K 问题。</p>
+<p>在这个过程中，我对 Java 的 <code>PriorityQueue</code>（优先队列）、Lambda 表达式以及堆排序的本质有了全新的认识。</p>
+<span id="more"></span>
+
+<p>先贴结果代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import java.util.*;</span><br><span class="line"></span><br><span class="line">class Solution &#123;</span><br><span class="line">    public int[] topKFrequent(int[] nums, int k) &#123;</span><br><span class="line">        // 1. 使用 HashMap 统计每个数字出现的频率</span><br><span class="line">        Map&lt;Integer, Integer&gt; counts = new HashMap&lt;&gt;();</span><br><span class="line">        for (int num : nums) &#123;</span><br><span class="line">            counts.put(num, counts.getOrDefault(num, 0) + 1);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // 2. 创建优先队列（小顶堆）</span><br><span class="line">        // 核心逻辑：(a, b) -&gt; counts.get(a) - counts.get(b)</span><br><span class="line">        // 含义：按照频率从小到大排。频率低的在堆顶，随时准备被踢走。</span><br><span class="line">        PriorityQueue&lt;Integer&gt; pq = new PriorityQueue&lt;&gt;((a, b) -&gt; counts.get(a) - counts.get(b));</span><br><span class="line"></span><br><span class="line">        // 3. 遍历 Map，维护一个大小为 k 的堆</span><br><span class="line">        for (int num : counts.keySet()) &#123;</span><br><span class="line">            pq.offer(num); // 入队</span><br><span class="line">            // 如果堆大了，就把频率最小的（堆顶）弹出去</span><br><span class="line">            if (pq.size() &gt; k) &#123;</span><br><span class="line">                pq.poll();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // 4. 输出结果</span><br><span class="line">        int[] res = new int[k];</span><br><span class="line">        for (int i = 0; i &lt; k; i++) &#123;</span><br><span class="line">            res[i] = pq.poll();</span><br><span class="line">        &#125;</span><br><span class="line">        return res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个代码里面，我最开始很不理解，这一个确实是我以前没怎么见过，后来理解了这是一种特殊的增加规则的的方法。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">PriorityQueue&lt;Integer&gt; pq = new PriorityQueue&lt;&gt;((a, b) -&gt; counts.get(a) - counts.get(b));</span><br></pre></td></tr></table></figure>
+
+<p>这行代码并不只是为了“排序”，它是在<strong>“立规矩”</strong>。</p>
+<ul>
+<li>**<code>a</code> 和 <code>b</code>**：是队列里的数字（选手）。</li>
+<li>**<code>counts.get(...)</code>**：是比较的标准（看频率，不看数字本身）。</li>
+<li><strong>返回值</strong>：虽然写的是减法算式，但 Java 接收到的是一个<strong>整数（int）</strong>。<ul>
+<li>负数：<code>a</code> 轻（上浮&#x2F;排前面）。</li>
+<li>正数：<code>a</code> 重（下沉&#x2F;排后面）。</li>
+</ul>
+</li>
+</ul>
+<p>从而保证了每次add都会维护，把小数值给上浮。</p>
+<h2><span id="2comparator-万能口诀">2.Comparator 万能口诀</span></h2><p>根据学习，永远是写（a,b）根据目标效果，选择是a-b还是b-a</p>
+<table>
+<thead>
+<tr>
+<th><strong>目标效果</strong></th>
+<th><strong>核心写法</strong></th>
+<th><strong>记忆口诀</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>小</strong>数值在堆顶 &#x2F; 排前面</td>
+<td><code>a - b</code></td>
+<td><strong>前减后</strong>（我减你）</td>
+</tr>
+<tr>
+<td><strong>大</strong>数值在堆顶 &#x2F; 排前面</td>
+<td><code>b - a</code></td>
+<td><strong>后减前</strong>（你减我）</td>
+</tr>
+<tr>
+<td><strong>String 长度短</strong>在堆顶</td>
+<td><code>a.length() - b.length()</code></td>
+<td>前减后</td>
+</tr>
+<tr>
+<td><strong>String 字典序</strong>靠前</td>
+<td><code>a.compareTo(b)</code></td>
+<td>顺着比</td>
+</tr>
+</tbody></table>
+<p>而对于一些复杂的情况，我们可以在里面增加代码串。逻辑是一样的，返回的数值小于0，就是选择数对的A上浮</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(a, b) -&gt; &#123;</span><br><span class="line">    int freqCompare = counts.get(a) - counts.get(b);</span><br><span class="line">    if (freqCompare != 0) &#123;</span><br><span class="line">        return freqCompare; // 频率不同：按频率小顶堆（小的在顶）</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        // 频率相同：进入这里的瞬间，freqCompare 已经是 0 了，不能用了！</span><br><span class="line">        // 题目要求：数字大的在堆顶 -&gt; 大顶堆逻辑 -&gt; 后减前</span><br><span class="line">        return b - a;  // &lt;--- 这里才是正确答案</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2><span id="3扩展用法">3.扩展用法</span></h2><p>不止是这个小根堆，大根堆场景，我们还能用在别的地方：</p>
+<h3><span id="31-给数组x2f列表排序-arrayssort-x2f-collectionssort">3.1 给数组&#x2F;列表排序 (<code>Arrays.sort</code> &#x2F; <code>Collections.sort</code>)</span></h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">List&lt;String&gt; list = new ArrayList&lt;&gt;(Arrays.asList(&quot;apple&quot;, &quot;hi&quot;, &quot;banana&quot;));</span><br><span class="line"></span><br><span class="line">// 旧写法：Collections.sort(list, new Comparator...);</span><br><span class="line">// 新写法（Lambda）：</span><br><span class="line">list.sort((a, b) -&gt; a.length() - b.length()); </span><br><span class="line"></span><br><span class="line">System.out.println(list); // 输出 [hi, apple, banana]</span><br></pre></td></tr></table></figure>
+
+<h3><span id="32-给二维数组排序">3.2 给二维数组排序</span></h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// intervals 是个二维数组，里面的元素是 int[] (一维数组)</span><br><span class="line">// 所以这里的 a 和 b 代表的是每一行，即 &#123;1,3&#125; 和 &#123;2,6&#125;</span><br><span class="line">Arrays.sort(intervals, (a, b) -&gt; a[0] - b[0]);</span><br></pre></td></tr></table></figure>
+
+<h3><span id="33-自动排序的-map-和-set-treemap-x2f-treeset">3.3 自动排序的 Map 和 Set (<code>TreeMap</code> &#x2F; <code>TreeSet</code>)</span></h3><p>这两个数据结构和 <code>PriorityQueue</code> 是亲兄弟。</p>
+<ul>
+<li><code>PriorityQueue</code>：只保证<strong>堆顶</strong>是有序的。</li>
+<li><code>TreeMap</code> &#x2F; <code>TreeSet</code>：保证<strong>内部所有元素永远</strong>是有序的。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 这里的 (a, b) 指的是 Key</span><br><span class="line">Map&lt;Integer, String&gt; map = new TreeMap&lt;&gt;((a, b) -&gt; b - a);</span><br><span class="line"></span><br><span class="line">map.put(1, &quot;A&quot;);</span><br><span class="line">map.put(3, &quot;B&quot;);</span><br><span class="line">map.put(2, &quot;C&quot;);</span><br><span class="line"></span><br><span class="line">// 遍历时，会自动按 Key 从大到小出：3 -&gt; 2 -&gt; 1</span><br><span class="line">for(Integer key : map.keySet()) &#123;</span><br><span class="line">    System.out.println(key); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2><span id="4-java-stream-流操作-max-min-sorted">4.  Java Stream 流操作 (<code>.max</code>, <code>.min</code>, <code>.sorted</code>)</span></h2><p>Java 8 的流式编程极其依赖这个写法。</p>
+<h4><span id="场景在一堆对象里找最的那一个">场景：在一堆对象里找“最…”的那一个</span></h4><p>假设你有一堆 <code>Student</code> 对象，想找<strong>分数最高</strong>的那个。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Student &#123; String name; int score; &#125;</span><br><span class="line">List&lt;Student&gt; students = ...;</span><br><span class="line"></span><br><span class="line">// 找最大值 (max)</span><br><span class="line">// 这里的 max 需要你告诉它：什么叫“大”？</span><br><span class="line">// 答：分数 (a.score - b.score) 越大，就越大</span><br><span class="line">Student bestStudent = students.stream()</span><br><span class="line">    .max((a, b) -&gt; a.score - b.score) </span><br><span class="line">    .get();</span><br></pre></td></tr></table></figure>
+
+<h2><span id="5总结">5.总结</span></h2><table>
+<thead>
+<tr>
+<th><strong>场景</strong></th>
+<th><strong>代码片段</strong></th>
+<th><strong>作用</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>优先队列</strong></td>
+<td><code>new PriorityQueue&lt;&gt;((a, b) -&gt; a - b)</code></td>
+<td>决定<strong>谁在堆顶</strong></td>
+</tr>
+<tr>
+<td><strong>数组排序</strong></td>
+<td><code>Arrays.sort(arr, (a, b) -&gt; a - b)</code></td>
+<td>决定<strong>谁排前面</strong></td>
+</tr>
+<tr>
+<td><strong>列表排序</strong></td>
+<td><code>list.sort((a, b) -&gt; a - b)</code></td>
+<td>决定<strong>谁排前面</strong></td>
+</tr>
+<tr>
+<td><strong>Tree结构</strong></td>
+<td><code>new TreeMap&lt;&gt;((a, b) -&gt; a - b)</code></td>
+<td>决定<strong>Key的存储顺序</strong></td>
+</tr>
+<tr>
+<td><strong>流操作</strong></td>
+<td><code>stream.max((a, b) -&gt; a - b)</code></td>
+<td>决定<strong>谁算最大值</strong></td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>日常学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>医疗助手大模型的微调</title>
+    <url>/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/</url>
+    <content><![CDATA[<p>在之前的博客助手大模型中，我感受到模型效果受参数影响极大，一些8b回答起来磕磕绊绊的问题，14b的模型就能顺利回答。固然模型的参数是一个要点，但我认为以后对于小模型的需求也不会减少，这就需要用微调的方式让模型垂直化，专业化。因此，我的下一个目标在大模型的微调上，由于我的课题和医疗方向比较相关的，这方面的微调数据集 (华佗GPT) 又有，因此，我计划从这方面入手，做出一个医疗领域的垂直优化大模型，旨在回答医疗知识，降低有害错误问题的发生率</p>
+<span id="more"></span>
+
+<h1><span id="1模型选择">1.模型选择</span></h1><h1><span id="2数据集选择">2.数据集选择</span></h1><p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828221748287.png" alt="image-20250828221748287"></p>
+<p>链接：<a href="https://huggingface.co/datasets?search=medical">https://huggingface.co/datasets?search=medical</a></p>
+<p>先确定目的，SFT阶段我们主要任务是让模型博学起来，能够理解医疗领域的术语、实体以及常见的对话模式就算成功，使用华佗GPT数据集，由香港中文大学（深圳）和深圳市大数据研究院联合开源了专用于医疗领域的复杂大模型。这样就使用他们给出的SFT数据集：<a href="https://huggingface.co/datasets/FreedomIntelligence/medical-o1-reasoning-SFT">FreedomIntelligence&#x2F;medical-o1-reasoning-SFT · Datasets at Hugging Face</a></p>
+<p>折磨了一下下完了，这里需要注意，安装前要先下两个库，然后用huggingface-cli下载会快很多：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install -U &quot;huggingface_hub[cli]&quot;</span><br><span class="line">#高速传输库 hf_transfer</span><br><span class="line">pip install -U hf_transfer</span><br></pre></td></tr></table></figure>
+
+<p>由于我的服务器内网限制严格，只能win上面安装，做了这两部我还要手动加上Path：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">WARNING: The scripts hf.exe... are installed in  &#x27;C:\Users\origin\AppData\Roaming\Python\Python312\Scripts&#x27;  which is not on PATH.</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828230911267.png" alt="image-20250828230911267"></p>
+<p>然后在新建造哪里输入上面的路径信息 <code>&#39;C:\Users\origin\AppData\Roaming\Python\Python312\Scripts&#39;</code> </p>
+<p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828231120276.png" alt="image-20250828231120276"></p>
+<p>重新启动后就可以正常下载了</p>
+<p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828225951739.png" alt="image-20250828225951739"></p>
+<h1><span id="参考资料">参考资料：</span></h1><p><a href="https://zhuanlan.zhihu.com/p/652615133">推荐收藏！23个医疗领域微调大模型微调及数据汇总！ - 知乎</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/15635537603">【论文解读】HuatuoGPT-o1：用CoT和RL增强医疗LLM的复杂推理能力 - 知乎</a></p>
+<p><a href="https://github.com/FreedomIntelligence/HuatuoGPT">FreedomIntelligence&#x2F;HuatuoGPT: HuatuoGPT, Towards Taming Language Models To Be a Doctor. (An Open Medical GPT)</a></p>
+]]></content>
+      <tags>
+        <tag>实习准备</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>排序算法</title>
     <url>/2026/01/17/%E5%8A%9B%E6%89%A3hot100%E7%BB%83%E4%B9%A0/</url>
     <content><![CDATA[<p>今天集中攻克了 7 道高频面试题。重点总结了 LRU 的 O(1) 实现细节、链表归并排序的断链技巧，以及回文串的中心扩散法。但本次的主题是再记忆排序算法，做一个排序算法的归类和理解。</p>
@@ -2088,143 +2228,15 @@ class UserService &#123;
       </tags>
   </entry>
   <entry>
-    <title>力扣学习记录lambda表达式</title>
-    <url>/2026/01/22/%E5%8A%9B%E6%89%A3%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
-    <content><![CDATA[<p>在做 LeetCode 347（前 K 个高频元素）时，我最开始的思路是简单的“统计频率 -&gt; 找出频率大于 k 的数”。但后来发现题目要求的是<strong>“频率最高的 k 个数”</strong>，这是一个经典的 Top K 问题。</p>
-<p>在这个过程中，我对 Java 的 <code>PriorityQueue</code>（优先队列）、Lambda 表达式以及堆排序的本质有了全新的认识。</p>
-<span id="more"></span>
-
-<p>先贴结果代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import java.util.*;</span><br><span class="line"></span><br><span class="line">class Solution &#123;</span><br><span class="line">    public int[] topKFrequent(int[] nums, int k) &#123;</span><br><span class="line">        // 1. 使用 HashMap 统计每个数字出现的频率</span><br><span class="line">        Map&lt;Integer, Integer&gt; counts = new HashMap&lt;&gt;();</span><br><span class="line">        for (int num : nums) &#123;</span><br><span class="line">            counts.put(num, counts.getOrDefault(num, 0) + 1);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // 2. 创建优先队列（小顶堆）</span><br><span class="line">        // 核心逻辑：(a, b) -&gt; counts.get(a) - counts.get(b)</span><br><span class="line">        // 含义：按照频率从小到大排。频率低的在堆顶，随时准备被踢走。</span><br><span class="line">        PriorityQueue&lt;Integer&gt; pq = new PriorityQueue&lt;&gt;((a, b) -&gt; counts.get(a) - counts.get(b));</span><br><span class="line"></span><br><span class="line">        // 3. 遍历 Map，维护一个大小为 k 的堆</span><br><span class="line">        for (int num : counts.keySet()) &#123;</span><br><span class="line">            pq.offer(num); // 入队</span><br><span class="line">            // 如果堆大了，就把频率最小的（堆顶）弹出去</span><br><span class="line">            if (pq.size() &gt; k) &#123;</span><br><span class="line">                pq.poll();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // 4. 输出结果</span><br><span class="line">        int[] res = new int[k];</span><br><span class="line">        for (int i = 0; i &lt; k; i++) &#123;</span><br><span class="line">            res[i] = pq.poll();</span><br><span class="line">        &#125;</span><br><span class="line">        return res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这个代码里面，我最开始很不理解，这一个确实是我以前没怎么见过，后来理解了这是一种特殊的增加规则的的方法。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">PriorityQueue&lt;Integer&gt; pq = new PriorityQueue&lt;&gt;((a, b) -&gt; counts.get(a) - counts.get(b));</span><br></pre></td></tr></table></figure>
-
-<p>这行代码并不只是为了“排序”，它是在<strong>“立规矩”</strong>。</p>
-<ul>
-<li>**<code>a</code> 和 <code>b</code>**：是队列里的数字（选手）。</li>
-<li>**<code>counts.get(...)</code>**：是比较的标准（看频率，不看数字本身）。</li>
-<li><strong>返回值</strong>：虽然写的是减法算式，但 Java 接收到的是一个<strong>整数（int）</strong>。<ul>
-<li>负数：<code>a</code> 轻（上浮&#x2F;排前面）。</li>
-<li>正数：<code>a</code> 重（下沉&#x2F;排后面）。</li>
-</ul>
-</li>
-</ul>
-<p>从而保证了每次add都会维护，把小数值给上浮。</p>
-<h2><span id="2comparator-万能口诀">2.Comparator 万能口诀</span></h2><p>根据学习，永远是写（a,b）根据目标效果，选择是a-b还是b-a</p>
-<table>
-<thead>
-<tr>
-<th><strong>目标效果</strong></th>
-<th><strong>核心写法</strong></th>
-<th><strong>记忆口诀</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>小</strong>数值在堆顶 &#x2F; 排前面</td>
-<td><code>a - b</code></td>
-<td><strong>前减后</strong>（我减你）</td>
-</tr>
-<tr>
-<td><strong>大</strong>数值在堆顶 &#x2F; 排前面</td>
-<td><code>b - a</code></td>
-<td><strong>后减前</strong>（你减我）</td>
-</tr>
-<tr>
-<td><strong>String 长度短</strong>在堆顶</td>
-<td><code>a.length() - b.length()</code></td>
-<td>前减后</td>
-</tr>
-<tr>
-<td><strong>String 字典序</strong>靠前</td>
-<td><code>a.compareTo(b)</code></td>
-<td>顺着比</td>
-</tr>
-</tbody></table>
-<p>而对于一些复杂的情况，我们可以在里面增加代码串。逻辑是一样的，返回的数值小于0，就是选择数对的A上浮</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(a, b) -&gt; &#123;</span><br><span class="line">    int freqCompare = counts.get(a) - counts.get(b);</span><br><span class="line">    if (freqCompare != 0) &#123;</span><br><span class="line">        return freqCompare; // 频率不同：按频率小顶堆（小的在顶）</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        // 频率相同：进入这里的瞬间，freqCompare 已经是 0 了，不能用了！</span><br><span class="line">        // 题目要求：数字大的在堆顶 -&gt; 大顶堆逻辑 -&gt; 后减前</span><br><span class="line">        return b - a;  // &lt;--- 这里才是正确答案</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2><span id="3扩展用法">3.扩展用法</span></h2><p>不止是这个小根堆，大根堆场景，我们还能用在别的地方：</p>
-<h3><span id="31-给数组x2f列表排序-arrayssort-x2f-collectionssort">3.1 给数组&#x2F;列表排序 (<code>Arrays.sort</code> &#x2F; <code>Collections.sort</code>)</span></h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">List&lt;String&gt; list = new ArrayList&lt;&gt;(Arrays.asList(&quot;apple&quot;, &quot;hi&quot;, &quot;banana&quot;));</span><br><span class="line"></span><br><span class="line">// 旧写法：Collections.sort(list, new Comparator...);</span><br><span class="line">// 新写法（Lambda）：</span><br><span class="line">list.sort((a, b) -&gt; a.length() - b.length()); </span><br><span class="line"></span><br><span class="line">System.out.println(list); // 输出 [hi, apple, banana]</span><br></pre></td></tr></table></figure>
-
-<h3><span id="32-给二维数组排序">3.2 给二维数组排序</span></h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// intervals 是个二维数组，里面的元素是 int[] (一维数组)</span><br><span class="line">// 所以这里的 a 和 b 代表的是每一行，即 &#123;1,3&#125; 和 &#123;2,6&#125;</span><br><span class="line">Arrays.sort(intervals, (a, b) -&gt; a[0] - b[0]);</span><br></pre></td></tr></table></figure>
-
-<h3><span id="33-自动排序的-map-和-set-treemap-x2f-treeset">3.3 自动排序的 Map 和 Set (<code>TreeMap</code> &#x2F; <code>TreeSet</code>)</span></h3><p>这两个数据结构和 <code>PriorityQueue</code> 是亲兄弟。</p>
-<ul>
-<li><code>PriorityQueue</code>：只保证<strong>堆顶</strong>是有序的。</li>
-<li><code>TreeMap</code> &#x2F; <code>TreeSet</code>：保证<strong>内部所有元素永远</strong>是有序的。</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 这里的 (a, b) 指的是 Key</span><br><span class="line">Map&lt;Integer, String&gt; map = new TreeMap&lt;&gt;((a, b) -&gt; b - a);</span><br><span class="line"></span><br><span class="line">map.put(1, &quot;A&quot;);</span><br><span class="line">map.put(3, &quot;B&quot;);</span><br><span class="line">map.put(2, &quot;C&quot;);</span><br><span class="line"></span><br><span class="line">// 遍历时，会自动按 Key 从大到小出：3 -&gt; 2 -&gt; 1</span><br><span class="line">for(Integer key : map.keySet()) &#123;</span><br><span class="line">    System.out.println(key); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2><span id="4-java-stream-流操作-max-min-sorted">4.  Java Stream 流操作 (<code>.max</code>, <code>.min</code>, <code>.sorted</code>)</span></h2><p>Java 8 的流式编程极其依赖这个写法。</p>
-<h4><span id="场景在一堆对象里找最的那一个">场景：在一堆对象里找“最…”的那一个</span></h4><p>假设你有一堆 <code>Student</code> 对象，想找<strong>分数最高</strong>的那个。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Student &#123; String name; int score; &#125;</span><br><span class="line">List&lt;Student&gt; students = ...;</span><br><span class="line"></span><br><span class="line">// 找最大值 (max)</span><br><span class="line">// 这里的 max 需要你告诉它：什么叫“大”？</span><br><span class="line">// 答：分数 (a.score - b.score) 越大，就越大</span><br><span class="line">Student bestStudent = students.stream()</span><br><span class="line">    .max((a, b) -&gt; a.score - b.score) </span><br><span class="line">    .get();</span><br></pre></td></tr></table></figure>
-
-<h2><span id="5总结">5.总结</span></h2><table>
-<thead>
-<tr>
-<th><strong>场景</strong></th>
-<th><strong>代码片段</strong></th>
-<th><strong>作用</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>优先队列</strong></td>
-<td><code>new PriorityQueue&lt;&gt;((a, b) -&gt; a - b)</code></td>
-<td>决定<strong>谁在堆顶</strong></td>
-</tr>
-<tr>
-<td><strong>数组排序</strong></td>
-<td><code>Arrays.sort(arr, (a, b) -&gt; a - b)</code></td>
-<td>决定<strong>谁排前面</strong></td>
-</tr>
-<tr>
-<td><strong>列表排序</strong></td>
-<td><code>list.sort((a, b) -&gt; a - b)</code></td>
-<td>决定<strong>谁排前面</strong></td>
-</tr>
-<tr>
-<td><strong>Tree结构</strong></td>
-<td><code>new TreeMap&lt;&gt;((a, b) -&gt; a - b)</code></td>
-<td>决定<strong>Key的存储顺序</strong></td>
-</tr>
-<tr>
-<td><strong>流操作</strong></td>
-<td><code>stream.max((a, b) -&gt; a - b)</code></td>
-<td>决定<strong>谁算最大值</strong></td>
-</tr>
-</tbody></table>
+    <title>大模型是怎么做到长上下文扩展的</title>
+    <url>/2025/05/22/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%98%AF%E6%80%8E%E4%B9%88%E5%81%9A%E5%88%B0%E9%95%BF%E4%B8%8A%E4%B8%8B%E6%96%87%E6%89%A9%E5%B1%95%E7%9A%84/</url>
+    <content><![CDATA[<p>一直以来我都很疑惑，为什么大模型可以从4K学到8K又到128K呢，今天看来视频才有一些想法。<br> <span id="more"></span><br>1.大模型拟合结果依赖随机梯度算法，如果一次性输出128K的文本进行拟合，那就会对128K倍的权重进行拟合，考虑到自注意力计算矩阵是输入增长的平方。直接进行拟合导致的计算消耗是难以估计的。</p>
+<p>2.因此，我们就先让模型学习少量文本。这时候模型的参数已经得到一定的调整了，当我们再扩大这个文本长度时，他会有一个基准线在，就可以以那个基准为基础进行二次拟合。如果我们把8K的参数全部冻结，训练128K的文本矩阵加到8K的参数矩阵上去，那这个实际上就类似LORA了。这也是LORA微调的核心，基础大模型不动，少量修改附加参数矩阵。</p>
+<p>3.再一个增大模型上下文长度的方法就是数据分片了，学习完前面的内容再把学到的东西传递下去</p>
+<p>4.如果从架构入手也是可以的，比如经典的局部注意力+全局注意力的形式，这一技术我们可以在Gemma2到Gemma3的架构改进中看到。</p>
 ]]></content>
       <tags>
-        <tag>日常学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>医疗助手大模型的微调</title>
-    <url>/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/</url>
-    <content><![CDATA[<p>在之前的博客助手大模型中，我感受到模型效果受参数影响极大，一些8b回答起来磕磕绊绊的问题，14b的模型就能顺利回答。固然模型的参数是一个要点，但我认为以后对于小模型的需求也不会减少，这就需要用微调的方式让模型垂直化，专业化。因此，我的下一个目标在大模型的微调上，由于我的课题和医疗方向比较相关的，这方面的微调数据集 (华佗GPT) 又有，因此，我计划从这方面入手，做出一个医疗领域的垂直优化大模型，旨在回答医疗知识，降低有害错误问题的发生率</p>
-<span id="more"></span>
-
-<h1><span id="1模型选择">1.模型选择</span></h1><h1><span id="2数据集选择">2.数据集选择</span></h1><p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828221748287.png" alt="image-20250828221748287"></p>
-<p>链接：<a href="https://huggingface.co/datasets?search=medical">https://huggingface.co/datasets?search=medical</a></p>
-<p>先确定目的，SFT阶段我们主要任务是让模型博学起来，能够理解医疗领域的术语、实体以及常见的对话模式就算成功，使用华佗GPT数据集，由香港中文大学（深圳）和深圳市大数据研究院联合开源了专用于医疗领域的复杂大模型。这样就使用他们给出的SFT数据集：<a href="https://huggingface.co/datasets/FreedomIntelligence/medical-o1-reasoning-SFT">FreedomIntelligence&#x2F;medical-o1-reasoning-SFT · Datasets at Hugging Face</a></p>
-<p>折磨了一下下完了，这里需要注意，安装前要先下两个库，然后用huggingface-cli下载会快很多：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install -U &quot;huggingface_hub[cli]&quot;</span><br><span class="line">#高速传输库 hf_transfer</span><br><span class="line">pip install -U hf_transfer</span><br></pre></td></tr></table></figure>
-
-<p>由于我的服务器内网限制严格，只能win上面安装，做了这两部我还要手动加上Path：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">WARNING: The scripts hf.exe... are installed in  &#x27;C:\Users\origin\AppData\Roaming\Python\Python312\Scripts&#x27;  which is not on PATH.</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828230911267.png" alt="image-20250828230911267"></p>
-<p>然后在新建造哪里输入上面的路径信息 <code>&#39;C:\Users\origin\AppData\Roaming\Python\Python312\Scripts&#39;</code> </p>
-<p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828231120276.png" alt="image-20250828231120276"></p>
-<p>重新启动后就可以正常下载了</p>
-<p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828225951739.png" alt="image-20250828225951739"></p>
-<h1><span id="参考资料">参考资料：</span></h1><p><a href="https://zhuanlan.zhihu.com/p/652615133">推荐收藏！23个医疗领域微调大模型微调及数据汇总！ - 知乎</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/15635537603">【论文解读】HuatuoGPT-o1：用CoT和RL增强医疗LLM的复杂推理能力 - 知乎</a></p>
-<p><a href="https://github.com/FreedomIntelligence/HuatuoGPT">FreedomIntelligence&#x2F;HuatuoGPT: HuatuoGPT, Towards Taming Language Models To Be a Doctor. (An Open Medical GPT)</a></p>
-]]></content>
-      <tags>
-        <tag>实习准备</tag>
+        <tag>日常记录</tag>
       </tags>
   </entry>
   <entry>
@@ -2403,12 +2415,11 @@ class UserService &#123;
       </tags>
   </entry>
   <entry>
-    <title>大模型是怎么做到长上下文扩展的</title>
-    <url>/2025/05/22/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%98%AF%E6%80%8E%E4%B9%88%E5%81%9A%E5%88%B0%E9%95%BF%E4%B8%8A%E4%B8%8B%E6%96%87%E6%89%A9%E5%B1%95%E7%9A%84/</url>
-    <content><![CDATA[<p>一直以来我都很疑惑，为什么大模型可以从4K学到8K又到128K呢，今天看来视频才有一些想法。<br> <span id="more"></span><br>1.大模型拟合结果依赖随机梯度算法，如果一次性输出128K的文本进行拟合，那就会对128K倍的权重进行拟合，考虑到自注意力计算矩阵是输入增长的平方。直接进行拟合导致的计算消耗是难以估计的。</p>
-<p>2.因此，我们就先让模型学习少量文本。这时候模型的参数已经得到一定的调整了，当我们再扩大这个文本长度时，他会有一个基准线在，就可以以那个基准为基础进行二次拟合。如果我们把8K的参数全部冻结，训练128K的文本矩阵加到8K的参数矩阵上去，那这个实际上就类似LORA了。这也是LORA微调的核心，基础大模型不动，少量修改附加参数矩阵。</p>
-<p>3.再一个增大模型上下文长度的方法就是数据分片了，学习完前面的内容再把学到的东西传递下去</p>
-<p>4.如果从架构入手也是可以的，比如经典的局部注意力+全局注意力的形式，这一技术我们可以在Gemma2到Gemma3的架构改进中看到。</p>
+    <title>大模型的输入</title>
+    <url>/2025/05/16/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%BE%93%E5%85%A5/</url>
+    <content><![CDATA[<p>虽然我以前就知道大模型的输入计算很坑，但还是没想到这么坑<br> <span id="more"></span><br>首先输入的文本【1234】【567】，输入【567】的时候之前的【1234】和模型对他的回答也会加进来。</p>
+<p>其次是联网功能，这玩意就牛逼了，上不封顶。就算是直接选择前面三个网页，也得是他去读了才行。麻了，同样的，这部分也要算你头上</p>
+<p>最后是提示词，你输入的格式规范之类的东西也得通过提示词 来实现，一样的，这个也是要Token的。这三样累计再一次，第二次开始的对话消耗就大的可怕，如果是使用智能体。这个消耗就更可怕了。大模型的规划可不是人类能理解的</p>
 ]]></content>
       <tags>
         <tag>日常记录</tag>
@@ -2424,24 +2435,6 @@ class UserService &#123;
 ]]></content>
       <tags>
         <tag>日常记录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何使用Typora快速在博客插入图片</title>
-    <url>/2025/06/22/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%BF%AB%E9%80%9F%E5%9C%A8%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</url>
-    <content><![CDATA[<p>不得不说，Typora确实是要好用很多，这里说说我是怎么修改Typora设置，能够直接从剪切板复制图片到MD文件的，</p>
- <span id="more"></span>
-
-<p><img src="/2025/06/22/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%BF%AB%E9%80%9F%E5%9C%A8%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/image-20250622160718684.png" alt="打开偏好设置"></p>
-<p>第一步是打开偏好设置，这里面的修改两个地方就行：</p>
-<p>1.插入图片时选择【复制到指定路径】，这个你选择后他会默认给你填好，意思是你复制时会把图片保存到你同文件夹【.&#x2F;】的你的文件名对应的文件夹【{filename}】下去</p>
-<p>2.修改图片语法偏好里面，点击【优先使用相对路径】</p>
-<p><img src="/2025/06/22/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%BF%AB%E9%80%9F%E5%9C%A8%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/image-20250622160805526.png" alt="偏好设置修改"></p>
-<p>修改这两处是因为Hexo搭建博客时，它使用的图片一定是和博文对应的那个文件夹里面的图片。而且使用相对路径时才能正常上传。需要注意，使用相对路径才能上传这一点是我遇到的问题；可能其他人遇到的情况不一样</p>
-<p>参考文献：<a href="https://blog.csdn.net/m0_43401436/article/details/107191688">hexo博客中插入图片失败——解决思路及个人最终解决办法_hexo 文章插入图片失败-CSDN博客</a></p>
-]]></content>
-      <tags>
-        <tag>日常学习</tag>
       </tags>
   </entry>
   <entry>
@@ -2476,14 +2469,21 @@ class UserService &#123;
       </tags>
   </entry>
   <entry>
-    <title>大模型的输入</title>
-    <url>/2025/05/16/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%BE%93%E5%85%A5/</url>
-    <content><![CDATA[<p>虽然我以前就知道大模型的输入计算很坑，但还是没想到这么坑<br> <span id="more"></span><br>首先输入的文本【1234】【567】，输入【567】的时候之前的【1234】和模型对他的回答也会加进来。</p>
-<p>其次是联网功能，这玩意就牛逼了，上不封顶。就算是直接选择前面三个网页，也得是他去读了才行。麻了，同样的，这部分也要算你头上</p>
-<p>最后是提示词，你输入的格式规范之类的东西也得通过提示词 来实现，一样的，这个也是要Token的。这三样累计再一次，第二次开始的对话消耗就大的可怕，如果是使用智能体。这个消耗就更可怕了。大模型的规划可不是人类能理解的</p>
+    <title>如何使用Typora快速在博客插入图片</title>
+    <url>/2025/06/22/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%BF%AB%E9%80%9F%E5%9C%A8%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</url>
+    <content><![CDATA[<p>不得不说，Typora确实是要好用很多，这里说说我是怎么修改Typora设置，能够直接从剪切板复制图片到MD文件的，</p>
+ <span id="more"></span>
+
+<p><img src="/2025/06/22/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%BF%AB%E9%80%9F%E5%9C%A8%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/image-20250622160718684.png" alt="打开偏好设置"></p>
+<p>第一步是打开偏好设置，这里面的修改两个地方就行：</p>
+<p>1.插入图片时选择【复制到指定路径】，这个你选择后他会默认给你填好，意思是你复制时会把图片保存到你同文件夹【.&#x2F;】的你的文件名对应的文件夹【{filename}】下去</p>
+<p>2.修改图片语法偏好里面，点击【优先使用相对路径】</p>
+<p><img src="/2025/06/22/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%BF%AB%E9%80%9F%E5%9C%A8%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/image-20250622160805526.png" alt="偏好设置修改"></p>
+<p>修改这两处是因为Hexo搭建博客时，它使用的图片一定是和博文对应的那个文件夹里面的图片。而且使用相对路径时才能正常上传。需要注意，使用相对路径才能上传这一点是我遇到的问题；可能其他人遇到的情况不一样</p>
+<p>参考文献：<a href="https://blog.csdn.net/m0_43401436/article/details/107191688">hexo博客中插入图片失败——解决思路及个人最终解决办法_hexo 文章插入图片失败-CSDN博客</a></p>
 ]]></content>
       <tags>
-        <tag>日常记录</tag>
+        <tag>日常学习</tag>
       </tags>
   </entry>
   <entry>
@@ -2495,24 +2495,6 @@ class UserService &#123;
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export TMPDIR=&quot;/mnt/data/temp/&quot;//有空间的那个磁盘下随便写一个文件路径</span><br><span class="line">mkdir -p $TMPDIR</span><br><span class="line">pip~</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>至此解决问题，成功下载</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>我对大模型框架改进的看法</title>
-    <url>/2025/05/08/%E6%88%91%E5%AF%B9%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%A1%86%E6%9E%B6%E6%94%B9%E8%BF%9B%E7%9A%84%E7%9C%8B%E6%B3%95/</url>
-    <content><![CDATA[<p>东西不记就容易忘掉，总之先记录下现在看llama系列模型改进的想法<br> <span id="more"></span><br>llama1的改动包括三个：ROPE,RMSnorm前置和SWIGLU。</p>
-<p>ROPE我还真是不看不知道，我一直以为位置编码都是加算embedding，结果这个相对位置编码是在对QKV做操作，同样的，ROPE也是计算出来的，所以可以适应变长的输入。然后是RMSnorm，贴一下归一化的定义：</p>
-<blockquote>
-<p>当两个值之间的差异较小时与较大时，评估值（例如 MSE，均方误差）可能会有很大差异。在 MSE 中，如果出现较大的值，梯度可能会变得极大，从而使学习变得不稳定</p>
-</blockquote>
-<p>我看到的一个说法是前置归一化能节约计算资源，这是因为数据在输入前是更不均匀的。RMS就仅使用均方根（RMS），传统的LayerNorm 相比，后者需要一次数据扫描来计算均值，另一次来计算方差。RMSNorm 通过维持非零均值而不与 0 对齐均值，帮助解决梯度消失问题。在早期周期中比 LayerNorm 维持更高的梯度范数。另一个原因是节省内存，这个结合我看到的在模型使用不同精度的数据，我想应该还真的是有这部分的作用，是DSV3吗，我有点记不得了。</p>
-<p>再然后就是使用了SWIGLU，这个方法就是保留了0以下的数值，捕捉的信息更多。</p>
-<p>然后就是llama2了，我感觉这个模型基本没啥大变化，虽然说是用了GQA，但也就这一点了。事实上由于GQA本身的性质，虽然能加速训练，但也一定会导致信息丢失的。我怀疑它通过大量增加训练数据（+40%）就是为了补偿这中间的损失</p>
-<p>不过llama2提出的训练数据质量决定SFT模型上限多重要的。另外和GPT相比，他明显投入的资源更多，在方方面面都有测评，肤色，宗教，性别这些。不过我说是投入更多，实际上我们看不到他对标的GPT3.5在安全上的努力有多少，毕竟是没有公布的东西。</p>
-<p>参考资料<br><a href="https://blog.csdn.net/star_nwe/article/details/145283201" title="详解大模型中的LayerNorm和RMSNorm">https://blog.csdn.net/star_nwe&#x2F;article&#x2F;details&#x2F;145283201</a></p>
-]]></content>
-      <tags>
-        <tag>日常记录</tag>
-      </tags>
   </entry>
   <entry>
     <title>如何让新创建的用户使用当前的conda</title>
@@ -2592,6 +2574,101 @@ class UserService &#123;
 ]]></content>
       <tags>
         <tag>日常学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>总结学习maven</title>
+    <url>/2025/08/13/%E6%80%BB%E7%BB%93%E5%AD%A6%E4%B9%A0maven/</url>
+    <content><![CDATA[<p>因为我之前是使用python的多，这里说下我对maven学习后的一些理解。先下定义：maven的功能是编译java代码，在依赖管理方面使用pom.xml文件。不过和conda不同，maven管理环境依赖的方式是把需要的内容下载到一个本地仓库（.m2&#x2F;repository），然后根据pom.xml里面的需求调用需要的内容。</p>
+<span id="more"></span>
+
+<p>其中：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;groupId&gt;- 是组织标识符，其实就是相对路径</span><br><span class="line">&lt;artifactId&gt; -是项目标识符</span><br><span class="line">&lt;version&gt;- 版本号</span><br><span class="line">&lt;type&gt;- 依赖类型，分为：pom- Maven项目文件，war-Web应用包，ear-企业应用包，zip-压缩包</span><br><span class="line">&lt;scope&gt; - 依赖范围，包括：compile（默认）- 编译和运行时都需要，provided - 编译时需要运行时由容器提供，runtime - 运行时需要编译时不需要，test - 仅测试时需要，system - 系统依赖需要指定路径，import - 导入其他POM的依赖管理</span><br></pre></td></tr></table></figure>
+
+<p>最后，我们可以归纳他们的特性为：</p>
+<table>
+<thead>
+<tr>
+<th align="center">特性</th>
+<th align="center">Maven</th>
+<th align="center">Conda</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">存储位置</td>
+<td align="center">中央化本地仓库 (<code>~/.m2/repository</code>)</td>
+<td align="center">隔离环境目录 (<code>&lt;conda_root&gt;/envs/&lt;env_name&gt;/</code>)</td>
+</tr>
+<tr>
+<td align="center">依赖共享</td>
+<td align="center">所有项目共享同一个仓库</td>
+<td align="center">环境间依赖完全隔离 (独立副本)</td>
+</tr>
+<tr>
+<td align="center">隔离单位</td>
+<td align="center">项目级别 (通过 Classpath 控制)</td>
+<td align="center">环境级别 (物理目录和系统路径隔离)</td>
+</tr>
+<tr>
+<td align="center">隔离机制</td>
+<td align="center">逻辑隔离 (依赖版本选择 + Classpath)</td>
+<td align="center">物理隔离 (文件系统副本 + PATH 环境变量)</td>
+</tr>
+<tr>
+<td align="center">包含内容</td>
+<td align="center">仅依赖库 (JAR) 及其元数据</td>
+<td align="center">Python解释器、Python包、可执行文件、非Python库</td>
+</tr>
+<tr>
+<td align="center">依赖问题</td>
+<td align="center">项目运行时依赖指向中央仓库的JAR。</td>
+<td align="center">环境目录本身就是一个包含所有依赖的包</td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>日常学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我对大模型框架改进的看法</title>
+    <url>/2025/05/08/%E6%88%91%E5%AF%B9%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%A1%86%E6%9E%B6%E6%94%B9%E8%BF%9B%E7%9A%84%E7%9C%8B%E6%B3%95/</url>
+    <content><![CDATA[<p>东西不记就容易忘掉，总之先记录下现在看llama系列模型改进的想法<br> <span id="more"></span><br>llama1的改动包括三个：ROPE,RMSnorm前置和SWIGLU。</p>
+<p>ROPE我还真是不看不知道，我一直以为位置编码都是加算embedding，结果这个相对位置编码是在对QKV做操作，同样的，ROPE也是计算出来的，所以可以适应变长的输入。然后是RMSnorm，贴一下归一化的定义：</p>
+<blockquote>
+<p>当两个值之间的差异较小时与较大时，评估值（例如 MSE，均方误差）可能会有很大差异。在 MSE 中，如果出现较大的值，梯度可能会变得极大，从而使学习变得不稳定</p>
+</blockquote>
+<p>我看到的一个说法是前置归一化能节约计算资源，这是因为数据在输入前是更不均匀的。RMS就仅使用均方根（RMS），传统的LayerNorm 相比，后者需要一次数据扫描来计算均值，另一次来计算方差。RMSNorm 通过维持非零均值而不与 0 对齐均值，帮助解决梯度消失问题。在早期周期中比 LayerNorm 维持更高的梯度范数。另一个原因是节省内存，这个结合我看到的在模型使用不同精度的数据，我想应该还真的是有这部分的作用，是DSV3吗，我有点记不得了。</p>
+<p>再然后就是使用了SWIGLU，这个方法就是保留了0以下的数值，捕捉的信息更多。</p>
+<p>然后就是llama2了，我感觉这个模型基本没啥大变化，虽然说是用了GQA，但也就这一点了。事实上由于GQA本身的性质，虽然能加速训练，但也一定会导致信息丢失的。我怀疑它通过大量增加训练数据（+40%）就是为了补偿这中间的损失</p>
+<p>不过llama2提出的训练数据质量决定SFT模型上限多重要的。另外和GPT相比，他明显投入的资源更多，在方方面面都有测评，肤色，宗教，性别这些。不过我说是投入更多，实际上我们看不到他对标的GPT3.5在安全上的努力有多少，毕竟是没有公布的东西。</p>
+<p>参考资料<br><a href="https://blog.csdn.net/star_nwe/article/details/145283201" title="详解大模型中的LayerNorm和RMSNorm">https://blog.csdn.net/star_nwe&#x2F;article&#x2F;details&#x2F;145283201</a></p>
+]]></content>
+      <tags>
+        <tag>日常记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构面经准备</title>
+    <url>/2025/08/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%9D%A2%E7%BB%8F%E5%87%86%E5%A4%87/</url>
+    <content><![CDATA[<p>毕竟是计算机基本功，但时间远了还是容易忘记，这里记录下我认为有必要准备的数据结构知识。整个流程我大体按照考研那时的数据结构来，尽可能全面吧</p>
+<span id="more"></span>
+
+<h1><span id="1数据结构">1.数据结构</span></h1><h1><span id="1数组和链表">1.数组和链表</span></h1><p>数组</p>
+<ul>
+<li>定义：一块连续的内存空间，用于存储相同类型的元素。通过索引（下标）可以直接访问任意元素。</li>
+<li>优点：随机存储</li>
+<li>缺点：</li>
+</ul>
+<p>链表</p>
+<ul>
+<li>定义：</li>
+<li>优点：</li>
+<li>缺点：</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>面试准备</tag>
       </tags>
   </entry>
   <entry>
@@ -2724,83 +2801,6 @@ class UserService &#123;
 ]]></content>
       <tags>
         <tag>就业准备</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>总结学习maven</title>
-    <url>/2025/08/13/%E6%80%BB%E7%BB%93%E5%AD%A6%E4%B9%A0maven/</url>
-    <content><![CDATA[<p>因为我之前是使用python的多，这里说下我对maven学习后的一些理解。先下定义：maven的功能是编译java代码，在依赖管理方面使用pom.xml文件。不过和conda不同，maven管理环境依赖的方式是把需要的内容下载到一个本地仓库（.m2&#x2F;repository），然后根据pom.xml里面的需求调用需要的内容。</p>
-<span id="more"></span>
-
-<p>其中：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;groupId&gt;- 是组织标识符，其实就是相对路径</span><br><span class="line">&lt;artifactId&gt; -是项目标识符</span><br><span class="line">&lt;version&gt;- 版本号</span><br><span class="line">&lt;type&gt;- 依赖类型，分为：pom- Maven项目文件，war-Web应用包，ear-企业应用包，zip-压缩包</span><br><span class="line">&lt;scope&gt; - 依赖范围，包括：compile（默认）- 编译和运行时都需要，provided - 编译时需要运行时由容器提供，runtime - 运行时需要编译时不需要，test - 仅测试时需要，system - 系统依赖需要指定路径，import - 导入其他POM的依赖管理</span><br></pre></td></tr></table></figure>
-
-<p>最后，我们可以归纳他们的特性为：</p>
-<table>
-<thead>
-<tr>
-<th align="center">特性</th>
-<th align="center">Maven</th>
-<th align="center">Conda</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">存储位置</td>
-<td align="center">中央化本地仓库 (<code>~/.m2/repository</code>)</td>
-<td align="center">隔离环境目录 (<code>&lt;conda_root&gt;/envs/&lt;env_name&gt;/</code>)</td>
-</tr>
-<tr>
-<td align="center">依赖共享</td>
-<td align="center">所有项目共享同一个仓库</td>
-<td align="center">环境间依赖完全隔离 (独立副本)</td>
-</tr>
-<tr>
-<td align="center">隔离单位</td>
-<td align="center">项目级别 (通过 Classpath 控制)</td>
-<td align="center">环境级别 (物理目录和系统路径隔离)</td>
-</tr>
-<tr>
-<td align="center">隔离机制</td>
-<td align="center">逻辑隔离 (依赖版本选择 + Classpath)</td>
-<td align="center">物理隔离 (文件系统副本 + PATH 环境变量)</td>
-</tr>
-<tr>
-<td align="center">包含内容</td>
-<td align="center">仅依赖库 (JAR) 及其元数据</td>
-<td align="center">Python解释器、Python包、可执行文件、非Python库</td>
-</tr>
-<tr>
-<td align="center">依赖问题</td>
-<td align="center">项目运行时依赖指向中央仓库的JAR。</td>
-<td align="center">环境目录本身就是一个包含所有依赖的包</td>
-</tr>
-</tbody></table>
-]]></content>
-      <tags>
-        <tag>日常学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据结构面经准备</title>
-    <url>/2025/08/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%9D%A2%E7%BB%8F%E5%87%86%E5%A4%87/</url>
-    <content><![CDATA[<p>毕竟是计算机基本功，但时间远了还是容易忘记，这里记录下我认为有必要准备的数据结构知识。整个流程我大体按照考研那时的数据结构来，尽可能全面吧</p>
-<span id="more"></span>
-
-<h1><span id="1数据结构">1.数据结构</span></h1><h1><span id="1数组和链表">1.数组和链表</span></h1><p>数组</p>
-<ul>
-<li>定义：一块连续的内存空间，用于存储相同类型的元素。通过索引（下标）可以直接访问任意元素。</li>
-<li>优点：随机存储</li>
-<li>缺点：</li>
-</ul>
-<p>链表</p>
-<ul>
-<li>定义：</li>
-<li>优点：</li>
-<li>缺点：</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>面试准备</tag>
       </tags>
   </entry>
   <entry>
@@ -3143,17 +3143,88 @@ class UserService &#123;
       </tags>
   </entry>
   <entry>
-    <title>背包问题</title>
-    <url>/2026/01/18/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>第一篇博客尝试</title>
     <url>/2024/06/14/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E5%B0%9D%E8%AF%95/</url>
     <content><![CDATA[<p>学习使用博客的技巧<br> <span id="more"></span><br>感谢知乎枫叶佬的文章，优化学习于：<a href="https://zhuanlan.zhihu.com/p/106060640">枫叶</a>,然后发文章的教程在：<a href="https://cloud.tencent.com/developer/article/1662733">腾讯云教程</a>,以作日后查询，简单说具体流程就是:</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new title  \\title换自己文章名</span><br><span class="line">hexo clean \\清理本地</span><br><span class="line">hexo g  </span><br><span class="line">hexo d  \\上传代码</span><br></pre></td></tr></table></figure>
 <p>此外学习了插入图片的技巧学习自博客<a href="https://zhuanlan.zhihu.com/p/265077468">插入图片教程</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>背包问题</title>
+    <url>/2026/01/18/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>给博客增加在线编辑能力的记录</title>
+    <url>/2026/07/16/%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%BE%91%E8%83%BD%E5%8A%9B%E7%9A%84%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p>这次对博客做了一次小改造：我希望它不只是一个需要在本地手动改文件、手动生成、手动发布的静态页面，而是能够有一个在线编辑入口。最后采用的方案是保留 Hexo 静态博客本身，再加上 Decap CMS、GitHub OAuth 和自动部署流程。</p>
+<span id="more"></span>
+
+<h2><span id="一开始的问题">一开始的问题</span></h2><p>我原来的博客本质上是一个静态站点。文章写在本地的 Markdown 文件里，Hexo 负责把这些 Markdown 生成网页，然后发布到 GitHub Pages。</p>
+<p>这种方式很稳定，也很适合个人博客，但缺点也很明显：</p>
+<ol>
+<li>每次写文章都要回到本地项目里改文件。</li>
+<li>如果换一台电脑，编辑体验就不方便。</li>
+<li>标签、分类这些内容虽然 Hexo 支持，但也需要自己手动维护。</li>
+<li>没有一个像后台一样的地方，可以直接新建、编辑、保存文章。</li>
+</ol>
+<p>所以这次的目标不是把博客改成完整的后端系统，而是加一个轻量的在线编辑能力。</p>
+<h2><span id="最后采用的方案">最后采用的方案</span></h2><p>这次选择的是 Decap CMS。它不是传统意义上的数据库后台，而是一个适合静态博客的内容管理工具。</p>
+<p>整个流程可以理解为：</p>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">访问博客后台 /admin/</span><br><span class="line">  -&gt; 使用 Decap CMS 编辑文章</span><br><span class="line">  -&gt; 通过 GitHub OAuth 登录</span><br><span class="line">  -&gt; 把文章保存到博客源码仓库</span><br><span class="line">  -&gt; GitHub Actions 自动构建 Hexo</span><br><span class="line">  -&gt; 发布到 GitHub Pages</span><br><span class="line">  -&gt; mtdown.top 更新</span><br></pre></td></tr></table></figure>
+
+<p>也就是说，博客最终仍然是静态网页，但是编辑文章这件事被搬到了浏览器里。</p>
+<h2><span id="我们具体做了什么">我们具体做了什么</span></h2><p>第一步是在博客里增加了一个后台入口：</p>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">https://mtdown.top/admin/</span><br></pre></td></tr></table></figure>
+
+<p>这个页面加载 Decap CMS。进入后可以看到文章列表，也可以新建文章、编辑标题、发布时间、标签、分类和正文。</p>
+<p>第二步是配置 Decap CMS，让它知道文章应该保存到哪里。这里连接的是博客源码仓库：</p>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">mtdown/blog-source</span><br></pre></td></tr></table></figure>
+
+<p>这一步很重要，因为在线编辑时修改的不是最终生成出来的网页，而是 Hexo 的源码。只有源码变了，后面才可以重新生成完整博客。</p>
+<p>第三步是处理 GitHub 登录。静态网页不能直接安全地保存 GitHub 的密钥，所以需要一个 OAuth 代理服务。这里用 Render 部署了一个小服务：</p>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">https://mtdown-blog-oauth.onrender.com</span><br></pre></td></tr></table></figure>
+
+<p>它负责完成 GitHub 授权。登录成功后，Decap CMS 才能代表我把文章保存回源码仓库。</p>
+<p>第四步是修改 GitHub OAuth App 的回调地址。这里一开始容易填错。正确的回调地址应该是 OAuth 代理服务自己的地址：</p>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">https://mtdown-blog-oauth.onrender.com/callback</span><br></pre></td></tr></table></figure>
+
+<p>而不是：</p>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">https://mtdown.top/callback</span><br></pre></td></tr></table></figure>
+
+<p>原因是 GitHub 登录完成后，需要先回到 Render 上的 OAuth 代理，由它完成最后的授权交换，再把结果交给博客后台。</p>
+<p>第五步是配置自动发布。以后只要后台保存文章，源码仓库产生变化，GitHub Actions 就会自动执行：</p>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">安装依赖</span><br><span class="line">生成 Hexo 静态文件</span><br><span class="line">发布到 mtdown.github.io</span><br><span class="line">更新 mtdown.top</span><br></pre></td></tr></table></figure>
+
+<p>这样编辑和发布就连起来了。</p>
+<h2><span id="这套方案的特点">这套方案的特点</span></h2><p>我觉得这套方案比较适合个人博客，因为它没有引入太重的后端。</p>
+<p>它的好处是：</p>
+<ol>
+<li>博客访问速度仍然是静态站的速度。</li>
+<li>不需要自己维护数据库。</li>
+<li>文章仍然是 Markdown 文件，长期可迁移。</li>
+<li>可以在浏览器里编辑文章，不必每次打开本地项目。</li>
+<li>GitHub 仍然保存完整历史记录，出问题可以追溯。</li>
+</ol>
+<p>它的限制也很清楚：</p>
+<ol>
+<li>登录依赖 GitHub OAuth。</li>
+<li>Render 免费服务可能会休眠，第一次打开登录会慢一点。</li>
+<li>自动发布依赖 GitHub Actions。</li>
+<li>这不是给所有访客使用的后台，只适合自己编辑内容。</li>
+</ol>
+<h2><span id="关于评论功能">关于评论功能</span></h2><p>这次暂时没有做评论功能。评论和在线编辑不一样，评论是给所有访客使用的交互能力，会涉及防垃圾评论、权限、存储和展示。</p>
+<p>如果以后要做评论，我更倾向于单独处理，比如使用 Giscus 这类基于 GitHub Discussions 的方案。这样可以避免自己维护数据库，也能保留静态博客的简单性。</p>
+<h2><span id="总结">总结</span></h2><p>这次改造让我对静态博客有了一个更清晰的认识：静态博客并不一定只能手动维护。它可以仍然保持静态发布，同时把编辑、授权、构建这些动作交给外部服务完成。</p>
+<p>最终得到的是一个比较轻量的内容管理流程：</p>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Hexo 负责生成博客</span><br><span class="line">Decap CMS 负责在线编辑</span><br><span class="line">GitHub 负责保存源码</span><br><span class="line">Render 负责登录授权</span><br><span class="line">GitHub Actions 负责自动发布</span><br><span class="line">GitHub Pages 负责展示网站</span><br></pre></td></tr></table></figure>
+
+<p>这样博客还是我的 Markdown 仓库，但编辑体验已经更接近一个真正的个人内容后台了。</p>
+]]></content>
+      <tags>
+        <tag>日常学习</tag>
+      </tags>
   </entry>
   <entry>
     <title>通过Tailscale突破内网限制连接服务器</title>
