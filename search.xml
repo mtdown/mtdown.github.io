@@ -64,11 +64,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Andrej Lets build GPT学习笔记</title>
-    <url>/2026/05/03/Andrej-Lets-build-GPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>APIfox功能学习</title>
     <url>/2025/07/02/APIfox%E5%8A%9F%E8%83%BD%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<p>​		学习大模型部署软件APIfox</p>
@@ -118,6 +113,11 @@
       <tags>
         <tag>实习准备</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Andrej Lets build GPT学习笔记</title>
+    <url>/2026/05/03/Andrej-Lets-build-GPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Harness Engineering学习</title>
@@ -243,19 +243,6 @@
     <content><![CDATA[<p>HoVer-Trans: Anatomy-AwareHoVer-Transformer for ROI-Free Breast CancerDiagnosis in Ultrasound Images</p>
 <p>2023.6，医学1区top，采用BUSI数据集和UDIAT，新创造了GDPH&amp;SYSUCC数据集<br> <span id="more"></span><br>这篇文章的结构有VIT的意思，感觉医学图像处理本质是特化后的视觉图像模型</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>RAG扩展学习</title>
-    <url>/2025/07/18/RAG%E6%89%A9%E5%B1%95%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<p>RAG，检索增强，生成是处理大模型需要根据自有数据库回答问题，矫正语言习惯使用的技术，其分块效果在帮助大模型上也有着良好的效果。今天看到B站有一个视频总结了整整16种RAG方案。我决定跟着他，总结RAG的内容。</p>
-<span id="more"></span>
-
-<p><img src="/2025/07/18/RAG%E6%89%A9%E5%B1%95%E5%AD%A6%E4%B9%A0/image-20250820152236814.png" alt="image-20250820152236814"></p>
-<h1><span id="参考资料">参考资料：</span></h1><p><a href="https://www.bilibili.com/video/BV1wVeTz4ENJ/?spm_id_from=333.337.search-card.all.click&vd_source=ecbe42ffb25fea0da636165433fb75d6">【大模型RAG】16种RAG方案大比拼，谁才是RAG最佳选择？30分钟带你搞懂这16种RAG方案，全程干货！少走99%的弯路！大模型&#x2F;LLM&#x2F;RAG_哔哩哔哩_bilibili</a></p>
-]]></content>
-      <tags>
-        <tag>日常学习</tag>
-      </tags>
   </entry>
   <entry>
     <title>SQL相关</title>
@@ -672,6 +659,35 @@
       </tags>
   </entry>
   <entry>
+    <title>RAG扩展学习</title>
+    <url>/2025/07/18/RAG%E6%89%A9%E5%B1%95%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<p>RAG，检索增强，生成是处理大模型需要根据自有数据库回答问题，矫正语言习惯使用的技术，其分块效果在帮助大模型上也有着良好的效果。今天看到B站有一个视频总结了整整16种RAG方案。我决定跟着他，总结RAG的内容。</p>
+<span id="more"></span>
+
+<p><img src="/2025/07/18/RAG%E6%89%A9%E5%B1%95%E5%AD%A6%E4%B9%A0/image-20250820152236814.png" alt="image-20250820152236814"></p>
+<h1><span id="参考资料">参考资料：</span></h1><p><a href="https://www.bilibili.com/video/BV1wVeTz4ENJ/?spm_id_from=333.337.search-card.all.click&vd_source=ecbe42ffb25fea0da636165433fb75d6">【大模型RAG】16种RAG方案大比拼，谁才是RAG最佳选择？30分钟带你搞懂这16种RAG方案，全程干货！少走99%的弯路！大模型&#x2F;LLM&#x2F;RAG_哔哩哔哩_bilibili</a></p>
+]]></content>
+      <tags>
+        <tag>日常学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java多态</title>
+    <url>/2024/09/15/java%E5%A4%9A%E6%80%81/</url>
+    <content><![CDATA[<p>这个部分我觉得稍稍有点杂，毕竟函数，属性都存在多态。考虑到向上继承，向下继承这些，调用的顺序和麻烦程度都会递增。<br> <span id="more"></span></p>
+<h1><span id="方法的多态">方法的多态</span></h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Dog extends animal&#123;</span><br><span class="line">    private String food=&quot;骨头&quot;;</span><br><span class="line">    public Dog(String name, int age, String sex, String food) &#123;</span><br><span class="line">        super(name, age, sex);</span><br><span class="line">        this.food = food;</span><br><span class="line">    &#125;</span><br><span class="line">    public Dog(String name, int age, String sex) &#123;</span><br><span class="line">        super(name, age, sex);</span><br><span class="line">        //这里就使用了多态，通过参数的不同，调用同一个函数名但有不同的效果</span><br><span class="line">    &#125;</span><br><span class="line">    public String eat()&#123;</span><br><span class="line">        return food;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里面的两个构造函数就是多态的一种，基于传参的多态<br>2024&#x2F;10&#x2F;2 21:19:13<br>关于编译类型增加细节<br>（1）一个对象的编译类型和运行类型可以不一致<br>（2）编译类型在定义对象时，就确定了，不能改<br>（3）运行类型是可以变的<br>（4）编译类型看定义时 &#x3D; 号的左边，运行类型看 &#x3D; 号右边。<br>（5）属性的值看编译类型，方法看运行<br>（6）继承会改变运行类型</p>
+<h1><span id="多态练习1">多态练习1</span></h1><p><img src="/images/%E5%A4%9A%E6%80%81.png" alt="练习题目" title="练习题"><br>对于代码：</p>
+<figure class="highlight plaintext"><figcaption><span>class PolyExercise02 &#123;</span></figcaption><table><tr><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Sub sub = new Sub();</span><br><span class="line">    System.out.println(sub.count);</span><br><span class="line">    sub.display();</span><br><span class="line">    Base b=sub;</span><br><span class="line">    System.out.println(b==sub);</span><br><span class="line">    System.out.println(b.count);</span><br><span class="line">    b.display();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>首先123都只是单纯地定义新类输出方法和属性，因此都是20.此时编译类型和运行类型都是sub</p>
+<figure class="highlight plaintext"><figcaption><span>sub </span></figcaption><table><tr><td class="code"><pre><span class="line">      System.out.println(sub.count);</span><br><span class="line">      sub.display();</span><br><span class="line">Base b=sub;</span><br></pre></td></tr></table></figure>
+<p>直到4进行了一次向上转型，此时b的编译类型Base，运行类型Sub，方法以Sub为准，属性以Base为准，因此我认为输出时false，10，20。结果如下图所示：<br><img src="/images/q2.png" alt="运行结果" title="结果"><br>对System.out.println(b&#x3D;&#x3D;sub)判断失误，原因是这里的&#x3D;&#x3D;判断对象是地址，代码：Base b&#x3D;sub 的对象赋值的本质是给了b和sub指向一个空间的地址。我姑且理解为以后在对两个对象进行判断时，考虑地址是否指向同一个东西<br>#多态练习2#<br>这里提到了个很重要的动态绑定机制，</p>
+]]></content>
+      <tags>
+        <tag>就业准备</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Vue Vben Admin 安装踩坑复盘：Windows + nvm 环境下 pnpm / catalog: 依赖问题</title>
     <url>/2026/02/27/Vue-Vben-Admin-%E5%AE%89%E8%A3%85%E8%B8%A9%E5%9D%91%E5%A4%8D%E7%9B%98%EF%BC%9AWindows-nvm-%E7%8E%AF%E5%A2%83%E4%B8%8B-pnpm-catalog-%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<h2><span id="背景">背景</span></h2><p>我准备使用 <strong>vue-vben-admin（Vue3 后台模板）</strong>作为 MotorHub 项目的管理后台。按照官方文档 clone 后执行安装：</p>
@@ -768,68 +784,6 @@
 </ol>
 <hr>
 <h2><span id="可复制的一键命令windows">可复制的一键命令（Windows）</span></h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">corepack enable</span><br><span class="line">corepack prepare pnpm@9.15.0 --activate</span><br><span class="line">pnpm -v</span><br><span class="line">pnpm install</span><br><span class="line">pnpm dev</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>日常学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java开发记录</title>
-    <url>/2025/10/01/java%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<p>这里记录的是我学习java的时候，了解到的一些细节的知识。这些内容会比较细碎</p>
-<span id="more"></span>
-
-<h1><span id="1isblank-x2f-isempty">1.isBlank &#x2F; isEmpty</span></h1><p>简单来说，它们处理的“空”的层次不同：</p>
-<ul>
-<li><strong><code>isBlank</code><strong>：是为</strong>字符串</strong>量身定做的，它更聪明，会检查字符串是否<strong>“没有实际内容”</strong>（包括空格）。</li>
-<li><strong><code>isEmpty</code><strong>：更通用，可以用于多种类型（字符串、集合、数组等），它只检查对象是否</strong>“不存在或长度为0”</strong>。</li>
-</ul>
-<h3><span id="对比分析">对比分析</span></h3><table>
-<thead>
-<tr>
-<th>判断方法</th>
-<th><code>null</code></th>
-<th><code>&quot;&quot;</code> (空字符串)</th>
-<th><code>&quot;   &quot;</code> (空格字符串)</th>
-<th><code>[ ]</code> (空列表)</th>
-<th>主要用途</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong><code>isBlank</code></strong></td>
-<td><code>true</code></td>
-<td><code>true</code></td>
-<td><strong><code>true</code></strong></td>
-<td>不适用</td>
-<td><strong>字符串</strong>内容校验</td>
-</tr>
-<tr>
-<td><strong><code>isEmpty</code></strong></td>
-<td><code>true</code></td>
-<td><code>true</code></td>
-<td><strong><code>false</code></strong></td>
-<td><code>true</code></td>
-<td>集合、数组、字符串的<strong>非空判断</strong></td>
-</tr>
-</tbody></table>
-<h2><span id="isblank-x2f-isnotblank"><code>isBlank</code> &#x2F; <code>isNotBlank</code></span></h2><p>这个方法是<strong>专门为字符串设计的</strong>。一个字符串在以下三种情况下被认为是 “blank”：</p>
-<ol>
-<li><code>null</code></li>
-<li>空字符串 <code>&quot;&quot;</code></li>
-<li>仅由<strong>空白字符</strong>组成（空格、制表符 <code>\t</code>、换行符 <code>\n</code> 等）</li>
-</ol>
-<p><strong>核心区别</strong>：<code>isBlank</code> 会把 <code>&quot;   &quot;</code> 这种只包含空格的字符串也视为空。这在校验用户表单输入时非常有用，可以防止用户只输入一堆空格就绕过“必填”校验。</p>
-<h2><span id="isempty-x2f-isnotempty"><code>isEmpty</code> &#x2F; <code>isNotEmpty</code></span></h2><p>这个方法通常<strong>适用性更广</strong>。它可以判断多种对象是否为“空”：</p>
-<ul>
-<li><strong>字符串</strong>: <code>null</code> 或长度为 0 (<code>&quot;&quot;</code>)。</li>
-<li><strong>集合 (List, Set)</strong>: <code>null</code> 或 <code>size()</code> 为 0。</li>
-<li><strong>Map</strong>: <code>null</code> 或 <code>size()</code> 为 0。</li>
-<li><strong>数组</strong>: <code>null</code> 或 <code>length</code> 为 0。</li>
-</ul>
-<p><strong>核心区别</strong>：对于字符串 <code>&quot;   &quot;</code>，因为它的长度不为0，所以 <code>isEmpty</code> 会认为它**不是空 (<code>false</code>)**。</p>
-<h1><span id="2模糊查询like和精确查询eq">2.模糊查询like和精确查询eq</span></h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">queryWrapper.eq(ObjUtil.isNotEmpty(userId), &quot;userId&quot;, userId);</span><br><span class="line">queryWrapper.like(StrUtil.isNotBlank(name), &quot;name&quot;, name);</span><br></pre></td></tr></table></figure>
-
-<p>没什么特别好说的，记住这个东西就好</p>
 ]]></content>
       <tags>
         <tag>日常学习</tag>
@@ -1050,30 +1004,65 @@
       </tags>
   </entry>
   <entry>
-    <title>java多态</title>
-    <url>/2024/09/15/java%E5%A4%9A%E6%80%81/</url>
-    <content><![CDATA[<p>这个部分我觉得稍稍有点杂，毕竟函数，属性都存在多态。考虑到向上继承，向下继承这些，调用的顺序和麻烦程度都会递增。<br> <span id="more"></span></p>
-<h1><span id="方法的多态">方法的多态</span></h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Dog extends animal&#123;</span><br><span class="line">    private String food=&quot;骨头&quot;;</span><br><span class="line">    public Dog(String name, int age, String sex, String food) &#123;</span><br><span class="line">        super(name, age, sex);</span><br><span class="line">        this.food = food;</span><br><span class="line">    &#125;</span><br><span class="line">    public Dog(String name, int age, String sex) &#123;</span><br><span class="line">        super(name, age, sex);</span><br><span class="line">        //这里就使用了多态，通过参数的不同，调用同一个函数名但有不同的效果</span><br><span class="line">    &#125;</span><br><span class="line">    public String eat()&#123;</span><br><span class="line">        return food;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这里面的两个构造函数就是多态的一种，基于传参的多态<br>2024&#x2F;10&#x2F;2 21:19:13<br>关于编译类型增加细节<br>（1）一个对象的编译类型和运行类型可以不一致<br>（2）编译类型在定义对象时，就确定了，不能改<br>（3）运行类型是可以变的<br>（4）编译类型看定义时 &#x3D; 号的左边，运行类型看 &#x3D; 号右边。<br>（5）属性的值看编译类型，方法看运行<br>（6）继承会改变运行类型</p>
-<h1><span id="多态练习1">多态练习1</span></h1><p><img src="/images/%E5%A4%9A%E6%80%81.png" alt="练习题目" title="练习题"><br>对于代码：</p>
-<figure class="highlight plaintext"><figcaption><span>class PolyExercise02 &#123;</span></figcaption><table><tr><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Sub sub = new Sub();</span><br><span class="line">    System.out.println(sub.count);</span><br><span class="line">    sub.display();</span><br><span class="line">    Base b=sub;</span><br><span class="line">    System.out.println(b==sub);</span><br><span class="line">    System.out.println(b.count);</span><br><span class="line">    b.display();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>首先123都只是单纯地定义新类输出方法和属性，因此都是20.此时编译类型和运行类型都是sub</p>
-<figure class="highlight plaintext"><figcaption><span>sub </span></figcaption><table><tr><td class="code"><pre><span class="line">      System.out.println(sub.count);</span><br><span class="line">      sub.display();</span><br><span class="line">Base b=sub;</span><br></pre></td></tr></table></figure>
-<p>直到4进行了一次向上转型，此时b的编译类型Base，运行类型Sub，方法以Sub为准，属性以Base为准，因此我认为输出时false，10，20。结果如下图所示：<br><img src="/images/q2.png" alt="运行结果" title="结果"><br>对System.out.println(b&#x3D;&#x3D;sub)判断失误，原因是这里的&#x3D;&#x3D;判断对象是地址，代码：Base b&#x3D;sub 的对象赋值的本质是给了b和sub指向一个空间的地址。我姑且理解为以后在对两个对象进行判断时，考虑地址是否指向同一个东西<br>#多态练习2#<br>这里提到了个很重要的动态绑定机制，</p>
-]]></content>
-      <tags>
-        <tag>就业准备</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java相关知识汇总</title>
-    <url>/2025/09/08/java%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E6%B1%87%E6%80%BB/</url>
-    <content><![CDATA[<p>根据java刷题知识路线归纳总结，以期能流畅背诵</p>
+    <title>java开发记录</title>
+    <url>/2025/10/01/java%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p>这里记录的是我学习java的时候，了解到的一些细节的知识。这些内容会比较细碎</p>
 <span id="more"></span>
 
-<h1><span id="1java基本语法与数据类型">1.java基本语法与数据类型</span></h1><h2><span id="11java的基本语法结构">1.1java的基本语法结构</span></h2><h2><span id="12基本数据类型与引用数据类型的区别">1.2基本数据类型与引用数据类型的区别</span></h2><h2><span id="13常用运算符的应用">1.3常用运算符的应用</span></h2>]]></content>
+<h1><span id="1isblank-x2f-isempty">1.isBlank &#x2F; isEmpty</span></h1><p>简单来说，它们处理的“空”的层次不同：</p>
+<ul>
+<li><strong><code>isBlank</code><strong>：是为</strong>字符串</strong>量身定做的，它更聪明，会检查字符串是否<strong>“没有实际内容”</strong>（包括空格）。</li>
+<li><strong><code>isEmpty</code><strong>：更通用，可以用于多种类型（字符串、集合、数组等），它只检查对象是否</strong>“不存在或长度为0”</strong>。</li>
+</ul>
+<h3><span id="对比分析">对比分析</span></h3><table>
+<thead>
+<tr>
+<th>判断方法</th>
+<th><code>null</code></th>
+<th><code>&quot;&quot;</code> (空字符串)</th>
+<th><code>&quot;   &quot;</code> (空格字符串)</th>
+<th><code>[ ]</code> (空列表)</th>
+<th>主要用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong><code>isBlank</code></strong></td>
+<td><code>true</code></td>
+<td><code>true</code></td>
+<td><strong><code>true</code></strong></td>
+<td>不适用</td>
+<td><strong>字符串</strong>内容校验</td>
+</tr>
+<tr>
+<td><strong><code>isEmpty</code></strong></td>
+<td><code>true</code></td>
+<td><code>true</code></td>
+<td><strong><code>false</code></strong></td>
+<td><code>true</code></td>
+<td>集合、数组、字符串的<strong>非空判断</strong></td>
+</tr>
+</tbody></table>
+<h2><span id="isblank-x2f-isnotblank"><code>isBlank</code> &#x2F; <code>isNotBlank</code></span></h2><p>这个方法是<strong>专门为字符串设计的</strong>。一个字符串在以下三种情况下被认为是 “blank”：</p>
+<ol>
+<li><code>null</code></li>
+<li>空字符串 <code>&quot;&quot;</code></li>
+<li>仅由<strong>空白字符</strong>组成（空格、制表符 <code>\t</code>、换行符 <code>\n</code> 等）</li>
+</ol>
+<p><strong>核心区别</strong>：<code>isBlank</code> 会把 <code>&quot;   &quot;</code> 这种只包含空格的字符串也视为空。这在校验用户表单输入时非常有用，可以防止用户只输入一堆空格就绕过“必填”校验。</p>
+<h2><span id="isempty-x2f-isnotempty"><code>isEmpty</code> &#x2F; <code>isNotEmpty</code></span></h2><p>这个方法通常<strong>适用性更广</strong>。它可以判断多种对象是否为“空”：</p>
+<ul>
+<li><strong>字符串</strong>: <code>null</code> 或长度为 0 (<code>&quot;&quot;</code>)。</li>
+<li><strong>集合 (List, Set)</strong>: <code>null</code> 或 <code>size()</code> 为 0。</li>
+<li><strong>Map</strong>: <code>null</code> 或 <code>size()</code> 为 0。</li>
+<li><strong>数组</strong>: <code>null</code> 或 <code>length</code> 为 0。</li>
+</ul>
+<p><strong>核心区别</strong>：对于字符串 <code>&quot;   &quot;</code>，因为它的长度不为0，所以 <code>isEmpty</code> 会认为它**不是空 (<code>false</code>)**。</p>
+<h1><span id="2模糊查询like和精确查询eq">2.模糊查询like和精确查询eq</span></h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">queryWrapper.eq(ObjUtil.isNotEmpty(userId), &quot;userId&quot;, userId);</span><br><span class="line">queryWrapper.like(StrUtil.isNotBlank(name), &quot;name&quot;, name);</span><br></pre></td></tr></table></figure>
+
+<p>没什么特别好说的，记住这个东西就好</p>
+]]></content>
       <tags>
-        <tag>就业准备</tag>
+        <tag>日常学习</tag>
       </tags>
   </entry>
   <entry>
@@ -1104,13 +1093,12 @@ class Dog2 extends Dog&#123;
       </tags>
   </entry>
   <entry>
-    <title>“java算法题目”</title>
-    <url>/2025/09/09/java%E7%AE%97%E6%B3%95%E9%A2%98%E7%9B%AE/</url>
-    <content><![CDATA[<p>我觉得还是要给自己的算法题一些分类，这有利于我以后求职，也是自己梳理一下。我从力扣100一遍遍做，遇到什么就补充什么进去，今天先这样。</p>
+    <title>java相关知识汇总</title>
+    <url>/2025/09/08/java%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E6%B1%87%E6%80%BB/</url>
+    <content><![CDATA[<p>根据java刷题知识路线归纳总结，以期能流畅背诵</p>
 <span id="more"></span>
 
-<p><img src="/2025/09/09/java%E7%AE%97%E6%B3%95%E9%A2%98%E7%9B%AE/image-20250909181704696.png" alt="image-20250909181704696"></p>
-]]></content>
+<h1><span id="1java基本语法与数据类型">1.java基本语法与数据类型</span></h1><h2><span id="11java的基本语法结构">1.1java的基本语法结构</span></h2><h2><span id="12基本数据类型与引用数据类型的区别">1.2基本数据类型与引用数据类型的区别</span></h2><h2><span id="13常用运算符的应用">1.3常用运算符的应用</span></h2>]]></content>
       <tags>
         <tag>就业准备</tag>
       </tags>
@@ -1127,6 +1115,18 @@ class Dog2 extends Dog&#123;
 <li>构造器可以有多个。</li>
 <li>关于向下继承，只能是父类强制转化成子类，同一个父类的两个子类之间不能强制转化。</li>
 </ol>
+]]></content>
+      <tags>
+        <tag>就业准备</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>“java算法题目”</title>
+    <url>/2025/09/09/java%E7%AE%97%E6%B3%95%E9%A2%98%E7%9B%AE/</url>
+    <content><![CDATA[<p>我觉得还是要给自己的算法题一些分类，这有利于我以后求职，也是自己梳理一下。我从力扣100一遍遍做，遇到什么就补充什么进去，今天先这样。</p>
+<span id="more"></span>
+
+<p><img src="/2025/09/09/java%E7%AE%97%E6%B3%95%E9%A2%98%E7%9B%AE/image-20250909181704696.png" alt="image-20250909181704696"></p>
 ]]></content>
       <tags>
         <tag>就业准备</tag>
@@ -1582,640 +1582,6 @@ public class Application &#123;
       </tags>
   </entry>
   <entry>
-    <title>位运算</title>
-    <url>/2026/01/18/%E4%BD%8D%E8%BF%90%E7%AE%97/</url>
-    <content><![CDATA[<h1><span id="一-位运算速查表">一、位运算速查表</span></h1><table>
-<thead>
-<tr>
-<th align="center">符号</th>
-<th align="center">描述</th>
-<th align="center">运算 (A ? B)</th>
-<th align="center">结果</th>
-<th align="center">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">&amp;</td>
-<td align="center">与</td>
-<td align="center">0011 1100 &amp; 0000 1101</td>
-<td align="center">0000 1100 (12)</td>
-<td align="center">同1为1</td>
-</tr>
-<tr>
-<td align="center">**&#96;</td>
-<td align="center">&#96;**</td>
-<td align="center">或</td>
-<td align="center">&#96;0011 1100</td>
-<td align="center">0000 1101&#96;</td>
-</tr>
-<tr>
-<td align="center">^</td>
-<td align="center">异或</td>
-<td align="center">0011 1100 ^ 0000 1101</td>
-<td align="center">0011 0001 (49)</td>
-<td align="center">同0异1</td>
-</tr>
-<tr>
-<td align="center">~</td>
-<td align="center">取反</td>
-<td align="center">~0011 1100</td>
-<td align="center">1100 0011</td>
-<td align="center">0变1，1变0</td>
-</tr>
-<tr>
-<td align="center">&lt;&lt;</td>
-<td align="center">左移</td>
-<td align="center">A &lt;&lt; 2</td>
-<td align="center">1111 0000 (240)</td>
-<td align="center">乘以 4</td>
-</tr>
-<tr>
-<td align="center">&gt;&gt;</td>
-<td align="center">右移</td>
-<td align="center">A &gt;&gt; 2</td>
-<td align="center">0000 1111 (15)</td>
-<td align="center">除以 4</td>
-</tr>
-</tbody></table>
-<h1><span id="二-异或的性质">二、异或的性质</span></h1><p>异或是位运算中的重点操作，满足以下定律：</p>
-<ol>
-<li>归零律：x ^ x &#x3D; 0 (任何数与自己异或都是0)</li>
-<li>恒等律：x ^ 0 &#x3D; x (任何数与0异或保持不变)</li>
-<li>交换律与结合律：a ^ b ^ c &#x3D; a ^ c ^ b</li>
-</ol>
-<h1><span id="三-必背的高阶技巧">三、 必背的高阶技巧</span></h1><ol>
-<li><h2><span id="消除二进制中最低位的-1-brian-kernighan-算法">消除二进制中最低位的 1 (Brian Kernighan 算法)</span></h2></li>
-</ol>
-<ul>
-<li><strong>公式</strong>：<code>n &amp; (n - 1)</code></li>
-<li><strong>原理</strong>：<code>n-1</code> 会把 <code>n</code> 最右边的 1 变成 0，并将该位右边的所有 0 变成 1。再和 <code>n</code> 做与运算，那部分就全部抵消了。</li>
-<li><strong>应用</strong>：统计 1 的个数、判断是否为 2 的幂。</li>
-</ul>
-<p>Java</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 统计 1 的个数</span><br><span class="line">int count = 0;</span><br><span class="line">while (n != 0) &#123;</span><br><span class="line">    n = n &amp; (n - 1);</span><br><span class="line">    count++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2><span id="2-获取最低位的-1-lowbit">2. 获取最低位的 1 (Lowbit)</span></h2><ul>
-<li><strong>公式</strong>：<code>n &amp; -n</code></li>
-<li><strong>原理</strong>：利用补码特性，<code>-n</code> 实际上是 <code>~n + 1</code>。</li>
-<li><strong>示例</strong>：<code>x = 10100</code> -&gt; <code>lowbit = 00100</code></li>
-<li><strong>应用</strong>：树状数组（Fenwick Tree）、Diff 比较。</li>
-</ul>
-<ol start="3">
-<li><h2><span id="判断-n-是否是-2-的幂">判断 n 是否是 2 的幂</span></h2></li>
-</ol>
-<ul>
-<li><strong>公式</strong>：<code>n &gt; 0 &amp;&amp; (n &amp; (n - 1)) == 0</code></li>
-<li><strong>原理</strong>：2 的幂次在二进制中只有一个 1。消掉这个 1 后应该等于 0。</li>
-</ul>
-<h2><span id="4-异或实现变量交换不使用临时变量">4. 异或实现变量交换（不使用临时变量）</span></h2><ul>
-<li><p><strong>代码</strong>：</p>
-<p>Java</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a = a ^ b;</span><br><span class="line">b = a ^ b;</span><br><span class="line">a = a ^ b;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>评价</strong>：虽然很帅，但实际工程中不如 <code>int temp</code> 快（现代编译器优化），主要用于面试展示对性质的理解。</p>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>日常学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于智能体的看法</title>
-    <url>/2025/04/28/%E5%85%B3%E4%BA%8E%E6%99%BA%E8%83%BD%E4%BD%93%E7%9A%84%E7%9C%8B%E6%B3%95/</url>
-    <content><![CDATA[<p>感觉所谓的智能体，实际上是以往工作的整合。不过也确实很擅长</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>关于智能体的体验</title>
-    <url>/2025/05/02/%E5%85%B3%E4%BA%8E%E6%99%BA%E8%83%BD%E4%BD%93%E7%9A%84%E4%BD%93%E9%AA%8C/</url>
-    <content><![CDATA[<p>2025年是智能体的元年，这一观点常被各大厂商提及。我查找了以往他们对于智能体的一些观点。看来也确实如此。</p>
-<p>比较有说服力的是OPENAI的创始人萨鲁曼的说法，在之前的纽约时报里，我看到对于大模型的财报并不理想。其实这方面我认为DS也是有影响的，他们推出的开源低成本大模型极大地促进了市场对于大模型的开发热情，另一方OPENAI必须为此降低成本以吸引用户。他们API和付费订阅就因此没那么容易赚钱了。必须寻找一个突破口—–也就是智能体。</p>
-<p>可以看到他们对于这个智能体是很有信心的，他们甚至敢说赚1750亿。没有比这个更直观的了，另一方面是智能体的进展。编程智能体是最多的，然后是检索引擎智能体。不得不说，编程类智能体感觉会导致就业进一步严峻。我必须跟进学习这部分才行。</p>
-]]></content>
-      <tags>
-        <tag>日常记录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>排序算法</title>
-    <url>/2026/01/17/%E5%8A%9B%E6%89%A3hot100%E7%BB%83%E4%B9%A0/</url>
-    <content><![CDATA[<p>今天集中攻克了 7 道高频面试题。重点总结了 LRU 的 O(1) 实现细节、链表归并排序的断链技巧，以及回文串的中心扩散法。但本次的主题是再记忆排序算法，做一个排序算法的归类和理解。</p>
-<span id="more"></span>
-
-<h1><span id="一-核心算法速查表">一、核心算法速查表</span></h1><table>
-<thead>
-<tr>
-<th><strong>算法名称</strong></th>
-<th><strong>平均时间</strong></th>
-<th><strong>最坏时间</strong></th>
-<th><strong>最好时间</strong></th>
-<th><strong>空间复杂度</strong></th>
-<th><strong>稳定性</strong></th>
-<th><strong>备注 (面试金句)</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>冒泡排序</strong></td>
-<td>$O(n^2)$</td>
-<td>$O(n^2)$</td>
-<td>$O(n)$</td>
-<td>$O(1)$</td>
-<td>稳定</td>
-<td>教学意义大于实战，但需知道如何优化（Flag标志位）。</td>
-</tr>
-<tr>
-<td><strong>选择排序</strong></td>
-<td>$O(n^2)$</td>
-<td>$O(n^2)$</td>
-<td>$O(n^2)$</td>
-<td>$O(1)$</td>
-<td>不稳定</td>
-<td>无论数据好坏都是 $O(n^2)$，因为交换次数少，写操作敏感时可用。</td>
-</tr>
-<tr>
-<td><strong>插入排序</strong></td>
-<td>$O(n^2)$</td>
-<td>$O(n^2)$</td>
-<td>$O(n)$</td>
-<td>$O(1)$</td>
-<td>稳定</td>
-<td><strong>数据量小或基本有序时，效率极高（甚至优于快排）。</strong></td>
-</tr>
-<tr>
-<td><strong>希尔排序</strong></td>
-<td>$O(n^{1.3})$</td>
-<td>$O(n^2)$</td>
-<td>$O(n)$</td>
-<td>$O(1)$</td>
-<td>不稳定</td>
-<td>插入排序的改进版，打破了 $O(n^2)$ 的魔咒，但现代库函数较少用。</td>
-</tr>
-<tr>
-<td><strong>归并排序</strong></td>
-<td>$O(n \log n)$</td>
-<td>$O(n \log n)$</td>
-<td>$O(n \log n)$</td>
-<td>$O(n)$</td>
-<td>稳定</td>
-<td><strong>由于稳定且性能稳定，常用于对象排序（如 Java 的 <code>Arrays.sort</code> 对对象用归并）。</strong></td>
-</tr>
-<tr>
-<td><strong>快速排序</strong></td>
-<td>$O(n \log n)$</td>
-<td>$O(n^2)$</td>
-<td>$O(n \log n)$</td>
-<td>$O(\log n)$</td>
-<td>不稳定</td>
-<td><strong>综合性能之王</strong>。最坏情况可通过随机化 Pivot 避免。</td>
-</tr>
-<tr>
-<td><strong>堆排序</strong></td>
-<td>$O(n \log n)$</td>
-<td>$O(n \log n)$</td>
-<td>$O(n \log n)$</td>
-<td>$O(1)$</td>
-<td>不稳定</td>
-<td><strong>空间复杂度 $O(1)$ 的最强王者</strong>。常用于 Top K 问题。</td>
-</tr>
-<tr>
-<td><strong>计数排序</strong></td>
-<td>$O(n+k)$</td>
-<td>$O(n+k)$</td>
-<td>$O(n+k)$</td>
-<td>$O(n+k)$</td>
-<td>稳定</td>
-<td>牺牲空间换时间，仅适用于范围较小的整数。</td>
-</tr>
-</tbody></table>
-<h2><span id="11算法的稳定性">1.1算法的稳定性</span></h2><p>稳定：冒泡排序、插入排序、归并排序、基数排序（冒插归基稳定）</p>
-<p>不稳定：快速排序，希尔排序，选择排序，堆排序（快希选堆不稳定）</p>
-<h2><span id="二-算法原理解释">二、算法原理解释</span></h2><h2><span id="1冒泡排序">1.冒泡排序</span></h2><p><strong>核心逻辑</strong>：</p>
-<ol>
-<li>从头开始，两两比较，如果前一个比后一个大，就交换。</li>
-<li>一轮扫描结束后，<strong>最大值</strong>一定被移到了最后一位（就位）。</li>
-<li>重复上述过程，直到没有元素需要交换。</li>
-</ol>
-<h2><span id="2-选择排序">2. 选择排序</span></h2><p><strong>核心逻辑</strong>：</p>
-<ol>
-<li>在未排序序列中找到最小元素，存放到排序序列的起始位置。</li>
-<li>再从剩余未排序元素中继续寻找最小元素，然后放到已排序序列的末尾。</li>
-</ol>
-<h2><span id="3插入排序">3.插入排序</span></h2><p><strong>核心逻辑</strong>：</p>
-<ol>
-<li>将数组分为“已排序区间”和“未排序区间”。</li>
-<li>每次从未排序区间取出一个元素，在已排序区间从后往前扫描。</li>
-<li>如果已排序的元素比它大，就<strong>向后移动</strong>，直到找到合适的位置插入。</li>
-</ol>
-<h2><span id="4快速排序">4.快速排序</span></h2><p><strong>核心逻辑</strong>：</p>
-<ol>
-<li><strong>选基准</strong>：随便挑一个数（通常是第一个、最后一个或中间）作为 Pivot。</li>
-<li><strong>分区 (Partition)<strong>：把比 Pivot 小的扔左边，比 Pivot 大的扔右边。这一步做完，</strong>Pivot 就在它最终应该在的位置上了</strong>（这是快排最关键的性质）。</li>
-<li><strong>递归</strong>：对左右两边继续重复上述过程。</li>
-</ol>
-<h2><span id="5归并排序">5.归并排序</span></h2><p><strong>核心逻辑</strong>：</p>
-<ol>
-<li>**分 (Divide)**：递归地把当前序列平均分割成两半，直到子序列长度为 1（由一个元素组成的序列天然有序）。</li>
-<li>**治 (Conquer)**：将两个有序的子序列合并成一个有序序列（双指针法：谁小取谁，放入新数组）。</li>
-</ol>
-<p><strong>面试价值</strong>：它是唯一一个<strong>稳定</strong>且时间复杂度永远是 $O(n \log n)$ 的算法，常用于对象排序或外部排序（内存装不下时）。</p>
-<h2><span id="6堆排序">6.堆排序</span></h2><p><strong>核心逻辑</strong>：</p>
-<ol>
-<li><strong>建堆</strong>：把数组构建成一个<strong>大顶堆</strong>（根节点最大）。</li>
-<li><strong>交换</strong>：把堆顶（最大值）和数组最后一个元素交换（最大值归位）。</li>
-<li>**堆化 (Heapify)**：把剩下的 $n-1$ 个元素重新调整为大顶堆。</li>
-<li>重复步骤 2-3。</li>
-</ol>
-<p><strong>面试价值</strong>：不需要额外空间 ($O(1)$)，但因为内存跳跃访问（索引 $i$ 的孩子在 $2i$），缓存命中率不如快排，所以实战中比快排慢。</p>
-<p>图片例子来源：<a href="https://www.bilibili.com/video/BV1sek9YBELe/?spm_id_from=333.337.search-card.all.click&vd_source=ecbe42ffb25fea0da636165433fb75d6">4分钟学堆排序(手机动画版)_哔哩哔哩_bilibili</a></p>
-<p>1.将数组从左到右填入二叉树中</p>
-<p><img src="/2026/01/17/%E5%8A%9B%E6%89%A3hot100%E7%BB%83%E4%B9%A0/image-20260117154512059.png" alt="image-20260117154512059"></p>
-<p>2.调整为大根堆，方法是找到最后一个非叶子节点int()(9&#x2F;2-1)，如果子节点比他大，那就swap一下。直到自己到达叶子节点。最后从3，2，1，0的顺序依次调整。做成最大堆</p>
-<p><img src="/2026/01/17/%E5%8A%9B%E6%89%A3hot100%E7%BB%83%E4%B9%A0/image-20260117154722378.png" alt="image-20260117154722378"></p>
-<p>3.最大值通过首尾交换的方式出栈，接下来就是对【0，7】再次进行操作</p>
-<p><img src="/2026/01/17/%E5%8A%9B%E6%89%A3hot100%E7%BB%83%E4%B9%A0/image-20260117155026446.png" alt="image-20260117155026446"></p>
-<p><img src="/2026/01/17/%E5%8A%9B%E6%89%A3hot100%E7%BB%83%E4%B9%A0/image-20260117154957961.png" alt="image-20260117154957961"></p>
-<h2><span id="7希尔排序">7.希尔排序</span></h2><p><strong>核心逻辑</strong>：</p>
-<p>插入排序在处理大规模乱序数据时很慢（因为一次只能移动一位）。</p>
-<p>希尔排序先让数组中<strong>间隔为 Gap</strong> 的元素进行插入排序（宏观调控）。</p>
-<p>不断缩小 Gap，直到 Gap&#x3D;1，此时数组已经基本有序，最后做一次插入排序即可。</p>
-<h2><span id="8-基数排序">8. 基数排序</span></h2><p><strong>一句话原理</strong>：<strong>非比较排序</strong>。按位（个位、十位、百位…）进行分配和收集。</p>
-<p><strong>核心逻辑</strong>：</p>
-<ol>
-<li>准备 10 个桶（0-9）。</li>
-<li>先按<strong>个位</strong>数字，把元素扔进对应的桶里，然后按顺序倒出来（此时个位有序）。</li>
-<li>再按<strong>十位</strong>数字，把元素扔进桶里，倒出来。</li>
-<li>重复直到最高位。</li>
-</ol>
-<p><strong>要求</strong>：必须从低位到高位（LSD），且每一轮入桶必须使用<strong>稳定</strong>的排序算法（通常是计数排序的变种），否则高位的排序会打乱低位的顺序。</p>
-]]></content>
-      <tags>
-        <tag>日常学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>优秀博文整理</title>
-    <url>/2025/07/06/%E4%BC%98%E7%A7%80%E5%8D%9A%E6%96%87%E6%95%B4%E7%90%86/</url>
-    <content><![CDATA[<p>​				记录一些我看过的优秀博文。</p>
-<span id="more"></span>
-
-<p>​				1. <a href="https://mp.weixin.qq.com/s/Ov2m6vht9I2tIEmZC_yeYg">【避坑指南！AnythingLLM本地知识库用的还好吗？】部署后必看（一）问错问题&#x3D;入天坑（附社区答复及本地存储文件夹解读）</a>   这一篇博文解释了本地知识库的一些使用问题，其实也可以扩展来说，也就是大模型处理数据库的方式， 其实也是一样的。——在【不是理解整篇文章，而是进行相似度检索这一点上】</p>
-]]></content>
-      <tags>
-        <tag>日常学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>力扣学习记录lambda表达式</title>
-    <url>/2026/01/22/%E5%8A%9B%E6%89%A3%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
-    <content><![CDATA[<p>在做 LeetCode 347（前 K 个高频元素）时，我最开始的思路是简单的“统计频率 -&gt; 找出频率大于 k 的数”。但后来发现题目要求的是<strong>“频率最高的 k 个数”</strong>，这是一个经典的 Top K 问题。</p>
-<p>在这个过程中，我对 Java 的 <code>PriorityQueue</code>（优先队列）、Lambda 表达式以及堆排序的本质有了全新的认识。</p>
-<span id="more"></span>
-
-<p>先贴结果代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import java.util.*;</span><br><span class="line"></span><br><span class="line">class Solution &#123;</span><br><span class="line">    public int[] topKFrequent(int[] nums, int k) &#123;</span><br><span class="line">        // 1. 使用 HashMap 统计每个数字出现的频率</span><br><span class="line">        Map&lt;Integer, Integer&gt; counts = new HashMap&lt;&gt;();</span><br><span class="line">        for (int num : nums) &#123;</span><br><span class="line">            counts.put(num, counts.getOrDefault(num, 0) + 1);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // 2. 创建优先队列（小顶堆）</span><br><span class="line">        // 核心逻辑：(a, b) -&gt; counts.get(a) - counts.get(b)</span><br><span class="line">        // 含义：按照频率从小到大排。频率低的在堆顶，随时准备被踢走。</span><br><span class="line">        PriorityQueue&lt;Integer&gt; pq = new PriorityQueue&lt;&gt;((a, b) -&gt; counts.get(a) - counts.get(b));</span><br><span class="line"></span><br><span class="line">        // 3. 遍历 Map，维护一个大小为 k 的堆</span><br><span class="line">        for (int num : counts.keySet()) &#123;</span><br><span class="line">            pq.offer(num); // 入队</span><br><span class="line">            // 如果堆大了，就把频率最小的（堆顶）弹出去</span><br><span class="line">            if (pq.size() &gt; k) &#123;</span><br><span class="line">                pq.poll();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // 4. 输出结果</span><br><span class="line">        int[] res = new int[k];</span><br><span class="line">        for (int i = 0; i &lt; k; i++) &#123;</span><br><span class="line">            res[i] = pq.poll();</span><br><span class="line">        &#125;</span><br><span class="line">        return res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这个代码里面，我最开始很不理解，这一个确实是我以前没怎么见过，后来理解了这是一种特殊的增加规则的的方法。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">PriorityQueue&lt;Integer&gt; pq = new PriorityQueue&lt;&gt;((a, b) -&gt; counts.get(a) - counts.get(b));</span><br></pre></td></tr></table></figure>
-
-<p>这行代码并不只是为了“排序”，它是在<strong>“立规矩”</strong>。</p>
-<ul>
-<li>**<code>a</code> 和 <code>b</code>**：是队列里的数字（选手）。</li>
-<li>**<code>counts.get(...)</code>**：是比较的标准（看频率，不看数字本身）。</li>
-<li><strong>返回值</strong>：虽然写的是减法算式，但 Java 接收到的是一个<strong>整数（int）</strong>。<ul>
-<li>负数：<code>a</code> 轻（上浮&#x2F;排前面）。</li>
-<li>正数：<code>a</code> 重（下沉&#x2F;排后面）。</li>
-</ul>
-</li>
-</ul>
-<p>从而保证了每次add都会维护，把小数值给上浮。</p>
-<h2><span id="2comparator-万能口诀">2.Comparator 万能口诀</span></h2><p>根据学习，永远是写（a,b）根据目标效果，选择是a-b还是b-a</p>
-<table>
-<thead>
-<tr>
-<th><strong>目标效果</strong></th>
-<th><strong>核心写法</strong></th>
-<th><strong>记忆口诀</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>小</strong>数值在堆顶 &#x2F; 排前面</td>
-<td><code>a - b</code></td>
-<td><strong>前减后</strong>（我减你）</td>
-</tr>
-<tr>
-<td><strong>大</strong>数值在堆顶 &#x2F; 排前面</td>
-<td><code>b - a</code></td>
-<td><strong>后减前</strong>（你减我）</td>
-</tr>
-<tr>
-<td><strong>String 长度短</strong>在堆顶</td>
-<td><code>a.length() - b.length()</code></td>
-<td>前减后</td>
-</tr>
-<tr>
-<td><strong>String 字典序</strong>靠前</td>
-<td><code>a.compareTo(b)</code></td>
-<td>顺着比</td>
-</tr>
-</tbody></table>
-<p>而对于一些复杂的情况，我们可以在里面增加代码串。逻辑是一样的，返回的数值小于0，就是选择数对的A上浮</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(a, b) -&gt; &#123;</span><br><span class="line">    int freqCompare = counts.get(a) - counts.get(b);</span><br><span class="line">    if (freqCompare != 0) &#123;</span><br><span class="line">        return freqCompare; // 频率不同：按频率小顶堆（小的在顶）</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        // 频率相同：进入这里的瞬间，freqCompare 已经是 0 了，不能用了！</span><br><span class="line">        // 题目要求：数字大的在堆顶 -&gt; 大顶堆逻辑 -&gt; 后减前</span><br><span class="line">        return b - a;  // &lt;--- 这里才是正确答案</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2><span id="3扩展用法">3.扩展用法</span></h2><p>不止是这个小根堆，大根堆场景，我们还能用在别的地方：</p>
-<h3><span id="31-给数组x2f列表排序-arrayssort-x2f-collectionssort">3.1 给数组&#x2F;列表排序 (<code>Arrays.sort</code> &#x2F; <code>Collections.sort</code>)</span></h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">List&lt;String&gt; list = new ArrayList&lt;&gt;(Arrays.asList(&quot;apple&quot;, &quot;hi&quot;, &quot;banana&quot;));</span><br><span class="line"></span><br><span class="line">// 旧写法：Collections.sort(list, new Comparator...);</span><br><span class="line">// 新写法（Lambda）：</span><br><span class="line">list.sort((a, b) -&gt; a.length() - b.length()); </span><br><span class="line"></span><br><span class="line">System.out.println(list); // 输出 [hi, apple, banana]</span><br></pre></td></tr></table></figure>
-
-<h3><span id="32-给二维数组排序">3.2 给二维数组排序</span></h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// intervals 是个二维数组，里面的元素是 int[] (一维数组)</span><br><span class="line">// 所以这里的 a 和 b 代表的是每一行，即 &#123;1,3&#125; 和 &#123;2,6&#125;</span><br><span class="line">Arrays.sort(intervals, (a, b) -&gt; a[0] - b[0]);</span><br></pre></td></tr></table></figure>
-
-<h3><span id="33-自动排序的-map-和-set-treemap-x2f-treeset">3.3 自动排序的 Map 和 Set (<code>TreeMap</code> &#x2F; <code>TreeSet</code>)</span></h3><p>这两个数据结构和 <code>PriorityQueue</code> 是亲兄弟。</p>
-<ul>
-<li><code>PriorityQueue</code>：只保证<strong>堆顶</strong>是有序的。</li>
-<li><code>TreeMap</code> &#x2F; <code>TreeSet</code>：保证<strong>内部所有元素永远</strong>是有序的。</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 这里的 (a, b) 指的是 Key</span><br><span class="line">Map&lt;Integer, String&gt; map = new TreeMap&lt;&gt;((a, b) -&gt; b - a);</span><br><span class="line"></span><br><span class="line">map.put(1, &quot;A&quot;);</span><br><span class="line">map.put(3, &quot;B&quot;);</span><br><span class="line">map.put(2, &quot;C&quot;);</span><br><span class="line"></span><br><span class="line">// 遍历时，会自动按 Key 从大到小出：3 -&gt; 2 -&gt; 1</span><br><span class="line">for(Integer key : map.keySet()) &#123;</span><br><span class="line">    System.out.println(key); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2><span id="4-java-stream-流操作-max-min-sorted">4.  Java Stream 流操作 (<code>.max</code>, <code>.min</code>, <code>.sorted</code>)</span></h2><p>Java 8 的流式编程极其依赖这个写法。</p>
-<h4><span id="场景在一堆对象里找最的那一个">场景：在一堆对象里找“最…”的那一个</span></h4><p>假设你有一堆 <code>Student</code> 对象，想找<strong>分数最高</strong>的那个。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Student &#123; String name; int score; &#125;</span><br><span class="line">List&lt;Student&gt; students = ...;</span><br><span class="line"></span><br><span class="line">// 找最大值 (max)</span><br><span class="line">// 这里的 max 需要你告诉它：什么叫“大”？</span><br><span class="line">// 答：分数 (a.score - b.score) 越大，就越大</span><br><span class="line">Student bestStudent = students.stream()</span><br><span class="line">    .max((a, b) -&gt; a.score - b.score) </span><br><span class="line">    .get();</span><br></pre></td></tr></table></figure>
-
-<h2><span id="5总结">5.总结</span></h2><table>
-<thead>
-<tr>
-<th><strong>场景</strong></th>
-<th><strong>代码片段</strong></th>
-<th><strong>作用</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>优先队列</strong></td>
-<td><code>new PriorityQueue&lt;&gt;((a, b) -&gt; a - b)</code></td>
-<td>决定<strong>谁在堆顶</strong></td>
-</tr>
-<tr>
-<td><strong>数组排序</strong></td>
-<td><code>Arrays.sort(arr, (a, b) -&gt; a - b)</code></td>
-<td>决定<strong>谁排前面</strong></td>
-</tr>
-<tr>
-<td><strong>列表排序</strong></td>
-<td><code>list.sort((a, b) -&gt; a - b)</code></td>
-<td>决定<strong>谁排前面</strong></td>
-</tr>
-<tr>
-<td><strong>Tree结构</strong></td>
-<td><code>new TreeMap&lt;&gt;((a, b) -&gt; a - b)</code></td>
-<td>决定<strong>Key的存储顺序</strong></td>
-</tr>
-<tr>
-<td><strong>流操作</strong></td>
-<td><code>stream.max((a, b) -&gt; a - b)</code></td>
-<td>决定<strong>谁算最大值</strong></td>
-</tr>
-</tbody></table>
-]]></content>
-      <tags>
-        <tag>日常学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>图片优化思路</title>
-    <url>/2025/10/23/%E5%9B%BE%E7%89%87%E4%BC%98%E5%8C%96%E6%80%9D%E8%B7%AF/</url>
-    <content><![CDATA[<p>这一个部分还是需要仔细思考，想来应该也不止是用在图片优化上，我认为在更多的地方都是可以使用这个技术的。</p>
-<span id="more"></span>
-
-<h1><span id="一-图片查询优化">一、图片查询优化</span></h1><p>首先确定什么样的数据适合缓存：</p>
-<ol>
-<li>高频访问的数据：如系统首页、热门推荐内容等。</li>
-<li>计算成本较高的数据：如复杂查询结果、大量数据的统计结果。</li>
-<li>允许短时间延迟的数据：如不需要实时更新的排行榜、图片列表等。</li>
-</ol>
-<h2><span id="redis-分布式缓存">Redis 分布式缓存</span></h2><p>分布式是指将缓存数据储存在多台服务器上，以便在高并发场景下实现更高的吞吐量和容错性。也可以把同一份数据存储到多个服务器去，以实现数据的安全性.</p>
-<p>作为分布式缓存的主流方案，REDIS具备以下几个优势：</p>
-<ul>
-<li><p>高性能：基于内存操作，访问速度极快。<strong>单节点 Redis 的读写 QPS 可达 10w 次每秒！</strong>而且<strong>Redis 的核心网络I&#x2F;O和命令执行是单线程的</strong>，避免了多线程上下文切换和锁竞争所带来的巨大性能开销。——我的理解是单线程执行不是重点，这个线程运行的方式，只询问不等待才是重点。从而让Redis 具备了用一个线程同时处理成千上万个网络连接的能力。</p>
-</li>
-<li><p>丰富的数据结构：支持字符串、列表、集合、哈希、位图等，适用于各种数据结构存储。</p>
-</li>
-<li><p>分布式支持：<strong>高可用和高扩展</strong>可以通过 Redis Cluster 构建高可用、高性能的分布式缓存，还提供哨兵集群机制提升可用性、提供分片集群机制提高可扩展性。</p>
-<p>这里的可扩展性指的是系统应对“增长”的能力。可以是用户量暴增、数据量暴增、或请求量暴增。我们可以增加机器或者机器升级来解决</p>
-<p>高可用性指的是系统抵抗故障的能力，解决的核心手段是冗余</p>
-</li>
-</ul>
-<h2><span id="什么是-redis-cluster">什么是 Redis Cluster？</span></h2><p><strong>Redis Cluster (集群模式)</strong> 是 Redis 官方提供的<strong>分布式解决方案</strong>。</p>
-<p>它的核心目标是解决两个问题：</p>
-<ol>
-<li>**数据分片 (Sharding)**：将海量数据分散存储到多个 Redis 节点上，突破单台服务器的内存和性能瓶颈。</li>
-<li>**高可用 (High Availability)**：当集群中的某个主节点宕机时，它的从节点可以自动顶上，保证服务继续可用。</li>
-</ol>
-<p>为了实现这个目标，Redis Cluster 采用了“**哈希槽 (Hash Slot)**”的设计：</p>
-<ul>
-<li><strong>16384 个哈希槽</strong>：Redis Cluster 将整个数据库（逻辑上）分成了 16384 （2的14次方）个哈希槽。</li>
-<li><strong>Key 与槽的映射</strong>：当你存入一个 key 时，Redis 会用 <code>CRC16(key) % 16384</code> 算法计算这个 key 应该属于哪个槽。</li>
-<li><strong>槽与节点的分配</strong>：集群启动时，这 16384 个槽会被分配给集群中所有的**主节点 (Master)**。例如，3 个主节点，可能节点 A 负责 0-5500 槽，节点 B 负责 5501-11000 槽，节点 C 负责 11001-16383 槽。</li>
-<li><strong>高可用（主从）</strong>：每个主节点都会有至少一个<strong>从节点 (Slave)</strong> 来复制它的数据。当主节点 A 宕机，它的从节点 A1 会被集群选举为新的主节点，接管 0-5500 槽，服务不会中断。</li>
-<li><strong>去中心化</strong>：集群中的所有节点都互相连接（通过Gossip协议），它们都知道哪个槽由哪个节点负责。当客户端连接任意一个节点并尝试操作一个不归它管的 key 时，它会告诉客户端“请重定向到 XX 节点”，整个过程对客户端是透明的。</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th><strong>方案</strong></th>
-<th><strong>Memcached</strong></th>
-<th>**Redis **</th>
-<th><strong>Hazelcast</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>定位</strong></td>
-<td>纯内存对象缓存</td>
-<td>数据结构服务器</td>
-<td>内存数据网格 (IMDG)</td>
-</tr>
-<tr>
-<td><strong>数据结构</strong></td>
-<td>仅字符串 (Key-Value)</td>
-<td>丰富 (String, Hash, List, Set…)</td>
-<td>丰富 (Map, Queue, Set, Topic…)</td>
-</tr>
-<tr>
-<td><strong>持久化</strong></td>
-<td><strong>不支持</strong></td>
-<td>支持 (RDB &#x2F; AOF)</td>
-<td>支持</td>
-</tr>
-<tr>
-<td><strong>集群</strong></td>
-<td>客户端实现（简单）</td>
-<td>需专门配置 (Cluster &#x2F; Sentinel)</td>
-<td><strong>自动发现，P2P 组网</strong></td>
-</tr>
-<tr>
-<td><strong>核心优点</strong></td>
-<td>简单、高性能 (多线程 Get&#x2F;Set)</td>
-<td>功能全面、生态强大</td>
-<td>Java 原生、集群管理简单</td>
-</tr>
-<tr>
-<td><strong>适用场景</strong></td>
-<td>数据库查询、API 响应的纯缓存</td>
-<td>缓存、分布式锁、消息队列、计数器</td>
-<td>Java 微服务、分布式计算</td>
-</tr>
-</tbody></table>
-<p>顺便列一下都是数据库且用得比较多的MYSQL，这两个的一切区别就是存放位置，这直接导致了他们在性能，数据持久和用途上的差异：MySQL 遵循 ACID 原则，能保证事务的原子性和一致性，数据可靠性高；Redis专为高速缓存和实时操作设计‌。</p>
-<table>
-<thead>
-<tr>
-<th><strong>特性</strong></th>
-<th><strong>MySQL (关系型数据库)</strong></th>
-<th><strong>Redis (内存数据库)</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>存储位置</strong></td>
-<td><strong>磁盘 (Disk-based)</strong></td>
-<td><strong>内存 (In-Memory)</strong></td>
-</tr>
-<tr>
-<td><strong>性能&#x2F;速度</strong></td>
-<td>较慢（受限于磁盘 I&#x2F;O）</td>
-<td><strong>极快</strong>（受限于内存速度）</td>
-</tr>
-<tr>
-<td><strong>数据持久化</strong></td>
-<td><strong>强持久化</strong>（数据默认永久保存）</td>
-<td>弱持久化（默认是临时的，需配置 RDB&#x2F;AOF 才能重启后恢复）</td>
-</tr>
-<tr>
-<td><strong>数据模型</strong></td>
-<td>结构化 (表、行、列)，使用 <code>SQL</code></td>
-<td>键值对 (Key-Value)，支持丰富的数据结构 (String, Hash, List)</td>
-</tr>
-<tr>
-<td><strong>容量限制</strong></td>
-<td>巨大（受限于硬盘大小, TB 级）</td>
-<td>有限（受限于内存大小, GB 级）</td>
-</tr>
-<tr>
-<td><strong>主要角色</strong></td>
-<td><strong>“数据仓库” (System of Record)</strong></td>
-<td><strong>“高速缓存” (Cache) &#x2F; “工作台”</strong></td>
-</tr>
-</tbody></table>
-<p>自己测试了下，使用带缓存的查询，第一次是470ms，第二次是7ms。不使用带缓存的查询是50ms，第二次是10ms，之所以会有这种情况，是因为mysql也有自己的缓存。</p>
-<h1><span id="解决缓存常见问题">解决缓存常见问题</span></h1><p>使用缓存时，一般要注意下面几个问题：</p>
-<ol>
-<li>缓存击穿：某些 <strong>热点数据</strong> 在缓存过期后，大量请求直接打到数据库。</li>
-</ol>
-<p>​	解决方案：设置热点数据的超长过期时间，或使用互斥锁（如 Redisson）控制缓存刷新。</p>
-<ol start="2">
-<li>缓存穿透：用户频繁请求不存在的数据，导致大量的请求直接触发数据库查询。</li>
-</ol>
-<p>​	解决方案：对无效查询结果也进行缓存（如设置空值缓存），或者使用布隆过滤器。</p>
-<ol start="3">
-<li>缓存雪崩：大量缓存同时过期，导致请求打到数据库，系统崩溃。</li>
-</ol>
-<ol start="4">
-<li>缓存一致性:你在“写”（增、删、改）操作时，只更新了数据库，但<strong>忘记</strong>了去处理缓存。</li>
-</ol>
-<p>​	解决方案: 先更新数据库，再删除缓存</p>
-<table>
-<thead>
-<tr>
-<th align="center"><strong>问题</strong></th>
-<th align="center"><strong>现象</strong></th>
-<th align="center"><strong>解决方案</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><strong>缓存穿透</strong></td>
-<td align="center">查一个<strong>不存在</strong>的数据</td>
-<td align="center">1. 缓存空值  2. 布隆过滤器</td>
-</tr>
-<tr>
-<td align="center"><strong>缓存击穿</strong></td>
-<td align="center"><strong>一个热点</strong>数据过期</td>
-<td align="center">1. 分布式锁 (Mutex)  2. 逻辑过期</td>
-</tr>
-<tr>
-<td align="center"><strong>缓存雪崩</strong></td>
-<td align="center"><strong>一大片</strong>数据同时过期 &#x2F; Redis 宕机</td>
-<td align="center">1. <strong>随机过期时间</strong> (你已在用)  2. Redis 高可用 (集群&#x2F;哨兵)</td>
-</tr>
-<tr>
-<td align="center"><strong>缓存一致性</strong></td>
-<td align="center">数据库和缓存<strong>数据不同</strong></td>
-<td align="center">1. <strong>先更新数据库，再删除缓存</strong></td>
-</tr>
-</tbody></table>
-]]></content>
-      <tags>
-        <tag>就业准备</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大模型是怎么做到长上下文扩展的</title>
-    <url>/2025/05/22/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%98%AF%E6%80%8E%E4%B9%88%E5%81%9A%E5%88%B0%E9%95%BF%E4%B8%8A%E4%B8%8B%E6%96%87%E6%89%A9%E5%B1%95%E7%9A%84/</url>
-    <content><![CDATA[<p>一直以来我都很疑惑，为什么大模型可以从4K学到8K又到128K呢，今天看来视频才有一些想法。<br> <span id="more"></span><br>1.大模型拟合结果依赖随机梯度算法，如果一次性输出128K的文本进行拟合，那就会对128K倍的权重进行拟合，考虑到自注意力计算矩阵是输入增长的平方。直接进行拟合导致的计算消耗是难以估计的。</p>
-<p>2.因此，我们就先让模型学习少量文本。这时候模型的参数已经得到一定的调整了，当我们再扩大这个文本长度时，他会有一个基准线在，就可以以那个基准为基础进行二次拟合。如果我们把8K的参数全部冻结，训练128K的文本矩阵加到8K的参数矩阵上去，那这个实际上就类似LORA了。这也是LORA微调的核心，基础大模型不动，少量修改附加参数矩阵。</p>
-<p>3.再一个增大模型上下文长度的方法就是数据分片了，学习完前面的内容再把学到的东西传递下去</p>
-<p>4.如果从架构入手也是可以的，比如经典的局部注意力+全局注意力的形式，这一技术我们可以在Gemma2到Gemma3的架构改进中看到。</p>
-]]></content>
-      <tags>
-        <tag>日常记录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>医疗助手大模型的微调</title>
-    <url>/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/</url>
-    <content><![CDATA[<p>在之前的博客助手大模型中，我感受到模型效果受参数影响极大，一些8b回答起来磕磕绊绊的问题，14b的模型就能顺利回答。固然模型的参数是一个要点，但我认为以后对于小模型的需求也不会减少，这就需要用微调的方式让模型垂直化，专业化。因此，我的下一个目标在大模型的微调上，由于我的课题和医疗方向比较相关的，这方面的微调数据集 (华佗GPT) 又有，因此，我计划从这方面入手，做出一个医疗领域的垂直优化大模型，旨在回答医疗知识，降低有害错误问题的发生率</p>
-<span id="more"></span>
-
-<h1><span id="1模型选择">1.模型选择</span></h1><h1><span id="2数据集选择">2.数据集选择</span></h1><p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828221748287.png" alt="image-20250828221748287"></p>
-<p>链接：<a href="https://huggingface.co/datasets?search=medical">https://huggingface.co/datasets?search=medical</a></p>
-<p>先确定目的，SFT阶段我们主要任务是让模型博学起来，能够理解医疗领域的术语、实体以及常见的对话模式就算成功，使用华佗GPT数据集，由香港中文大学（深圳）和深圳市大数据研究院联合开源了专用于医疗领域的复杂大模型。这样就使用他们给出的SFT数据集：<a href="https://huggingface.co/datasets/FreedomIntelligence/medical-o1-reasoning-SFT">FreedomIntelligence&#x2F;medical-o1-reasoning-SFT · Datasets at Hugging Face</a></p>
-<p>折磨了一下下完了，这里需要注意，安装前要先下两个库，然后用huggingface-cli下载会快很多：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install -U &quot;huggingface_hub[cli]&quot;</span><br><span class="line">#高速传输库 hf_transfer</span><br><span class="line">pip install -U hf_transfer</span><br></pre></td></tr></table></figure>
-
-<p>由于我的服务器内网限制严格，只能win上面安装，做了这两部我还要手动加上Path：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">WARNING: The scripts hf.exe... are installed in  &#x27;C:\Users\origin\AppData\Roaming\Python\Python312\Scripts&#x27;  which is not on PATH.</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828230911267.png" alt="image-20250828230911267"></p>
-<p>然后在新建造哪里输入上面的路径信息 <code>&#39;C:\Users\origin\AppData\Roaming\Python\Python312\Scripts&#39;</code> </p>
-<p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828231120276.png" alt="image-20250828231120276"></p>
-<p>重新启动后就可以正常下载了</p>
-<p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828225951739.png" alt="image-20250828225951739"></p>
-<h1><span id="参考资料">参考资料：</span></h1><p><a href="https://zhuanlan.zhihu.com/p/652615133">推荐收藏！23个医疗领域微调大模型微调及数据汇总！ - 知乎</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/15635537603">【论文解读】HuatuoGPT-o1：用CoT和RL增强医疗LLM的复杂推理能力 - 知乎</a></p>
-<p><a href="https://github.com/FreedomIntelligence/HuatuoGPT">FreedomIntelligence&#x2F;HuatuoGPT: HuatuoGPT, Towards Taming Language Models To Be a Doctor. (An Open Medical GPT)</a></p>
-]]></content>
-      <tags>
-        <tag>实习准备</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大模型的演变趋势</title>
-    <url>/2025/05/14/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%BC%94%E5%8F%98%E8%B6%8B%E5%8A%BF/</url>
-    <content><![CDATA[<p>我认为大模型的趋势有俩，轻量化和多模态化。<br> <span id="more"></span><br>轻量化说的就是MOE和稀疏自注意力。大家都在往这个方向走。而且现在似乎再MOE这一点上已经达成一致了。考虑到MOE能够大幅度减少推理成本，这是很合理的。</p>
-<p>另一个问题是自注意力机制。最关键的这个部分反而是没有怎么改动的，从MHA,GQA,单个子注意力。这些都是缩减规模，但是性能肉眼可见的在掉，虽然分组倒是能行，但效果还是差了点。这一点来说DS的新注意力就很强了，MLA。和ROPE混合起来使用，保留了自注意力的效果还减少了计算量，明显的有在另辟蹊径。</p>
-<p>然后就是多模态化，道也不用多说。这些本质都是为了后续的硬件做服务。我感觉现在的大模型卷到一定程度，确实是都走向应用去了，就是大模型始终只能当辅助。</p>
-<p>虽然不好说这个时间能持续多久就是了</p>
-]]></content>
-      <tags>
-        <tag>日常记录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大模型的输入</title>
-    <url>/2025/05/16/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%BE%93%E5%85%A5/</url>
-    <content><![CDATA[<p>虽然我以前就知道大模型的输入计算很坑，但还是没想到这么坑<br> <span id="more"></span><br>首先输入的文本【1234】【567】，输入【567】的时候之前的【1234】和模型对他的回答也会加进来。</p>
-<p>其次是联网功能，这玩意就牛逼了，上不封顶。就算是直接选择前面三个网页，也得是他去读了才行。麻了，同样的，这部分也要算你头上</p>
-<p>最后是提示词，你输入的格式规范之类的东西也得通过提示词 来实现，一样的，这个也是要Token的。这三样累计再一次，第二次开始的对话消耗就大的可怕，如果是使用智能体。这个消耗就更可怕了。大模型的规划可不是人类能理解的</p>
-]]></content>
-      <tags>
-        <tag>日常记录</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>从满汉全席到IOC容器</title>
     <url>/2025/08/13/%E4%BB%8E%E6%BB%A1%E6%B1%89%E5%85%A8%E5%B8%AD%E5%88%B0IOC%E5%AE%B9%E5%99%A8/</url>
     <content><![CDATA[<p>记录下自己对于IOC容器的理解。</p>
@@ -2438,14 +1804,645 @@ class UserService &#123;
       </tags>
   </entry>
   <entry>
-    <title>如何处理服务器内存不足</title>
-    <url>/2025/03/17/%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%86%85%E5%AD%98%E4%B8%8D%E8%B6%B3/</url>
-    <content><![CDATA[<p>这个解决方法主要面向那些明明有还有磁盘空间的服务器，但在conda装载环境时报错，显示内存不足的情况。一言以蔽之，这个问题是默认安装环境的路径不对。<br> <span id="more"></span><br>首先用df -h查看内存，这里的vda1,vda2就是两个磁盘。小的那个类似系统C盘的定位，大的那个有1T，但是我们运行报错：ERROR: Could not install packages due to an OSError: [Errno 28] No space left on device<br><img src="/images/%E5%86%85%E5%AD%98.png" alt="内存" title="内存"><br>这是因为，conda的环境默认装到vda2去了.我们就需要用命令修改默认安装包和环境的路径，请注意替换里面的&#x2F;root&#x2F;为你更大的那个磁盘的路径：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mkdir -p /root/autodl-tmp/conda/pkgs </span><br><span class="line">conda config --add pkgs_dirs /root/autodl-tmp/conda/pkgs </span><br><span class="line">mkdir -p /root/autodl-tmp/conda/envs </span><br><span class="line">conda config --add envs_dirs /root/autodl-tmp/conda/envs</span><br></pre></td></tr></table></figure>
-<p>顺便一提，Mounted on下面就代表磁盘的路径，我这里是&#x2F;mnt&#x2F;data，就用&#x2F;mnt&#x2F;data替换&#x2F;root。<br>但是，有时候你在修改了这个都还是报错磁盘不足，这是因为你只修改了conda的,如果你用的pip命令就可能导致再次出错。这里我们指定 pip 的临时文件夹就可以了</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export TMPDIR=&quot;/mnt/data/temp/&quot;//有空间的那个磁盘下随便写一个文件路径</span><br><span class="line">mkdir -p $TMPDIR</span><br><span class="line">pip~</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>至此解决问题，成功下载</p>
+    <title>优秀博文整理</title>
+    <url>/2025/07/06/%E4%BC%98%E7%A7%80%E5%8D%9A%E6%96%87%E6%95%B4%E7%90%86/</url>
+    <content><![CDATA[<p>​				记录一些我看过的优秀博文。</p>
+<span id="more"></span>
+
+<p>​				1. <a href="https://mp.weixin.qq.com/s/Ov2m6vht9I2tIEmZC_yeYg">【避坑指南！AnythingLLM本地知识库用的还好吗？】部署后必看（一）问错问题&#x3D;入天坑（附社区答复及本地存储文件夹解读）</a>   这一篇博文解释了本地知识库的一些使用问题，其实也可以扩展来说，也就是大模型处理数据库的方式， 其实也是一样的。——在【不是理解整篇文章，而是进行相似度检索这一点上】</p>
 ]]></content>
+      <tags>
+        <tag>日常学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于智能体的体验</title>
+    <url>/2025/05/02/%E5%85%B3%E4%BA%8E%E6%99%BA%E8%83%BD%E4%BD%93%E7%9A%84%E4%BD%93%E9%AA%8C/</url>
+    <content><![CDATA[<p>2025年是智能体的元年，这一观点常被各大厂商提及。我查找了以往他们对于智能体的一些观点。看来也确实如此。</p>
+<p>比较有说服力的是OPENAI的创始人萨鲁曼的说法，在之前的纽约时报里，我看到对于大模型的财报并不理想。其实这方面我认为DS也是有影响的，他们推出的开源低成本大模型极大地促进了市场对于大模型的开发热情，另一方OPENAI必须为此降低成本以吸引用户。他们API和付费订阅就因此没那么容易赚钱了。必须寻找一个突破口—–也就是智能体。</p>
+<p>可以看到他们对于这个智能体是很有信心的，他们甚至敢说赚1750亿。没有比这个更直观的了，另一方面是智能体的进展。编程智能体是最多的，然后是检索引擎智能体。不得不说，编程类智能体感觉会导致就业进一步严峻。我必须跟进学习这部分才行。</p>
+]]></content>
+      <tags>
+        <tag>日常记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>位运算</title>
+    <url>/2026/01/18/%E4%BD%8D%E8%BF%90%E7%AE%97/</url>
+    <content><![CDATA[<h1><span id="一-位运算速查表">一、位运算速查表</span></h1><table>
+<thead>
+<tr>
+<th align="center">符号</th>
+<th align="center">描述</th>
+<th align="center">运算 (A ? B)</th>
+<th align="center">结果</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&amp;</td>
+<td align="center">与</td>
+<td align="center">0011 1100 &amp; 0000 1101</td>
+<td align="center">0000 1100 (12)</td>
+<td align="center">同1为1</td>
+</tr>
+<tr>
+<td align="center">**&#96;</td>
+<td align="center">&#96;**</td>
+<td align="center">或</td>
+<td align="center">&#96;0011 1100</td>
+<td align="center">0000 1101&#96;</td>
+</tr>
+<tr>
+<td align="center">^</td>
+<td align="center">异或</td>
+<td align="center">0011 1100 ^ 0000 1101</td>
+<td align="center">0011 0001 (49)</td>
+<td align="center">同0异1</td>
+</tr>
+<tr>
+<td align="center">~</td>
+<td align="center">取反</td>
+<td align="center">~0011 1100</td>
+<td align="center">1100 0011</td>
+<td align="center">0变1，1变0</td>
+</tr>
+<tr>
+<td align="center">&lt;&lt;</td>
+<td align="center">左移</td>
+<td align="center">A &lt;&lt; 2</td>
+<td align="center">1111 0000 (240)</td>
+<td align="center">乘以 4</td>
+</tr>
+<tr>
+<td align="center">&gt;&gt;</td>
+<td align="center">右移</td>
+<td align="center">A &gt;&gt; 2</td>
+<td align="center">0000 1111 (15)</td>
+<td align="center">除以 4</td>
+</tr>
+</tbody></table>
+<h1><span id="二-异或的性质">二、异或的性质</span></h1><p>异或是位运算中的重点操作，满足以下定律：</p>
+<ol>
+<li>归零律：x ^ x &#x3D; 0 (任何数与自己异或都是0)</li>
+<li>恒等律：x ^ 0 &#x3D; x (任何数与0异或保持不变)</li>
+<li>交换律与结合律：a ^ b ^ c &#x3D; a ^ c ^ b</li>
+</ol>
+<h1><span id="三-必背的高阶技巧">三、 必背的高阶技巧</span></h1><ol>
+<li><h2><span id="消除二进制中最低位的-1-brian-kernighan-算法">消除二进制中最低位的 1 (Brian Kernighan 算法)</span></h2></li>
+</ol>
+<ul>
+<li><strong>公式</strong>：<code>n &amp; (n - 1)</code></li>
+<li><strong>原理</strong>：<code>n-1</code> 会把 <code>n</code> 最右边的 1 变成 0，并将该位右边的所有 0 变成 1。再和 <code>n</code> 做与运算，那部分就全部抵消了。</li>
+<li><strong>应用</strong>：统计 1 的个数、判断是否为 2 的幂。</li>
+</ul>
+<p>Java</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 统计 1 的个数</span><br><span class="line">int count = 0;</span><br><span class="line">while (n != 0) &#123;</span><br><span class="line">    n = n &amp; (n - 1);</span><br><span class="line">    count++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2><span id="2-获取最低位的-1-lowbit">2. 获取最低位的 1 (Lowbit)</span></h2><ul>
+<li><strong>公式</strong>：<code>n &amp; -n</code></li>
+<li><strong>原理</strong>：利用补码特性，<code>-n</code> 实际上是 <code>~n + 1</code>。</li>
+<li><strong>示例</strong>：<code>x = 10100</code> -&gt; <code>lowbit = 00100</code></li>
+<li><strong>应用</strong>：树状数组（Fenwick Tree）、Diff 比较。</li>
+</ul>
+<ol start="3">
+<li><h2><span id="判断-n-是否是-2-的幂">判断 n 是否是 2 的幂</span></h2></li>
+</ol>
+<ul>
+<li><strong>公式</strong>：<code>n &gt; 0 &amp;&amp; (n &amp; (n - 1)) == 0</code></li>
+<li><strong>原理</strong>：2 的幂次在二进制中只有一个 1。消掉这个 1 后应该等于 0。</li>
+</ul>
+<h2><span id="4-异或实现变量交换不使用临时变量">4. 异或实现变量交换（不使用临时变量）</span></h2><ul>
+<li><p><strong>代码</strong>：</p>
+<p>Java</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a = a ^ b;</span><br><span class="line">b = a ^ b;</span><br><span class="line">a = a ^ b;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>评价</strong>：虽然很帅，但实际工程中不如 <code>int temp</code> 快（现代编译器优化），主要用于面试展示对性质的理解。</p>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>日常学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于智能体的看法</title>
+    <url>/2025/04/28/%E5%85%B3%E4%BA%8E%E6%99%BA%E8%83%BD%E4%BD%93%E7%9A%84%E7%9C%8B%E6%B3%95/</url>
+    <content><![CDATA[<p>感觉所谓的智能体，实际上是以往工作的整合。不过也确实很擅长</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>排序算法</title>
+    <url>/2026/01/17/%E5%8A%9B%E6%89%A3hot100%E7%BB%83%E4%B9%A0/</url>
+    <content><![CDATA[<p>今天集中攻克了 7 道高频面试题。重点总结了 LRU 的 O(1) 实现细节、链表归并排序的断链技巧，以及回文串的中心扩散法。但本次的主题是再记忆排序算法，做一个排序算法的归类和理解。</p>
+<span id="more"></span>
+
+<h1><span id="一-核心算法速查表">一、核心算法速查表</span></h1><table>
+<thead>
+<tr>
+<th><strong>算法名称</strong></th>
+<th><strong>平均时间</strong></th>
+<th><strong>最坏时间</strong></th>
+<th><strong>最好时间</strong></th>
+<th><strong>空间复杂度</strong></th>
+<th><strong>稳定性</strong></th>
+<th><strong>备注 (面试金句)</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>冒泡排序</strong></td>
+<td>$O(n^2)$</td>
+<td>$O(n^2)$</td>
+<td>$O(n)$</td>
+<td>$O(1)$</td>
+<td>稳定</td>
+<td>教学意义大于实战，但需知道如何优化（Flag标志位）。</td>
+</tr>
+<tr>
+<td><strong>选择排序</strong></td>
+<td>$O(n^2)$</td>
+<td>$O(n^2)$</td>
+<td>$O(n^2)$</td>
+<td>$O(1)$</td>
+<td>不稳定</td>
+<td>无论数据好坏都是 $O(n^2)$，因为交换次数少，写操作敏感时可用。</td>
+</tr>
+<tr>
+<td><strong>插入排序</strong></td>
+<td>$O(n^2)$</td>
+<td>$O(n^2)$</td>
+<td>$O(n)$</td>
+<td>$O(1)$</td>
+<td>稳定</td>
+<td><strong>数据量小或基本有序时，效率极高（甚至优于快排）。</strong></td>
+</tr>
+<tr>
+<td><strong>希尔排序</strong></td>
+<td>$O(n^{1.3})$</td>
+<td>$O(n^2)$</td>
+<td>$O(n)$</td>
+<td>$O(1)$</td>
+<td>不稳定</td>
+<td>插入排序的改进版，打破了 $O(n^2)$ 的魔咒，但现代库函数较少用。</td>
+</tr>
+<tr>
+<td><strong>归并排序</strong></td>
+<td>$O(n \log n)$</td>
+<td>$O(n \log n)$</td>
+<td>$O(n \log n)$</td>
+<td>$O(n)$</td>
+<td>稳定</td>
+<td><strong>由于稳定且性能稳定，常用于对象排序（如 Java 的 <code>Arrays.sort</code> 对对象用归并）。</strong></td>
+</tr>
+<tr>
+<td><strong>快速排序</strong></td>
+<td>$O(n \log n)$</td>
+<td>$O(n^2)$</td>
+<td>$O(n \log n)$</td>
+<td>$O(\log n)$</td>
+<td>不稳定</td>
+<td><strong>综合性能之王</strong>。最坏情况可通过随机化 Pivot 避免。</td>
+</tr>
+<tr>
+<td><strong>堆排序</strong></td>
+<td>$O(n \log n)$</td>
+<td>$O(n \log n)$</td>
+<td>$O(n \log n)$</td>
+<td>$O(1)$</td>
+<td>不稳定</td>
+<td><strong>空间复杂度 $O(1)$ 的最强王者</strong>。常用于 Top K 问题。</td>
+</tr>
+<tr>
+<td><strong>计数排序</strong></td>
+<td>$O(n+k)$</td>
+<td>$O(n+k)$</td>
+<td>$O(n+k)$</td>
+<td>$O(n+k)$</td>
+<td>稳定</td>
+<td>牺牲空间换时间，仅适用于范围较小的整数。</td>
+</tr>
+</tbody></table>
+<h2><span id="11算法的稳定性">1.1算法的稳定性</span></h2><p>稳定：冒泡排序、插入排序、归并排序、基数排序（冒插归基稳定）</p>
+<p>不稳定：快速排序，希尔排序，选择排序，堆排序（快希选堆不稳定）</p>
+<h2><span id="二-算法原理解释">二、算法原理解释</span></h2><h2><span id="1冒泡排序">1.冒泡排序</span></h2><p><strong>核心逻辑</strong>：</p>
+<ol>
+<li>从头开始，两两比较，如果前一个比后一个大，就交换。</li>
+<li>一轮扫描结束后，<strong>最大值</strong>一定被移到了最后一位（就位）。</li>
+<li>重复上述过程，直到没有元素需要交换。</li>
+</ol>
+<h2><span id="2-选择排序">2. 选择排序</span></h2><p><strong>核心逻辑</strong>：</p>
+<ol>
+<li>在未排序序列中找到最小元素，存放到排序序列的起始位置。</li>
+<li>再从剩余未排序元素中继续寻找最小元素，然后放到已排序序列的末尾。</li>
+</ol>
+<h2><span id="3插入排序">3.插入排序</span></h2><p><strong>核心逻辑</strong>：</p>
+<ol>
+<li>将数组分为“已排序区间”和“未排序区间”。</li>
+<li>每次从未排序区间取出一个元素，在已排序区间从后往前扫描。</li>
+<li>如果已排序的元素比它大，就<strong>向后移动</strong>，直到找到合适的位置插入。</li>
+</ol>
+<h2><span id="4快速排序">4.快速排序</span></h2><p><strong>核心逻辑</strong>：</p>
+<ol>
+<li><strong>选基准</strong>：随便挑一个数（通常是第一个、最后一个或中间）作为 Pivot。</li>
+<li><strong>分区 (Partition)<strong>：把比 Pivot 小的扔左边，比 Pivot 大的扔右边。这一步做完，</strong>Pivot 就在它最终应该在的位置上了</strong>（这是快排最关键的性质）。</li>
+<li><strong>递归</strong>：对左右两边继续重复上述过程。</li>
+</ol>
+<h2><span id="5归并排序">5.归并排序</span></h2><p><strong>核心逻辑</strong>：</p>
+<ol>
+<li>**分 (Divide)**：递归地把当前序列平均分割成两半，直到子序列长度为 1（由一个元素组成的序列天然有序）。</li>
+<li>**治 (Conquer)**：将两个有序的子序列合并成一个有序序列（双指针法：谁小取谁，放入新数组）。</li>
+</ol>
+<p><strong>面试价值</strong>：它是唯一一个<strong>稳定</strong>且时间复杂度永远是 $O(n \log n)$ 的算法，常用于对象排序或外部排序（内存装不下时）。</p>
+<h2><span id="6堆排序">6.堆排序</span></h2><p><strong>核心逻辑</strong>：</p>
+<ol>
+<li><strong>建堆</strong>：把数组构建成一个<strong>大顶堆</strong>（根节点最大）。</li>
+<li><strong>交换</strong>：把堆顶（最大值）和数组最后一个元素交换（最大值归位）。</li>
+<li>**堆化 (Heapify)**：把剩下的 $n-1$ 个元素重新调整为大顶堆。</li>
+<li>重复步骤 2-3。</li>
+</ol>
+<p><strong>面试价值</strong>：不需要额外空间 ($O(1)$)，但因为内存跳跃访问（索引 $i$ 的孩子在 $2i$），缓存命中率不如快排，所以实战中比快排慢。</p>
+<p>图片例子来源：<a href="https://www.bilibili.com/video/BV1sek9YBELe/?spm_id_from=333.337.search-card.all.click&vd_source=ecbe42ffb25fea0da636165433fb75d6">4分钟学堆排序(手机动画版)_哔哩哔哩_bilibili</a></p>
+<p>1.将数组从左到右填入二叉树中</p>
+<p><img src="/2026/01/17/%E5%8A%9B%E6%89%A3hot100%E7%BB%83%E4%B9%A0/image-20260117154512059.png" alt="image-20260117154512059"></p>
+<p>2.调整为大根堆，方法是找到最后一个非叶子节点int()(9&#x2F;2-1)，如果子节点比他大，那就swap一下。直到自己到达叶子节点。最后从3，2，1，0的顺序依次调整。做成最大堆</p>
+<p><img src="/2026/01/17/%E5%8A%9B%E6%89%A3hot100%E7%BB%83%E4%B9%A0/image-20260117154722378.png" alt="image-20260117154722378"></p>
+<p>3.最大值通过首尾交换的方式出栈，接下来就是对【0，7】再次进行操作</p>
+<p><img src="/2026/01/17/%E5%8A%9B%E6%89%A3hot100%E7%BB%83%E4%B9%A0/image-20260117155026446.png" alt="image-20260117155026446"></p>
+<p><img src="/2026/01/17/%E5%8A%9B%E6%89%A3hot100%E7%BB%83%E4%B9%A0/image-20260117154957961.png" alt="image-20260117154957961"></p>
+<h2><span id="7希尔排序">7.希尔排序</span></h2><p><strong>核心逻辑</strong>：</p>
+<p>插入排序在处理大规模乱序数据时很慢（因为一次只能移动一位）。</p>
+<p>希尔排序先让数组中<strong>间隔为 Gap</strong> 的元素进行插入排序（宏观调控）。</p>
+<p>不断缩小 Gap，直到 Gap&#x3D;1，此时数组已经基本有序，最后做一次插入排序即可。</p>
+<h2><span id="8-基数排序">8. 基数排序</span></h2><p><strong>一句话原理</strong>：<strong>非比较排序</strong>。按位（个位、十位、百位…）进行分配和收集。</p>
+<p><strong>核心逻辑</strong>：</p>
+<ol>
+<li>准备 10 个桶（0-9）。</li>
+<li>先按<strong>个位</strong>数字，把元素扔进对应的桶里，然后按顺序倒出来（此时个位有序）。</li>
+<li>再按<strong>十位</strong>数字，把元素扔进桶里，倒出来。</li>
+<li>重复直到最高位。</li>
+</ol>
+<p><strong>要求</strong>：必须从低位到高位（LSD），且每一轮入桶必须使用<strong>稳定</strong>的排序算法（通常是计数排序的变种），否则高位的排序会打乱低位的顺序。</p>
+]]></content>
+      <tags>
+        <tag>日常学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>力扣学习记录lambda表达式</title>
+    <url>/2026/01/22/%E5%8A%9B%E6%89%A3%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+    <content><![CDATA[<p>在做 LeetCode 347（前 K 个高频元素）时，我最开始的思路是简单的“统计频率 -&gt; 找出频率大于 k 的数”。但后来发现题目要求的是<strong>“频率最高的 k 个数”</strong>，这是一个经典的 Top K 问题。</p>
+<p>在这个过程中，我对 Java 的 <code>PriorityQueue</code>（优先队列）、Lambda 表达式以及堆排序的本质有了全新的认识。</p>
+<span id="more"></span>
+
+<p>先贴结果代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import java.util.*;</span><br><span class="line"></span><br><span class="line">class Solution &#123;</span><br><span class="line">    public int[] topKFrequent(int[] nums, int k) &#123;</span><br><span class="line">        // 1. 使用 HashMap 统计每个数字出现的频率</span><br><span class="line">        Map&lt;Integer, Integer&gt; counts = new HashMap&lt;&gt;();</span><br><span class="line">        for (int num : nums) &#123;</span><br><span class="line">            counts.put(num, counts.getOrDefault(num, 0) + 1);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // 2. 创建优先队列（小顶堆）</span><br><span class="line">        // 核心逻辑：(a, b) -&gt; counts.get(a) - counts.get(b)</span><br><span class="line">        // 含义：按照频率从小到大排。频率低的在堆顶，随时准备被踢走。</span><br><span class="line">        PriorityQueue&lt;Integer&gt; pq = new PriorityQueue&lt;&gt;((a, b) -&gt; counts.get(a) - counts.get(b));</span><br><span class="line"></span><br><span class="line">        // 3. 遍历 Map，维护一个大小为 k 的堆</span><br><span class="line">        for (int num : counts.keySet()) &#123;</span><br><span class="line">            pq.offer(num); // 入队</span><br><span class="line">            // 如果堆大了，就把频率最小的（堆顶）弹出去</span><br><span class="line">            if (pq.size() &gt; k) &#123;</span><br><span class="line">                pq.poll();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // 4. 输出结果</span><br><span class="line">        int[] res = new int[k];</span><br><span class="line">        for (int i = 0; i &lt; k; i++) &#123;</span><br><span class="line">            res[i] = pq.poll();</span><br><span class="line">        &#125;</span><br><span class="line">        return res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个代码里面，我最开始很不理解，这一个确实是我以前没怎么见过，后来理解了这是一种特殊的增加规则的的方法。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">PriorityQueue&lt;Integer&gt; pq = new PriorityQueue&lt;&gt;((a, b) -&gt; counts.get(a) - counts.get(b));</span><br></pre></td></tr></table></figure>
+
+<p>这行代码并不只是为了“排序”，它是在<strong>“立规矩”</strong>。</p>
+<ul>
+<li>**<code>a</code> 和 <code>b</code>**：是队列里的数字（选手）。</li>
+<li>**<code>counts.get(...)</code>**：是比较的标准（看频率，不看数字本身）。</li>
+<li><strong>返回值</strong>：虽然写的是减法算式，但 Java 接收到的是一个<strong>整数（int）</strong>。<ul>
+<li>负数：<code>a</code> 轻（上浮&#x2F;排前面）。</li>
+<li>正数：<code>a</code> 重（下沉&#x2F;排后面）。</li>
+</ul>
+</li>
+</ul>
+<p>从而保证了每次add都会维护，把小数值给上浮。</p>
+<h2><span id="2comparator-万能口诀">2.Comparator 万能口诀</span></h2><p>根据学习，永远是写（a,b）根据目标效果，选择是a-b还是b-a</p>
+<table>
+<thead>
+<tr>
+<th><strong>目标效果</strong></th>
+<th><strong>核心写法</strong></th>
+<th><strong>记忆口诀</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>小</strong>数值在堆顶 &#x2F; 排前面</td>
+<td><code>a - b</code></td>
+<td><strong>前减后</strong>（我减你）</td>
+</tr>
+<tr>
+<td><strong>大</strong>数值在堆顶 &#x2F; 排前面</td>
+<td><code>b - a</code></td>
+<td><strong>后减前</strong>（你减我）</td>
+</tr>
+<tr>
+<td><strong>String 长度短</strong>在堆顶</td>
+<td><code>a.length() - b.length()</code></td>
+<td>前减后</td>
+</tr>
+<tr>
+<td><strong>String 字典序</strong>靠前</td>
+<td><code>a.compareTo(b)</code></td>
+<td>顺着比</td>
+</tr>
+</tbody></table>
+<p>而对于一些复杂的情况，我们可以在里面增加代码串。逻辑是一样的，返回的数值小于0，就是选择数对的A上浮</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(a, b) -&gt; &#123;</span><br><span class="line">    int freqCompare = counts.get(a) - counts.get(b);</span><br><span class="line">    if (freqCompare != 0) &#123;</span><br><span class="line">        return freqCompare; // 频率不同：按频率小顶堆（小的在顶）</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        // 频率相同：进入这里的瞬间，freqCompare 已经是 0 了，不能用了！</span><br><span class="line">        // 题目要求：数字大的在堆顶 -&gt; 大顶堆逻辑 -&gt; 后减前</span><br><span class="line">        return b - a;  // &lt;--- 这里才是正确答案</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2><span id="3扩展用法">3.扩展用法</span></h2><p>不止是这个小根堆，大根堆场景，我们还能用在别的地方：</p>
+<h3><span id="31-给数组x2f列表排序-arrayssort-x2f-collectionssort">3.1 给数组&#x2F;列表排序 (<code>Arrays.sort</code> &#x2F; <code>Collections.sort</code>)</span></h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">List&lt;String&gt; list = new ArrayList&lt;&gt;(Arrays.asList(&quot;apple&quot;, &quot;hi&quot;, &quot;banana&quot;));</span><br><span class="line"></span><br><span class="line">// 旧写法：Collections.sort(list, new Comparator...);</span><br><span class="line">// 新写法（Lambda）：</span><br><span class="line">list.sort((a, b) -&gt; a.length() - b.length()); </span><br><span class="line"></span><br><span class="line">System.out.println(list); // 输出 [hi, apple, banana]</span><br></pre></td></tr></table></figure>
+
+<h3><span id="32-给二维数组排序">3.2 给二维数组排序</span></h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// intervals 是个二维数组，里面的元素是 int[] (一维数组)</span><br><span class="line">// 所以这里的 a 和 b 代表的是每一行，即 &#123;1,3&#125; 和 &#123;2,6&#125;</span><br><span class="line">Arrays.sort(intervals, (a, b) -&gt; a[0] - b[0]);</span><br></pre></td></tr></table></figure>
+
+<h3><span id="33-自动排序的-map-和-set-treemap-x2f-treeset">3.3 自动排序的 Map 和 Set (<code>TreeMap</code> &#x2F; <code>TreeSet</code>)</span></h3><p>这两个数据结构和 <code>PriorityQueue</code> 是亲兄弟。</p>
+<ul>
+<li><code>PriorityQueue</code>：只保证<strong>堆顶</strong>是有序的。</li>
+<li><code>TreeMap</code> &#x2F; <code>TreeSet</code>：保证<strong>内部所有元素永远</strong>是有序的。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 这里的 (a, b) 指的是 Key</span><br><span class="line">Map&lt;Integer, String&gt; map = new TreeMap&lt;&gt;((a, b) -&gt; b - a);</span><br><span class="line"></span><br><span class="line">map.put(1, &quot;A&quot;);</span><br><span class="line">map.put(3, &quot;B&quot;);</span><br><span class="line">map.put(2, &quot;C&quot;);</span><br><span class="line"></span><br><span class="line">// 遍历时，会自动按 Key 从大到小出：3 -&gt; 2 -&gt; 1</span><br><span class="line">for(Integer key : map.keySet()) &#123;</span><br><span class="line">    System.out.println(key); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2><span id="4-java-stream-流操作-max-min-sorted">4.  Java Stream 流操作 (<code>.max</code>, <code>.min</code>, <code>.sorted</code>)</span></h2><p>Java 8 的流式编程极其依赖这个写法。</p>
+<h4><span id="场景在一堆对象里找最的那一个">场景：在一堆对象里找“最…”的那一个</span></h4><p>假设你有一堆 <code>Student</code> 对象，想找<strong>分数最高</strong>的那个。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Student &#123; String name; int score; &#125;</span><br><span class="line">List&lt;Student&gt; students = ...;</span><br><span class="line"></span><br><span class="line">// 找最大值 (max)</span><br><span class="line">// 这里的 max 需要你告诉它：什么叫“大”？</span><br><span class="line">// 答：分数 (a.score - b.score) 越大，就越大</span><br><span class="line">Student bestStudent = students.stream()</span><br><span class="line">    .max((a, b) -&gt; a.score - b.score) </span><br><span class="line">    .get();</span><br></pre></td></tr></table></figure>
+
+<h2><span id="5总结">5.总结</span></h2><table>
+<thead>
+<tr>
+<th><strong>场景</strong></th>
+<th><strong>代码片段</strong></th>
+<th><strong>作用</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>优先队列</strong></td>
+<td><code>new PriorityQueue&lt;&gt;((a, b) -&gt; a - b)</code></td>
+<td>决定<strong>谁在堆顶</strong></td>
+</tr>
+<tr>
+<td><strong>数组排序</strong></td>
+<td><code>Arrays.sort(arr, (a, b) -&gt; a - b)</code></td>
+<td>决定<strong>谁排前面</strong></td>
+</tr>
+<tr>
+<td><strong>列表排序</strong></td>
+<td><code>list.sort((a, b) -&gt; a - b)</code></td>
+<td>决定<strong>谁排前面</strong></td>
+</tr>
+<tr>
+<td><strong>Tree结构</strong></td>
+<td><code>new TreeMap&lt;&gt;((a, b) -&gt; a - b)</code></td>
+<td>决定<strong>Key的存储顺序</strong></td>
+</tr>
+<tr>
+<td><strong>流操作</strong></td>
+<td><code>stream.max((a, b) -&gt; a - b)</code></td>
+<td>决定<strong>谁算最大值</strong></td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>日常学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>医疗助手大模型的微调</title>
+    <url>/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/</url>
+    <content><![CDATA[<p>在之前的博客助手大模型中，我感受到模型效果受参数影响极大，一些8b回答起来磕磕绊绊的问题，14b的模型就能顺利回答。固然模型的参数是一个要点，但我认为以后对于小模型的需求也不会减少，这就需要用微调的方式让模型垂直化，专业化。因此，我的下一个目标在大模型的微调上，由于我的课题和医疗方向比较相关的，这方面的微调数据集 (华佗GPT) 又有，因此，我计划从这方面入手，做出一个医疗领域的垂直优化大模型，旨在回答医疗知识，降低有害错误问题的发生率</p>
+<span id="more"></span>
+
+<h1><span id="1模型选择">1.模型选择</span></h1><h1><span id="2数据集选择">2.数据集选择</span></h1><p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828221748287.png" alt="image-20250828221748287"></p>
+<p>链接：<a href="https://huggingface.co/datasets?search=medical">https://huggingface.co/datasets?search=medical</a></p>
+<p>先确定目的，SFT阶段我们主要任务是让模型博学起来，能够理解医疗领域的术语、实体以及常见的对话模式就算成功，使用华佗GPT数据集，由香港中文大学（深圳）和深圳市大数据研究院联合开源了专用于医疗领域的复杂大模型。这样就使用他们给出的SFT数据集：<a href="https://huggingface.co/datasets/FreedomIntelligence/medical-o1-reasoning-SFT">FreedomIntelligence&#x2F;medical-o1-reasoning-SFT · Datasets at Hugging Face</a></p>
+<p>折磨了一下下完了，这里需要注意，安装前要先下两个库，然后用huggingface-cli下载会快很多：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install -U &quot;huggingface_hub[cli]&quot;</span><br><span class="line">#高速传输库 hf_transfer</span><br><span class="line">pip install -U hf_transfer</span><br></pre></td></tr></table></figure>
+
+<p>由于我的服务器内网限制严格，只能win上面安装，做了这两部我还要手动加上Path：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">WARNING: The scripts hf.exe... are installed in  &#x27;C:\Users\origin\AppData\Roaming\Python\Python312\Scripts&#x27;  which is not on PATH.</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828230911267.png" alt="image-20250828230911267"></p>
+<p>然后在新建造哪里输入上面的路径信息 <code>&#39;C:\Users\origin\AppData\Roaming\Python\Python312\Scripts&#39;</code> </p>
+<p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828231120276.png" alt="image-20250828231120276"></p>
+<p>重新启动后就可以正常下载了</p>
+<p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828225951739.png" alt="image-20250828225951739"></p>
+<h1><span id="参考资料">参考资料：</span></h1><p><a href="https://zhuanlan.zhihu.com/p/652615133">推荐收藏！23个医疗领域微调大模型微调及数据汇总！ - 知乎</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/15635537603">【论文解读】HuatuoGPT-o1：用CoT和RL增强医疗LLM的复杂推理能力 - 知乎</a></p>
+<p><a href="https://github.com/FreedomIntelligence/HuatuoGPT">FreedomIntelligence&#x2F;HuatuoGPT: HuatuoGPT, Towards Taming Language Models To Be a Doctor. (An Open Medical GPT)</a></p>
+]]></content>
+      <tags>
+        <tag>实习准备</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>图片优化思路</title>
+    <url>/2025/10/23/%E5%9B%BE%E7%89%87%E4%BC%98%E5%8C%96%E6%80%9D%E8%B7%AF/</url>
+    <content><![CDATA[<p>这一个部分还是需要仔细思考，想来应该也不止是用在图片优化上，我认为在更多的地方都是可以使用这个技术的。</p>
+<span id="more"></span>
+
+<h1><span id="一-图片查询优化">一、图片查询优化</span></h1><p>首先确定什么样的数据适合缓存：</p>
+<ol>
+<li>高频访问的数据：如系统首页、热门推荐内容等。</li>
+<li>计算成本较高的数据：如复杂查询结果、大量数据的统计结果。</li>
+<li>允许短时间延迟的数据：如不需要实时更新的排行榜、图片列表等。</li>
+</ol>
+<h2><span id="redis-分布式缓存">Redis 分布式缓存</span></h2><p>分布式是指将缓存数据储存在多台服务器上，以便在高并发场景下实现更高的吞吐量和容错性。也可以把同一份数据存储到多个服务器去，以实现数据的安全性.</p>
+<p>作为分布式缓存的主流方案，REDIS具备以下几个优势：</p>
+<ul>
+<li><p>高性能：基于内存操作，访问速度极快。<strong>单节点 Redis 的读写 QPS 可达 10w 次每秒！</strong>而且<strong>Redis 的核心网络I&#x2F;O和命令执行是单线程的</strong>，避免了多线程上下文切换和锁竞争所带来的巨大性能开销。——我的理解是单线程执行不是重点，这个线程运行的方式，只询问不等待才是重点。从而让Redis 具备了用一个线程同时处理成千上万个网络连接的能力。</p>
+</li>
+<li><p>丰富的数据结构：支持字符串、列表、集合、哈希、位图等，适用于各种数据结构存储。</p>
+</li>
+<li><p>分布式支持：<strong>高可用和高扩展</strong>可以通过 Redis Cluster 构建高可用、高性能的分布式缓存，还提供哨兵集群机制提升可用性、提供分片集群机制提高可扩展性。</p>
+<p>这里的可扩展性指的是系统应对“增长”的能力。可以是用户量暴增、数据量暴增、或请求量暴增。我们可以增加机器或者机器升级来解决</p>
+<p>高可用性指的是系统抵抗故障的能力，解决的核心手段是冗余</p>
+</li>
+</ul>
+<h2><span id="什么是-redis-cluster">什么是 Redis Cluster？</span></h2><p><strong>Redis Cluster (集群模式)</strong> 是 Redis 官方提供的<strong>分布式解决方案</strong>。</p>
+<p>它的核心目标是解决两个问题：</p>
+<ol>
+<li>**数据分片 (Sharding)**：将海量数据分散存储到多个 Redis 节点上，突破单台服务器的内存和性能瓶颈。</li>
+<li>**高可用 (High Availability)**：当集群中的某个主节点宕机时，它的从节点可以自动顶上，保证服务继续可用。</li>
+</ol>
+<p>为了实现这个目标，Redis Cluster 采用了“**哈希槽 (Hash Slot)**”的设计：</p>
+<ul>
+<li><strong>16384 个哈希槽</strong>：Redis Cluster 将整个数据库（逻辑上）分成了 16384 （2的14次方）个哈希槽。</li>
+<li><strong>Key 与槽的映射</strong>：当你存入一个 key 时，Redis 会用 <code>CRC16(key) % 16384</code> 算法计算这个 key 应该属于哪个槽。</li>
+<li><strong>槽与节点的分配</strong>：集群启动时，这 16384 个槽会被分配给集群中所有的**主节点 (Master)**。例如，3 个主节点，可能节点 A 负责 0-5500 槽，节点 B 负责 5501-11000 槽，节点 C 负责 11001-16383 槽。</li>
+<li><strong>高可用（主从）</strong>：每个主节点都会有至少一个<strong>从节点 (Slave)</strong> 来复制它的数据。当主节点 A 宕机，它的从节点 A1 会被集群选举为新的主节点，接管 0-5500 槽，服务不会中断。</li>
+<li><strong>去中心化</strong>：集群中的所有节点都互相连接（通过Gossip协议），它们都知道哪个槽由哪个节点负责。当客户端连接任意一个节点并尝试操作一个不归它管的 key 时，它会告诉客户端“请重定向到 XX 节点”，整个过程对客户端是透明的。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>方案</strong></th>
+<th><strong>Memcached</strong></th>
+<th>**Redis **</th>
+<th><strong>Hazelcast</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>定位</strong></td>
+<td>纯内存对象缓存</td>
+<td>数据结构服务器</td>
+<td>内存数据网格 (IMDG)</td>
+</tr>
+<tr>
+<td><strong>数据结构</strong></td>
+<td>仅字符串 (Key-Value)</td>
+<td>丰富 (String, Hash, List, Set…)</td>
+<td>丰富 (Map, Queue, Set, Topic…)</td>
+</tr>
+<tr>
+<td><strong>持久化</strong></td>
+<td><strong>不支持</strong></td>
+<td>支持 (RDB &#x2F; AOF)</td>
+<td>支持</td>
+</tr>
+<tr>
+<td><strong>集群</strong></td>
+<td>客户端实现（简单）</td>
+<td>需专门配置 (Cluster &#x2F; Sentinel)</td>
+<td><strong>自动发现，P2P 组网</strong></td>
+</tr>
+<tr>
+<td><strong>核心优点</strong></td>
+<td>简单、高性能 (多线程 Get&#x2F;Set)</td>
+<td>功能全面、生态强大</td>
+<td>Java 原生、集群管理简单</td>
+</tr>
+<tr>
+<td><strong>适用场景</strong></td>
+<td>数据库查询、API 响应的纯缓存</td>
+<td>缓存、分布式锁、消息队列、计数器</td>
+<td>Java 微服务、分布式计算</td>
+</tr>
+</tbody></table>
+<p>顺便列一下都是数据库且用得比较多的MYSQL，这两个的一切区别就是存放位置，这直接导致了他们在性能，数据持久和用途上的差异：MySQL 遵循 ACID 原则，能保证事务的原子性和一致性，数据可靠性高；Redis专为高速缓存和实时操作设计‌。</p>
+<table>
+<thead>
+<tr>
+<th><strong>特性</strong></th>
+<th><strong>MySQL (关系型数据库)</strong></th>
+<th><strong>Redis (内存数据库)</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>存储位置</strong></td>
+<td><strong>磁盘 (Disk-based)</strong></td>
+<td><strong>内存 (In-Memory)</strong></td>
+</tr>
+<tr>
+<td><strong>性能&#x2F;速度</strong></td>
+<td>较慢（受限于磁盘 I&#x2F;O）</td>
+<td><strong>极快</strong>（受限于内存速度）</td>
+</tr>
+<tr>
+<td><strong>数据持久化</strong></td>
+<td><strong>强持久化</strong>（数据默认永久保存）</td>
+<td>弱持久化（默认是临时的，需配置 RDB&#x2F;AOF 才能重启后恢复）</td>
+</tr>
+<tr>
+<td><strong>数据模型</strong></td>
+<td>结构化 (表、行、列)，使用 <code>SQL</code></td>
+<td>键值对 (Key-Value)，支持丰富的数据结构 (String, Hash, List)</td>
+</tr>
+<tr>
+<td><strong>容量限制</strong></td>
+<td>巨大（受限于硬盘大小, TB 级）</td>
+<td>有限（受限于内存大小, GB 级）</td>
+</tr>
+<tr>
+<td><strong>主要角色</strong></td>
+<td><strong>“数据仓库” (System of Record)</strong></td>
+<td><strong>“高速缓存” (Cache) &#x2F; “工作台”</strong></td>
+</tr>
+</tbody></table>
+<p>自己测试了下，使用带缓存的查询，第一次是470ms，第二次是7ms。不使用带缓存的查询是50ms，第二次是10ms，之所以会有这种情况，是因为mysql也有自己的缓存。</p>
+<h1><span id="解决缓存常见问题">解决缓存常见问题</span></h1><p>使用缓存时，一般要注意下面几个问题：</p>
+<ol>
+<li>缓存击穿：某些 <strong>热点数据</strong> 在缓存过期后，大量请求直接打到数据库。</li>
+</ol>
+<p>​	解决方案：设置热点数据的超长过期时间，或使用互斥锁（如 Redisson）控制缓存刷新。</p>
+<ol start="2">
+<li>缓存穿透：用户频繁请求不存在的数据，导致大量的请求直接触发数据库查询。</li>
+</ol>
+<p>​	解决方案：对无效查询结果也进行缓存（如设置空值缓存），或者使用布隆过滤器。</p>
+<ol start="3">
+<li>缓存雪崩：大量缓存同时过期，导致请求打到数据库，系统崩溃。</li>
+</ol>
+<ol start="4">
+<li>缓存一致性:你在“写”（增、删、改）操作时，只更新了数据库，但<strong>忘记</strong>了去处理缓存。</li>
+</ol>
+<p>​	解决方案: 先更新数据库，再删除缓存</p>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>问题</strong></th>
+<th align="center"><strong>现象</strong></th>
+<th align="center"><strong>解决方案</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>缓存穿透</strong></td>
+<td align="center">查一个<strong>不存在</strong>的数据</td>
+<td align="center">1. 缓存空值  2. 布隆过滤器</td>
+</tr>
+<tr>
+<td align="center"><strong>缓存击穿</strong></td>
+<td align="center"><strong>一个热点</strong>数据过期</td>
+<td align="center">1. 分布式锁 (Mutex)  2. 逻辑过期</td>
+</tr>
+<tr>
+<td align="center"><strong>缓存雪崩</strong></td>
+<td align="center"><strong>一大片</strong>数据同时过期 &#x2F; Redis 宕机</td>
+<td align="center">1. <strong>随机过期时间</strong> (你已在用)  2. Redis 高可用 (集群&#x2F;哨兵)</td>
+</tr>
+<tr>
+<td align="center"><strong>缓存一致性</strong></td>
+<td align="center">数据库和缓存<strong>数据不同</strong></td>
+<td align="center">1. <strong>先更新数据库，再删除缓存</strong></td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>就业准备</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大模型是怎么做到长上下文扩展的</title>
+    <url>/2025/05/22/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%98%AF%E6%80%8E%E4%B9%88%E5%81%9A%E5%88%B0%E9%95%BF%E4%B8%8A%E4%B8%8B%E6%96%87%E6%89%A9%E5%B1%95%E7%9A%84/</url>
+    <content><![CDATA[<p>一直以来我都很疑惑，为什么大模型可以从4K学到8K又到128K呢，今天看来视频才有一些想法。<br> <span id="more"></span><br>1.大模型拟合结果依赖随机梯度算法，如果一次性输出128K的文本进行拟合，那就会对128K倍的权重进行拟合，考虑到自注意力计算矩阵是输入增长的平方。直接进行拟合导致的计算消耗是难以估计的。</p>
+<p>2.因此，我们就先让模型学习少量文本。这时候模型的参数已经得到一定的调整了，当我们再扩大这个文本长度时，他会有一个基准线在，就可以以那个基准为基础进行二次拟合。如果我们把8K的参数全部冻结，训练128K的文本矩阵加到8K的参数矩阵上去，那这个实际上就类似LORA了。这也是LORA微调的核心，基础大模型不动，少量修改附加参数矩阵。</p>
+<p>3.再一个增大模型上下文长度的方法就是数据分片了，学习完前面的内容再把学到的东西传递下去</p>
+<p>4.如果从架构入手也是可以的，比如经典的局部注意力+全局注意力的形式，这一技术我们可以在Gemma2到Gemma3的架构改进中看到。</p>
+]]></content>
+      <tags>
+        <tag>日常记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大模型的演变趋势</title>
+    <url>/2025/05/14/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%BC%94%E5%8F%98%E8%B6%8B%E5%8A%BF/</url>
+    <content><![CDATA[<p>我认为大模型的趋势有俩，轻量化和多模态化。<br> <span id="more"></span><br>轻量化说的就是MOE和稀疏自注意力。大家都在往这个方向走。而且现在似乎再MOE这一点上已经达成一致了。考虑到MOE能够大幅度减少推理成本，这是很合理的。</p>
+<p>另一个问题是自注意力机制。最关键的这个部分反而是没有怎么改动的，从MHA,GQA,单个子注意力。这些都是缩减规模，但是性能肉眼可见的在掉，虽然分组倒是能行，但效果还是差了点。这一点来说DS的新注意力就很强了，MLA。和ROPE混合起来使用，保留了自注意力的效果还减少了计算量，明显的有在另辟蹊径。</p>
+<p>然后就是多模态化，道也不用多说。这些本质都是为了后续的硬件做服务。我感觉现在的大模型卷到一定程度，确实是都走向应用去了，就是大模型始终只能当辅助。</p>
+<p>虽然不好说这个时间能持续多久就是了</p>
+]]></content>
+      <tags>
+        <tag>日常记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何使用Typora快速在博客插入图片</title>
+    <url>/2025/06/22/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%BF%AB%E9%80%9F%E5%9C%A8%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</url>
+    <content><![CDATA[<p>不得不说，Typora确实是要好用很多，这里说说我是怎么修改Typora设置，能够直接从剪切板复制图片到MD文件的，</p>
+ <span id="more"></span>
+
+<p><img src="/2025/06/22/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%BF%AB%E9%80%9F%E5%9C%A8%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/image-20250622160718684.png" alt="打开偏好设置"></p>
+<p>第一步是打开偏好设置，这里面的修改两个地方就行：</p>
+<p>1.插入图片时选择【复制到指定路径】，这个你选择后他会默认给你填好，意思是你复制时会把图片保存到你同文件夹【.&#x2F;】的你的文件名对应的文件夹【{filename}】下去</p>
+<p>2.修改图片语法偏好里面，点击【优先使用相对路径】</p>
+<p><img src="/2025/06/22/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%BF%AB%E9%80%9F%E5%9C%A8%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/image-20250622160805526.png" alt="偏好设置修改"></p>
+<p>修改这两处是因为Hexo搭建博客时，它使用的图片一定是和博文对应的那个文件夹里面的图片。而且使用相对路径时才能正常上传。需要注意，使用相对路径才能上传这一点是我遇到的问题；可能其他人遇到的情况不一样</p>
+<p>参考文献：<a href="https://blog.csdn.net/m0_43401436/article/details/107191688">hexo博客中插入图片失败——解决思路及个人最终解决办法_hexo 文章插入图片失败-CSDN博客</a></p>
+]]></content>
+      <tags>
+        <tag>日常学习</tag>
+      </tags>
   </entry>
   <entry>
     <title>大模型训练消耗显存</title>
@@ -2479,21 +2476,42 @@ class UserService &#123;
       </tags>
   </entry>
   <entry>
-    <title>如何使用Typora快速在博客插入图片</title>
-    <url>/2025/06/22/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%BF%AB%E9%80%9F%E5%9C%A8%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</url>
-    <content><![CDATA[<p>不得不说，Typora确实是要好用很多，这里说说我是怎么修改Typora设置，能够直接从剪切板复制图片到MD文件的，</p>
- <span id="more"></span>
-
-<p><img src="/2025/06/22/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%BF%AB%E9%80%9F%E5%9C%A8%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/image-20250622160718684.png" alt="打开偏好设置"></p>
-<p>第一步是打开偏好设置，这里面的修改两个地方就行：</p>
-<p>1.插入图片时选择【复制到指定路径】，这个你选择后他会默认给你填好，意思是你复制时会把图片保存到你同文件夹【.&#x2F;】的你的文件名对应的文件夹【{filename}】下去</p>
-<p>2.修改图片语法偏好里面，点击【优先使用相对路径】</p>
-<p><img src="/2025/06/22/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%BF%AB%E9%80%9F%E5%9C%A8%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/image-20250622160805526.png" alt="偏好设置修改"></p>
-<p>修改这两处是因为Hexo搭建博客时，它使用的图片一定是和博文对应的那个文件夹里面的图片。而且使用相对路径时才能正常上传。需要注意，使用相对路径才能上传这一点是我遇到的问题；可能其他人遇到的情况不一样</p>
-<p>参考文献：<a href="https://blog.csdn.net/m0_43401436/article/details/107191688">hexo博客中插入图片失败——解决思路及个人最终解决办法_hexo 文章插入图片失败-CSDN博客</a></p>
+    <title>大模型的输入</title>
+    <url>/2025/05/16/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%BE%93%E5%85%A5/</url>
+    <content><![CDATA[<p>虽然我以前就知道大模型的输入计算很坑，但还是没想到这么坑<br> <span id="more"></span><br>首先输入的文本【1234】【567】，输入【567】的时候之前的【1234】和模型对他的回答也会加进来。</p>
+<p>其次是联网功能，这玩意就牛逼了，上不封顶。就算是直接选择前面三个网页，也得是他去读了才行。麻了，同样的，这部分也要算你头上</p>
+<p>最后是提示词，你输入的格式规范之类的东西也得通过提示词 来实现，一样的，这个也是要Token的。这三样累计再一次，第二次开始的对话消耗就大的可怕，如果是使用智能体。这个消耗就更可怕了。大模型的规划可不是人类能理解的</p>
 ]]></content>
       <tags>
-        <tag>日常学习</tag>
+        <tag>日常记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何处理服务器内存不足</title>
+    <url>/2025/03/17/%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%86%85%E5%AD%98%E4%B8%8D%E8%B6%B3/</url>
+    <content><![CDATA[<p>这个解决方法主要面向那些明明有还有磁盘空间的服务器，但在conda装载环境时报错，显示内存不足的情况。一言以蔽之，这个问题是默认安装环境的路径不对。<br> <span id="more"></span><br>首先用df -h查看内存，这里的vda1,vda2就是两个磁盘。小的那个类似系统C盘的定位，大的那个有1T，但是我们运行报错：ERROR: Could not install packages due to an OSError: [Errno 28] No space left on device<br><img src="/images/%E5%86%85%E5%AD%98.png" alt="内存" title="内存"><br>这是因为，conda的环境默认装到vda2去了.我们就需要用命令修改默认安装包和环境的路径，请注意替换里面的&#x2F;root&#x2F;为你更大的那个磁盘的路径：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mkdir -p /root/autodl-tmp/conda/pkgs </span><br><span class="line">conda config --add pkgs_dirs /root/autodl-tmp/conda/pkgs </span><br><span class="line">mkdir -p /root/autodl-tmp/conda/envs </span><br><span class="line">conda config --add envs_dirs /root/autodl-tmp/conda/envs</span><br></pre></td></tr></table></figure>
+<p>顺便一提，Mounted on下面就代表磁盘的路径，我这里是&#x2F;mnt&#x2F;data，就用&#x2F;mnt&#x2F;data替换&#x2F;root。<br>但是，有时候你在修改了这个都还是报错磁盘不足，这是因为你只修改了conda的,如果你用的pip命令就可能导致再次出错。这里我们指定 pip 的临时文件夹就可以了</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export TMPDIR=&quot;/mnt/data/temp/&quot;//有空间的那个磁盘下随便写一个文件路径</span><br><span class="line">mkdir -p $TMPDIR</span><br><span class="line">pip~</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>至此解决问题，成功下载</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>我对大模型框架改进的看法</title>
+    <url>/2025/05/08/%E6%88%91%E5%AF%B9%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%A1%86%E6%9E%B6%E6%94%B9%E8%BF%9B%E7%9A%84%E7%9C%8B%E6%B3%95/</url>
+    <content><![CDATA[<p>东西不记就容易忘掉，总之先记录下现在看llama系列模型改进的想法<br> <span id="more"></span><br>llama1的改动包括三个：ROPE,RMSnorm前置和SWIGLU。</p>
+<p>ROPE我还真是不看不知道，我一直以为位置编码都是加算embedding，结果这个相对位置编码是在对QKV做操作，同样的，ROPE也是计算出来的，所以可以适应变长的输入。然后是RMSnorm，贴一下归一化的定义：</p>
+<blockquote>
+<p>当两个值之间的差异较小时与较大时，评估值（例如 MSE，均方误差）可能会有很大差异。在 MSE 中，如果出现较大的值，梯度可能会变得极大，从而使学习变得不稳定</p>
+</blockquote>
+<p>我看到的一个说法是前置归一化能节约计算资源，这是因为数据在输入前是更不均匀的。RMS就仅使用均方根（RMS），传统的LayerNorm 相比，后者需要一次数据扫描来计算均值，另一次来计算方差。RMSNorm 通过维持非零均值而不与 0 对齐均值，帮助解决梯度消失问题。在早期周期中比 LayerNorm 维持更高的梯度范数。另一个原因是节省内存，这个结合我看到的在模型使用不同精度的数据，我想应该还真的是有这部分的作用，是DSV3吗，我有点记不得了。</p>
+<p>再然后就是使用了SWIGLU，这个方法就是保留了0以下的数值，捕捉的信息更多。</p>
+<p>然后就是llama2了，我感觉这个模型基本没啥大变化，虽然说是用了GQA，但也就这一点了。事实上由于GQA本身的性质，虽然能加速训练，但也一定会导致信息丢失的。我怀疑它通过大量增加训练数据（+40%）就是为了补偿这中间的损失</p>
+<p>不过llama2提出的训练数据质量决定SFT模型上限多重要的。另外和GPT相比，他明显投入的资源更多，在方方面面都有测评，肤色，宗教，性别这些。不过我说是投入更多，实际上我们看不到他对标的GPT3.5在安全上的努力有多少，毕竟是没有公布的东西。</p>
+<p>参考资料<br><a href="https://blog.csdn.net/star_nwe/article/details/145283201" title="详解大模型中的LayerNorm和RMSNorm">https://blog.csdn.net/star_nwe&#x2F;article&#x2F;details&#x2F;145283201</a></p>
+]]></content>
+      <tags>
+        <tag>日常记录</tag>
       </tags>
   </entry>
   <entry>
@@ -2574,78 +2592,6 @@ class UserService &#123;
 ]]></content>
       <tags>
         <tag>日常学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>总结学习maven</title>
-    <url>/2025/08/13/%E6%80%BB%E7%BB%93%E5%AD%A6%E4%B9%A0maven/</url>
-    <content><![CDATA[<p>因为我之前是使用python的多，这里说下我对maven学习后的一些理解。先下定义：maven的功能是编译java代码，在依赖管理方面使用pom.xml文件。不过和conda不同，maven管理环境依赖的方式是把需要的内容下载到一个本地仓库（.m2&#x2F;repository），然后根据pom.xml里面的需求调用需要的内容。</p>
-<span id="more"></span>
-
-<p>其中：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;groupId&gt;- 是组织标识符，其实就是相对路径</span><br><span class="line">&lt;artifactId&gt; -是项目标识符</span><br><span class="line">&lt;version&gt;- 版本号</span><br><span class="line">&lt;type&gt;- 依赖类型，分为：pom- Maven项目文件，war-Web应用包，ear-企业应用包，zip-压缩包</span><br><span class="line">&lt;scope&gt; - 依赖范围，包括：compile（默认）- 编译和运行时都需要，provided - 编译时需要运行时由容器提供，runtime - 运行时需要编译时不需要，test - 仅测试时需要，system - 系统依赖需要指定路径，import - 导入其他POM的依赖管理</span><br></pre></td></tr></table></figure>
-
-<p>最后，我们可以归纳他们的特性为：</p>
-<table>
-<thead>
-<tr>
-<th align="center">特性</th>
-<th align="center">Maven</th>
-<th align="center">Conda</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">存储位置</td>
-<td align="center">中央化本地仓库 (<code>~/.m2/repository</code>)</td>
-<td align="center">隔离环境目录 (<code>&lt;conda_root&gt;/envs/&lt;env_name&gt;/</code>)</td>
-</tr>
-<tr>
-<td align="center">依赖共享</td>
-<td align="center">所有项目共享同一个仓库</td>
-<td align="center">环境间依赖完全隔离 (独立副本)</td>
-</tr>
-<tr>
-<td align="center">隔离单位</td>
-<td align="center">项目级别 (通过 Classpath 控制)</td>
-<td align="center">环境级别 (物理目录和系统路径隔离)</td>
-</tr>
-<tr>
-<td align="center">隔离机制</td>
-<td align="center">逻辑隔离 (依赖版本选择 + Classpath)</td>
-<td align="center">物理隔离 (文件系统副本 + PATH 环境变量)</td>
-</tr>
-<tr>
-<td align="center">包含内容</td>
-<td align="center">仅依赖库 (JAR) 及其元数据</td>
-<td align="center">Python解释器、Python包、可执行文件、非Python库</td>
-</tr>
-<tr>
-<td align="center">依赖问题</td>
-<td align="center">项目运行时依赖指向中央仓库的JAR。</td>
-<td align="center">环境目录本身就是一个包含所有依赖的包</td>
-</tr>
-</tbody></table>
-]]></content>
-      <tags>
-        <tag>日常学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我对大模型框架改进的看法</title>
-    <url>/2025/05/08/%E6%88%91%E5%AF%B9%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%A1%86%E6%9E%B6%E6%94%B9%E8%BF%9B%E7%9A%84%E7%9C%8B%E6%B3%95/</url>
-    <content><![CDATA[<p>东西不记就容易忘掉，总之先记录下现在看llama系列模型改进的想法<br> <span id="more"></span><br>llama1的改动包括三个：ROPE,RMSnorm前置和SWIGLU。</p>
-<p>ROPE我还真是不看不知道，我一直以为位置编码都是加算embedding，结果这个相对位置编码是在对QKV做操作，同样的，ROPE也是计算出来的，所以可以适应变长的输入。然后是RMSnorm，贴一下归一化的定义：</p>
-<blockquote>
-<p>当两个值之间的差异较小时与较大时，评估值（例如 MSE，均方误差）可能会有很大差异。在 MSE 中，如果出现较大的值，梯度可能会变得极大，从而使学习变得不稳定</p>
-</blockquote>
-<p>我看到的一个说法是前置归一化能节约计算资源，这是因为数据在输入前是更不均匀的。RMS就仅使用均方根（RMS），传统的LayerNorm 相比，后者需要一次数据扫描来计算均值，另一次来计算方差。RMSNorm 通过维持非零均值而不与 0 对齐均值，帮助解决梯度消失问题。在早期周期中比 LayerNorm 维持更高的梯度范数。另一个原因是节省内存，这个结合我看到的在模型使用不同精度的数据，我想应该还真的是有这部分的作用，是DSV3吗，我有点记不得了。</p>
-<p>再然后就是使用了SWIGLU，这个方法就是保留了0以下的数值，捕捉的信息更多。</p>
-<p>然后就是llama2了，我感觉这个模型基本没啥大变化，虽然说是用了GQA，但也就这一点了。事实上由于GQA本身的性质，虽然能加速训练，但也一定会导致信息丢失的。我怀疑它通过大量增加训练数据（+40%）就是为了补偿这中间的损失</p>
-<p>不过llama2提出的训练数据质量决定SFT模型上限多重要的。另外和GPT相比，他明显投入的资源更多，在方方面面都有测评，肤色，宗教，性别这些。不过我说是投入更多，实际上我们看不到他对标的GPT3.5在安全上的努力有多少，毕竟是没有公布的东西。</p>
-<p>参考资料<br><a href="https://blog.csdn.net/star_nwe/article/details/145283201" title="详解大模型中的LayerNorm和RMSNorm">https://blog.csdn.net/star_nwe&#x2F;article&#x2F;details&#x2F;145283201</a></p>
-]]></content>
-      <tags>
-        <tag>日常记录</tag>
       </tags>
   </entry>
   <entry>
@@ -2781,6 +2727,60 @@ class UserService &#123;
       </tags>
   </entry>
   <entry>
+    <title>总结学习maven</title>
+    <url>/2025/08/13/%E6%80%BB%E7%BB%93%E5%AD%A6%E4%B9%A0maven/</url>
+    <content><![CDATA[<p>因为我之前是使用python的多，这里说下我对maven学习后的一些理解。先下定义：maven的功能是编译java代码，在依赖管理方面使用pom.xml文件。不过和conda不同，maven管理环境依赖的方式是把需要的内容下载到一个本地仓库（.m2&#x2F;repository），然后根据pom.xml里面的需求调用需要的内容。</p>
+<span id="more"></span>
+
+<p>其中：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;groupId&gt;- 是组织标识符，其实就是相对路径</span><br><span class="line">&lt;artifactId&gt; -是项目标识符</span><br><span class="line">&lt;version&gt;- 版本号</span><br><span class="line">&lt;type&gt;- 依赖类型，分为：pom- Maven项目文件，war-Web应用包，ear-企业应用包，zip-压缩包</span><br><span class="line">&lt;scope&gt; - 依赖范围，包括：compile（默认）- 编译和运行时都需要，provided - 编译时需要运行时由容器提供，runtime - 运行时需要编译时不需要，test - 仅测试时需要，system - 系统依赖需要指定路径，import - 导入其他POM的依赖管理</span><br></pre></td></tr></table></figure>
+
+<p>最后，我们可以归纳他们的特性为：</p>
+<table>
+<thead>
+<tr>
+<th align="center">特性</th>
+<th align="center">Maven</th>
+<th align="center">Conda</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">存储位置</td>
+<td align="center">中央化本地仓库 (<code>~/.m2/repository</code>)</td>
+<td align="center">隔离环境目录 (<code>&lt;conda_root&gt;/envs/&lt;env_name&gt;/</code>)</td>
+</tr>
+<tr>
+<td align="center">依赖共享</td>
+<td align="center">所有项目共享同一个仓库</td>
+<td align="center">环境间依赖完全隔离 (独立副本)</td>
+</tr>
+<tr>
+<td align="center">隔离单位</td>
+<td align="center">项目级别 (通过 Classpath 控制)</td>
+<td align="center">环境级别 (物理目录和系统路径隔离)</td>
+</tr>
+<tr>
+<td align="center">隔离机制</td>
+<td align="center">逻辑隔离 (依赖版本选择 + Classpath)</td>
+<td align="center">物理隔离 (文件系统副本 + PATH 环境变量)</td>
+</tr>
+<tr>
+<td align="center">包含内容</td>
+<td align="center">仅依赖库 (JAR) 及其元数据</td>
+<td align="center">Python解释器、Python包、可执行文件、非Python库</td>
+</tr>
+<tr>
+<td align="center">依赖问题</td>
+<td align="center">项目运行时依赖指向中央仓库的JAR。</td>
+<td align="center">环境目录本身就是一个包含所有依赖的包</td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>日常学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据结构面经准备</title>
     <url>/2025/08/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%9D%A2%E7%BB%8F%E5%87%86%E5%A4%87/</url>
     <content><![CDATA[<p>毕竟是计算机基本功，但时间远了还是容易忘记，这里记录下我认为有必要准备的数据结构知识。整个流程我大体按照考研那时的数据结构来，尽可能全面吧</p>
@@ -2815,14 +2815,6 @@ class UserService &#123;
       <tags>
         <tag>日常记录</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>第一篇博客尝试</title>
-    <url>/2024/06/14/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E5%B0%9D%E8%AF%95/</url>
-    <content><![CDATA[<p>学习使用博客的技巧<br> <span id="more"></span><br>感谢知乎枫叶佬的文章，优化学习于：<a href="https://zhuanlan.zhihu.com/p/106060640">枫叶</a>,然后发文章的教程在：<a href="https://cloud.tencent.com/developer/article/1662733">腾讯云教程</a>,以作日后查询，简单说具体流程就是:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new title  \\title换自己文章名</span><br><span class="line">hexo clean \\清理本地</span><br><span class="line">hexo g  </span><br><span class="line">hexo d  \\上传代码</span><br></pre></td></tr></table></figure>
-<p>此外学习了插入图片的技巧学习自博客<a href="https://zhuanlan.zhihu.com/p/265077468">插入图片教程</a></p>
-]]></content>
   </entry>
   <entry>
     <title>知识拾遗</title>
@@ -3156,6 +3148,29 @@ class UserService &#123;
     <content><![CDATA[]]></content>
   </entry>
   <entry>
+    <title>第一篇博客尝试</title>
+    <url>/2024/06/14/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E5%B0%9D%E8%AF%95/</url>
+    <content><![CDATA[<p>学习使用博客的技巧<br> <span id="more"></span><br>感谢知乎枫叶佬的文章，优化学习于：<a href="https://zhuanlan.zhihu.com/p/106060640">枫叶</a>,然后发文章的教程在：<a href="https://cloud.tencent.com/developer/article/1662733">腾讯云教程</a>,以作日后查询，简单说具体流程就是:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new title  \\title换自己文章名</span><br><span class="line">hexo clean \\清理本地</span><br><span class="line">hexo g  </span><br><span class="line">hexo d  \\上传代码</span><br></pre></td></tr></table></figure>
+<p>此外学习了插入图片的技巧学习自博客<a href="https://zhuanlan.zhihu.com/p/265077468">插入图片教程</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>通过Tailscale突破内网限制连接服务器</title>
+    <url>/2025/06/22/%E9%80%9A%E8%BF%87Tailscale%E7%AA%81%E7%A0%B4%E5%86%85%E7%BD%91%E9%99%90%E5%88%B6%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[<p>一直以来苦恼于实验室的服务器不能够远程操作，在外实习会十分不方便，今天找到Tailscale可以解决这个问题。<br> <span id="more"></span><br>操作方式很简单</p>
+<p>1.登录Tailscale官网<a href="https://tailscale.com/download">Download | Tailscale</a>，下载win版本和linux版本。win版本一路确认下载就行，linux版本跟着官网走指令就行：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/noble.noarmor.gpg | sudo tee /usr/share/keyrings/tailscale-archive-keyring.gpg &gt;/dev/null</span><br><span class="line">curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/noble.tailscale-keyring.list | sudo tee /etc/apt/sources.list.d/tailscale.list</span><br><span class="line"></span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install tailscale</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2025/06/22/%E9%80%9A%E8%BF%87Tailscale%E7%AA%81%E7%A0%B4%E5%86%85%E7%BD%91%E9%99%90%E5%88%B6%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/image-20250622161758395.png" alt="image-20250622161758395"></p>
+<p>2.两边都安装好后，首先用<code>sudo tailscale up</code>进行身份验证，同样的，win这边也有个验证，使用同一个账号登录就行。到这一步，工作就基本完成了。</p>
+<p>3.最后是用<code>tailscale ip -4</code>查询你的地址，比如说是100.XX.X.XX。就正常按照SSH连接的方式登录服务器就行。以上</p>
+]]></content>
+      <tags>
+        <tag>日常积累</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>随想杂谈</title>
     <url>/2025/08/21/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/</url>
     <content><![CDATA[<p>每天学习的时候，看到一些东西，记录在word里面很容易就找不到，在这里做个备忘录。</p>
@@ -3262,21 +3277,6 @@ class UserService &#123;
 ]]></content>
       <tags>
         <tag>日常学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>通过Tailscale突破内网限制连接服务器</title>
-    <url>/2025/06/22/%E9%80%9A%E8%BF%87Tailscale%E7%AA%81%E7%A0%B4%E5%86%85%E7%BD%91%E9%99%90%E5%88%B6%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
-    <content><![CDATA[<p>一直以来苦恼于实验室的服务器不能够远程操作，在外实习会十分不方便，今天找到Tailscale可以解决这个问题。<br> <span id="more"></span><br>操作方式很简单</p>
-<p>1.登录Tailscale官网<a href="https://tailscale.com/download">Download | Tailscale</a>，下载win版本和linux版本。win版本一路确认下载就行，linux版本跟着官网走指令就行：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/noble.noarmor.gpg | sudo tee /usr/share/keyrings/tailscale-archive-keyring.gpg &gt;/dev/null</span><br><span class="line">curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/noble.tailscale-keyring.list | sudo tee /etc/apt/sources.list.d/tailscale.list</span><br><span class="line"></span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install tailscale</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2025/06/22/%E9%80%9A%E8%BF%87Tailscale%E7%AA%81%E7%A0%B4%E5%86%85%E7%BD%91%E9%99%90%E5%88%B6%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/image-20250622161758395.png" alt="image-20250622161758395"></p>
-<p>2.两边都安装好后，首先用<code>sudo tailscale up</code>进行身份验证，同样的，win这边也有个验证，使用同一个账号登录就行。到这一步，工作就基本完成了。</p>
-<p>3.最后是用<code>tailscale ip -4</code>查询你的地址，比如说是100.XX.X.XX。就正常按照SSH连接的方式登录服务器就行。以上</p>
-]]></content>
-      <tags>
-        <tag>日常积累</tag>
       </tags>
   </entry>
   <entry>
