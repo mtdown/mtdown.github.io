@@ -30,6 +30,45 @@
       </tags>
   </entry>
   <entry>
+    <title>AI行业共识观后感</title>
+    <url>/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/</url>
+    <content><![CDATA[<p>​	如果不记笔记就等于没学，一定程度上我体会到这点了。现在记录下<a href="https://www.bilibili.com/video/BV1GXNfzSE1T/?spm_id_from=333.1007.tianma.1-1-1.click&vd_source=ecbe42ffb25fea0da636165433fb75d6">40页PPT记录2025年年中AI行业共识【视频播客】_哔哩哔哩_bilibili</a>的观后感。</p>
+<span id="more"></span>
+
+<h1><span id="1缺少评价ai大模型能力的数据集">1.缺少评价AI大模型能力的数据集</span></h1><p>​	根据他给出来的OPEN AI的研究显示现在的AI大模型数据集都做到很顶峰的级别，导致你没有办法判断AI模型的能力；其实这一点也有一些论文讨论过，就认为现在的大模型训练效果好有可能是没有做足够的数据去重，这些训练集上的好表现有可能是过拟合的结果。</p>
+<p>​	而根据自己的认识，这些模型基线的评测也有局限，做选择题，做多选题的多，评价答案的少。而评价答案生成能力，往往是直接拿另外一个大模型来打分。毕竟数据量那么大，不可能人工评估。我想这大概就是我们需要微调，让他更适合业务场景的原因之一——表现好的大模型有可能是过拟合的，表现好的大模型也不一定适配你的业务场景。当然，更多的我想还是私有知识库的问题。</p>
+<p> <img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623100757995.png" alt="大模型基准数据集能力"></p>
+<h1><span id="2模型的能力提升">2.模型的能力提升</span></h1><p>​	这个倒是常见了，就是模型的一个进化过程，从预训练堆积数据集，到GPT3.5注重模型的后训练，最后到RL强化学习阶段，让大模型自己更新自己的能力。从open ai 的RLHF,Anthorpic的RLAIF,斯坦福大学的DPO,DS的GRPO都是在搞这些。有意思的是，这些算法都是在RLHF的不同维度上做减法——减少同时训练的模型数量，用AI的数据代替人类的数据，也就是CAI。</p>
+<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623102821329.png" alt="image-20250623102821329"></p>
+<h1><span id="3开源也是行业趋势">3.开源也是行业趋势</span></h1><p>​	一定程度上我能理解开源可以增加技术迭代的速度，有人帮你踩坑，你肯定自己研发就有更多思路。但另一方面，我实在不太理解开源能带来哪些经济上的收益</p>
+<p>​	【今年最多的开源关注是智能体，然后是coding，最后是inference这样的基础设施】</p>
+<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623103404461.png" alt="image-20250623103404461"></p>
+<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623103647415.png" alt="image-20250623103647415"></p>
+<p>​	这个报告真是不错，由蚂蚁开源在 2025 年 5 月 27 日第十届技术日发布，源连接：<a href="https://antoss-landscape.my.canva.site/">https://antoss-landscape.my.canva.site</a></p>
+<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623111817694.png" alt="image-20250623111817694"></p>
+<h1><span id="4产品">4.产品</span></h1><p>​	趋势之一是有大量Agent应用产生，这个很常见。但是浏览器这个我还真是不太清楚。谷歌我记得有一个问题是被政府拆分啥的。夸克的AI高考报名，然后腾讯也在接近。</p>
+<p>​	这个也就是搜广推这三大业务吧，只是换上大模型作为核心。</p>
+<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623105428946.png" alt="image-20250623105428946"></p>
+<p>​	他提到运营上也很有意思：现在的环境允许发布的产品是内测阶段。就比如cursor，这个东西都一年多了，才推出1.0。不过，现在的用户能接受使用产品，等他的成长，但等成熟的产品出现后，再想做这个东西，一定就会面临没有用户愿意来，导致没有足够数据更新的困境吧</p>
+<p>​	这个榜单值得一看：</p>
+<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623110438759.png" alt="image-20250623110438759"></p>
+<p>​	今年是并购大年</p>
+<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623111158747.png" alt="image-20250623111158747"></p>
+<p>​	最后指出这个协议也是一个很好的发展机会，不过这玩意不是大公司真的能玩吗？</p>
+<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623111557903.png" alt="image-20250623111557903"></p>
+<h1><span id="参考资料">参考资料：</span></h1><p>1.<a href="https://www.bilibili.com/video/BV1GXNfzSE1T/?spm_id_from=333.1007.tianma.1-1-1.click&vd_source=ecbe42ffb25fea0da636165433fb75d6">40页PPT记录2025年年中AI行业共识【视频播客】_哔哩哔哩_bilibili</a></p>
+<p>2.<a href="https://blog.csdn.net/2401_85328934/article/details/148292625">蚂蚁开源最新报告：Agent 框架热潮褪去，大模型开发已经进入“生死局”_2025 模型开源开发 态全景与趋势-CSDN博客</a></p>
+]]></content>
+      <tags>
+        <tag>日常积累</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Andrej Lets build GPT学习笔记</title>
+    <url>/2026/05/03/Andrej-Lets-build-GPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>APIfox功能学习</title>
     <url>/2025/07/02/APIfox%E5%8A%9F%E8%83%BD%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<p>​		学习大模型部署软件APIfox</p>
@@ -79,52 +118,6 @@
       <tags>
         <tag>实习准备</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>AI行业共识观后感</title>
-    <url>/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/</url>
-    <content><![CDATA[<p>​	如果不记笔记就等于没学，一定程度上我体会到这点了。现在记录下<a href="https://www.bilibili.com/video/BV1GXNfzSE1T/?spm_id_from=333.1007.tianma.1-1-1.click&vd_source=ecbe42ffb25fea0da636165433fb75d6">40页PPT记录2025年年中AI行业共识【视频播客】_哔哩哔哩_bilibili</a>的观后感。</p>
-<span id="more"></span>
-
-<h1><span id="1缺少评价ai大模型能力的数据集">1.缺少评价AI大模型能力的数据集</span></h1><p>​	根据他给出来的OPEN AI的研究显示现在的AI大模型数据集都做到很顶峰的级别，导致你没有办法判断AI模型的能力；其实这一点也有一些论文讨论过，就认为现在的大模型训练效果好有可能是没有做足够的数据去重，这些训练集上的好表现有可能是过拟合的结果。</p>
-<p>​	而根据自己的认识，这些模型基线的评测也有局限，做选择题，做多选题的多，评价答案的少。而评价答案生成能力，往往是直接拿另外一个大模型来打分。毕竟数据量那么大，不可能人工评估。我想这大概就是我们需要微调，让他更适合业务场景的原因之一——表现好的大模型有可能是过拟合的，表现好的大模型也不一定适配你的业务场景。当然，更多的我想还是私有知识库的问题。</p>
-<p> <img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623100757995.png" alt="大模型基准数据集能力"></p>
-<h1><span id="2模型的能力提升">2.模型的能力提升</span></h1><p>​	这个倒是常见了，就是模型的一个进化过程，从预训练堆积数据集，到GPT3.5注重模型的后训练，最后到RL强化学习阶段，让大模型自己更新自己的能力。从open ai 的RLHF,Anthorpic的RLAIF,斯坦福大学的DPO,DS的GRPO都是在搞这些。有意思的是，这些算法都是在RLHF的不同维度上做减法——减少同时训练的模型数量，用AI的数据代替人类的数据，也就是CAI。</p>
-<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623102821329.png" alt="image-20250623102821329"></p>
-<h1><span id="3开源也是行业趋势">3.开源也是行业趋势</span></h1><p>​	一定程度上我能理解开源可以增加技术迭代的速度，有人帮你踩坑，你肯定自己研发就有更多思路。但另一方面，我实在不太理解开源能带来哪些经济上的收益</p>
-<p>​	【今年最多的开源关注是智能体，然后是coding，最后是inference这样的基础设施】</p>
-<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623103404461.png" alt="image-20250623103404461"></p>
-<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623103647415.png" alt="image-20250623103647415"></p>
-<p>​	这个报告真是不错，由蚂蚁开源在 2025 年 5 月 27 日第十届技术日发布，源连接：<a href="https://antoss-landscape.my.canva.site/">https://antoss-landscape.my.canva.site</a></p>
-<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623111817694.png" alt="image-20250623111817694"></p>
-<h1><span id="4产品">4.产品</span></h1><p>​	趋势之一是有大量Agent应用产生，这个很常见。但是浏览器这个我还真是不太清楚。谷歌我记得有一个问题是被政府拆分啥的。夸克的AI高考报名，然后腾讯也在接近。</p>
-<p>​	这个也就是搜广推这三大业务吧，只是换上大模型作为核心。</p>
-<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623105428946.png" alt="image-20250623105428946"></p>
-<p>​	他提到运营上也很有意思：现在的环境允许发布的产品是内测阶段。就比如cursor，这个东西都一年多了，才推出1.0。不过，现在的用户能接受使用产品，等他的成长，但等成熟的产品出现后，再想做这个东西，一定就会面临没有用户愿意来，导致没有足够数据更新的困境吧</p>
-<p>​	这个榜单值得一看：</p>
-<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623110438759.png" alt="image-20250623110438759"></p>
-<p>​	今年是并购大年</p>
-<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623111158747.png" alt="image-20250623111158747"></p>
-<p>​	最后指出这个协议也是一个很好的发展机会，不过这玩意不是大公司真的能玩吗？</p>
-<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623111557903.png" alt="image-20250623111557903"></p>
-<h1><span id="参考资料">参考资料：</span></h1><p>1.<a href="https://www.bilibili.com/video/BV1GXNfzSE1T/?spm_id_from=333.1007.tianma.1-1-1.click&vd_source=ecbe42ffb25fea0da636165433fb75d6">40页PPT记录2025年年中AI行业共识【视频播客】_哔哩哔哩_bilibili</a></p>
-<p>2.<a href="https://blog.csdn.net/2401_85328934/article/details/148292625">蚂蚁开源最新报告：Agent 框架热潮褪去，大模型开发已经进入“生死局”_2025 模型开源开发 态全景与趋势-CSDN博客</a></p>
-]]></content>
-      <tags>
-        <tag>日常积累</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Andrej Lets build GPT学习笔记</title>
-    <url>/2026/05/03/Andrej-Lets-build-GPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>HoVernet阅读体会</title>
-    <url>/2024/06/19/HoVernet%E9%98%85%E8%AF%BB%E4%BD%93%E4%BC%9A/</url>
-    <content><![CDATA[<p>HoVer-Trans: Anatomy-AwareHoVer-Transformer for ROI-Free Breast CancerDiagnosis in Ultrasound Images</p>
-<p>2023.6，医学1区top，采用BUSI数据集和UDIAT，新创造了GDPH&amp;SYSUCC数据集<br> <span id="more"></span><br>这篇文章的结构有VIT的意思，感觉医学图像处理本质是特化后的视觉图像模型</p>
-]]></content>
   </entry>
   <entry>
     <title>Harness Engineering学习</title>
@@ -245,106 +238,11 @@
       </tags>
   </entry>
   <entry>
-    <title>Vue Vben Admin 安装踩坑复盘：Windows + nvm 环境下 pnpm / catalog: 依赖问题</title>
-    <url>/2026/02/27/Vue-Vben-Admin-%E5%AE%89%E8%A3%85%E8%B8%A9%E5%9D%91%E5%A4%8D%E7%9B%98%EF%BC%9AWindows-nvm-%E7%8E%AF%E5%A2%83%E4%B8%8B-pnpm-catalog-%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h2><span id="背景">背景</span></h2><p>我准备使用 <strong>vue-vben-admin（Vue3 后台模板）</strong>作为 MotorHub 项目的管理后台。按照官方文档 clone 后执行安装：</p>
-<ul>
-<li><code>git clone https://github.com/vbenjs/vue-vben-admin.git</code></li>
-<li>文档要求：<code>pnpm install</code> &#x2F; <code>pnpm dev</code></li>
-</ul>
-<p>我的环境：</p>
-<ul>
-<li>Windows</li>
-<li>使用 <strong>nvm for windows</strong>（Node 安装路径在 <code>C:\nvm4w\nodejs</code>）</li>
-</ul>
-<hr>
-<h2><span id="报错-1pnpm-不是内部或外部命令">报错 1：<code>pnpm</code> 不是内部或外部命令</span></h2><p>在项目目录执行：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pnpm install</span><br></pre></td></tr></table></figure>
-
-<p>报错：</p>
-<blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;pnpm&#x27; 不是内部或外部命令，也不是可运行的程序或批处理文件。</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p>这意味着：系统找不到 pnpm 命令（没安装，或没进入 PATH）。</p>
-<hr>
-<h2><span id="报错-2npm-install-不支持-catalog">报错 2：<code>npm install</code> 不支持 <code>catalog:</code></span></h2><p>我尝试改用 npm 安装依赖：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
-<p>报错：</p>
-<blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm error Unsupported URL Type &quot;catalog:&quot;: catalog:</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p>原因：<strong>vue-vben-admin 的依赖里使用了 pnpm 支持的 <code>catalog:</code> 协议</strong>，npm 不认识，所以 npm 无法安装。<br> 结论：<strong>该项目必须用 pnpm（或对应生态工具）安装</strong>，npm 行不通。</p>
-<hr>
-<h2><span id="报错-3npm-i-g-pnpm-安装失败-eexist">报错 3：<code>npm i -g pnpm</code> 安装失败 EEXIST</span></h2><p>我尝试安装 pnpm：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i -g pnpm</span><br></pre></td></tr></table></figure>
-
-<p>报错：</p>
-<blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">EEXIST: file already exists ...\npm\pnpm</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p>但同时执行：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pnpm -v</span><br></pre></td></tr></table></figure>
-
-<p>仍然提示找不到 <code>pnpm</code>。</p>
-<p>这类情况通常表示：系统里存在 pnpm 的残留&#x2F;损坏 shim 或冲突文件，但 pnpm 命令并没有正确可用。</p>
-<hr>
-<h2><span id="关键排查确认-npm-的全局-prefix-与-path">关键排查：确认 npm 的全局 prefix 与 PATH</span></h2><p>先检查 npm 全局安装位置（prefix）：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm config get prefix</span><br></pre></td></tr></table></figure>
-
-<p>输出：</p>
-<blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">C:\Users\origin\AppData\Roaming\npm</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p>再检查 <code>where pnpm</code>：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">where pnpm</span><br></pre></td></tr></table></figure>
-
-<p>输出：</p>
-<blockquote>
-<p>找不到文件</p>
-</blockquote>
-<p>说明：pnpm 不在 PATH 或 shim 没生成。</p>
-<p>查看 prefix 目录内容：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dir C:\Users\origin\AppData\Roaming\npm</span><br></pre></td></tr></table></figure>
-
-<p>发现目录里有：</p>
-<ul>
-<li><code>corepack.cmd</code></li>
-<li><code>pnpm.ps1</code></li>
-<li><code>pnpx.ps1</code></li>
-<li>但没有 <code>pnpm.cmd</code></li>
-</ul>
-<p>这说明 pnpm 在 PowerShell shim 层面有残留，但 cmd 无法直接使用 <code>pnpm</code>，并且项目依赖安装仍然无法进行。</p>
-<hr>
-<h2><span id="最终解决方案使用-corepack-激活-pnpm">最终解决方案：使用 corepack 激活 pnpm</span></h2><p>因为 prefix 目录里已经存在 corepack，我最终采用 <strong>corepack 方式</strong>（不依赖自己手动装全局 pnpm）：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">corepack enable</span><br><span class="line">corepack prepare pnpm@9.15.0 --activate</span><br><span class="line">pnpm -v</span><br></pre></td></tr></table></figure>
-
-<p>当 <code>pnpm -v</code> 成功输出版本号后，说明 pnpm 已就绪。</p>
-<p>然后在项目目录执行：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pnpm install</span><br><span class="line">pnpm dev</span><br></pre></td></tr></table></figure>
-
-<p>项目即可正常启动。</p>
-<hr>
-<h2><span id="结论与经验">结论与经验</span></h2><ol>
-<li><strong>vue-vben-admin 使用 pnpm 特性（catalog:），npm 无法安装依赖</strong><br> 遇到 <code>Unsupported URL Type &quot;catalog:&quot;</code> 基本就说明必须换 pnpm&#x2F;yarn。</li>
-<li>Windows + nvm 环境下，全局工具经常出现 “安装了但命令不可用”<br> 重点检查：<ul>
-<li><code>npm config get prefix</code></li>
-<li><code>where pnpm</code></li>
-<li>prefix 目录是否在 PATH</li>
-</ul>
-</li>
-<li><strong>优先推荐 corepack 安装&#x2F;管理 pnpm</strong><br> 省去全局安装冲突，版本更可控：<ul>
-<li><code>corepack enable</code></li>
-<li><code>corepack prepare pnpm@xx --activate</code></li>
-</ul>
-</li>
-</ol>
-<hr>
-<h2><span id="可复制的一键命令windows">可复制的一键命令（Windows）</span></h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">corepack enable</span><br><span class="line">corepack prepare pnpm@9.15.0 --activate</span><br><span class="line">pnpm -v</span><br><span class="line">pnpm install</span><br><span class="line">pnpm dev</span><br></pre></td></tr></table></figure>
+    <title>HoVernet阅读体会</title>
+    <url>/2024/06/19/HoVernet%E9%98%85%E8%AF%BB%E4%BD%93%E4%BC%9A/</url>
+    <content><![CDATA[<p>HoVer-Trans: Anatomy-AwareHoVer-Transformer for ROI-Free Breast CancerDiagnosis in Ultrasound Images</p>
+<p>2023.6，医学1区top，采用BUSI数据集和UDIAT，新创造了GDPH&amp;SYSUCC数据集<br> <span id="more"></span><br>这篇文章的结构有VIT的意思，感觉医学图像处理本质是特化后的视觉图像模型</p>
 ]]></content>
-      <tags>
-        <tag>日常学习</tag>
-      </tags>
   </entry>
   <entry>
     <title>RAG扩展学习</title>
@@ -357,236 +255,6 @@
 ]]></content>
       <tags>
         <tag>日常学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>http请求</title>
-    <url>/2025/09/18/http%E8%AF%B7%E6%B1%82/</url>
-    <content><![CDATA[<p>Http协议存在九种请求方式，GET,POST,PUT,PATCH,HEAD,OPTION,CONNECT,TRACE,DELETE.其中用的多的是GET,POST,PUT,HEAD</p>
-<span id="more"></span>
-
-<h1><span id="1http文件的九种请求方式">1,HTTP文件的九种请求方式</span></h1><table>
-<thead>
-<tr>
-<th>序号</th>
-<th>方法</th>
-<th>描述用途</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1</td>
-<td>GET</td>
-<td>【<strong>获取资源</strong>】本质就是发送一个请求来取得服务器上的某一资源。资源通过一组HTTP头和呈现数据（如HTML文本，或者图片或者视频等）返回给客户端。GET请求中，永远不会包含呈现数据。 即GET请求只用来向服务器获取资源，而GET请求本身不应该携带任何呈现数据。  1. 登录时GET获取服务器数据库用户名和密码进行验证。 2.下载文本、图片、音视频等时获取服务器资源。</td>
-</tr>
-<tr>
-<td>2</td>
-<td>POST</td>
-<td>【<strong>传输实体文本</strong>】向指定资源提交数据进行处理请求（例如提交表单或者上传文件）。数据被包含在POST请求体中。POST 请求可能会导致新的资源的建立或已有资源的修改。  1. 提交用户注册信息。 2. 提交修改的用户信息。</td>
-</tr>
-<tr>
-<td>3</td>
-<td>HEAD</td>
-<td>【<strong>获得报文首部</strong>】类似于 GET 请求，只不过返回的响应中没有具体的内容，用于获取报头。欲判断某个资源是否存在，我们通常使用GET，但这里用HEAD则意义更加明确。  1. 向服务器获取某些易过期或丢失大型文件时，可用HEAD方式查询资源是否存在。</td>
-</tr>
-<tr>
-<td>4</td>
-<td>OPTIONS</td>
-<td>【<strong>询问支持的方法</strong>】客户端询问服务器可以提交哪些请求方法。这个方法很有趣，它用于获取当前URL所支持的方法。若请求成功，则它会在HTTP头中包含一个名为“Allow”的头，值是所支持的方法，如“GET, POST”。  极少使用。</td>
-</tr>
-<tr>
-<td>5</td>
-<td>PUT</td>
-<td>【<strong>传输文件</strong>】从客户端向服务器传送的数据取代指定的文档的内容，即指定上传资源存放路径。这个方法比较少见。HTML表单也不支持这个。本质上来讲， PUT和POST极为相似，都是向服务器发送数据，但它们之间有一个重要区别，PUT通常指定了资源的存放位置，而POST则没有，POST的数据存放位置由服务器自己决定。  如一个用于提交博文的URL，&#x2F;addBlog。如果用PUT，则提交的URL会是像这样的”&#x2F;addBlog&#x2F;abc123”，其中abc123就是这个博文的地址。而如果用POST，则这个地址会在提交后由服务器告知客户端。目前大部分博客都是这样的。显然，PUT和POST用途是不一样的。具体用哪个还取决于当前的业务场景。</td>
-</tr>
-<tr>
-<td>6</td>
-<td>PATCH</td>
-<td>【<strong>局部更新文件</strong>】是对 PUT 方法的补充，用来对已知资源进行局部更新 。  极少使用。</td>
-</tr>
-<tr>
-<td>7</td>
-<td>DELETE</td>
-<td>【<strong>删除文件</strong>】请求服务器删除指定的资源。  基本上这个也很少见，不过还是有一些地方比如amazon的S3云服务里面就用的这个方法来删除资源。</td>
-</tr>
-<tr>
-<td>8</td>
-<td>TRACE</td>
-<td>【<strong>追踪路径</strong>】回显服务器收到的请求，客户端可以对请求消息的传输路径进行追踪，TRACE方法是让Web服务器端将之前的请求通信还给客户端的方法。主要用于测试或诊断。  极少使用。</td>
-</tr>
-<tr>
-<td>9</td>
-<td>CONNECT</td>
-<td>【<strong>要求用隧道协议连接代理</strong>】HTTP&#x2F;1.1 协议中预留给能够将连接改为管道方式的代理服务器。CONNECT方法要求在与代理服务器通信时建立隧道，实现用隧道协议进行TCP通信。主要使用SSL（安全套接层）和TLS（传输层安全）协议把通信内容加密后经网络隧道传输。  极少使用。****</td>
-</tr>
-</tbody></table>
-<h1><span id="2http的102030">2.HTTP的1.0，2.0，3.0</span></h1><p>HTTP最早有0.9的版本。这个版本只有GET的请求方式，那时候的人们只在乎他传输文本的功能。到了1.0，增加了POST和HEAD的用法。此外，为了改进0.9版本HTTP必须要等到传输完才能进行下一个操作的问题，1.0使用了pineline。在这个阶段，都还是文本字符，使用的都是短链接。</p>
-<p>到了2.0版本，多路复用支持并发任务，这是因为2.0版本将请求和相应分割为更小的二进制帧和 流ID。这样，多个请求和响应就可以在同一个连接上同时、交错地传输，彻底解决了队头阻塞问题。在传输上，为了加快传输速度，使用了HPACK对内容进行压缩，他们有一个61字符的哈希表和一个动态的表格来存储常用的内容，HPACK就是靠此，不传输文本而是传输索引。</p>
-<p>到了3.0版本，他迭代了TCP，改为使用以UDP为主的QUIC协议传输文件。将 TCP 和 TLS 的握手过程合并了。对于首次连接，只需要 1-RTT 即可建立安全连接。在会话恢复的情况下，甚至可以做到0RTT。此外，因为QUIC是使用连接ID（Connection ID）来标识连接，而不是传统的IP地址和端口。当网络切换时，IP地址虽然变了，但连接ID保持不变，可以实现无缝的连接迁移，不会中断数据传输。</p>
-<h1><span id="3tcp的三次握手">3.TCP的三次握手</span></h1><p>TCP的三次握手是服务器端和客户端确认彼此接收能力的过程。第一次客户端传输服务器端SYN，服务器端口确认了客户端的发送能力。第二次服务器段传回来，让客户端确认了服务器端的收发能力，这时候就返回ACK和SYN+1,如此服务器端就知道客户端是收发能力具备的。</p>
-<p>不过断开联机的的时候我们会用到四次挥手，这是因为服务器端在收到关闭请求后，除开返回一个确认信号，还需要再自己的文件发送完后再给个FIN信号。这就是多出来的一次挥手</p>
-<h1><span id="4网络设备四兄弟">4.网络设备四兄弟</span></h1><h4><span id="1-集线器-hub"><strong>1. 集线器 (Hub)</strong></span></h4><ul>
-<li><strong>工作层次：</strong> OSI 第1层 - <strong>物理层</strong></li>
-<li><strong>核心功能：</strong> 信号放大与<strong>广播</strong>。</li>
-<li><strong>工作原理：</strong> 这是最“傻瓜”的设备。它只有一个功能：当一个端口收到数据信号（二进制比特流）后，它不关心内容，不看地址，直接把这个信号复制并放大，然后发送给<strong>所有其他</strong>的端口。</li>
-<li><strong>关键特征：</strong> 所有连接到集线器的设备，共享同一个<strong>冲突域 (Collision Domain)</strong> 和同一个**广播域 (Broadcast Domain)**。这意味着在任何时刻，只有一个设备可以发送数据，否则就会发生“冲突”（Collision），导致数据损坏，需要重传。这使得网络效率非常低下。</li>
-<li><strong>通俗类比：</strong> 一个<strong>大喇叭</strong>或<strong>广播站</strong>。一个人对着喇叭喊话，整个房间（网络）的所有人都会听到，不管是不是说给他听的。</li>
-</ul>
-<h4><span id="2-网桥-bridge"><strong>2. 网桥 (Bridge)</strong></span></h4><ul>
-<li><strong>工作层次：</strong> OSI 第2层 - <strong>数据链路层</strong></li>
-<li><strong>核心功能：</strong> 连接两个网络<strong>段</strong>，并根据<strong>MAC地址</strong>对数据帧进行过滤转发。</li>
-<li><strong>工作原理：</strong> 网桥比集线器聪明了一点。它会查看数据帧的目标MAC地址。通过学习，它知道哪些MAC地址的设备在哪个网段。<ul>
-<li>如果目标MAC地址和源MAC地址在<strong>同一个网段</strong>，它就<strong>不会</strong>转发这个数据帧。</li>
-<li>如果目标MAC地址在<strong>另一个网段</strong>，它才把数据帧转发过去。</li>
-</ul>
-</li>
-<li><strong>关键特征：</strong> 网桥可以<strong>隔离冲突域</strong>。连接在网桥两端的两个网段，分属不同的冲突域，可以同时进行通信而互不干扰。但它<strong>不能</strong>隔离广播域。</li>
-<li><strong>通俗类比：</strong> 两个办公室之间的<strong>门卫</strong>。门卫会看信件的收件人部门（MAC地址），如果收件人就在发信人所在的这个办公室，门卫就把信拦下，不让它传到另一个办公室去，减少了不必要的干扰。</li>
-</ul>
-<h4><span id="3-交换机-switch"><strong>3. 交换机 (Switch)</strong></span></h4><ul>
-<li><strong>工作层次：</strong> OSI 第2层 - <strong>数据链路层</strong></li>
-<li><strong>核心功能：</strong> 可以看作是网桥的“超级进化版”，是一个<strong>多端口的网桥</strong>。</li>
-<li><strong>工作原理：</strong> 交换机内部有一个<strong>MAC地址表</strong>，它能学习并记录连接在每个端口上的设备的MAC地址。当一个数据帧进来时，交换机会读取其目标MAC地址，然后直接在MAC地址表中查找对应的端口，并<strong>只将该数据帧发送到那个特定的端口</strong>。<ul>
-<li>（只有当目标MAC地址未知，或者这是一个广播帧时，交换机才会像集线器一样向所有端口发送。）</li>
-</ul>
-</li>
-<li><strong>关键特征：</strong> 交换机的<strong>每一个端口都是一个独立的冲突域</strong>。这意味着连接在交换机上的所有设备都可以同时收发数据，互不影响，极大地提高了网络效率。但默认情况下，所有端口仍属于同一个<strong>广播域</strong>。</li>
-<li><strong>通俗类比：</strong> 一个<strong>电话总机接线员</strong>。当A要打电话给B时，接线员会为他们俩建立一条专属的、点对点的线路。他们的通话内容（数据）不会被C和D听到。</li>
-</ul>
-<h4><span id="4-路由器-router"><strong>4. 路由器 (Router)</strong></span></h4><ul>
-<li><strong>工作层次：</strong> OSI 第3层 - <strong>网络层</strong></li>
-<li><strong>核心功能：</strong> 连接<strong>不同的网络</strong>（比如你家的局域网和广阔的互联网），并根据<strong>IP地址</strong>进行路径选择和数据包转发。</li>
-<li><strong>工作原理：</strong> 路由器是这四者中最“天才”的。它不关心MAC地址，而是读取数据包的<strong>目标IP地址</strong>。它内部维护着一张<strong>路由表</strong>，这张表就像一张地图，告诉它要去往某个IP地址段，应该把数据包从哪个“出口”（端口）发出去才是最佳路径。</li>
-<li><strong>关键特征：</strong> 路由器既可以<strong>隔离冲突域</strong>，也可以<strong>隔离广播域</strong>。它的每一个端口都连接着一个独立的网络，从而形成一个独立的广播域。这是管理大型网络、防止“广播风暴”的关键设备。</li>
-<li><strong>通俗类比：</strong> 一个<strong>国际机场的航站楼</strong>或<strong>大型快递中转枢纽</strong>。它根据包裹上的最终城市地址（IP地址），而不是具体的街道门牌号（MAC地址），来决定这个包裹应该上哪一架飞机、走哪条航线（路由）。</li>
-</ul>
-<h3><span id="总结表"><strong>总结表</strong></span></h3><table>
-<thead>
-<tr>
-<th align="center">特性</th>
-<th align="center">集线器 (Hub)</th>
-<th align="center">网桥 (Bridge)</th>
-<th align="center">交换机 (Switch)</th>
-<th align="center">路由器 (Router)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><strong>工作层次</strong></td>
-<td align="center"><strong>物理层 (L1)</strong></td>
-<td align="center"><strong>数据链路层 (L2)</strong></td>
-<td align="center"><strong>数据链路层 (L2)</strong></td>
-<td align="center"><strong>网络层 (L3)</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>使用地址</strong></td>
-<td align="center">不使用地址</td>
-<td align="center"><strong>MAC地址</strong></td>
-<td align="center"><strong>MAC地址</strong></td>
-<td align="center"><strong>IP地址</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>工作模式</strong></td>
-<td align="center">广播</td>
-<td align="center">过滤转发</td>
-<td align="center"><strong>点对点转发</strong></td>
-<td align="center"><strong>路径选择转发</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>连接对象</strong></td>
-<td align="center">将设备连接成网段</td>
-<td align="center">连接两个网段</td>
-<td align="center">连接多个设备或网段</td>
-<td align="center">连接<strong>不同网络</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>冲突域</strong></td>
-<td align="center">整体是一个冲突域</td>
-<td align="center">每个端口是一个冲突域</td>
-<td align="center"><strong>每个端口是一个冲突域</strong></td>
-<td align="center">每个端口是一个冲突域</td>
-</tr>
-<tr>
-<td align="center"><strong>广播域</strong></td>
-<td align="center">整体是一个广播域</td>
-<td align="center">整体是一个广播域</td>
-<td align="center">整体是一个广播域</td>
-<td align="center"><strong>每个端口是一个广播域</strong></td>
-</tr>
-</tbody></table>
-<h1><span id="5h1-到-h6-的层级关系">5.<code>h1</code> 到 <code>h6</code> 的层级关系</span></h1><p>HTML 提供了六个级别的标题，从 <code>&lt;h1&gt;</code> 到 <code>&lt;h6&gt;</code>，重要性依次递减：</p>
-<ul>
-<li><strong><code>&lt;h1&gt;</code></strong>: <strong>最高级别的标题</strong>。通常用于页面的主标题，比如一篇文章的题目或网站的名称。 **一个页面最好只有一个 <code>&lt;h1&gt;</code>**。<ul>
-<li><em>例子</em>：<code>&lt;h1&gt;海东文库项目介绍&lt;/h1&gt;</code></li>
-</ul>
-</li>
-<li><strong><code>&lt;h2&gt;</code></strong>: <strong>二级标题</strong>。用于表示页面主要章节或区域的标题。<ul>
-<li><em>例子</em>：<code>&lt;h2&gt;用户模块功能&lt;/h2&gt;</code></li>
-</ul>
-</li>
-<li><strong><code>&lt;h3&gt;</code></strong>: <strong>三级标题</strong>。用于二级标题下的子标题。<ul>
-<li><em>例子</em>：<code>&lt;h3&gt;用户登录功能&lt;/h3&gt;</code></li>
-</ul>
-</li>
-<li><strong><code>&lt;h4&gt;</code>, <code>&lt;h5&gt;</code>, <code>&lt;h6&gt;</code></strong>: 重要性更低的子标题，以此类推。</li>
-</ul>
-<h1><span id="6http请求">6.HTTP请求</span></h1><p>注解和HTTP请求的各个部分对应起来：</p>
-<table>
-<thead>
-<tr>
-<th>注解</th>
-<th>读取HTTP请求的哪个部分？</th>
-<th>主要用途</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong><code>@PathVariable</code></strong></td>
-<td><strong>请求行</strong> (URL路径)</td>
-<td>获取RESTful风格的路径变量，如 <code>/users/&#123;id&#125;</code></td>
-</tr>
-<tr>
-<td><strong><code>@RequestParam</code></strong></td>
-<td><strong>请求行</strong> (URL查询参数) 或 <strong>请求体</strong> (表单数据)</td>
-<td>获取简单的键值对参数或文件</td>
-</tr>
-<tr>
-<td><strong><code>@RequestBody</code></strong></td>
-<td><strong>请求体</strong> (整个Body)</td>
-<td>将JSON&#x2F;XML等格式的请求体完整地转为一个Java对象</td>
-</tr>
-<tr>
-<td><strong><code>@RequestPart</code></strong></td>
-<td><strong>请求体</strong> (<code>multipart/form-data</code>的某个部分)</td>
-<td>获取文件或与文件混合的复杂数据（如JSON）</td>
-</tr>
-<tr>
-<td><strong><code>@RequestHeader</code></strong></td>
-<td><strong>请求头</strong></td>
-<td>获取Header信息，如 <code>Authorization</code>, <code>Content-Type</code></td>
-</tr>
-<tr>
-<td><strong><code>@CookieValue</code></strong></td>
-<td><strong>请求头</strong> (Cookie信息)</td>
-<td>获取特定的Cookie值</td>
-</tr>
-</tbody></table>
-]]></content>
-      <tags>
-        <tag>就业准备</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java多态</title>
-    <url>/2024/09/15/java%E5%A4%9A%E6%80%81/</url>
-    <content><![CDATA[<p>这个部分我觉得稍稍有点杂，毕竟函数，属性都存在多态。考虑到向上继承，向下继承这些，调用的顺序和麻烦程度都会递增。<br> <span id="more"></span></p>
-<h1><span id="方法的多态">方法的多态</span></h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Dog extends animal&#123;</span><br><span class="line">    private String food=&quot;骨头&quot;;</span><br><span class="line">    public Dog(String name, int age, String sex, String food) &#123;</span><br><span class="line">        super(name, age, sex);</span><br><span class="line">        this.food = food;</span><br><span class="line">    &#125;</span><br><span class="line">    public Dog(String name, int age, String sex) &#123;</span><br><span class="line">        super(name, age, sex);</span><br><span class="line">        //这里就使用了多态，通过参数的不同，调用同一个函数名但有不同的效果</span><br><span class="line">    &#125;</span><br><span class="line">    public String eat()&#123;</span><br><span class="line">        return food;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这里面的两个构造函数就是多态的一种，基于传参的多态<br>2024&#x2F;10&#x2F;2 21:19:13<br>关于编译类型增加细节<br>（1）一个对象的编译类型和运行类型可以不一致<br>（2）编译类型在定义对象时，就确定了，不能改<br>（3）运行类型是可以变的<br>（4）编译类型看定义时 &#x3D; 号的左边，运行类型看 &#x3D; 号右边。<br>（5）属性的值看编译类型，方法看运行<br>（6）继承会改变运行类型</p>
-<h1><span id="多态练习1">多态练习1</span></h1><p><img src="/images/%E5%A4%9A%E6%80%81.png" alt="练习题目" title="练习题"><br>对于代码：</p>
-<figure class="highlight plaintext"><figcaption><span>class PolyExercise02 &#123;</span></figcaption><table><tr><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Sub sub = new Sub();</span><br><span class="line">    System.out.println(sub.count);</span><br><span class="line">    sub.display();</span><br><span class="line">    Base b=sub;</span><br><span class="line">    System.out.println(b==sub);</span><br><span class="line">    System.out.println(b.count);</span><br><span class="line">    b.display();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>首先123都只是单纯地定义新类输出方法和属性，因此都是20.此时编译类型和运行类型都是sub</p>
-<figure class="highlight plaintext"><figcaption><span>sub </span></figcaption><table><tr><td class="code"><pre><span class="line">      System.out.println(sub.count);</span><br><span class="line">      sub.display();</span><br><span class="line">Base b=sub;</span><br></pre></td></tr></table></figure>
-<p>直到4进行了一次向上转型，此时b的编译类型Base，运行类型Sub，方法以Sub为准，属性以Base为准，因此我认为输出时false，10，20。结果如下图所示：<br><img src="/images/q2.png" alt="运行结果" title="结果"><br>对System.out.println(b&#x3D;&#x3D;sub)判断失误，原因是这里的&#x3D;&#x3D;判断对象是地址，代码：Base b&#x3D;sub 的对象赋值的本质是给了b和sub指向一个空间的地址。我姑且理解为以后在对两个对象进行判断时，考虑地址是否指向同一个东西<br>#多态练习2#<br>这里提到了个很重要的动态绑定机制，</p>
-]]></content>
-      <tags>
-        <tag>就业准备</tag>
       </tags>
   </entry>
   <entry>
@@ -1004,30 +672,105 @@
       </tags>
   </entry>
   <entry>
-    <title>java封装</title>
-    <url>/2024/09/14/java%E5%B0%81%E8%A3%85/</url>
-    <content><![CDATA[<p>本文的目的在于复习一些学习JAVA过程时难以理解或者是忘却的部分，<br> <span id="more"></span><br>封装：这个部分比较好理解，其实就是设置个接口然后调用函数就行.目的在于保护一些私密的属性，只能用事先确定的函数进行修改，从而提高程序的安全性</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package train.com.example1;</span><br><span class="line"></span><br><span class="line">public class ex1 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Person person = new Person();</span><br><span class="line">        System.out.println(person.name);</span><br><span class="line">        System.out.println(person.getMoney());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Person&#123;</span><br><span class="line">    private int age=10;</span><br><span class="line">    protected int money=100;</span><br><span class="line">    public String name =&quot;小张&quot;;</span><br><span class="line">    int lucknumber=7;</span><br><span class="line">    public int getMoney() &#123;</span><br><span class="line">        return money;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这里面Person类的getMoney就算是最初级的封装，借此可以访问到被private限制，不能直接访问的类型。<br>访问修饰符格式如下：<br><img src="/images/%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6.png" alt="访问修饰符" title="访问修饰符"><br>比较需要注意的是这里面的包和类存在重叠的情况，对于文件：</p>
-<pre><code>class Dog&#123;
-    private String name=&quot;小黄&quot;;
-    public String getName() &#123;
-        return name;
-    &#125;
-&#125;
+    <title>Vue Vben Admin 安装踩坑复盘：Windows + nvm 环境下 pnpm / catalog: 依赖问题</title>
+    <url>/2026/02/27/Vue-Vben-Admin-%E5%AE%89%E8%A3%85%E8%B8%A9%E5%9D%91%E5%A4%8D%E7%9B%98%EF%BC%9AWindows-nvm-%E7%8E%AF%E5%A2%83%E4%B8%8B-pnpm-catalog-%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h2><span id="背景">背景</span></h2><p>我准备使用 <strong>vue-vben-admin（Vue3 后台模板）</strong>作为 MotorHub 项目的管理后台。按照官方文档 clone 后执行安装：</p>
+<ul>
+<li><code>git clone https://github.com/vbenjs/vue-vben-admin.git</code></li>
+<li>文档要求：<code>pnpm install</code> &#x2F; <code>pnpm dev</code></li>
+</ul>
+<p>我的环境：</p>
+<ul>
+<li>Windows</li>
+<li>使用 <strong>nvm for windows</strong>（Node 安装路径在 <code>C:\nvm4w\nodejs</code>）</li>
+</ul>
+<hr>
+<h2><span id="报错-1pnpm-不是内部或外部命令">报错 1：<code>pnpm</code> 不是内部或外部命令</span></h2><p>在项目目录执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pnpm install</span><br></pre></td></tr></table></figure>
 
-class Dog2 extends Dog&#123;
-    String name=&quot;小小&quot;;
-    @Override
-    public String getName() &#123;
-        return super.name;
-    &#125;
-&#125;
-```这俩就是一类，且同包，当访问修饰符号为默认时，Dog2就能访问到父类的name，只会在私有的情况下报错。因此，当具备多个身份，即又是子类又是同包时，会采用同包的规则。
-</code></pre>
+<p>报错：</p>
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;pnpm&#x27; 不是内部或外部命令，也不是可运行的程序或批处理文件。</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>这意味着：系统找不到 pnpm 命令（没安装，或没进入 PATH）。</p>
+<hr>
+<h2><span id="报错-2npm-install-不支持-catalog">报错 2：<code>npm install</code> 不支持 <code>catalog:</code></span></h2><p>我尝试改用 npm 安装依赖：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>报错：</p>
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm error Unsupported URL Type &quot;catalog:&quot;: catalog:</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>原因：<strong>vue-vben-admin 的依赖里使用了 pnpm 支持的 <code>catalog:</code> 协议</strong>，npm 不认识，所以 npm 无法安装。<br> 结论：<strong>该项目必须用 pnpm（或对应生态工具）安装</strong>，npm 行不通。</p>
+<hr>
+<h2><span id="报错-3npm-i-g-pnpm-安装失败-eexist">报错 3：<code>npm i -g pnpm</code> 安装失败 EEXIST</span></h2><p>我尝试安装 pnpm：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i -g pnpm</span><br></pre></td></tr></table></figure>
+
+<p>报错：</p>
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">EEXIST: file already exists ...\npm\pnpm</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>但同时执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pnpm -v</span><br></pre></td></tr></table></figure>
+
+<p>仍然提示找不到 <code>pnpm</code>。</p>
+<p>这类情况通常表示：系统里存在 pnpm 的残留&#x2F;损坏 shim 或冲突文件，但 pnpm 命令并没有正确可用。</p>
+<hr>
+<h2><span id="关键排查确认-npm-的全局-prefix-与-path">关键排查：确认 npm 的全局 prefix 与 PATH</span></h2><p>先检查 npm 全局安装位置（prefix）：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm config get prefix</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">C:\Users\origin\AppData\Roaming\npm</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>再检查 <code>where pnpm</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">where pnpm</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<blockquote>
+<p>找不到文件</p>
+</blockquote>
+<p>说明：pnpm 不在 PATH 或 shim 没生成。</p>
+<p>查看 prefix 目录内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dir C:\Users\origin\AppData\Roaming\npm</span><br></pre></td></tr></table></figure>
+
+<p>发现目录里有：</p>
+<ul>
+<li><code>corepack.cmd</code></li>
+<li><code>pnpm.ps1</code></li>
+<li><code>pnpx.ps1</code></li>
+<li>但没有 <code>pnpm.cmd</code></li>
+</ul>
+<p>这说明 pnpm 在 PowerShell shim 层面有残留，但 cmd 无法直接使用 <code>pnpm</code>，并且项目依赖安装仍然无法进行。</p>
+<hr>
+<h2><span id="最终解决方案使用-corepack-激活-pnpm">最终解决方案：使用 corepack 激活 pnpm</span></h2><p>因为 prefix 目录里已经存在 corepack，我最终采用 <strong>corepack 方式</strong>（不依赖自己手动装全局 pnpm）：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">corepack enable</span><br><span class="line">corepack prepare pnpm@9.15.0 --activate</span><br><span class="line">pnpm -v</span><br></pre></td></tr></table></figure>
+
+<p>当 <code>pnpm -v</code> 成功输出版本号后，说明 pnpm 已就绪。</p>
+<p>然后在项目目录执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pnpm install</span><br><span class="line">pnpm dev</span><br></pre></td></tr></table></figure>
+
+<p>项目即可正常启动。</p>
+<hr>
+<h2><span id="结论与经验">结论与经验</span></h2><ol>
+<li><strong>vue-vben-admin 使用 pnpm 特性（catalog:），npm 无法安装依赖</strong><br> 遇到 <code>Unsupported URL Type &quot;catalog:&quot;</code> 基本就说明必须换 pnpm&#x2F;yarn。</li>
+<li>Windows + nvm 环境下，全局工具经常出现 “安装了但命令不可用”<br> 重点检查：<ul>
+<li><code>npm config get prefix</code></li>
+<li><code>where pnpm</code></li>
+<li>prefix 目录是否在 PATH</li>
+</ul>
+</li>
+<li><strong>优先推荐 corepack 安装&#x2F;管理 pnpm</strong><br> 省去全局安装冲突，版本更可控：<ul>
+<li><code>corepack enable</code></li>
+<li><code>corepack prepare pnpm@xx --activate</code></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2><span id="可复制的一键命令windows">可复制的一键命令（Windows）</span></h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">corepack enable</span><br><span class="line">corepack prepare pnpm@9.15.0 --activate</span><br><span class="line">pnpm -v</span><br><span class="line">pnpm install</span><br><span class="line">pnpm dev</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
-        <tag>就业准备</tag>
+        <tag>日常学习</tag>
       </tags>
   </entry>
   <entry>
@@ -1093,17 +836,230 @@ class Dog2 extends Dog&#123;
       </tags>
   </entry>
   <entry>
-    <title>java继承</title>
-    <url>/2024/09/15/java%E7%BB%A7%E6%89%BF/</url>
-    <content><![CDATA[<p>继承的作用是解决代码复用的问题，在公用属性的基础上进行添加特有的操作。<br> <span id="more"></span><br>写法如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class ex1 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Dog dog =new Dog(&quot;大黄&quot;,13,&quot;公&quot;);</span><br><span class="line">        System.out.println(dog.eat());</span><br><span class="line">        dog.prinfo();</span><br><span class="line">        Dog dog2 =new Dog(&quot;小粉&quot;,20,&quot;直升机&quot;,&quot;草&quot;);</span><br><span class="line">        System.out.println(dog2.eat());</span><br><span class="line">        dog2.prinfo();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class animal&#123;</span><br><span class="line">    private String name;</span><br><span class="line">    private int age;</span><br><span class="line">    private String sex;</span><br><span class="line">    public animal(String name, int age, String sex) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">        this.age = age;</span><br><span class="line">        this.sex = sex;</span><br><span class="line">    &#125;</span><br><span class="line">    public void prinfo()&#123;</span><br><span class="line">        System.out.println(getName()+&quot;今年&quot;+getAge()+&quot;岁了，是个&quot;+getSex()+&quot;宠物&quot;);</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    private void info()&#123;</span><br><span class="line">        System.out.println(getName()+&quot;今年&quot;+getAge()+&quot;岁了，是个&quot;+getSex()+&quot;宠物&quot;);</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    public void setName(String name) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    public void setAge(int age) &#123;</span><br><span class="line">        this.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">    public void setSex(String sex) &#123;</span><br><span class="line">        this.sex = sex;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public int getAge() &#123;</span><br><span class="line">        return age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String getName() &#123;</span><br><span class="line">        return name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String getSex() &#123;</span><br><span class="line">        return sex;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Dog extends animal&#123;</span><br><span class="line">    private String food=&quot;骨头&quot;;</span><br><span class="line">    public Dog(String name, int age, String sex, String food) &#123;</span><br><span class="line">        super(name, age, sex);</span><br><span class="line">        this.food = food;</span><br><span class="line">    &#125;</span><br><span class="line">    public Dog(String name, int age, String sex) &#123;</span><br><span class="line">        super(name, age, sex);</span><br><span class="line">        //这里就使用了多态，通过参数的不同，调用同一个函数名但有不同的效果</span><br><span class="line">    &#125;</span><br><span class="line">    public String eat()&#123;</span><br><span class="line">        return food;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这里面的狗就继承了动物的属性，不需要再额外写一遍名字年龄性别的属性。此外，对于父类的函数，根据访问修辞符而定。但在这里，仅仅是同包不同类的Dog是没办法使用函数info的，只能使用prinfo函数。<br>2024&#x2F;9&#x2F;20 15:22:31<br>增加细节：之前一直用IDE自动填充，没有注意到的部分在这里重申一下以加强记忆。</p>
-<ol>
-<li>一个类的构造器名字要和类名一致。且构造器是没有类型的，为【访问修辞符】 【构造器名】的格式组成。值得注意的是，虽然目前没有用上，但访问修辞符也是可以为private的</li>
-<li>当我们继承父类时，子类没有显式调用父类构造器的画，编译器会为隐式调用父类的无参构造器，而如果父类没有这个无参构造器，那就必须用super关键词显式进行调用。</li>
-<li>构造器可以有多个。</li>
-<li>关于向下继承，只能是父类强制转化成子类，同一个父类的两个子类之间不能强制转化。</li>
-</ol>
+    <title>http请求</title>
+    <url>/2025/09/18/http%E8%AF%B7%E6%B1%82/</url>
+    <content><![CDATA[<p>Http协议存在九种请求方式，GET,POST,PUT,PATCH,HEAD,OPTION,CONNECT,TRACE,DELETE.其中用的多的是GET,POST,PUT,HEAD</p>
+<span id="more"></span>
+
+<h1><span id="1http文件的九种请求方式">1,HTTP文件的九种请求方式</span></h1><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>方法</th>
+<th>描述用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>GET</td>
+<td>【<strong>获取资源</strong>】本质就是发送一个请求来取得服务器上的某一资源。资源通过一组HTTP头和呈现数据（如HTML文本，或者图片或者视频等）返回给客户端。GET请求中，永远不会包含呈现数据。 即GET请求只用来向服务器获取资源，而GET请求本身不应该携带任何呈现数据。  1. 登录时GET获取服务器数据库用户名和密码进行验证。 2.下载文本、图片、音视频等时获取服务器资源。</td>
+</tr>
+<tr>
+<td>2</td>
+<td>POST</td>
+<td>【<strong>传输实体文本</strong>】向指定资源提交数据进行处理请求（例如提交表单或者上传文件）。数据被包含在POST请求体中。POST 请求可能会导致新的资源的建立或已有资源的修改。  1. 提交用户注册信息。 2. 提交修改的用户信息。</td>
+</tr>
+<tr>
+<td>3</td>
+<td>HEAD</td>
+<td>【<strong>获得报文首部</strong>】类似于 GET 请求，只不过返回的响应中没有具体的内容，用于获取报头。欲判断某个资源是否存在，我们通常使用GET，但这里用HEAD则意义更加明确。  1. 向服务器获取某些易过期或丢失大型文件时，可用HEAD方式查询资源是否存在。</td>
+</tr>
+<tr>
+<td>4</td>
+<td>OPTIONS</td>
+<td>【<strong>询问支持的方法</strong>】客户端询问服务器可以提交哪些请求方法。这个方法很有趣，它用于获取当前URL所支持的方法。若请求成功，则它会在HTTP头中包含一个名为“Allow”的头，值是所支持的方法，如“GET, POST”。  极少使用。</td>
+</tr>
+<tr>
+<td>5</td>
+<td>PUT</td>
+<td>【<strong>传输文件</strong>】从客户端向服务器传送的数据取代指定的文档的内容，即指定上传资源存放路径。这个方法比较少见。HTML表单也不支持这个。本质上来讲， PUT和POST极为相似，都是向服务器发送数据，但它们之间有一个重要区别，PUT通常指定了资源的存放位置，而POST则没有，POST的数据存放位置由服务器自己决定。  如一个用于提交博文的URL，&#x2F;addBlog。如果用PUT，则提交的URL会是像这样的”&#x2F;addBlog&#x2F;abc123”，其中abc123就是这个博文的地址。而如果用POST，则这个地址会在提交后由服务器告知客户端。目前大部分博客都是这样的。显然，PUT和POST用途是不一样的。具体用哪个还取决于当前的业务场景。</td>
+</tr>
+<tr>
+<td>6</td>
+<td>PATCH</td>
+<td>【<strong>局部更新文件</strong>】是对 PUT 方法的补充，用来对已知资源进行局部更新 。  极少使用。</td>
+</tr>
+<tr>
+<td>7</td>
+<td>DELETE</td>
+<td>【<strong>删除文件</strong>】请求服务器删除指定的资源。  基本上这个也很少见，不过还是有一些地方比如amazon的S3云服务里面就用的这个方法来删除资源。</td>
+</tr>
+<tr>
+<td>8</td>
+<td>TRACE</td>
+<td>【<strong>追踪路径</strong>】回显服务器收到的请求，客户端可以对请求消息的传输路径进行追踪，TRACE方法是让Web服务器端将之前的请求通信还给客户端的方法。主要用于测试或诊断。  极少使用。</td>
+</tr>
+<tr>
+<td>9</td>
+<td>CONNECT</td>
+<td>【<strong>要求用隧道协议连接代理</strong>】HTTP&#x2F;1.1 协议中预留给能够将连接改为管道方式的代理服务器。CONNECT方法要求在与代理服务器通信时建立隧道，实现用隧道协议进行TCP通信。主要使用SSL（安全套接层）和TLS（传输层安全）协议把通信内容加密后经网络隧道传输。  极少使用。****</td>
+</tr>
+</tbody></table>
+<h1><span id="2http的102030">2.HTTP的1.0，2.0，3.0</span></h1><p>HTTP最早有0.9的版本。这个版本只有GET的请求方式，那时候的人们只在乎他传输文本的功能。到了1.0，增加了POST和HEAD的用法。此外，为了改进0.9版本HTTP必须要等到传输完才能进行下一个操作的问题，1.0使用了pineline。在这个阶段，都还是文本字符，使用的都是短链接。</p>
+<p>到了2.0版本，多路复用支持并发任务，这是因为2.0版本将请求和相应分割为更小的二进制帧和 流ID。这样，多个请求和响应就可以在同一个连接上同时、交错地传输，彻底解决了队头阻塞问题。在传输上，为了加快传输速度，使用了HPACK对内容进行压缩，他们有一个61字符的哈希表和一个动态的表格来存储常用的内容，HPACK就是靠此，不传输文本而是传输索引。</p>
+<p>到了3.0版本，他迭代了TCP，改为使用以UDP为主的QUIC协议传输文件。将 TCP 和 TLS 的握手过程合并了。对于首次连接，只需要 1-RTT 即可建立安全连接。在会话恢复的情况下，甚至可以做到0RTT。此外，因为QUIC是使用连接ID（Connection ID）来标识连接，而不是传统的IP地址和端口。当网络切换时，IP地址虽然变了，但连接ID保持不变，可以实现无缝的连接迁移，不会中断数据传输。</p>
+<h1><span id="3tcp的三次握手">3.TCP的三次握手</span></h1><p>TCP的三次握手是服务器端和客户端确认彼此接收能力的过程。第一次客户端传输服务器端SYN，服务器端口确认了客户端的发送能力。第二次服务器段传回来，让客户端确认了服务器端的收发能力，这时候就返回ACK和SYN+1,如此服务器端就知道客户端是收发能力具备的。</p>
+<p>不过断开联机的的时候我们会用到四次挥手，这是因为服务器端在收到关闭请求后，除开返回一个确认信号，还需要再自己的文件发送完后再给个FIN信号。这就是多出来的一次挥手</p>
+<h1><span id="4网络设备四兄弟">4.网络设备四兄弟</span></h1><h4><span id="1-集线器-hub"><strong>1. 集线器 (Hub)</strong></span></h4><ul>
+<li><strong>工作层次：</strong> OSI 第1层 - <strong>物理层</strong></li>
+<li><strong>核心功能：</strong> 信号放大与<strong>广播</strong>。</li>
+<li><strong>工作原理：</strong> 这是最“傻瓜”的设备。它只有一个功能：当一个端口收到数据信号（二进制比特流）后，它不关心内容，不看地址，直接把这个信号复制并放大，然后发送给<strong>所有其他</strong>的端口。</li>
+<li><strong>关键特征：</strong> 所有连接到集线器的设备，共享同一个<strong>冲突域 (Collision Domain)</strong> 和同一个**广播域 (Broadcast Domain)**。这意味着在任何时刻，只有一个设备可以发送数据，否则就会发生“冲突”（Collision），导致数据损坏，需要重传。这使得网络效率非常低下。</li>
+<li><strong>通俗类比：</strong> 一个<strong>大喇叭</strong>或<strong>广播站</strong>。一个人对着喇叭喊话，整个房间（网络）的所有人都会听到，不管是不是说给他听的。</li>
+</ul>
+<h4><span id="2-网桥-bridge"><strong>2. 网桥 (Bridge)</strong></span></h4><ul>
+<li><strong>工作层次：</strong> OSI 第2层 - <strong>数据链路层</strong></li>
+<li><strong>核心功能：</strong> 连接两个网络<strong>段</strong>，并根据<strong>MAC地址</strong>对数据帧进行过滤转发。</li>
+<li><strong>工作原理：</strong> 网桥比集线器聪明了一点。它会查看数据帧的目标MAC地址。通过学习，它知道哪些MAC地址的设备在哪个网段。<ul>
+<li>如果目标MAC地址和源MAC地址在<strong>同一个网段</strong>，它就<strong>不会</strong>转发这个数据帧。</li>
+<li>如果目标MAC地址在<strong>另一个网段</strong>，它才把数据帧转发过去。</li>
+</ul>
+</li>
+<li><strong>关键特征：</strong> 网桥可以<strong>隔离冲突域</strong>。连接在网桥两端的两个网段，分属不同的冲突域，可以同时进行通信而互不干扰。但它<strong>不能</strong>隔离广播域。</li>
+<li><strong>通俗类比：</strong> 两个办公室之间的<strong>门卫</strong>。门卫会看信件的收件人部门（MAC地址），如果收件人就在发信人所在的这个办公室，门卫就把信拦下，不让它传到另一个办公室去，减少了不必要的干扰。</li>
+</ul>
+<h4><span id="3-交换机-switch"><strong>3. 交换机 (Switch)</strong></span></h4><ul>
+<li><strong>工作层次：</strong> OSI 第2层 - <strong>数据链路层</strong></li>
+<li><strong>核心功能：</strong> 可以看作是网桥的“超级进化版”，是一个<strong>多端口的网桥</strong>。</li>
+<li><strong>工作原理：</strong> 交换机内部有一个<strong>MAC地址表</strong>，它能学习并记录连接在每个端口上的设备的MAC地址。当一个数据帧进来时，交换机会读取其目标MAC地址，然后直接在MAC地址表中查找对应的端口，并<strong>只将该数据帧发送到那个特定的端口</strong>。<ul>
+<li>（只有当目标MAC地址未知，或者这是一个广播帧时，交换机才会像集线器一样向所有端口发送。）</li>
+</ul>
+</li>
+<li><strong>关键特征：</strong> 交换机的<strong>每一个端口都是一个独立的冲突域</strong>。这意味着连接在交换机上的所有设备都可以同时收发数据，互不影响，极大地提高了网络效率。但默认情况下，所有端口仍属于同一个<strong>广播域</strong>。</li>
+<li><strong>通俗类比：</strong> 一个<strong>电话总机接线员</strong>。当A要打电话给B时，接线员会为他们俩建立一条专属的、点对点的线路。他们的通话内容（数据）不会被C和D听到。</li>
+</ul>
+<h4><span id="4-路由器-router"><strong>4. 路由器 (Router)</strong></span></h4><ul>
+<li><strong>工作层次：</strong> OSI 第3层 - <strong>网络层</strong></li>
+<li><strong>核心功能：</strong> 连接<strong>不同的网络</strong>（比如你家的局域网和广阔的互联网），并根据<strong>IP地址</strong>进行路径选择和数据包转发。</li>
+<li><strong>工作原理：</strong> 路由器是这四者中最“天才”的。它不关心MAC地址，而是读取数据包的<strong>目标IP地址</strong>。它内部维护着一张<strong>路由表</strong>，这张表就像一张地图，告诉它要去往某个IP地址段，应该把数据包从哪个“出口”（端口）发出去才是最佳路径。</li>
+<li><strong>关键特征：</strong> 路由器既可以<strong>隔离冲突域</strong>，也可以<strong>隔离广播域</strong>。它的每一个端口都连接着一个独立的网络，从而形成一个独立的广播域。这是管理大型网络、防止“广播风暴”的关键设备。</li>
+<li><strong>通俗类比：</strong> 一个<strong>国际机场的航站楼</strong>或<strong>大型快递中转枢纽</strong>。它根据包裹上的最终城市地址（IP地址），而不是具体的街道门牌号（MAC地址），来决定这个包裹应该上哪一架飞机、走哪条航线（路由）。</li>
+</ul>
+<h3><span id="总结表"><strong>总结表</strong></span></h3><table>
+<thead>
+<tr>
+<th align="center">特性</th>
+<th align="center">集线器 (Hub)</th>
+<th align="center">网桥 (Bridge)</th>
+<th align="center">交换机 (Switch)</th>
+<th align="center">路由器 (Router)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>工作层次</strong></td>
+<td align="center"><strong>物理层 (L1)</strong></td>
+<td align="center"><strong>数据链路层 (L2)</strong></td>
+<td align="center"><strong>数据链路层 (L2)</strong></td>
+<td align="center"><strong>网络层 (L3)</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>使用地址</strong></td>
+<td align="center">不使用地址</td>
+<td align="center"><strong>MAC地址</strong></td>
+<td align="center"><strong>MAC地址</strong></td>
+<td align="center"><strong>IP地址</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>工作模式</strong></td>
+<td align="center">广播</td>
+<td align="center">过滤转发</td>
+<td align="center"><strong>点对点转发</strong></td>
+<td align="center"><strong>路径选择转发</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>连接对象</strong></td>
+<td align="center">将设备连接成网段</td>
+<td align="center">连接两个网段</td>
+<td align="center">连接多个设备或网段</td>
+<td align="center">连接<strong>不同网络</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>冲突域</strong></td>
+<td align="center">整体是一个冲突域</td>
+<td align="center">每个端口是一个冲突域</td>
+<td align="center"><strong>每个端口是一个冲突域</strong></td>
+<td align="center">每个端口是一个冲突域</td>
+</tr>
+<tr>
+<td align="center"><strong>广播域</strong></td>
+<td align="center">整体是一个广播域</td>
+<td align="center">整体是一个广播域</td>
+<td align="center">整体是一个广播域</td>
+<td align="center"><strong>每个端口是一个广播域</strong></td>
+</tr>
+</tbody></table>
+<h1><span id="5h1-到-h6-的层级关系">5.<code>h1</code> 到 <code>h6</code> 的层级关系</span></h1><p>HTML 提供了六个级别的标题，从 <code>&lt;h1&gt;</code> 到 <code>&lt;h6&gt;</code>，重要性依次递减：</p>
+<ul>
+<li><strong><code>&lt;h1&gt;</code></strong>: <strong>最高级别的标题</strong>。通常用于页面的主标题，比如一篇文章的题目或网站的名称。 **一个页面最好只有一个 <code>&lt;h1&gt;</code>**。<ul>
+<li><em>例子</em>：<code>&lt;h1&gt;海东文库项目介绍&lt;/h1&gt;</code></li>
+</ul>
+</li>
+<li><strong><code>&lt;h2&gt;</code></strong>: <strong>二级标题</strong>。用于表示页面主要章节或区域的标题。<ul>
+<li><em>例子</em>：<code>&lt;h2&gt;用户模块功能&lt;/h2&gt;</code></li>
+</ul>
+</li>
+<li><strong><code>&lt;h3&gt;</code></strong>: <strong>三级标题</strong>。用于二级标题下的子标题。<ul>
+<li><em>例子</em>：<code>&lt;h3&gt;用户登录功能&lt;/h3&gt;</code></li>
+</ul>
+</li>
+<li><strong><code>&lt;h4&gt;</code>, <code>&lt;h5&gt;</code>, <code>&lt;h6&gt;</code></strong>: 重要性更低的子标题，以此类推。</li>
+</ul>
+<h1><span id="6http请求">6.HTTP请求</span></h1><p>注解和HTTP请求的各个部分对应起来：</p>
+<table>
+<thead>
+<tr>
+<th>注解</th>
+<th>读取HTTP请求的哪个部分？</th>
+<th>主要用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong><code>@PathVariable</code></strong></td>
+<td><strong>请求行</strong> (URL路径)</td>
+<td>获取RESTful风格的路径变量，如 <code>/users/&#123;id&#125;</code></td>
+</tr>
+<tr>
+<td><strong><code>@RequestParam</code></strong></td>
+<td><strong>请求行</strong> (URL查询参数) 或 <strong>请求体</strong> (表单数据)</td>
+<td>获取简单的键值对参数或文件</td>
+</tr>
+<tr>
+<td><strong><code>@RequestBody</code></strong></td>
+<td><strong>请求体</strong> (整个Body)</td>
+<td>将JSON&#x2F;XML等格式的请求体完整地转为一个Java对象</td>
+</tr>
+<tr>
+<td><strong><code>@RequestPart</code></strong></td>
+<td><strong>请求体</strong> (<code>multipart/form-data</code>的某个部分)</td>
+<td>获取文件或与文件混合的复杂数据（如JSON）</td>
+</tr>
+<tr>
+<td><strong><code>@RequestHeader</code></strong></td>
+<td><strong>请求头</strong></td>
+<td>获取Header信息，如 <code>Authorization</code>, <code>Content-Type</code></td>
+</tr>
+<tr>
+<td><strong><code>@CookieValue</code></strong></td>
+<td><strong>请求头</strong> (Cookie信息)</td>
+<td>获取特定的Cookie值</td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>就业准备</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java多态</title>
+    <url>/2024/09/15/java%E5%A4%9A%E6%80%81/</url>
+    <content><![CDATA[<p>这个部分我觉得稍稍有点杂，毕竟函数，属性都存在多态。考虑到向上继承，向下继承这些，调用的顺序和麻烦程度都会递增。<br> <span id="more"></span></p>
+<h1><span id="方法的多态">方法的多态</span></h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Dog extends animal&#123;</span><br><span class="line">    private String food=&quot;骨头&quot;;</span><br><span class="line">    public Dog(String name, int age, String sex, String food) &#123;</span><br><span class="line">        super(name, age, sex);</span><br><span class="line">        this.food = food;</span><br><span class="line">    &#125;</span><br><span class="line">    public Dog(String name, int age, String sex) &#123;</span><br><span class="line">        super(name, age, sex);</span><br><span class="line">        //这里就使用了多态，通过参数的不同，调用同一个函数名但有不同的效果</span><br><span class="line">    &#125;</span><br><span class="line">    public String eat()&#123;</span><br><span class="line">        return food;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里面的两个构造函数就是多态的一种，基于传参的多态<br>2024&#x2F;10&#x2F;2 21:19:13<br>关于编译类型增加细节<br>（1）一个对象的编译类型和运行类型可以不一致<br>（2）编译类型在定义对象时，就确定了，不能改<br>（3）运行类型是可以变的<br>（4）编译类型看定义时 &#x3D; 号的左边，运行类型看 &#x3D; 号右边。<br>（5）属性的值看编译类型，方法看运行<br>（6）继承会改变运行类型</p>
+<h1><span id="多态练习1">多态练习1</span></h1><p><img src="/images/%E5%A4%9A%E6%80%81.png" alt="练习题目" title="练习题"><br>对于代码：</p>
+<figure class="highlight plaintext"><figcaption><span>class PolyExercise02 &#123;</span></figcaption><table><tr><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Sub sub = new Sub();</span><br><span class="line">    System.out.println(sub.count);</span><br><span class="line">    sub.display();</span><br><span class="line">    Base b=sub;</span><br><span class="line">    System.out.println(b==sub);</span><br><span class="line">    System.out.println(b.count);</span><br><span class="line">    b.display();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>首先123都只是单纯地定义新类输出方法和属性，因此都是20.此时编译类型和运行类型都是sub</p>
+<figure class="highlight plaintext"><figcaption><span>sub </span></figcaption><table><tr><td class="code"><pre><span class="line">      System.out.println(sub.count);</span><br><span class="line">      sub.display();</span><br><span class="line">Base b=sub;</span><br></pre></td></tr></table></figure>
+<p>直到4进行了一次向上转型，此时b的编译类型Base，运行类型Sub，方法以Sub为准，属性以Base为准，因此我认为输出时false，10，20。结果如下图所示：<br><img src="/images/q2.png" alt="运行结果" title="结果"><br>对System.out.println(b&#x3D;&#x3D;sub)判断失误，原因是这里的&#x3D;&#x3D;判断对象是地址，代码：Base b&#x3D;sub 的对象赋值的本质是给了b和sub指向一个空间的地址。我姑且理解为以后在对两个对象进行判断时，考虑地址是否指向同一个东西<br>#多态练习2#<br>这里提到了个很重要的动态绑定机制，</p>
 ]]></content>
       <tags>
         <tag>就业准备</tag>
@@ -1121,6 +1077,33 @@ class Dog2 extends Dog&#123;
       </tags>
   </entry>
   <entry>
+    <title>java封装</title>
+    <url>/2024/09/14/java%E5%B0%81%E8%A3%85/</url>
+    <content><![CDATA[<p>本文的目的在于复习一些学习JAVA过程时难以理解或者是忘却的部分，<br> <span id="more"></span><br>封装：这个部分比较好理解，其实就是设置个接口然后调用函数就行.目的在于保护一些私密的属性，只能用事先确定的函数进行修改，从而提高程序的安全性</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package train.com.example1;</span><br><span class="line"></span><br><span class="line">public class ex1 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Person person = new Person();</span><br><span class="line">        System.out.println(person.name);</span><br><span class="line">        System.out.println(person.getMoney());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Person&#123;</span><br><span class="line">    private int age=10;</span><br><span class="line">    protected int money=100;</span><br><span class="line">    public String name =&quot;小张&quot;;</span><br><span class="line">    int lucknumber=7;</span><br><span class="line">    public int getMoney() &#123;</span><br><span class="line">        return money;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里面Person类的getMoney就算是最初级的封装，借此可以访问到被private限制，不能直接访问的类型。<br>访问修饰符格式如下：<br><img src="/images/%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6.png" alt="访问修饰符" title="访问修饰符"><br>比较需要注意的是这里面的包和类存在重叠的情况，对于文件：</p>
+<pre><code>class Dog&#123;
+    private String name=&quot;小黄&quot;;
+    public String getName() &#123;
+        return name;
+    &#125;
+&#125;
+
+class Dog2 extends Dog&#123;
+    String name=&quot;小小&quot;;
+    @Override
+    public String getName() &#123;
+        return super.name;
+    &#125;
+&#125;
+```这俩就是一类，且同包，当访问修饰符号为默认时，Dog2就能访问到父类的name，只会在私有的情况下报错。因此，当具备多个身份，即又是子类又是同包时，会采用同包的规则。
+</code></pre>
+]]></content>
+      <tags>
+        <tag>就业准备</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>“java算法题目”</title>
     <url>/2025/09/09/java%E7%AE%97%E6%B3%95%E9%A2%98%E7%9B%AE/</url>
     <content><![CDATA[<p>我觉得还是要给自己的算法题一些分类，这有利于我以后求职，也是自己梳理一下。我从力扣100一遍遍做，遇到什么就补充什么进去，今天先这样。</p>
@@ -1130,6 +1113,59 @@ class Dog2 extends Dog&#123;
 ]]></content>
       <tags>
         <tag>就业准备</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java继承</title>
+    <url>/2024/09/15/java%E7%BB%A7%E6%89%BF/</url>
+    <content><![CDATA[<p>继承的作用是解决代码复用的问题，在公用属性的基础上进行添加特有的操作。<br> <span id="more"></span><br>写法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class ex1 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Dog dog =new Dog(&quot;大黄&quot;,13,&quot;公&quot;);</span><br><span class="line">        System.out.println(dog.eat());</span><br><span class="line">        dog.prinfo();</span><br><span class="line">        Dog dog2 =new Dog(&quot;小粉&quot;,20,&quot;直升机&quot;,&quot;草&quot;);</span><br><span class="line">        System.out.println(dog2.eat());</span><br><span class="line">        dog2.prinfo();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class animal&#123;</span><br><span class="line">    private String name;</span><br><span class="line">    private int age;</span><br><span class="line">    private String sex;</span><br><span class="line">    public animal(String name, int age, String sex) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">        this.age = age;</span><br><span class="line">        this.sex = sex;</span><br><span class="line">    &#125;</span><br><span class="line">    public void prinfo()&#123;</span><br><span class="line">        System.out.println(getName()+&quot;今年&quot;+getAge()+&quot;岁了，是个&quot;+getSex()+&quot;宠物&quot;);</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    private void info()&#123;</span><br><span class="line">        System.out.println(getName()+&quot;今年&quot;+getAge()+&quot;岁了，是个&quot;+getSex()+&quot;宠物&quot;);</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    public void setName(String name) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    public void setAge(int age) &#123;</span><br><span class="line">        this.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">    public void setSex(String sex) &#123;</span><br><span class="line">        this.sex = sex;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public int getAge() &#123;</span><br><span class="line">        return age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String getName() &#123;</span><br><span class="line">        return name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String getSex() &#123;</span><br><span class="line">        return sex;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Dog extends animal&#123;</span><br><span class="line">    private String food=&quot;骨头&quot;;</span><br><span class="line">    public Dog(String name, int age, String sex, String food) &#123;</span><br><span class="line">        super(name, age, sex);</span><br><span class="line">        this.food = food;</span><br><span class="line">    &#125;</span><br><span class="line">    public Dog(String name, int age, String sex) &#123;</span><br><span class="line">        super(name, age, sex);</span><br><span class="line">        //这里就使用了多态，通过参数的不同，调用同一个函数名但有不同的效果</span><br><span class="line">    &#125;</span><br><span class="line">    public String eat()&#123;</span><br><span class="line">        return food;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里面的狗就继承了动物的属性，不需要再额外写一遍名字年龄性别的属性。此外，对于父类的函数，根据访问修辞符而定。但在这里，仅仅是同包不同类的Dog是没办法使用函数info的，只能使用prinfo函数。<br>2024&#x2F;9&#x2F;20 15:22:31<br>增加细节：之前一直用IDE自动填充，没有注意到的部分在这里重申一下以加强记忆。</p>
+<ol>
+<li>一个类的构造器名字要和类名一致。且构造器是没有类型的，为【访问修辞符】 【构造器名】的格式组成。值得注意的是，虽然目前没有用上，但访问修辞符也是可以为private的</li>
+<li>当我们继承父类时，子类没有显式调用父类构造器的画，编译器会为隐式调用父类的无参构造器，而如果父类没有这个无参构造器，那就必须用super关键词显式进行调用。</li>
+<li>构造器可以有多个。</li>
+<li>关于向下继承，只能是父类强制转化成子类，同一个父类的两个子类之间不能强制转化。</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>就业准备</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>langchain学习记录</title>
+    <url>/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p>​			记录一下自己学习langchain的过程。首先是模型安装和部署。</p>
+<span id="more"></span>
+
+<h1><span id="1安装conda-环境">1.安装conda 环境</span></h1><p>​				这一步没啥好说的，首先登陆官网<a href="https://www.anaconda.com/download/success">Download Now | Anaconda</a>根据你的系统选择合适的本本，这里左边Distribution Installers是指图形界面安装程序，Miniconda Installers是命令行安装程序。根据自己习惯选就行。</p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250701195719017.png" alt="image-20250701195719017"></p>
+<p>​			安装完成后会有一个anaconda的界面，输入<code>conda --version</code>和<code>python --version</code>检查版本，这俩都是安装时自带的 Python 版本，Base表示你处于默认的激活环境，一般来说我们不会在这个环境下操作，而是自己创建一个。</p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250701200720245.png" alt="image-20250701200720245"></p>
+<p>​			创建的环境的命令是<code>conda create --name ml_env python=3.9,</code>意思是创建名为ml_env的环境，使用Python 3.9；然后使用<code>conda env list</code>可以检查你拥有的环境，<code>conda activate ml_env</code>表示激活ml_env环境。</p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250701201412106.png" alt="image-20250701201412106"></p>
+<p>​			创建好了新环境，我们就激活它，然后在那个环境里解决大模型的部署问题。</p>
+<h1><span id="2ollama部署qwen">2.ollama部署qwen</span></h1><p>​			这里就直接跟着教程走吧，登录官网<a href="https://ollama.com/library/qwen3:8b">qwen3:8b</a>，下载ollama，然后搜索你需要的模型，Qwen3会有一堆这样的模型和词条，你需要哪个版本就直接用那个版本下面的代码就行，首次运行他会自动给你下载：</p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702121036039.png" alt="image-20250702121036039"></p>
+<p>​			<code>ollama run qwen3:8b</code>这一步运行完后就能正常操作了。但这里需要注意一一点：ollama给你的模型基本都是量化后的，这是为了方便你本地运行：<img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702121239065.png" alt="image-20250702121239065"></p>
+<p>​			输入<code>curl http://localhost:11434/api/tags</code>代码，你也会看到<code>&quot;quantization_level&quot;:&quot;Q4_K_M&quot;&#125;</code>，这证明我们下载的是个四位量化的模型，全量的模型应该是：<code>quantize: none</code><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702122414057.png" alt="image-20250702122414057"></p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702122150980.png" alt="image-20250702122150980"></p>
+<p>​			如果你要使用全量化的模型，那就需要到huggingface这种模型网站去他们<a href="https://huggingface.co/Qwen/collections">Qwen (Qwen)</a>的GGUF格式文件，而这个可就要大得多了：</p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702134841259.png" alt="image-20250702134841259"></p>
+<p>​			此外，你还需要根据<a href="https://qwen.readthedocs.io/zh-cn/latest/run_locally/ollama.html">Ollama - Qwen</a>的流程创建文件：</p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702134931270.png" alt="image-20250702134931270"></p>
+<p>​				然后这里我们说一下ollama调用API时的几个默认接口：</p>
+<p>​				在本地部署时有个基础的：<a href="http://localhost:11434，然后根据你的需求，额外增加生成文本补全端点：POST">http://localhost:11434，然后根据你的需求，额外增加生成文本补全端点：POST</a> &#x2F;api&#x2F;generate；对话式交互端点：POST &#x2F;api&#x2F;chat；我们这里首先点开1.新建接口，换成POST，并填写<a href="http://localhost:11434/api/chat">http://localhost:11434/api/chat</a></p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250703205010332.png" alt="image-20250703205010332"></p>
+<p>​			然后我们这里就点击Body，选择里面的json格式，并参考这样的格式添加一个示例。请注意，json格式不支持注释，我这里是为了方便理解和后续替换对应的块。<img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250703205111334.png" alt="image-20250703205111334"></p>
+<p>​			这里面的流式传输需要额外说明一下，流式传输是一种将数据分割成多个连续的小块（chunk）实时传输的方式，如果你选择了流式传输，那他就会一个字一个字（Token）的给你反馈：<img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250703205346011.png" alt="image-20250703205346011"></p>
+<p>此外 ，关于这个部分，在我看的网课里面有一张很好的图概括：</p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250706232003714.png" alt="image-20250706232003714"></p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250706233801408.png" alt="image-20250706233801408"></p>
+<h1><span id="参考目录">参考目录</span></h1><p>1.<a href="https://ollama.com/blog/thinking">思考 ·Ollama 博客</a></p>
+]]></content>
+      <tags>
+        <tag>实习准备</tag>
       </tags>
   </entry>
   <entry>
@@ -1208,6 +1244,103 @@ class Dog2 extends Dog&#123;
 ]]></content>
       <tags>
         <tag>日常学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>langchain学习记录2</title>
+    <url>/2025/07/06/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/</url>
+    <content><![CDATA[<p>总结记录一下自己学习langchain4j的整个过程，这里面包括项目结构的简述，每个文件的作用，和新功能如何添加的说明。</p>
+<span id="more"></span>
+
+<h1><span id="1项目文件结构展示">1.项目文件结构展示</span></h1><p>首先是项目文件结构展示：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">src</span><br><span class="line">└── main</span><br><span class="line">    ├── java</span><br><span class="line">    │   └── com</span><br><span class="line">    │       └── itheima</span><br><span class="line">    │           └── consultant</span><br><span class="line">    │               ├── aiservice</span><br><span class="line">    │               │   └── ConsultantService.java     // 【AI核心】LangChain4j的AI服务接口，通过@AiService注解整合IOC容器中的对象。</span><br><span class="line">    │               ├── config</span><br><span class="line">    │               │   ├── CommonConfig.java          // 【配置中心】配置项目的核心Bean，如RAG检索器、聊天记忆、网络搜索工具等。</span><br><span class="line">    │               │   └── DataIngestionRunner.java   // 【数据注入器】项目启动时运行，负责读取本地文件(如.md)，将其向量化后存入Redis。</span><br><span class="line">    │               ├── controller</span><br><span class="line">    │               │   └── ChatController.java        // 【API入口】暴露/chat接口给前端，处理HTTP请求，并根据请求头判断返回流式或完整响应。</span><br><span class="line">    │               ├── mapper</span><br><span class="line">    │               │   └── ReservationMapper.java     // 【数据库接口】MyBatis的Mapper接口，定义了对预约表的增删改查SQL操作。</span><br><span class="line">    │               ├── pojo</span><br><span class="line">    │               │   └── Reservation.java           // 【数据模型】定义了“预约”这个业务对象的Java类，与数据库表字段对应。</span><br><span class="line">    │               ├── repository</span><br><span class="line">    │               │   └── RedisChatMemoryStore.java  // 【数据存储实现】实现了聊天记忆的存取逻辑，具体是将聊天记录存到Redis中。</span><br><span class="line">    │               ├── service</span><br><span class="line">    │               │   └── ReservationService.java    // 【业务逻辑】处理预约相关的业务，调用Mapper来操作数据库。</span><br><span class="line">    │               ├── tools                          // 【AI工具箱】存放供AI调用的工具类 (预约使用的ReservationTool.java 就在这里)。</span><br><span class="line">    │               └── ConsultantApplication.java     // 【启动器】整个Spring Boot项目的入口，main方法所在地。</span><br><span class="line">    │</span><br><span class="line">    └── resources</span><br><span class="line">        ├── content</span><br><span class="line">        │   ├── LLMForEverybody-main           // 存放知识库文档的文件夹。</span><br><span class="line">        │   └── 长安大学.md                    // 【RAG知识源】具体的知识库文件，DataIngestionRunner会读取它。</span><br><span class="line">        ├── pdfcontent</span><br><span class="line">        │   └── 长安大学.pdf                   // 【RAG知识源】PDF格式的知识库文件。</span><br><span class="line">        ├── static</span><br><span class="line">        │   └── index.html                     // 【前端】项目的主页面，用于承载聊天窗口。</span><br><span class="line">        ├── templates                          // 存放服务端模板的文件夹 (此项目中未使用)。</span><br><span class="line">        ├── application.yml                    // 【总配置文件】Spring Boot的配置文件，用于配置API密钥、数据库连接、Redis地址等。</span><br><span class="line">        └── system.txt                         // 【AI人设定义】系统级Prompt，用于定义AI的角色、说话风格和行为准则。</span><br><span class="line">└── target                                     // 【编译输出目录】存放项目编译后的.class文件和打包后的.jar/.war文件。</span><br><span class="line">├── .gitattributes                             // 【Git配置】定义Git处理特定文件路径的方式。</span><br><span class="line">├── .gitignore                                 // 【Git配置】告诉Git哪些文件或目录不需要纳入版本控制（如target目录）。</span><br><span class="line">├── HELP.md                                    // 【项目文档】Spring Boot项目自动生成的帮助文件。</span><br><span class="line">├── mvnw                                       // 【Maven Wrapper】Linux/macOS下的Maven包装器脚本，无需全局安装Maven即可执行mvn命令。</span><br><span class="line">├── mvnw.cmd                                   // 【Maven Wrapper】Windows下的Maven包装器脚本。</span><br><span class="line">└── pom.xml                                    // 【项目核心配置】Maven的项目对象模型文件，定义项目依赖、插件、版本等。</span><br></pre></td></tr></table></figure>
+
+<p>其中，最最最基础的只需要五个文件：ConsultantApplication.java  启动器；ConsultantService.java  整合器；ChatController.java对话接收装置。以及负责包的pom.xml，还有负责项目配置的application.yml，使用什么模型，接口port是多少都在这里设置.</p>
+<p>CommonConfig.java 都只是为了更精细地控制。其他的内容都算是起扩展作用的文件。</p>
+<h2><span id="11-pomxml文件设置">1.1 pom.xml文件设置</span></h2><p>首先，要构建自己的大模型智能体，我们要先引入需要的依赖，由于我这里使用的是langchain4j，所有需要在pom.xml文件中输入以下内容：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>dev.langchain4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>langchain4j-open-ai<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这个文件是Maven 项目的核心配置文件，全称为 Project Object Model（项目对象模型）。它主要用于管理项目的构建、依赖、插件和其他配置信息，是 Maven 进行项目管理和构建的基础。</p>
+<p>后续需要使用到redis，mysql和文本分块，都需要配置对应的依赖：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;dependencies&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;</span><br><span class="line">        &lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;dev.langchain4j&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;langchain4j-open-ai-spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;1.0.1-beta6&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!--aiservice相关依赖--&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;dev.langchain4j&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;langchain4j-spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;1.0.1-beta6&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!--流式传输相关依赖--&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-boot-starter-webflux&lt;/artifactId&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;dev.langchain4j&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;langchain4j-reactor&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;1.0.1-beta6&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!--redis依赖--&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-boot-starter-data-redis&lt;/artifactId&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!--lombok--&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;lombok&lt;/artifactId&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!--mybatis依赖--&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.mybatis.spring.boot&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;mybatis-spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;3.0.3&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!--mysql依赖--&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;com.mysql&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;mysql-connector-j&lt;/artifactId&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!--Pdf依赖--&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;dev.langchain4j&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;langchain4j-document-parser-apache-pdfbox&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;1.0.1-beta6&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!--引入对向量化redis的依赖--&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;dev.langchain4j&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;langchain4j-community-redis-spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;1.0.1-beta6&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!--引入对Tavily的依赖--&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;dev.langchain4j&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;langchain4j-web-search-engine-tavily&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;1.0.0-beta3&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!--引入对搜索引擎的依赖--&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;dev.langchain4j&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;langchain4j-web-search-engine-searchapi&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;1.0.0-beta3&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">&lt;/dependencies&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这些依赖的来源也很简单——LangChain4j 的官方网站<a href="https://docs.langchain4j.dev/intro%E4%BC%9A%E6%9C%89%E7%9B%B8%E5%BD%93%E5%A4%9A%E7%9A%84%E7%A4%BA%E4%BE%8B%EF%BC%8C%E5%8F%AF%E4%BB%A5%E8%B7%9F%E7%9D%80%E9%87%8C%E9%9D%A2%E7%9A%84%E4%BB%8B%E7%BB%8D%E4%B8%80%E6%AD%A5%E4%B8%80%E6%AD%A5%E7%9A%84%E5%8E%BB%E5%AE%9E%E7%8E%B0%E3%80%82%E6%AD%A4%E5%A4%96%EF%BC%8C%E8%BF%98%E6%9C%89%E5%85%AC%E5%BC%80%E7%9A%84">https://docs.langchain4j.dev/intro会有相当多的示例，可以跟着里面的介绍一步一步的去实现。此外，还有公开的</a> Java 依赖包的“全球总仓库“可以去查看<a href="https://central.sonatype.com/search?q=wechat%E3%80%82%E5%A6%82%E6%9E%9C%E8%BF%99%E4%BA%9B%E9%83%BD%E6%B2%A1%E6%9C%89%EF%BC%8C%E5%B0%B1%E5%8F%AA%E8%83%BD%E8%87%AA%E5%B7%B1%E6%83%B3%E5%8A%9E%E6%B3%95%E5%8A%A8%E6%89%8B%E9%9B%86%E6%88%90%E4%BA%86%E3%80%82%E6%88%91%E6%83%B3%E8%BF%99%E7%A7%8D%E6%83%85%E5%86%B5%E4%BC%9A%E6%98%AF%E5%BC%80%E5%8F%91%E4%B8%AD%E9%9D%A2%E4%B8%B4%E7%9A%84%E6%9C%80%E5%A4%A7%E9%97%AE%E9%A2%98%E3%80%82">https://central.sonatype.com/search?q=wechat。如果这些都没有，就只能自己想办法动手集成了。我想这种情况会是开发中面临的最大问题。</a></p>
+<p><img src="/2025/07/06/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/image-20250820190609274.png" alt="image-20250820190609274"></p>
+<h2><span id="12-consultantservice文件">1.2 ConsultantService文件</span></h2><p>决定了依赖，接下来就是要定义接口，也就是ConsultantService文件。其在整个项目中，负责定义AI服务，主要是通过 @AiService 注解来将多种AI功能组件整合在一起。这里重点说下里面wiringMode，它默认为 AiServiceWiringMode.AUTOMATIC ，会自己去装配 IOC 容器中已有的 chatModel。</p>
+<p><img src="/2025/07/06/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/image-20250813220435776.png" alt="image-20250813220435776"></p>
+<p>此外，对于langchain4j支持的东西，他们都会提供专用的属性来配置：比如：<code>chatModel</code> &#x2F; <code>streamingChatModel</code>：配置AI的“<strong>大脑</strong>”，即语言模型本身；<code>chatMemoryProvider</code>：配置AI的“<strong>内存</strong>”，负责管理对话历史。；<code>contentRetriever</code>：配置AI的“<strong>知识库检索器</strong>”，负责RAG中的信息检索。</p>
+<p>而对于自定义的外部功能，则是通过tools属性来实现，作为AI的外部工具箱。@AiService里面的对象名字是@Bean注入的容器名字。</p>
+<h2><span id="13-commonconfigjava文件">1.3 CommonConfig.java文件</span></h2><p>这个文件是用来配置项目需求运行所必须的内容的，当我们要添加一个新功能时，往往是先去找能实现对应功能的包，然后构建一个Bean对象出来。统一管理后，就是这个 CommonConfig.java文件</p>
+<p><img src="/2025/07/06/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/image-20250824105524520.png" alt="image-20250824105524520"></p>
+<h2><span id="13-applicationyml文件">1.3 application.yml文件</span></h2><p>application.yml文件是Spring Boot 应用的主配置文件，包含应用程序的各种配置项，如服务器端口、数据库连接信息、日志级别、自定义属性等。每要新接入一个组件，都需要在这个文件中写入对应的设置，比如说使用的模型名字啊，端口号这些。</p>
+<p><img src="/2025/07/06/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/image-20250814211645812.png" alt="image-20250814211645812"></p>
+<p>此外，根据情况不同，还可以按照<code>application-&#123;profile&#125;.yml</code> 格式命名使用多个配置文件: - application.yml (默认配置) - application-dev.yml (开发环境) - application-prod.yml (生产环境)</p>
+<pre><code>@SpringBootApplication
+public class Application &#123;
+    public static void main(String[] args) &#123;
+        SpringApplication app = new SpringApplication(Application.class);
+        
+        // 设置配置文件名
+        app.setAdditionalProfiles(&quot;dev&quot;);
+        
+        // 设置配置文件位置
+        System.setProperty(&quot;spring.config.location&quot;, &quot;classpath:/custom/&quot;);
+        
+        app.run(args);
+    &#125;
+&#125;
+</code></pre>
+<h2><span id="14-redis配置相关文件">1.4 redis配置相关文件</span></h2><p>在上面的几个部分，基本就是文件的核心部分，接下来梳理redis部分，在这一个部分，我要做的工作是增加长文本对话的功能，这就需要我有一个存储用的RedisChatMemoryStore，并以其为核心，我发现他同样具备简单的embedding功能，这就代表他不止是可以负责对话信息的获取，转化和存储，还可以用来做RAG。</p>
+<p>同样的，添加依赖：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--redis依赖--&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-data-redis&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<p>然后填写本地的端口：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">spring:</span><br><span class="line">  data:</span><br><span class="line">    redis:</span><br><span class="line">      host: localhost</span><br><span class="line">      port: 6379</span><br></pre></td></tr></table></figure>
+
+<p>因为这里主要处理的是字符，所以选择 redisTemplate，使用里面的redisTemplate.opsForValue()方法获取String的字符串，也就是对话的结果，然后填写这个增删改查的函数。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">@Repository</span><br><span class="line">public class RedisChatMemoryStore implements ChatMemoryStore &#123;</span><br><span class="line">    //注入redis</span><br><span class="line">    @Autowired</span><br><span class="line">    private StringRedisTemplate redisTemplate;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public List&lt;ChatMessage&gt; getMessages(Object MemoryId) &#123;</span><br><span class="line">        //获取对话消息</span><br><span class="line">        String message = redisTemplate.opsForValue().get(MemoryId);</span><br><span class="line">        //还需要转换成list</span><br><span class="line">        List&lt;ChatMessage&gt; chatMessage = ChatMessageDeserializer.messagesFromJson(message);</span><br><span class="line">        return chatMessage;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void updateMessages(Object MemoryId, List&lt;ChatMessage&gt; list) &#123;</span><br><span class="line">        //更新会话消息</span><br><span class="line">        //1.list转换为json</span><br><span class="line">        String json = ChatMessageSerializer.messagesToJson(list);</span><br><span class="line">        //2.json存到redis</span><br><span class="line">        redisTemplate.opsForValue().set(MemoryId.toString(), json, Duration.ofDays(1));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void deleteMessages(Object MemoryId) &#123;</span><br><span class="line">        redisTemplate.delete(MemoryId.toString());</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后，我就需要告诉大模型去使用这个仓库，这一步就是在CommonConfig.java中去配置public ChatMemoryProvider chatMemoryProvider() 的记忆对话对象。也就是这个Bean。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">@Bean</span><br><span class="line">public ChatMemoryProvider chatMemoryProvider() &#123;//构建会话记忆对象</span><br><span class="line">    ChatMemoryProvider chatMemoryProvider = new ChatMemoryProvider() &#123;</span><br><span class="line">        @Override//注意，这里的ChatMemoryProvider是一个接口，所以才能这样写</span><br><span class="line">        public ChatMemory get(Object memoryId) &#123;</span><br><span class="line">            return MessageWindowChatMemory.builder()</span><br><span class="line">                    .id(memoryId)</span><br><span class="line">                    .maxMessages(20)</span><br><span class="line">                    .chatMemoryStore(chatMemoryStore)</span><br><span class="line">                    .build();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    return chatMemoryProvider;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3><span id="14-tips">1.4 tips</span></h3><p>像是&#96;public ChatMemoryProvider chatMemoryProvider() {&#x2F;&#x2F;构建会话记忆对象</p>
+<p>​    ChatMemoryProvider chatMemoryProvider &#x3D; new ChatMemoryProvider() <code>这里面的这种重写，叫做匿名内部类特性，适用于接口、抽象类和非</code>final&#96;的普通类：</p>
+<h4><span id="1实现一个接口也就是当原本的类是一个inference时">1.实现一个接口：也就是当原本的类是一个inference时：</span></h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">@FunctionalInterface</span><br><span class="line">public interface ChatMemoryProvider &#123;</span><br><span class="line">    ChatMemory get(Object var1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>语法：<code>new InterfaceName() &#123; ... &#125;</code></p>
+<p>含义：这不是对接口的实例化，而是创建一个无名的新类，并且<strong>必须立即在大括号 <code>&#123;...&#125;</code> 中提供接口所有抽象方法的具体实现</strong>。</p>
+<h4><span id="2继承一个抽象类">2.继承一个抽象类</span></h4><p><strong>语法</strong>：<code>new AbstractClassName() &#123; ... &#125;</code></p>
+<p><strong>含义</strong>：创建一个继承了该抽象类的新类，同样必须立即在大括号 <code>&#123;...&#125;</code> 中提供所有抽象方法的具体实现，非抽象方法选择性重写。</p>
+<h4><span id="3继承一个普通的具体类">3.继承一个普通的具体类</span></h4><p><strong>语法</strong>：<code>new ConcreteClassName() &#123; ... &#125;</code></p>
+<p><strong>含义</strong>：您在创建一个继承了该具体类的新类，并且可以在大括号 <code>&#123;...&#125;</code> 中<strong>重写父类中已有的方法</strong>，为其提供一个一次性的、特殊的行为。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class NormalButton &#123;</span><br><span class="line">    public void onClick() &#123;</span><br><span class="line">        System.out.println(&quot;Button clicked!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 创建一个NormalButton的匿名子类，并重写它的onClick行为</span><br><span class="line">NormalButton specialButton = new NormalButton() &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void onClick() &#123;</span><br><span class="line">        System.out.println(&quot;Special button clicked with a different action!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">specialButton.onClick(); // 输出 &quot;Special button clicked with a different action!&quot;</span><br></pre></td></tr></table></figure>
+
+<h3><span id="14-tips2">1.4 tips2</span></h3><ol>
+<li>配置文件除了.properties还有,yml文件，.properties的优先级要更高一些。此外，application这部分也是不能改的，这是Spring的【约定优先于配置】原则的体现。如果一定要这样做，就得在启动Jar时用–spring.config.name来指定</li>
+<li>顺便一提，想要修改的话可以打开redis里面的编辑按钮，修改端口：</li>
+</ol>
+<p><img src="/2025/07/06/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/image-20250825163141076.png" alt="image-20250825163141076"></p>
+<p>如果是linux，就需要用到redis.conf文件，通常在&#x2F;etc&#x2F;redis&#x2F;redis.conf<code>或</code>&#x2F;usr&#x2F;local&#x2F;etc&#x2F;redis.conf。你也可以用sudo find &#x2F; -name redis进行查询，然后修改里面的port行</p>
+<h2><span id="15-rag的实现">1.5 rag的实现</span></h2><p>现在的模型支持对话记忆，但我还希望能结合我本地的知识库，毕竟本地部署最大的优势也就是私有数据集了。为了实现这个功能，我们需要一个@Bean拆分本地的文档，存储到redis里面去；需要一个@Bean读取本地的文档。前者langchain4j有提供一个</p>
+<p><code>List&lt;Document&gt; documents = FileSystemDocumentLoader.loadDocuments(&quot;/home/langchain4j/documentation&quot;);</code></p>
+<p>更进一步，我们把它注入到向量库里：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">@Component</span><br><span class="line">@ConditionalOnProperty(name = &quot;rag.ingestion.enabled&quot;, havingValue = &quot;true&quot;)</span><br><span class="line">public class DataIngestionRunner implements CommandLineRunner &#123;</span><br><span class="line"></span><br><span class="line">    private static final Logger logger = LoggerFactory.getLogger(DataIngestionRunner.class);</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private EmbeddingStore&lt;TextSegment&gt; embeddingStore; // 直接注入 EmbeddingStore</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private EmbeddingModel embeddingModel;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void run(String... args) throws Exception &#123;</span><br><span class="line">        logger.info(&quot;Starting RAG data ingestion... &#x27;rag.ingestion.enabled&#x27; is true.&quot;);</span><br><span class="line"></span><br><span class="line">        // 1. 从本地博客文章文件夹加载所有 .md 文件</span><br><span class="line">        logger.info(&quot;Loading documents from C:\\blog\\source\\_posts&quot;);</span><br><span class="line">        List&lt;Document&gt; documents = FileSystemDocumentLoader.loadDocuments(&quot;C:\\blog\\source\\_posts&quot;);</span><br><span class="line">        logger.info(&quot;Loaded &#123;&#125; documents&quot;, documents.size());</span><br><span class="line"></span><br><span class="line">        // 2. 创建 Ingestor 并注入数据</span><br><span class="line">        DocumentSplitter recursive = DocumentSplitters.recursive(500, 100);</span><br><span class="line">        EmbeddingStoreIngestor ingestor = EmbeddingStoreIngestor.builder()</span><br><span class="line">                .embeddingStore(embeddingStore)</span><br><span class="line">                .embeddingModel(embeddingModel)</span><br><span class="line">                .documentSplitter(recursive)</span><br><span class="line">                .build();</span><br><span class="line"></span><br><span class="line">        ingestor.ingest(documents);</span><br><span class="line"></span><br><span class="line">        logger.info(&quot;RAG data ingestion complete.&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>完成了这一步，接下来就是读取功能了，这里我们有负责实现的EmbeddingStoreContentRetriever，填写好对应的向量数据库和使用的embeddingmodel，还有相似度规则就可以了。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">@Bean</span><br><span class="line">//构建向量数据检索对象</span><br><span class="line">public ContentRetriever contentRetriever() &#123;//有意思，这里EmbeddingStore Store如果使用了默认的embeddingStore 会导致无法读取文件内容</span><br><span class="line">    return EmbeddingStoreContentRetriever.builder()</span><br><span class="line">            .embeddingStore(redisEmbeddingStore)</span><br><span class="line">            .embeddingModel(embeddingModel)</span><br><span class="line">            .minScore(0.5)</span><br><span class="line">            .maxResults(3)</span><br><span class="line">            .build();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>由于这里需要用到embedding模型，我们还需要再pom.xml文件配置一个embedding模型</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">embedding-model:</span><br><span class="line">  #流式模型配置</span><br><span class="line">  base-url: http://localhost:11434/v1</span><br><span class="line">  api-key: &quot;N/A&quot;</span><br><span class="line">  model-name: qwen3-embedding-4B-Q6_K</span><br><span class="line">  log-requests: true</span><br><span class="line">  log-responses: true</span><br></pre></td></tr></table></figure>
+
+<h3><span id="15-tips">1.5 tips</span></h3><p>文本和向量数据的互相转化都是由embedding模型进行，相似度搜索算法则是在redis内部运行，负责快速提升搜索速度，主要是解决文档过多的问题。而Embedding模型决定的是检索的质量和效果。</p>
+<h1><span id="2项目位置">2.项目位置</span></h1><p><a href="https://github.com/mtdown/Assistant">mtdown&#x2F;Assistant</a></p>
+<p>期待纠错和交流</p>
+<h1><span id="参考资料">参考资料：</span></h1><p>1.<a href="https://mp.weixin.qq.com/s?__biz=MzAxMjY5NDU2Ng==&mid=2651869668&idx=1&sn=894bd454f055fa4a80d6cad8cfdf51ed&chksm=81e7bab8410a46d987098c55234834796d0ef8ffd1b3495029b33ac45807fa00364d39aeff93&scene=27">https://mp.weixin.qq.com/s?__biz=MzAxMjY5NDU2Ng==&amp;mid=2651869668&amp;idx=1&amp;sn=894bd454f055fa4a80d6cad8cfdf51ed&amp;chksm=81e7bab8410a46d987098c55234834796d0ef8ffd1b3495029b33ac45807fa00364d39aeff93&amp;scene=27</a></p>
+<p>2.[Spring Boot与Redis：整合与实战-阿里云开发者社区](<a href="https://developer.aliyun.com/article/1629660#:~:text=%E7%AE%80%E4%BB%8B%EF%BC%9A">https://developer.aliyun.com/article/1629660#:~:text=简介：</a> 【10月更文挑战第15天】本文介绍了如何在Spring,Boot项目中整合Redis，通过一个电商商品推荐系统的案例，详细展示了从添加依赖、配置连接信息到创建配置类的具体步骤。 实战部分演示了如何利用Redis缓存提高系统响应速度，减少数据库访问压力，从而提升用户体验。 在当今的互联网时代，数据的高速读写和处理成为了系统性能的关键因素。)</p>
+<p>3.<a href="https://springdoc.cn/spring-ai-redis-rag-app/">使用 Redis 和 Spring AI 创建 RAG（检索增强生成）应用 - spring 中文网</a></p>
+]]></content>
+      <tags>
+        <tag>实习准备</tag>
       </tags>
   </entry>
   <entry>
@@ -1363,103 +1496,6 @@ class Dog2 extends Dog&#123;
       </tags>
   </entry>
   <entry>
-    <title>langchain学习记录2</title>
-    <url>/2025/07/06/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/</url>
-    <content><![CDATA[<p>总结记录一下自己学习langchain4j的整个过程，这里面包括项目结构的简述，每个文件的作用，和新功能如何添加的说明。</p>
-<span id="more"></span>
-
-<h1><span id="1项目文件结构展示">1.项目文件结构展示</span></h1><p>首先是项目文件结构展示：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">src</span><br><span class="line">└── main</span><br><span class="line">    ├── java</span><br><span class="line">    │   └── com</span><br><span class="line">    │       └── itheima</span><br><span class="line">    │           └── consultant</span><br><span class="line">    │               ├── aiservice</span><br><span class="line">    │               │   └── ConsultantService.java     // 【AI核心】LangChain4j的AI服务接口，通过@AiService注解整合IOC容器中的对象。</span><br><span class="line">    │               ├── config</span><br><span class="line">    │               │   ├── CommonConfig.java          // 【配置中心】配置项目的核心Bean，如RAG检索器、聊天记忆、网络搜索工具等。</span><br><span class="line">    │               │   └── DataIngestionRunner.java   // 【数据注入器】项目启动时运行，负责读取本地文件(如.md)，将其向量化后存入Redis。</span><br><span class="line">    │               ├── controller</span><br><span class="line">    │               │   └── ChatController.java        // 【API入口】暴露/chat接口给前端，处理HTTP请求，并根据请求头判断返回流式或完整响应。</span><br><span class="line">    │               ├── mapper</span><br><span class="line">    │               │   └── ReservationMapper.java     // 【数据库接口】MyBatis的Mapper接口，定义了对预约表的增删改查SQL操作。</span><br><span class="line">    │               ├── pojo</span><br><span class="line">    │               │   └── Reservation.java           // 【数据模型】定义了“预约”这个业务对象的Java类，与数据库表字段对应。</span><br><span class="line">    │               ├── repository</span><br><span class="line">    │               │   └── RedisChatMemoryStore.java  // 【数据存储实现】实现了聊天记忆的存取逻辑，具体是将聊天记录存到Redis中。</span><br><span class="line">    │               ├── service</span><br><span class="line">    │               │   └── ReservationService.java    // 【业务逻辑】处理预约相关的业务，调用Mapper来操作数据库。</span><br><span class="line">    │               ├── tools                          // 【AI工具箱】存放供AI调用的工具类 (预约使用的ReservationTool.java 就在这里)。</span><br><span class="line">    │               └── ConsultantApplication.java     // 【启动器】整个Spring Boot项目的入口，main方法所在地。</span><br><span class="line">    │</span><br><span class="line">    └── resources</span><br><span class="line">        ├── content</span><br><span class="line">        │   ├── LLMForEverybody-main           // 存放知识库文档的文件夹。</span><br><span class="line">        │   └── 长安大学.md                    // 【RAG知识源】具体的知识库文件，DataIngestionRunner会读取它。</span><br><span class="line">        ├── pdfcontent</span><br><span class="line">        │   └── 长安大学.pdf                   // 【RAG知识源】PDF格式的知识库文件。</span><br><span class="line">        ├── static</span><br><span class="line">        │   └── index.html                     // 【前端】项目的主页面，用于承载聊天窗口。</span><br><span class="line">        ├── templates                          // 存放服务端模板的文件夹 (此项目中未使用)。</span><br><span class="line">        ├── application.yml                    // 【总配置文件】Spring Boot的配置文件，用于配置API密钥、数据库连接、Redis地址等。</span><br><span class="line">        └── system.txt                         // 【AI人设定义】系统级Prompt，用于定义AI的角色、说话风格和行为准则。</span><br><span class="line">└── target                                     // 【编译输出目录】存放项目编译后的.class文件和打包后的.jar/.war文件。</span><br><span class="line">├── .gitattributes                             // 【Git配置】定义Git处理特定文件路径的方式。</span><br><span class="line">├── .gitignore                                 // 【Git配置】告诉Git哪些文件或目录不需要纳入版本控制（如target目录）。</span><br><span class="line">├── HELP.md                                    // 【项目文档】Spring Boot项目自动生成的帮助文件。</span><br><span class="line">├── mvnw                                       // 【Maven Wrapper】Linux/macOS下的Maven包装器脚本，无需全局安装Maven即可执行mvn命令。</span><br><span class="line">├── mvnw.cmd                                   // 【Maven Wrapper】Windows下的Maven包装器脚本。</span><br><span class="line">└── pom.xml                                    // 【项目核心配置】Maven的项目对象模型文件，定义项目依赖、插件、版本等。</span><br></pre></td></tr></table></figure>
-
-<p>其中，最最最基础的只需要五个文件：ConsultantApplication.java  启动器；ConsultantService.java  整合器；ChatController.java对话接收装置。以及负责包的pom.xml，还有负责项目配置的application.yml，使用什么模型，接口port是多少都在这里设置.</p>
-<p>CommonConfig.java 都只是为了更精细地控制。其他的内容都算是起扩展作用的文件。</p>
-<h2><span id="11-pomxml文件设置">1.1 pom.xml文件设置</span></h2><p>首先，要构建自己的大模型智能体，我们要先引入需要的依赖，由于我这里使用的是langchain4j，所有需要在pom.xml文件中输入以下内容：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>dev.langchain4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>langchain4j-open-ai<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>这个文件是Maven 项目的核心配置文件，全称为 Project Object Model（项目对象模型）。它主要用于管理项目的构建、依赖、插件和其他配置信息，是 Maven 进行项目管理和构建的基础。</p>
-<p>后续需要使用到redis，mysql和文本分块，都需要配置对应的依赖：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;dependencies&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;</span><br><span class="line">        &lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;dev.langchain4j&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;langchain4j-open-ai-spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;1.0.1-beta6&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!--aiservice相关依赖--&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;dev.langchain4j&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;langchain4j-spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;1.0.1-beta6&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!--流式传输相关依赖--&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-boot-starter-webflux&lt;/artifactId&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;dev.langchain4j&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;langchain4j-reactor&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;1.0.1-beta6&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!--redis依赖--&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-boot-starter-data-redis&lt;/artifactId&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!--lombok--&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;lombok&lt;/artifactId&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!--mybatis依赖--&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.mybatis.spring.boot&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;mybatis-spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;3.0.3&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!--mysql依赖--&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;com.mysql&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;mysql-connector-j&lt;/artifactId&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!--Pdf依赖--&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;dev.langchain4j&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;langchain4j-document-parser-apache-pdfbox&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;1.0.1-beta6&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!--引入对向量化redis的依赖--&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;dev.langchain4j&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;langchain4j-community-redis-spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;1.0.1-beta6&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!--引入对Tavily的依赖--&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;dev.langchain4j&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;langchain4j-web-search-engine-tavily&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;1.0.0-beta3&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!--引入对搜索引擎的依赖--&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;dev.langchain4j&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;langchain4j-web-search-engine-searchapi&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;1.0.0-beta3&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">&lt;/dependencies&gt;</span><br></pre></td></tr></table></figure>
-
-<p>这些依赖的来源也很简单——LangChain4j 的官方网站<a href="https://docs.langchain4j.dev/intro%E4%BC%9A%E6%9C%89%E7%9B%B8%E5%BD%93%E5%A4%9A%E7%9A%84%E7%A4%BA%E4%BE%8B%EF%BC%8C%E5%8F%AF%E4%BB%A5%E8%B7%9F%E7%9D%80%E9%87%8C%E9%9D%A2%E7%9A%84%E4%BB%8B%E7%BB%8D%E4%B8%80%E6%AD%A5%E4%B8%80%E6%AD%A5%E7%9A%84%E5%8E%BB%E5%AE%9E%E7%8E%B0%E3%80%82%E6%AD%A4%E5%A4%96%EF%BC%8C%E8%BF%98%E6%9C%89%E5%85%AC%E5%BC%80%E7%9A%84">https://docs.langchain4j.dev/intro会有相当多的示例，可以跟着里面的介绍一步一步的去实现。此外，还有公开的</a> Java 依赖包的“全球总仓库“可以去查看<a href="https://central.sonatype.com/search?q=wechat%E3%80%82%E5%A6%82%E6%9E%9C%E8%BF%99%E4%BA%9B%E9%83%BD%E6%B2%A1%E6%9C%89%EF%BC%8C%E5%B0%B1%E5%8F%AA%E8%83%BD%E8%87%AA%E5%B7%B1%E6%83%B3%E5%8A%9E%E6%B3%95%E5%8A%A8%E6%89%8B%E9%9B%86%E6%88%90%E4%BA%86%E3%80%82%E6%88%91%E6%83%B3%E8%BF%99%E7%A7%8D%E6%83%85%E5%86%B5%E4%BC%9A%E6%98%AF%E5%BC%80%E5%8F%91%E4%B8%AD%E9%9D%A2%E4%B8%B4%E7%9A%84%E6%9C%80%E5%A4%A7%E9%97%AE%E9%A2%98%E3%80%82">https://central.sonatype.com/search?q=wechat。如果这些都没有，就只能自己想办法动手集成了。我想这种情况会是开发中面临的最大问题。</a></p>
-<p><img src="/2025/07/06/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/image-20250820190609274.png" alt="image-20250820190609274"></p>
-<h2><span id="12-consultantservice文件">1.2 ConsultantService文件</span></h2><p>决定了依赖，接下来就是要定义接口，也就是ConsultantService文件。其在整个项目中，负责定义AI服务，主要是通过 @AiService 注解来将多种AI功能组件整合在一起。这里重点说下里面wiringMode，它默认为 AiServiceWiringMode.AUTOMATIC ，会自己去装配 IOC 容器中已有的 chatModel。</p>
-<p><img src="/2025/07/06/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/image-20250813220435776.png" alt="image-20250813220435776"></p>
-<p>此外，对于langchain4j支持的东西，他们都会提供专用的属性来配置：比如：<code>chatModel</code> &#x2F; <code>streamingChatModel</code>：配置AI的“<strong>大脑</strong>”，即语言模型本身；<code>chatMemoryProvider</code>：配置AI的“<strong>内存</strong>”，负责管理对话历史。；<code>contentRetriever</code>：配置AI的“<strong>知识库检索器</strong>”，负责RAG中的信息检索。</p>
-<p>而对于自定义的外部功能，则是通过tools属性来实现，作为AI的外部工具箱。@AiService里面的对象名字是@Bean注入的容器名字。</p>
-<h2><span id="13-commonconfigjava文件">1.3 CommonConfig.java文件</span></h2><p>这个文件是用来配置项目需求运行所必须的内容的，当我们要添加一个新功能时，往往是先去找能实现对应功能的包，然后构建一个Bean对象出来。统一管理后，就是这个 CommonConfig.java文件</p>
-<p><img src="/2025/07/06/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/image-20250824105524520.png" alt="image-20250824105524520"></p>
-<h2><span id="13-applicationyml文件">1.3 application.yml文件</span></h2><p>application.yml文件是Spring Boot 应用的主配置文件，包含应用程序的各种配置项，如服务器端口、数据库连接信息、日志级别、自定义属性等。每要新接入一个组件，都需要在这个文件中写入对应的设置，比如说使用的模型名字啊，端口号这些。</p>
-<p><img src="/2025/07/06/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/image-20250814211645812.png" alt="image-20250814211645812"></p>
-<p>此外，根据情况不同，还可以按照<code>application-&#123;profile&#125;.yml</code> 格式命名使用多个配置文件: - application.yml (默认配置) - application-dev.yml (开发环境) - application-prod.yml (生产环境)</p>
-<pre><code>@SpringBootApplication
-public class Application &#123;
-    public static void main(String[] args) &#123;
-        SpringApplication app = new SpringApplication(Application.class);
-        
-        // 设置配置文件名
-        app.setAdditionalProfiles(&quot;dev&quot;);
-        
-        // 设置配置文件位置
-        System.setProperty(&quot;spring.config.location&quot;, &quot;classpath:/custom/&quot;);
-        
-        app.run(args);
-    &#125;
-&#125;
-</code></pre>
-<h2><span id="14-redis配置相关文件">1.4 redis配置相关文件</span></h2><p>在上面的几个部分，基本就是文件的核心部分，接下来梳理redis部分，在这一个部分，我要做的工作是增加长文本对话的功能，这就需要我有一个存储用的RedisChatMemoryStore，并以其为核心，我发现他同样具备简单的embedding功能，这就代表他不止是可以负责对话信息的获取，转化和存储，还可以用来做RAG。</p>
-<p>同样的，添加依赖：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--redis依赖--&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-data-redis&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
-
-<p>然后填写本地的端口：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">spring:</span><br><span class="line">  data:</span><br><span class="line">    redis:</span><br><span class="line">      host: localhost</span><br><span class="line">      port: 6379</span><br></pre></td></tr></table></figure>
-
-<p>因为这里主要处理的是字符，所以选择 redisTemplate，使用里面的redisTemplate.opsForValue()方法获取String的字符串，也就是对话的结果，然后填写这个增删改查的函数。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">@Repository</span><br><span class="line">public class RedisChatMemoryStore implements ChatMemoryStore &#123;</span><br><span class="line">    //注入redis</span><br><span class="line">    @Autowired</span><br><span class="line">    private StringRedisTemplate redisTemplate;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public List&lt;ChatMessage&gt; getMessages(Object MemoryId) &#123;</span><br><span class="line">        //获取对话消息</span><br><span class="line">        String message = redisTemplate.opsForValue().get(MemoryId);</span><br><span class="line">        //还需要转换成list</span><br><span class="line">        List&lt;ChatMessage&gt; chatMessage = ChatMessageDeserializer.messagesFromJson(message);</span><br><span class="line">        return chatMessage;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void updateMessages(Object MemoryId, List&lt;ChatMessage&gt; list) &#123;</span><br><span class="line">        //更新会话消息</span><br><span class="line">        //1.list转换为json</span><br><span class="line">        String json = ChatMessageSerializer.messagesToJson(list);</span><br><span class="line">        //2.json存到redis</span><br><span class="line">        redisTemplate.opsForValue().set(MemoryId.toString(), json, Duration.ofDays(1));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void deleteMessages(Object MemoryId) &#123;</span><br><span class="line">        redisTemplate.delete(MemoryId.toString());</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>然后，我就需要告诉大模型去使用这个仓库，这一步就是在CommonConfig.java中去配置public ChatMemoryProvider chatMemoryProvider() 的记忆对话对象。也就是这个Bean。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">@Bean</span><br><span class="line">public ChatMemoryProvider chatMemoryProvider() &#123;//构建会话记忆对象</span><br><span class="line">    ChatMemoryProvider chatMemoryProvider = new ChatMemoryProvider() &#123;</span><br><span class="line">        @Override//注意，这里的ChatMemoryProvider是一个接口，所以才能这样写</span><br><span class="line">        public ChatMemory get(Object memoryId) &#123;</span><br><span class="line">            return MessageWindowChatMemory.builder()</span><br><span class="line">                    .id(memoryId)</span><br><span class="line">                    .maxMessages(20)</span><br><span class="line">                    .chatMemoryStore(chatMemoryStore)</span><br><span class="line">                    .build();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    return chatMemoryProvider;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3><span id="14-tips">1.4 tips</span></h3><p>像是&#96;public ChatMemoryProvider chatMemoryProvider() {&#x2F;&#x2F;构建会话记忆对象</p>
-<p>​    ChatMemoryProvider chatMemoryProvider &#x3D; new ChatMemoryProvider() <code>这里面的这种重写，叫做匿名内部类特性，适用于接口、抽象类和非</code>final&#96;的普通类：</p>
-<h4><span id="1实现一个接口也就是当原本的类是一个inference时">1.实现一个接口：也就是当原本的类是一个inference时：</span></h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">@FunctionalInterface</span><br><span class="line">public interface ChatMemoryProvider &#123;</span><br><span class="line">    ChatMemory get(Object var1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>语法：<code>new InterfaceName() &#123; ... &#125;</code></p>
-<p>含义：这不是对接口的实例化，而是创建一个无名的新类，并且<strong>必须立即在大括号 <code>&#123;...&#125;</code> 中提供接口所有抽象方法的具体实现</strong>。</p>
-<h4><span id="2继承一个抽象类">2.继承一个抽象类</span></h4><p><strong>语法</strong>：<code>new AbstractClassName() &#123; ... &#125;</code></p>
-<p><strong>含义</strong>：创建一个继承了该抽象类的新类，同样必须立即在大括号 <code>&#123;...&#125;</code> 中提供所有抽象方法的具体实现，非抽象方法选择性重写。</p>
-<h4><span id="3继承一个普通的具体类">3.继承一个普通的具体类</span></h4><p><strong>语法</strong>：<code>new ConcreteClassName() &#123; ... &#125;</code></p>
-<p><strong>含义</strong>：您在创建一个继承了该具体类的新类，并且可以在大括号 <code>&#123;...&#125;</code> 中<strong>重写父类中已有的方法</strong>，为其提供一个一次性的、特殊的行为。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class NormalButton &#123;</span><br><span class="line">    public void onClick() &#123;</span><br><span class="line">        System.out.println(&quot;Button clicked!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 创建一个NormalButton的匿名子类，并重写它的onClick行为</span><br><span class="line">NormalButton specialButton = new NormalButton() &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void onClick() &#123;</span><br><span class="line">        System.out.println(&quot;Special button clicked with a different action!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">specialButton.onClick(); // 输出 &quot;Special button clicked with a different action!&quot;</span><br></pre></td></tr></table></figure>
-
-<h3><span id="14-tips2">1.4 tips2</span></h3><ol>
-<li>配置文件除了.properties还有,yml文件，.properties的优先级要更高一些。此外，application这部分也是不能改的，这是Spring的【约定优先于配置】原则的体现。如果一定要这样做，就得在启动Jar时用–spring.config.name来指定</li>
-<li>顺便一提，想要修改的话可以打开redis里面的编辑按钮，修改端口：</li>
-</ol>
-<p><img src="/2025/07/06/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/image-20250825163141076.png" alt="image-20250825163141076"></p>
-<p>如果是linux，就需要用到redis.conf文件，通常在&#x2F;etc&#x2F;redis&#x2F;redis.conf<code>或</code>&#x2F;usr&#x2F;local&#x2F;etc&#x2F;redis.conf。你也可以用sudo find &#x2F; -name redis进行查询，然后修改里面的port行</p>
-<h2><span id="15-rag的实现">1.5 rag的实现</span></h2><p>现在的模型支持对话记忆，但我还希望能结合我本地的知识库，毕竟本地部署最大的优势也就是私有数据集了。为了实现这个功能，我们需要一个@Bean拆分本地的文档，存储到redis里面去；需要一个@Bean读取本地的文档。前者langchain4j有提供一个</p>
-<p><code>List&lt;Document&gt; documents = FileSystemDocumentLoader.loadDocuments(&quot;/home/langchain4j/documentation&quot;);</code></p>
-<p>更进一步，我们把它注入到向量库里：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">@Component</span><br><span class="line">@ConditionalOnProperty(name = &quot;rag.ingestion.enabled&quot;, havingValue = &quot;true&quot;)</span><br><span class="line">public class DataIngestionRunner implements CommandLineRunner &#123;</span><br><span class="line"></span><br><span class="line">    private static final Logger logger = LoggerFactory.getLogger(DataIngestionRunner.class);</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private EmbeddingStore&lt;TextSegment&gt; embeddingStore; // 直接注入 EmbeddingStore</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private EmbeddingModel embeddingModel;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void run(String... args) throws Exception &#123;</span><br><span class="line">        logger.info(&quot;Starting RAG data ingestion... &#x27;rag.ingestion.enabled&#x27; is true.&quot;);</span><br><span class="line"></span><br><span class="line">        // 1. 从本地博客文章文件夹加载所有 .md 文件</span><br><span class="line">        logger.info(&quot;Loading documents from C:\\blog\\source\\_posts&quot;);</span><br><span class="line">        List&lt;Document&gt; documents = FileSystemDocumentLoader.loadDocuments(&quot;C:\\blog\\source\\_posts&quot;);</span><br><span class="line">        logger.info(&quot;Loaded &#123;&#125; documents&quot;, documents.size());</span><br><span class="line"></span><br><span class="line">        // 2. 创建 Ingestor 并注入数据</span><br><span class="line">        DocumentSplitter recursive = DocumentSplitters.recursive(500, 100);</span><br><span class="line">        EmbeddingStoreIngestor ingestor = EmbeddingStoreIngestor.builder()</span><br><span class="line">                .embeddingStore(embeddingStore)</span><br><span class="line">                .embeddingModel(embeddingModel)</span><br><span class="line">                .documentSplitter(recursive)</span><br><span class="line">                .build();</span><br><span class="line"></span><br><span class="line">        ingestor.ingest(documents);</span><br><span class="line"></span><br><span class="line">        logger.info(&quot;RAG data ingestion complete.&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>完成了这一步，接下来就是读取功能了，这里我们有负责实现的EmbeddingStoreContentRetriever，填写好对应的向量数据库和使用的embeddingmodel，还有相似度规则就可以了。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">@Bean</span><br><span class="line">//构建向量数据检索对象</span><br><span class="line">public ContentRetriever contentRetriever() &#123;//有意思，这里EmbeddingStore Store如果使用了默认的embeddingStore 会导致无法读取文件内容</span><br><span class="line">    return EmbeddingStoreContentRetriever.builder()</span><br><span class="line">            .embeddingStore(redisEmbeddingStore)</span><br><span class="line">            .embeddingModel(embeddingModel)</span><br><span class="line">            .minScore(0.5)</span><br><span class="line">            .maxResults(3)</span><br><span class="line">            .build();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>由于这里需要用到embedding模型，我们还需要再pom.xml文件配置一个embedding模型</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">embedding-model:</span><br><span class="line">  #流式模型配置</span><br><span class="line">  base-url: http://localhost:11434/v1</span><br><span class="line">  api-key: &quot;N/A&quot;</span><br><span class="line">  model-name: qwen3-embedding-4B-Q6_K</span><br><span class="line">  log-requests: true</span><br><span class="line">  log-responses: true</span><br></pre></td></tr></table></figure>
-
-<h3><span id="15-tips">1.5 tips</span></h3><p>文本和向量数据的互相转化都是由embedding模型进行，相似度搜索算法则是在redis内部运行，负责快速提升搜索速度，主要是解决文档过多的问题。而Embedding模型决定的是检索的质量和效果。</p>
-<h1><span id="2项目位置">2.项目位置</span></h1><p><a href="https://github.com/mtdown/Assistant">mtdown&#x2F;Assistant</a></p>
-<p>期待纠错和交流</p>
-<h1><span id="参考资料">参考资料：</span></h1><p>1.<a href="https://mp.weixin.qq.com/s?__biz=MzAxMjY5NDU2Ng==&mid=2651869668&idx=1&sn=894bd454f055fa4a80d6cad8cfdf51ed&chksm=81e7bab8410a46d987098c55234834796d0ef8ffd1b3495029b33ac45807fa00364d39aeff93&scene=27">https://mp.weixin.qq.com/s?__biz=MzAxMjY5NDU2Ng==&amp;mid=2651869668&amp;idx=1&amp;sn=894bd454f055fa4a80d6cad8cfdf51ed&amp;chksm=81e7bab8410a46d987098c55234834796d0ef8ffd1b3495029b33ac45807fa00364d39aeff93&amp;scene=27</a></p>
-<p>2.[Spring Boot与Redis：整合与实战-阿里云开发者社区](<a href="https://developer.aliyun.com/article/1629660#:~:text=%E7%AE%80%E4%BB%8B%EF%BC%9A">https://developer.aliyun.com/article/1629660#:~:text=简介：</a> 【10月更文挑战第15天】本文介绍了如何在Spring,Boot项目中整合Redis，通过一个电商商品推荐系统的案例，详细展示了从添加依赖、配置连接信息到创建配置类的具体步骤。 实战部分演示了如何利用Redis缓存提高系统响应速度，减少数据库访问压力，从而提升用户体验。 在当今的互联网时代，数据的高速读写和处理成为了系统性能的关键因素。)</p>
-<p>3.<a href="https://springdoc.cn/spring-ai-redis-rag-app/">使用 Redis 和 Spring AI 创建 RAG（检索增强生成）应用 - spring 中文网</a></p>
-]]></content>
-      <tags>
-        <tag>实习准备</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>llama4看到的一些东西</title>
     <url>/2025/05/12/llama4%E7%9C%8B%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E4%B8%9C%E8%A5%BF/</url>
     <content><![CDATA[<p>带着有色眼镜果然容易看错一些东西，我对于llama就有不少误解。特此记录，警醒自己。<br> <span id="more"></span><br>我从没想过llama最大的开源模型之一会不支持中文。这一点实在是太过离谱了。但是对此也引发了我新的疑问：大语言模型的多语言能力是怎么来的呢？为什么没有中文的模型居然可以训练出中文语义呢？</p>
@@ -1469,56 +1505,6 @@ public class Application &#123;
       <tags>
         <tag>日常记录</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>langchain学习记录</title>
-    <url>/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<p>​			记录一下自己学习langchain的过程。首先是模型安装和部署。</p>
-<span id="more"></span>
-
-<h1><span id="1安装conda-环境">1.安装conda 环境</span></h1><p>​				这一步没啥好说的，首先登陆官网<a href="https://www.anaconda.com/download/success">Download Now | Anaconda</a>根据你的系统选择合适的本本，这里左边Distribution Installers是指图形界面安装程序，Miniconda Installers是命令行安装程序。根据自己习惯选就行。</p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250701195719017.png" alt="image-20250701195719017"></p>
-<p>​			安装完成后会有一个anaconda的界面，输入<code>conda --version</code>和<code>python --version</code>检查版本，这俩都是安装时自带的 Python 版本，Base表示你处于默认的激活环境，一般来说我们不会在这个环境下操作，而是自己创建一个。</p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250701200720245.png" alt="image-20250701200720245"></p>
-<p>​			创建的环境的命令是<code>conda create --name ml_env python=3.9,</code>意思是创建名为ml_env的环境，使用Python 3.9；然后使用<code>conda env list</code>可以检查你拥有的环境，<code>conda activate ml_env</code>表示激活ml_env环境。</p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250701201412106.png" alt="image-20250701201412106"></p>
-<p>​			创建好了新环境，我们就激活它，然后在那个环境里解决大模型的部署问题。</p>
-<h1><span id="2ollama部署qwen">2.ollama部署qwen</span></h1><p>​			这里就直接跟着教程走吧，登录官网<a href="https://ollama.com/library/qwen3:8b">qwen3:8b</a>，下载ollama，然后搜索你需要的模型，Qwen3会有一堆这样的模型和词条，你需要哪个版本就直接用那个版本下面的代码就行，首次运行他会自动给你下载：</p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702121036039.png" alt="image-20250702121036039"></p>
-<p>​			<code>ollama run qwen3:8b</code>这一步运行完后就能正常操作了。但这里需要注意一一点：ollama给你的模型基本都是量化后的，这是为了方便你本地运行：<img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702121239065.png" alt="image-20250702121239065"></p>
-<p>​			输入<code>curl http://localhost:11434/api/tags</code>代码，你也会看到<code>&quot;quantization_level&quot;:&quot;Q4_K_M&quot;&#125;</code>，这证明我们下载的是个四位量化的模型，全量的模型应该是：<code>quantize: none</code><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702122414057.png" alt="image-20250702122414057"></p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702122150980.png" alt="image-20250702122150980"></p>
-<p>​			如果你要使用全量化的模型，那就需要到huggingface这种模型网站去他们<a href="https://huggingface.co/Qwen/collections">Qwen (Qwen)</a>的GGUF格式文件，而这个可就要大得多了：</p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702134841259.png" alt="image-20250702134841259"></p>
-<p>​			此外，你还需要根据<a href="https://qwen.readthedocs.io/zh-cn/latest/run_locally/ollama.html">Ollama - Qwen</a>的流程创建文件：</p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702134931270.png" alt="image-20250702134931270"></p>
-<p>​				然后这里我们说一下ollama调用API时的几个默认接口：</p>
-<p>​				在本地部署时有个基础的：<a href="http://localhost:11434，然后根据你的需求，额外增加生成文本补全端点：POST">http://localhost:11434，然后根据你的需求，额外增加生成文本补全端点：POST</a> &#x2F;api&#x2F;generate；对话式交互端点：POST &#x2F;api&#x2F;chat；我们这里首先点开1.新建接口，换成POST，并填写<a href="http://localhost:11434/api/chat">http://localhost:11434/api/chat</a></p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250703205010332.png" alt="image-20250703205010332"></p>
-<p>​			然后我们这里就点击Body，选择里面的json格式，并参考这样的格式添加一个示例。请注意，json格式不支持注释，我这里是为了方便理解和后续替换对应的块。<img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250703205111334.png" alt="image-20250703205111334"></p>
-<p>​			这里面的流式传输需要额外说明一下，流式传输是一种将数据分割成多个连续的小块（chunk）实时传输的方式，如果你选择了流式传输，那他就会一个字一个字（Token）的给你反馈：<img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250703205346011.png" alt="image-20250703205346011"></p>
-<p>此外 ，关于这个部分，在我看的网课里面有一张很好的图概括：</p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250706232003714.png" alt="image-20250706232003714"></p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250706233801408.png" alt="image-20250706233801408"></p>
-<h1><span id="参考目录">参考目录</span></h1><p>1.<a href="https://ollama.com/blog/thinking">思考 ·Ollama 博客</a></p>
-]]></content>
-      <tags>
-        <tag>实习准备</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>node js基础</title>
-    <url>/2026/04/10/node-js%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<p>Node.js 是一个基于 Chrome V8 引擎的 <strong>JavaScript 运行环境</strong></p>
-]]></content>
-      <tags>
-        <tag>日常学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>n8n项目试做</title>
-    <url>/2025/08/29/n8n%E9%A1%B9%E7%9B%AE%E8%AF%95%E5%81%9A/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>moe使用学习中</title>
@@ -1534,6 +1520,20 @@ public class Application &#123;
       <tags>
         <tag>未来日记</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>node js基础</title>
+    <url>/2026/04/10/node-js%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<p>Node.js 是一个基于 Chrome V8 引擎的 <strong>JavaScript 运行环境</strong></p>
+]]></content>
+      <tags>
+        <tag>日常学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>n8n项目试做</title>
+    <url>/2025/08/29/n8n%E9%A1%B9%E7%9B%AE%E8%AF%95%E5%81%9A/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>qwen3模型的效果记录</title>
@@ -1560,6 +1560,17 @@ public class Application &#123;
       </tags>
   </entry>
   <entry>
+    <title>taichinet阅读体会</title>
+    <url>/2024/06/18/taichinet%E9%98%85%E8%AF%BB%E4%BD%93%E4%BC%9A/</url>
+    <content><![CDATA[<p>TaiChiNet: Negative-Positive Cross-Attention Network for Breast Lesion Segmentation in Ultrasound Images</p>
+<p>2024.3，医学2区top，采用BUSI数据集和Dataset B<br> <span id="more"></span><br>关于乳腺癌的X光类型数据集，可以被看做是一个像素级的二分类问题，即一类像素病变，另一类表示正常。但由于其超声模式复杂，分割性能容易被削弱。<br>为了提高分割性能有两种研究方法：<br>    1.采用全局和局部注意力特征挖掘前景病变和正常背景——但由于两种背景的模式相似容易发生混淆，而类的不平和问题导致了分割性能的敏感性低下<br>    2.通过焦点损失单方面增强前景病变——聚焦于前景损害的方法单方面地获得损害前景中的真阳性的增加，但也导致包括分散区域的正常背景中的假阳性的增加</p>
+<p>提出的新方法：<br>    对前景病变和正常背景进行双边增强，然后进行交叉聚集。然后将乳腺病变分割作为负的正常-背景路径和正的前景-病变路径之间的相互监督任务，并把提出的网络负向正向交叉网络叫做太极网：1.其由两个u网组成，分别挖掘周围病变和正常背景的模式。并在两个U-Net的深层之间，设计了一个交叉注意模块，用于跨深层语义通道传递信息。2.此外，为了改善在相互监督下的特征表示，在传统分割约束的基础上，提出了负路径和正路径之间的互补损失来传递双边补充信息，其中骰子损失主要集中在单边增强上</p>
+]]></content>
+      <tags>
+        <tag>-医学图像</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>web通讯的四种方式</title>
     <url>/2025/08/30/web%E9%80%9A%E8%AE%AF%E7%9A%84%E5%9B%9B%E7%A7%8D%E6%96%B9%E5%BC%8F/</url>
     <content><![CDATA[<p>惯例的知识整理</p>
@@ -1571,14 +1582,637 @@ public class Application &#123;
       </tags>
   </entry>
   <entry>
-    <title>taichinet阅读体会</title>
-    <url>/2024/06/18/taichinet%E9%98%85%E8%AF%BB%E4%BD%93%E4%BC%9A/</url>
-    <content><![CDATA[<p>TaiChiNet: Negative-Positive Cross-Attention Network for Breast Lesion Segmentation in Ultrasound Images</p>
-<p>2024.3，医学2区top，采用BUSI数据集和Dataset B<br> <span id="more"></span><br>关于乳腺癌的X光类型数据集，可以被看做是一个像素级的二分类问题，即一类像素病变，另一类表示正常。但由于其超声模式复杂，分割性能容易被削弱。<br>为了提高分割性能有两种研究方法：<br>    1.采用全局和局部注意力特征挖掘前景病变和正常背景——但由于两种背景的模式相似容易发生混淆，而类的不平和问题导致了分割性能的敏感性低下<br>    2.通过焦点损失单方面增强前景病变——聚焦于前景损害的方法单方面地获得损害前景中的真阳性的增加，但也导致包括分散区域的正常背景中的假阳性的增加</p>
-<p>提出的新方法：<br>    对前景病变和正常背景进行双边增强，然后进行交叉聚集。然后将乳腺病变分割作为负的正常-背景路径和正的前景-病变路径之间的相互监督任务，并把提出的网络负向正向交叉网络叫做太极网：1.其由两个u网组成，分别挖掘周围病变和正常背景的模式。并在两个U-Net的深层之间，设计了一个交叉注意模块，用于跨深层语义通道传递信息。2.此外，为了改善在相互监督下的特征表示，在传统分割约束的基础上，提出了负路径和正路径之间的互补损失来传递双边补充信息，其中骰子损失主要集中在单边增强上</p>
+    <title>位运算</title>
+    <url>/2026/01/18/%E4%BD%8D%E8%BF%90%E7%AE%97/</url>
+    <content><![CDATA[<h1><span id="一-位运算速查表">一、位运算速查表</span></h1><table>
+<thead>
+<tr>
+<th align="center">符号</th>
+<th align="center">描述</th>
+<th align="center">运算 (A ? B)</th>
+<th align="center">结果</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&amp;</td>
+<td align="center">与</td>
+<td align="center">0011 1100 &amp; 0000 1101</td>
+<td align="center">0000 1100 (12)</td>
+<td align="center">同1为1</td>
+</tr>
+<tr>
+<td align="center">**&#96;</td>
+<td align="center">&#96;**</td>
+<td align="center">或</td>
+<td align="center">&#96;0011 1100</td>
+<td align="center">0000 1101&#96;</td>
+</tr>
+<tr>
+<td align="center">^</td>
+<td align="center">异或</td>
+<td align="center">0011 1100 ^ 0000 1101</td>
+<td align="center">0011 0001 (49)</td>
+<td align="center">同0异1</td>
+</tr>
+<tr>
+<td align="center">~</td>
+<td align="center">取反</td>
+<td align="center">~0011 1100</td>
+<td align="center">1100 0011</td>
+<td align="center">0变1，1变0</td>
+</tr>
+<tr>
+<td align="center">&lt;&lt;</td>
+<td align="center">左移</td>
+<td align="center">A &lt;&lt; 2</td>
+<td align="center">1111 0000 (240)</td>
+<td align="center">乘以 4</td>
+</tr>
+<tr>
+<td align="center">&gt;&gt;</td>
+<td align="center">右移</td>
+<td align="center">A &gt;&gt; 2</td>
+<td align="center">0000 1111 (15)</td>
+<td align="center">除以 4</td>
+</tr>
+</tbody></table>
+<h1><span id="二-异或的性质">二、异或的性质</span></h1><p>异或是位运算中的重点操作，满足以下定律：</p>
+<ol>
+<li>归零律：x ^ x &#x3D; 0 (任何数与自己异或都是0)</li>
+<li>恒等律：x ^ 0 &#x3D; x (任何数与0异或保持不变)</li>
+<li>交换律与结合律：a ^ b ^ c &#x3D; a ^ c ^ b</li>
+</ol>
+<h1><span id="三-必背的高阶技巧">三、 必背的高阶技巧</span></h1><ol>
+<li><h2><span id="消除二进制中最低位的-1-brian-kernighan-算法">消除二进制中最低位的 1 (Brian Kernighan 算法)</span></h2></li>
+</ol>
+<ul>
+<li><strong>公式</strong>：<code>n &amp; (n - 1)</code></li>
+<li><strong>原理</strong>：<code>n-1</code> 会把 <code>n</code> 最右边的 1 变成 0，并将该位右边的所有 0 变成 1。再和 <code>n</code> 做与运算，那部分就全部抵消了。</li>
+<li><strong>应用</strong>：统计 1 的个数、判断是否为 2 的幂。</li>
+</ul>
+<p>Java</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 统计 1 的个数</span><br><span class="line">int count = 0;</span><br><span class="line">while (n != 0) &#123;</span><br><span class="line">    n = n &amp; (n - 1);</span><br><span class="line">    count++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2><span id="2-获取最低位的-1-lowbit">2. 获取最低位的 1 (Lowbit)</span></h2><ul>
+<li><strong>公式</strong>：<code>n &amp; -n</code></li>
+<li><strong>原理</strong>：利用补码特性，<code>-n</code> 实际上是 <code>~n + 1</code>。</li>
+<li><strong>示例</strong>：<code>x = 10100</code> -&gt; <code>lowbit = 00100</code></li>
+<li><strong>应用</strong>：树状数组（Fenwick Tree）、Diff 比较。</li>
+</ul>
+<ol start="3">
+<li><h2><span id="判断-n-是否是-2-的幂">判断 n 是否是 2 的幂</span></h2></li>
+</ol>
+<ul>
+<li><strong>公式</strong>：<code>n &gt; 0 &amp;&amp; (n &amp; (n - 1)) == 0</code></li>
+<li><strong>原理</strong>：2 的幂次在二进制中只有一个 1。消掉这个 1 后应该等于 0。</li>
+</ul>
+<h2><span id="4-异或实现变量交换不使用临时变量">4. 异或实现变量交换（不使用临时变量）</span></h2><ul>
+<li><p><strong>代码</strong>：</p>
+<p>Java</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a = a ^ b;</span><br><span class="line">b = a ^ b;</span><br><span class="line">a = a ^ b;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>评价</strong>：虽然很帅，但实际工程中不如 <code>int temp</code> 快（现代编译器优化），主要用于面试展示对性质的理解。</p>
+</li>
+</ul>
 ]]></content>
       <tags>
-        <tag>-医学图像</tag>
+        <tag>日常学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于智能体的看法</title>
+    <url>/2025/04/28/%E5%85%B3%E4%BA%8E%E6%99%BA%E8%83%BD%E4%BD%93%E7%9A%84%E7%9C%8B%E6%B3%95/</url>
+    <content><![CDATA[<p>感觉所谓的智能体，实际上是以往工作的整合。不过也确实很擅长</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>关于智能体的体验</title>
+    <url>/2025/05/02/%E5%85%B3%E4%BA%8E%E6%99%BA%E8%83%BD%E4%BD%93%E7%9A%84%E4%BD%93%E9%AA%8C/</url>
+    <content><![CDATA[<p>2025年是智能体的元年，这一观点常被各大厂商提及。我查找了以往他们对于智能体的一些观点。看来也确实如此。</p>
+<p>比较有说服力的是OPENAI的创始人萨鲁曼的说法，在之前的纽约时报里，我看到对于大模型的财报并不理想。其实这方面我认为DS也是有影响的，他们推出的开源低成本大模型极大地促进了市场对于大模型的开发热情，另一方OPENAI必须为此降低成本以吸引用户。他们API和付费订阅就因此没那么容易赚钱了。必须寻找一个突破口—–也就是智能体。</p>
+<p>可以看到他们对于这个智能体是很有信心的，他们甚至敢说赚1750亿。没有比这个更直观的了，另一方面是智能体的进展。编程智能体是最多的，然后是检索引擎智能体。不得不说，编程类智能体感觉会导致就业进一步严峻。我必须跟进学习这部分才行。</p>
+]]></content>
+      <tags>
+        <tag>日常记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>排序算法</title>
+    <url>/2026/01/17/%E5%8A%9B%E6%89%A3hot100%E7%BB%83%E4%B9%A0/</url>
+    <content><![CDATA[<p>今天集中攻克了 7 道高频面试题。重点总结了 LRU 的 O(1) 实现细节、链表归并排序的断链技巧，以及回文串的中心扩散法。但本次的主题是再记忆排序算法，做一个排序算法的归类和理解。</p>
+<span id="more"></span>
+
+<h1><span id="一-核心算法速查表">一、核心算法速查表</span></h1><table>
+<thead>
+<tr>
+<th><strong>算法名称</strong></th>
+<th><strong>平均时间</strong></th>
+<th><strong>最坏时间</strong></th>
+<th><strong>最好时间</strong></th>
+<th><strong>空间复杂度</strong></th>
+<th><strong>稳定性</strong></th>
+<th><strong>备注 (面试金句)</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>冒泡排序</strong></td>
+<td>$O(n^2)$</td>
+<td>$O(n^2)$</td>
+<td>$O(n)$</td>
+<td>$O(1)$</td>
+<td>稳定</td>
+<td>教学意义大于实战，但需知道如何优化（Flag标志位）。</td>
+</tr>
+<tr>
+<td><strong>选择排序</strong></td>
+<td>$O(n^2)$</td>
+<td>$O(n^2)$</td>
+<td>$O(n^2)$</td>
+<td>$O(1)$</td>
+<td>不稳定</td>
+<td>无论数据好坏都是 $O(n^2)$，因为交换次数少，写操作敏感时可用。</td>
+</tr>
+<tr>
+<td><strong>插入排序</strong></td>
+<td>$O(n^2)$</td>
+<td>$O(n^2)$</td>
+<td>$O(n)$</td>
+<td>$O(1)$</td>
+<td>稳定</td>
+<td><strong>数据量小或基本有序时，效率极高（甚至优于快排）。</strong></td>
+</tr>
+<tr>
+<td><strong>希尔排序</strong></td>
+<td>$O(n^{1.3})$</td>
+<td>$O(n^2)$</td>
+<td>$O(n)$</td>
+<td>$O(1)$</td>
+<td>不稳定</td>
+<td>插入排序的改进版，打破了 $O(n^2)$ 的魔咒，但现代库函数较少用。</td>
+</tr>
+<tr>
+<td><strong>归并排序</strong></td>
+<td>$O(n \log n)$</td>
+<td>$O(n \log n)$</td>
+<td>$O(n \log n)$</td>
+<td>$O(n)$</td>
+<td>稳定</td>
+<td><strong>由于稳定且性能稳定，常用于对象排序（如 Java 的 <code>Arrays.sort</code> 对对象用归并）。</strong></td>
+</tr>
+<tr>
+<td><strong>快速排序</strong></td>
+<td>$O(n \log n)$</td>
+<td>$O(n^2)$</td>
+<td>$O(n \log n)$</td>
+<td>$O(\log n)$</td>
+<td>不稳定</td>
+<td><strong>综合性能之王</strong>。最坏情况可通过随机化 Pivot 避免。</td>
+</tr>
+<tr>
+<td><strong>堆排序</strong></td>
+<td>$O(n \log n)$</td>
+<td>$O(n \log n)$</td>
+<td>$O(n \log n)$</td>
+<td>$O(1)$</td>
+<td>不稳定</td>
+<td><strong>空间复杂度 $O(1)$ 的最强王者</strong>。常用于 Top K 问题。</td>
+</tr>
+<tr>
+<td><strong>计数排序</strong></td>
+<td>$O(n+k)$</td>
+<td>$O(n+k)$</td>
+<td>$O(n+k)$</td>
+<td>$O(n+k)$</td>
+<td>稳定</td>
+<td>牺牲空间换时间，仅适用于范围较小的整数。</td>
+</tr>
+</tbody></table>
+<h2><span id="11算法的稳定性">1.1算法的稳定性</span></h2><p>稳定：冒泡排序、插入排序、归并排序、基数排序（冒插归基稳定）</p>
+<p>不稳定：快速排序，希尔排序，选择排序，堆排序（快希选堆不稳定）</p>
+<h2><span id="二-算法原理解释">二、算法原理解释</span></h2><h2><span id="1冒泡排序">1.冒泡排序</span></h2><p><strong>核心逻辑</strong>：</p>
+<ol>
+<li>从头开始，两两比较，如果前一个比后一个大，就交换。</li>
+<li>一轮扫描结束后，<strong>最大值</strong>一定被移到了最后一位（就位）。</li>
+<li>重复上述过程，直到没有元素需要交换。</li>
+</ol>
+<h2><span id="2-选择排序">2. 选择排序</span></h2><p><strong>核心逻辑</strong>：</p>
+<ol>
+<li>在未排序序列中找到最小元素，存放到排序序列的起始位置。</li>
+<li>再从剩余未排序元素中继续寻找最小元素，然后放到已排序序列的末尾。</li>
+</ol>
+<h2><span id="3插入排序">3.插入排序</span></h2><p><strong>核心逻辑</strong>：</p>
+<ol>
+<li>将数组分为“已排序区间”和“未排序区间”。</li>
+<li>每次从未排序区间取出一个元素，在已排序区间从后往前扫描。</li>
+<li>如果已排序的元素比它大，就<strong>向后移动</strong>，直到找到合适的位置插入。</li>
+</ol>
+<h2><span id="4快速排序">4.快速排序</span></h2><p><strong>核心逻辑</strong>：</p>
+<ol>
+<li><strong>选基准</strong>：随便挑一个数（通常是第一个、最后一个或中间）作为 Pivot。</li>
+<li><strong>分区 (Partition)<strong>：把比 Pivot 小的扔左边，比 Pivot 大的扔右边。这一步做完，</strong>Pivot 就在它最终应该在的位置上了</strong>（这是快排最关键的性质）。</li>
+<li><strong>递归</strong>：对左右两边继续重复上述过程。</li>
+</ol>
+<h2><span id="5归并排序">5.归并排序</span></h2><p><strong>核心逻辑</strong>：</p>
+<ol>
+<li>**分 (Divide)**：递归地把当前序列平均分割成两半，直到子序列长度为 1（由一个元素组成的序列天然有序）。</li>
+<li>**治 (Conquer)**：将两个有序的子序列合并成一个有序序列（双指针法：谁小取谁，放入新数组）。</li>
+</ol>
+<p><strong>面试价值</strong>：它是唯一一个<strong>稳定</strong>且时间复杂度永远是 $O(n \log n)$ 的算法，常用于对象排序或外部排序（内存装不下时）。</p>
+<h2><span id="6堆排序">6.堆排序</span></h2><p><strong>核心逻辑</strong>：</p>
+<ol>
+<li><strong>建堆</strong>：把数组构建成一个<strong>大顶堆</strong>（根节点最大）。</li>
+<li><strong>交换</strong>：把堆顶（最大值）和数组最后一个元素交换（最大值归位）。</li>
+<li>**堆化 (Heapify)**：把剩下的 $n-1$ 个元素重新调整为大顶堆。</li>
+<li>重复步骤 2-3。</li>
+</ol>
+<p><strong>面试价值</strong>：不需要额外空间 ($O(1)$)，但因为内存跳跃访问（索引 $i$ 的孩子在 $2i$），缓存命中率不如快排，所以实战中比快排慢。</p>
+<p>图片例子来源：<a href="https://www.bilibili.com/video/BV1sek9YBELe/?spm_id_from=333.337.search-card.all.click&vd_source=ecbe42ffb25fea0da636165433fb75d6">4分钟学堆排序(手机动画版)_哔哩哔哩_bilibili</a></p>
+<p>1.将数组从左到右填入二叉树中</p>
+<p><img src="/2026/01/17/%E5%8A%9B%E6%89%A3hot100%E7%BB%83%E4%B9%A0/image-20260117154512059.png" alt="image-20260117154512059"></p>
+<p>2.调整为大根堆，方法是找到最后一个非叶子节点int()(9&#x2F;2-1)，如果子节点比他大，那就swap一下。直到自己到达叶子节点。最后从3，2，1，0的顺序依次调整。做成最大堆</p>
+<p><img src="/2026/01/17/%E5%8A%9B%E6%89%A3hot100%E7%BB%83%E4%B9%A0/image-20260117154722378.png" alt="image-20260117154722378"></p>
+<p>3.最大值通过首尾交换的方式出栈，接下来就是对【0，7】再次进行操作</p>
+<p><img src="/2026/01/17/%E5%8A%9B%E6%89%A3hot100%E7%BB%83%E4%B9%A0/image-20260117155026446.png" alt="image-20260117155026446"></p>
+<p><img src="/2026/01/17/%E5%8A%9B%E6%89%A3hot100%E7%BB%83%E4%B9%A0/image-20260117154957961.png" alt="image-20260117154957961"></p>
+<h2><span id="7希尔排序">7.希尔排序</span></h2><p><strong>核心逻辑</strong>：</p>
+<p>插入排序在处理大规模乱序数据时很慢（因为一次只能移动一位）。</p>
+<p>希尔排序先让数组中<strong>间隔为 Gap</strong> 的元素进行插入排序（宏观调控）。</p>
+<p>不断缩小 Gap，直到 Gap&#x3D;1，此时数组已经基本有序，最后做一次插入排序即可。</p>
+<h2><span id="8-基数排序">8. 基数排序</span></h2><p><strong>一句话原理</strong>：<strong>非比较排序</strong>。按位（个位、十位、百位…）进行分配和收集。</p>
+<p><strong>核心逻辑</strong>：</p>
+<ol>
+<li>准备 10 个桶（0-9）。</li>
+<li>先按<strong>个位</strong>数字，把元素扔进对应的桶里，然后按顺序倒出来（此时个位有序）。</li>
+<li>再按<strong>十位</strong>数字，把元素扔进桶里，倒出来。</li>
+<li>重复直到最高位。</li>
+</ol>
+<p><strong>要求</strong>：必须从低位到高位（LSD），且每一轮入桶必须使用<strong>稳定</strong>的排序算法（通常是计数排序的变种），否则高位的排序会打乱低位的顺序。</p>
+]]></content>
+      <tags>
+        <tag>日常学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>优秀博文整理</title>
+    <url>/2025/07/06/%E4%BC%98%E7%A7%80%E5%8D%9A%E6%96%87%E6%95%B4%E7%90%86/</url>
+    <content><![CDATA[<p>​				记录一些我看过的优秀博文。</p>
+<span id="more"></span>
+
+<p>​				1. <a href="https://mp.weixin.qq.com/s/Ov2m6vht9I2tIEmZC_yeYg">【避坑指南！AnythingLLM本地知识库用的还好吗？】部署后必看（一）问错问题&#x3D;入天坑（附社区答复及本地存储文件夹解读）</a>   这一篇博文解释了本地知识库的一些使用问题，其实也可以扩展来说，也就是大模型处理数据库的方式， 其实也是一样的。——在【不是理解整篇文章，而是进行相似度检索这一点上】</p>
+]]></content>
+      <tags>
+        <tag>日常学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>力扣学习记录lambda表达式</title>
+    <url>/2026/01/22/%E5%8A%9B%E6%89%A3%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+    <content><![CDATA[<p>在做 LeetCode 347（前 K 个高频元素）时，我最开始的思路是简单的“统计频率 -&gt; 找出频率大于 k 的数”。但后来发现题目要求的是<strong>“频率最高的 k 个数”</strong>，这是一个经典的 Top K 问题。</p>
+<p>在这个过程中，我对 Java 的 <code>PriorityQueue</code>（优先队列）、Lambda 表达式以及堆排序的本质有了全新的认识。</p>
+<span id="more"></span>
+
+<p>先贴结果代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import java.util.*;</span><br><span class="line"></span><br><span class="line">class Solution &#123;</span><br><span class="line">    public int[] topKFrequent(int[] nums, int k) &#123;</span><br><span class="line">        // 1. 使用 HashMap 统计每个数字出现的频率</span><br><span class="line">        Map&lt;Integer, Integer&gt; counts = new HashMap&lt;&gt;();</span><br><span class="line">        for (int num : nums) &#123;</span><br><span class="line">            counts.put(num, counts.getOrDefault(num, 0) + 1);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // 2. 创建优先队列（小顶堆）</span><br><span class="line">        // 核心逻辑：(a, b) -&gt; counts.get(a) - counts.get(b)</span><br><span class="line">        // 含义：按照频率从小到大排。频率低的在堆顶，随时准备被踢走。</span><br><span class="line">        PriorityQueue&lt;Integer&gt; pq = new PriorityQueue&lt;&gt;((a, b) -&gt; counts.get(a) - counts.get(b));</span><br><span class="line"></span><br><span class="line">        // 3. 遍历 Map，维护一个大小为 k 的堆</span><br><span class="line">        for (int num : counts.keySet()) &#123;</span><br><span class="line">            pq.offer(num); // 入队</span><br><span class="line">            // 如果堆大了，就把频率最小的（堆顶）弹出去</span><br><span class="line">            if (pq.size() &gt; k) &#123;</span><br><span class="line">                pq.poll();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // 4. 输出结果</span><br><span class="line">        int[] res = new int[k];</span><br><span class="line">        for (int i = 0; i &lt; k; i++) &#123;</span><br><span class="line">            res[i] = pq.poll();</span><br><span class="line">        &#125;</span><br><span class="line">        return res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个代码里面，我最开始很不理解，这一个确实是我以前没怎么见过，后来理解了这是一种特殊的增加规则的的方法。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">PriorityQueue&lt;Integer&gt; pq = new PriorityQueue&lt;&gt;((a, b) -&gt; counts.get(a) - counts.get(b));</span><br></pre></td></tr></table></figure>
+
+<p>这行代码并不只是为了“排序”，它是在<strong>“立规矩”</strong>。</p>
+<ul>
+<li>**<code>a</code> 和 <code>b</code>**：是队列里的数字（选手）。</li>
+<li>**<code>counts.get(...)</code>**：是比较的标准（看频率，不看数字本身）。</li>
+<li><strong>返回值</strong>：虽然写的是减法算式，但 Java 接收到的是一个<strong>整数（int）</strong>。<ul>
+<li>负数：<code>a</code> 轻（上浮&#x2F;排前面）。</li>
+<li>正数：<code>a</code> 重（下沉&#x2F;排后面）。</li>
+</ul>
+</li>
+</ul>
+<p>从而保证了每次add都会维护，把小数值给上浮。</p>
+<h2><span id="2comparator-万能口诀">2.Comparator 万能口诀</span></h2><p>根据学习，永远是写（a,b）根据目标效果，选择是a-b还是b-a</p>
+<table>
+<thead>
+<tr>
+<th><strong>目标效果</strong></th>
+<th><strong>核心写法</strong></th>
+<th><strong>记忆口诀</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>小</strong>数值在堆顶 &#x2F; 排前面</td>
+<td><code>a - b</code></td>
+<td><strong>前减后</strong>（我减你）</td>
+</tr>
+<tr>
+<td><strong>大</strong>数值在堆顶 &#x2F; 排前面</td>
+<td><code>b - a</code></td>
+<td><strong>后减前</strong>（你减我）</td>
+</tr>
+<tr>
+<td><strong>String 长度短</strong>在堆顶</td>
+<td><code>a.length() - b.length()</code></td>
+<td>前减后</td>
+</tr>
+<tr>
+<td><strong>String 字典序</strong>靠前</td>
+<td><code>a.compareTo(b)</code></td>
+<td>顺着比</td>
+</tr>
+</tbody></table>
+<p>而对于一些复杂的情况，我们可以在里面增加代码串。逻辑是一样的，返回的数值小于0，就是选择数对的A上浮</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(a, b) -&gt; &#123;</span><br><span class="line">    int freqCompare = counts.get(a) - counts.get(b);</span><br><span class="line">    if (freqCompare != 0) &#123;</span><br><span class="line">        return freqCompare; // 频率不同：按频率小顶堆（小的在顶）</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        // 频率相同：进入这里的瞬间，freqCompare 已经是 0 了，不能用了！</span><br><span class="line">        // 题目要求：数字大的在堆顶 -&gt; 大顶堆逻辑 -&gt; 后减前</span><br><span class="line">        return b - a;  // &lt;--- 这里才是正确答案</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2><span id="3扩展用法">3.扩展用法</span></h2><p>不止是这个小根堆，大根堆场景，我们还能用在别的地方：</p>
+<h3><span id="31-给数组x2f列表排序-arrayssort-x2f-collectionssort">3.1 给数组&#x2F;列表排序 (<code>Arrays.sort</code> &#x2F; <code>Collections.sort</code>)</span></h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">List&lt;String&gt; list = new ArrayList&lt;&gt;(Arrays.asList(&quot;apple&quot;, &quot;hi&quot;, &quot;banana&quot;));</span><br><span class="line"></span><br><span class="line">// 旧写法：Collections.sort(list, new Comparator...);</span><br><span class="line">// 新写法（Lambda）：</span><br><span class="line">list.sort((a, b) -&gt; a.length() - b.length()); </span><br><span class="line"></span><br><span class="line">System.out.println(list); // 输出 [hi, apple, banana]</span><br></pre></td></tr></table></figure>
+
+<h3><span id="32-给二维数组排序">3.2 给二维数组排序</span></h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// intervals 是个二维数组，里面的元素是 int[] (一维数组)</span><br><span class="line">// 所以这里的 a 和 b 代表的是每一行，即 &#123;1,3&#125; 和 &#123;2,6&#125;</span><br><span class="line">Arrays.sort(intervals, (a, b) -&gt; a[0] - b[0]);</span><br></pre></td></tr></table></figure>
+
+<h3><span id="33-自动排序的-map-和-set-treemap-x2f-treeset">3.3 自动排序的 Map 和 Set (<code>TreeMap</code> &#x2F; <code>TreeSet</code>)</span></h3><p>这两个数据结构和 <code>PriorityQueue</code> 是亲兄弟。</p>
+<ul>
+<li><code>PriorityQueue</code>：只保证<strong>堆顶</strong>是有序的。</li>
+<li><code>TreeMap</code> &#x2F; <code>TreeSet</code>：保证<strong>内部所有元素永远</strong>是有序的。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 这里的 (a, b) 指的是 Key</span><br><span class="line">Map&lt;Integer, String&gt; map = new TreeMap&lt;&gt;((a, b) -&gt; b - a);</span><br><span class="line"></span><br><span class="line">map.put(1, &quot;A&quot;);</span><br><span class="line">map.put(3, &quot;B&quot;);</span><br><span class="line">map.put(2, &quot;C&quot;);</span><br><span class="line"></span><br><span class="line">// 遍历时，会自动按 Key 从大到小出：3 -&gt; 2 -&gt; 1</span><br><span class="line">for(Integer key : map.keySet()) &#123;</span><br><span class="line">    System.out.println(key); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2><span id="4-java-stream-流操作-max-min-sorted">4.  Java Stream 流操作 (<code>.max</code>, <code>.min</code>, <code>.sorted</code>)</span></h2><p>Java 8 的流式编程极其依赖这个写法。</p>
+<h4><span id="场景在一堆对象里找最的那一个">场景：在一堆对象里找“最…”的那一个</span></h4><p>假设你有一堆 <code>Student</code> 对象，想找<strong>分数最高</strong>的那个。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Student &#123; String name; int score; &#125;</span><br><span class="line">List&lt;Student&gt; students = ...;</span><br><span class="line"></span><br><span class="line">// 找最大值 (max)</span><br><span class="line">// 这里的 max 需要你告诉它：什么叫“大”？</span><br><span class="line">// 答：分数 (a.score - b.score) 越大，就越大</span><br><span class="line">Student bestStudent = students.stream()</span><br><span class="line">    .max((a, b) -&gt; a.score - b.score) </span><br><span class="line">    .get();</span><br></pre></td></tr></table></figure>
+
+<h2><span id="5总结">5.总结</span></h2><table>
+<thead>
+<tr>
+<th><strong>场景</strong></th>
+<th><strong>代码片段</strong></th>
+<th><strong>作用</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>优先队列</strong></td>
+<td><code>new PriorityQueue&lt;&gt;((a, b) -&gt; a - b)</code></td>
+<td>决定<strong>谁在堆顶</strong></td>
+</tr>
+<tr>
+<td><strong>数组排序</strong></td>
+<td><code>Arrays.sort(arr, (a, b) -&gt; a - b)</code></td>
+<td>决定<strong>谁排前面</strong></td>
+</tr>
+<tr>
+<td><strong>列表排序</strong></td>
+<td><code>list.sort((a, b) -&gt; a - b)</code></td>
+<td>决定<strong>谁排前面</strong></td>
+</tr>
+<tr>
+<td><strong>Tree结构</strong></td>
+<td><code>new TreeMap&lt;&gt;((a, b) -&gt; a - b)</code></td>
+<td>决定<strong>Key的存储顺序</strong></td>
+</tr>
+<tr>
+<td><strong>流操作</strong></td>
+<td><code>stream.max((a, b) -&gt; a - b)</code></td>
+<td>决定<strong>谁算最大值</strong></td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>日常学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>图片优化思路</title>
+    <url>/2025/10/23/%E5%9B%BE%E7%89%87%E4%BC%98%E5%8C%96%E6%80%9D%E8%B7%AF/</url>
+    <content><![CDATA[<p>这一个部分还是需要仔细思考，想来应该也不止是用在图片优化上，我认为在更多的地方都是可以使用这个技术的。</p>
+<span id="more"></span>
+
+<h1><span id="一-图片查询优化">一、图片查询优化</span></h1><p>首先确定什么样的数据适合缓存：</p>
+<ol>
+<li>高频访问的数据：如系统首页、热门推荐内容等。</li>
+<li>计算成本较高的数据：如复杂查询结果、大量数据的统计结果。</li>
+<li>允许短时间延迟的数据：如不需要实时更新的排行榜、图片列表等。</li>
+</ol>
+<h2><span id="redis-分布式缓存">Redis 分布式缓存</span></h2><p>分布式是指将缓存数据储存在多台服务器上，以便在高并发场景下实现更高的吞吐量和容错性。也可以把同一份数据存储到多个服务器去，以实现数据的安全性.</p>
+<p>作为分布式缓存的主流方案，REDIS具备以下几个优势：</p>
+<ul>
+<li><p>高性能：基于内存操作，访问速度极快。<strong>单节点 Redis 的读写 QPS 可达 10w 次每秒！</strong>而且<strong>Redis 的核心网络I&#x2F;O和命令执行是单线程的</strong>，避免了多线程上下文切换和锁竞争所带来的巨大性能开销。——我的理解是单线程执行不是重点，这个线程运行的方式，只询问不等待才是重点。从而让Redis 具备了用一个线程同时处理成千上万个网络连接的能力。</p>
+</li>
+<li><p>丰富的数据结构：支持字符串、列表、集合、哈希、位图等，适用于各种数据结构存储。</p>
+</li>
+<li><p>分布式支持：<strong>高可用和高扩展</strong>可以通过 Redis Cluster 构建高可用、高性能的分布式缓存，还提供哨兵集群机制提升可用性、提供分片集群机制提高可扩展性。</p>
+<p>这里的可扩展性指的是系统应对“增长”的能力。可以是用户量暴增、数据量暴增、或请求量暴增。我们可以增加机器或者机器升级来解决</p>
+<p>高可用性指的是系统抵抗故障的能力，解决的核心手段是冗余</p>
+</li>
+</ul>
+<h2><span id="什么是-redis-cluster">什么是 Redis Cluster？</span></h2><p><strong>Redis Cluster (集群模式)</strong> 是 Redis 官方提供的<strong>分布式解决方案</strong>。</p>
+<p>它的核心目标是解决两个问题：</p>
+<ol>
+<li>**数据分片 (Sharding)**：将海量数据分散存储到多个 Redis 节点上，突破单台服务器的内存和性能瓶颈。</li>
+<li>**高可用 (High Availability)**：当集群中的某个主节点宕机时，它的从节点可以自动顶上，保证服务继续可用。</li>
+</ol>
+<p>为了实现这个目标，Redis Cluster 采用了“**哈希槽 (Hash Slot)**”的设计：</p>
+<ul>
+<li><strong>16384 个哈希槽</strong>：Redis Cluster 将整个数据库（逻辑上）分成了 16384 （2的14次方）个哈希槽。</li>
+<li><strong>Key 与槽的映射</strong>：当你存入一个 key 时，Redis 会用 <code>CRC16(key) % 16384</code> 算法计算这个 key 应该属于哪个槽。</li>
+<li><strong>槽与节点的分配</strong>：集群启动时，这 16384 个槽会被分配给集群中所有的**主节点 (Master)**。例如，3 个主节点，可能节点 A 负责 0-5500 槽，节点 B 负责 5501-11000 槽，节点 C 负责 11001-16383 槽。</li>
+<li><strong>高可用（主从）</strong>：每个主节点都会有至少一个<strong>从节点 (Slave)</strong> 来复制它的数据。当主节点 A 宕机，它的从节点 A1 会被集群选举为新的主节点，接管 0-5500 槽，服务不会中断。</li>
+<li><strong>去中心化</strong>：集群中的所有节点都互相连接（通过Gossip协议），它们都知道哪个槽由哪个节点负责。当客户端连接任意一个节点并尝试操作一个不归它管的 key 时，它会告诉客户端“请重定向到 XX 节点”，整个过程对客户端是透明的。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>方案</strong></th>
+<th><strong>Memcached</strong></th>
+<th>**Redis **</th>
+<th><strong>Hazelcast</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>定位</strong></td>
+<td>纯内存对象缓存</td>
+<td>数据结构服务器</td>
+<td>内存数据网格 (IMDG)</td>
+</tr>
+<tr>
+<td><strong>数据结构</strong></td>
+<td>仅字符串 (Key-Value)</td>
+<td>丰富 (String, Hash, List, Set…)</td>
+<td>丰富 (Map, Queue, Set, Topic…)</td>
+</tr>
+<tr>
+<td><strong>持久化</strong></td>
+<td><strong>不支持</strong></td>
+<td>支持 (RDB &#x2F; AOF)</td>
+<td>支持</td>
+</tr>
+<tr>
+<td><strong>集群</strong></td>
+<td>客户端实现（简单）</td>
+<td>需专门配置 (Cluster &#x2F; Sentinel)</td>
+<td><strong>自动发现，P2P 组网</strong></td>
+</tr>
+<tr>
+<td><strong>核心优点</strong></td>
+<td>简单、高性能 (多线程 Get&#x2F;Set)</td>
+<td>功能全面、生态强大</td>
+<td>Java 原生、集群管理简单</td>
+</tr>
+<tr>
+<td><strong>适用场景</strong></td>
+<td>数据库查询、API 响应的纯缓存</td>
+<td>缓存、分布式锁、消息队列、计数器</td>
+<td>Java 微服务、分布式计算</td>
+</tr>
+</tbody></table>
+<p>顺便列一下都是数据库且用得比较多的MYSQL，这两个的一切区别就是存放位置，这直接导致了他们在性能，数据持久和用途上的差异：MySQL 遵循 ACID 原则，能保证事务的原子性和一致性，数据可靠性高；Redis专为高速缓存和实时操作设计‌。</p>
+<table>
+<thead>
+<tr>
+<th><strong>特性</strong></th>
+<th><strong>MySQL (关系型数据库)</strong></th>
+<th><strong>Redis (内存数据库)</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>存储位置</strong></td>
+<td><strong>磁盘 (Disk-based)</strong></td>
+<td><strong>内存 (In-Memory)</strong></td>
+</tr>
+<tr>
+<td><strong>性能&#x2F;速度</strong></td>
+<td>较慢（受限于磁盘 I&#x2F;O）</td>
+<td><strong>极快</strong>（受限于内存速度）</td>
+</tr>
+<tr>
+<td><strong>数据持久化</strong></td>
+<td><strong>强持久化</strong>（数据默认永久保存）</td>
+<td>弱持久化（默认是临时的，需配置 RDB&#x2F;AOF 才能重启后恢复）</td>
+</tr>
+<tr>
+<td><strong>数据模型</strong></td>
+<td>结构化 (表、行、列)，使用 <code>SQL</code></td>
+<td>键值对 (Key-Value)，支持丰富的数据结构 (String, Hash, List)</td>
+</tr>
+<tr>
+<td><strong>容量限制</strong></td>
+<td>巨大（受限于硬盘大小, TB 级）</td>
+<td>有限（受限于内存大小, GB 级）</td>
+</tr>
+<tr>
+<td><strong>主要角色</strong></td>
+<td><strong>“数据仓库” (System of Record)</strong></td>
+<td><strong>“高速缓存” (Cache) &#x2F; “工作台”</strong></td>
+</tr>
+</tbody></table>
+<p>自己测试了下，使用带缓存的查询，第一次是470ms，第二次是7ms。不使用带缓存的查询是50ms，第二次是10ms，之所以会有这种情况，是因为mysql也有自己的缓存。</p>
+<h1><span id="解决缓存常见问题">解决缓存常见问题</span></h1><p>使用缓存时，一般要注意下面几个问题：</p>
+<ol>
+<li>缓存击穿：某些 <strong>热点数据</strong> 在缓存过期后，大量请求直接打到数据库。</li>
+</ol>
+<p>​	解决方案：设置热点数据的超长过期时间，或使用互斥锁（如 Redisson）控制缓存刷新。</p>
+<ol start="2">
+<li>缓存穿透：用户频繁请求不存在的数据，导致大量的请求直接触发数据库查询。</li>
+</ol>
+<p>​	解决方案：对无效查询结果也进行缓存（如设置空值缓存），或者使用布隆过滤器。</p>
+<ol start="3">
+<li>缓存雪崩：大量缓存同时过期，导致请求打到数据库，系统崩溃。</li>
+</ol>
+<ol start="4">
+<li>缓存一致性:你在“写”（增、删、改）操作时，只更新了数据库，但<strong>忘记</strong>了去处理缓存。</li>
+</ol>
+<p>​	解决方案: 先更新数据库，再删除缓存</p>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>问题</strong></th>
+<th align="center"><strong>现象</strong></th>
+<th align="center"><strong>解决方案</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>缓存穿透</strong></td>
+<td align="center">查一个<strong>不存在</strong>的数据</td>
+<td align="center">1. 缓存空值  2. 布隆过滤器</td>
+</tr>
+<tr>
+<td align="center"><strong>缓存击穿</strong></td>
+<td align="center"><strong>一个热点</strong>数据过期</td>
+<td align="center">1. 分布式锁 (Mutex)  2. 逻辑过期</td>
+</tr>
+<tr>
+<td align="center"><strong>缓存雪崩</strong></td>
+<td align="center"><strong>一大片</strong>数据同时过期 &#x2F; Redis 宕机</td>
+<td align="center">1. <strong>随机过期时间</strong> (你已在用)  2. Redis 高可用 (集群&#x2F;哨兵)</td>
+</tr>
+<tr>
+<td align="center"><strong>缓存一致性</strong></td>
+<td align="center">数据库和缓存<strong>数据不同</strong></td>
+<td align="center">1. <strong>先更新数据库，再删除缓存</strong></td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>就业准备</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大模型是怎么做到长上下文扩展的</title>
+    <url>/2025/05/22/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%98%AF%E6%80%8E%E4%B9%88%E5%81%9A%E5%88%B0%E9%95%BF%E4%B8%8A%E4%B8%8B%E6%96%87%E6%89%A9%E5%B1%95%E7%9A%84/</url>
+    <content><![CDATA[<p>一直以来我都很疑惑，为什么大模型可以从4K学到8K又到128K呢，今天看来视频才有一些想法。<br> <span id="more"></span><br>1.大模型拟合结果依赖随机梯度算法，如果一次性输出128K的文本进行拟合，那就会对128K倍的权重进行拟合，考虑到自注意力计算矩阵是输入增长的平方。直接进行拟合导致的计算消耗是难以估计的。</p>
+<p>2.因此，我们就先让模型学习少量文本。这时候模型的参数已经得到一定的调整了，当我们再扩大这个文本长度时，他会有一个基准线在，就可以以那个基准为基础进行二次拟合。如果我们把8K的参数全部冻结，训练128K的文本矩阵加到8K的参数矩阵上去，那这个实际上就类似LORA了。这也是LORA微调的核心，基础大模型不动，少量修改附加参数矩阵。</p>
+<p>3.再一个增大模型上下文长度的方法就是数据分片了，学习完前面的内容再把学到的东西传递下去</p>
+<p>4.如果从架构入手也是可以的，比如经典的局部注意力+全局注意力的形式，这一技术我们可以在Gemma2到Gemma3的架构改进中看到。</p>
+]]></content>
+      <tags>
+        <tag>日常记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>医疗助手大模型的微调</title>
+    <url>/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/</url>
+    <content><![CDATA[<p>在之前的博客助手大模型中，我感受到模型效果受参数影响极大，一些8b回答起来磕磕绊绊的问题，14b的模型就能顺利回答。固然模型的参数是一个要点，但我认为以后对于小模型的需求也不会减少，这就需要用微调的方式让模型垂直化，专业化。因此，我的下一个目标在大模型的微调上，由于我的课题和医疗方向比较相关的，这方面的微调数据集 (华佗GPT) 又有，因此，我计划从这方面入手，做出一个医疗领域的垂直优化大模型，旨在回答医疗知识，降低有害错误问题的发生率</p>
+<span id="more"></span>
+
+<h1><span id="1模型选择">1.模型选择</span></h1><h1><span id="2数据集选择">2.数据集选择</span></h1><p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828221748287.png" alt="image-20250828221748287"></p>
+<p>链接：<a href="https://huggingface.co/datasets?search=medical">https://huggingface.co/datasets?search=medical</a></p>
+<p>先确定目的，SFT阶段我们主要任务是让模型博学起来，能够理解医疗领域的术语、实体以及常见的对话模式就算成功，使用华佗GPT数据集，由香港中文大学（深圳）和深圳市大数据研究院联合开源了专用于医疗领域的复杂大模型。这样就使用他们给出的SFT数据集：<a href="https://huggingface.co/datasets/FreedomIntelligence/medical-o1-reasoning-SFT">FreedomIntelligence&#x2F;medical-o1-reasoning-SFT · Datasets at Hugging Face</a></p>
+<p>折磨了一下下完了，这里需要注意，安装前要先下两个库，然后用huggingface-cli下载会快很多：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install -U &quot;huggingface_hub[cli]&quot;</span><br><span class="line">#高速传输库 hf_transfer</span><br><span class="line">pip install -U hf_transfer</span><br></pre></td></tr></table></figure>
+
+<p>由于我的服务器内网限制严格，只能win上面安装，做了这两部我还要手动加上Path：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">WARNING: The scripts hf.exe... are installed in  &#x27;C:\Users\origin\AppData\Roaming\Python\Python312\Scripts&#x27;  which is not on PATH.</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828230911267.png" alt="image-20250828230911267"></p>
+<p>然后在新建造哪里输入上面的路径信息 <code>&#39;C:\Users\origin\AppData\Roaming\Python\Python312\Scripts&#39;</code> </p>
+<p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828231120276.png" alt="image-20250828231120276"></p>
+<p>重新启动后就可以正常下载了</p>
+<p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828225951739.png" alt="image-20250828225951739"></p>
+<h1><span id="参考资料">参考资料：</span></h1><p><a href="https://zhuanlan.zhihu.com/p/652615133">推荐收藏！23个医疗领域微调大模型微调及数据汇总！ - 知乎</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/15635537603">【论文解读】HuatuoGPT-o1：用CoT和RL增强医疗LLM的复杂推理能力 - 知乎</a></p>
+<p><a href="https://github.com/FreedomIntelligence/HuatuoGPT">FreedomIntelligence&#x2F;HuatuoGPT: HuatuoGPT, Towards Taming Language Models To Be a Doctor. (An Open Medical GPT)</a></p>
+]]></content>
+      <tags>
+        <tag>实习准备</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大模型的演变趋势</title>
+    <url>/2025/05/14/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%BC%94%E5%8F%98%E8%B6%8B%E5%8A%BF/</url>
+    <content><![CDATA[<p>我认为大模型的趋势有俩，轻量化和多模态化。<br> <span id="more"></span><br>轻量化说的就是MOE和稀疏自注意力。大家都在往这个方向走。而且现在似乎再MOE这一点上已经达成一致了。考虑到MOE能够大幅度减少推理成本，这是很合理的。</p>
+<p>另一个问题是自注意力机制。最关键的这个部分反而是没有怎么改动的，从MHA,GQA,单个子注意力。这些都是缩减规模，但是性能肉眼可见的在掉，虽然分组倒是能行，但效果还是差了点。这一点来说DS的新注意力就很强了，MLA。和ROPE混合起来使用，保留了自注意力的效果还减少了计算量，明显的有在另辟蹊径。</p>
+<p>然后就是多模态化，道也不用多说。这些本质都是为了后续的硬件做服务。我感觉现在的大模型卷到一定程度，确实是都走向应用去了，就是大模型始终只能当辅助。</p>
+<p>虽然不好说这个时间能持续多久就是了</p>
+]]></content>
+      <tags>
+        <tag>日常记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大模型的输入</title>
+    <url>/2025/05/16/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%BE%93%E5%85%A5/</url>
+    <content><![CDATA[<p>虽然我以前就知道大模型的输入计算很坑，但还是没想到这么坑<br> <span id="more"></span><br>首先输入的文本【1234】【567】，输入【567】的时候之前的【1234】和模型对他的回答也会加进来。</p>
+<p>其次是联网功能，这玩意就牛逼了，上不封顶。就算是直接选择前面三个网页，也得是他去读了才行。麻了，同样的，这部分也要算你头上</p>
+<p>最后是提示词，你输入的格式规范之类的东西也得通过提示词 来实现，一样的，这个也是要Token的。这三样累计再一次，第二次开始的对话消耗就大的可怕，如果是使用智能体。这个消耗就更可怕了。大模型的规划可不是人类能理解的</p>
+]]></content>
+      <tags>
+        <tag>日常记录</tag>
       </tags>
   </entry>
   <entry>
@@ -1804,627 +2438,14 @@ class UserService &#123;
       </tags>
   </entry>
   <entry>
-    <title>位运算</title>
-    <url>/2026/01/18/%E4%BD%8D%E8%BF%90%E7%AE%97/</url>
-    <content><![CDATA[<h1><span id="一-位运算速查表">一、位运算速查表</span></h1><table>
-<thead>
-<tr>
-<th align="center">符号</th>
-<th align="center">描述</th>
-<th align="center">运算 (A ? B)</th>
-<th align="center">结果</th>
-<th align="center">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">&amp;</td>
-<td align="center">与</td>
-<td align="center">0011 1100 &amp; 0000 1101</td>
-<td align="center">0000 1100 (12)</td>
-<td align="center">同1为1</td>
-</tr>
-<tr>
-<td align="center">**&#96;</td>
-<td align="center">&#96;**</td>
-<td align="center">或</td>
-<td align="center">&#96;0011 1100</td>
-<td align="center">0000 1101&#96;</td>
-</tr>
-<tr>
-<td align="center">^</td>
-<td align="center">异或</td>
-<td align="center">0011 1100 ^ 0000 1101</td>
-<td align="center">0011 0001 (49)</td>
-<td align="center">同0异1</td>
-</tr>
-<tr>
-<td align="center">~</td>
-<td align="center">取反</td>
-<td align="center">~0011 1100</td>
-<td align="center">1100 0011</td>
-<td align="center">0变1，1变0</td>
-</tr>
-<tr>
-<td align="center">&lt;&lt;</td>
-<td align="center">左移</td>
-<td align="center">A &lt;&lt; 2</td>
-<td align="center">1111 0000 (240)</td>
-<td align="center">乘以 4</td>
-</tr>
-<tr>
-<td align="center">&gt;&gt;</td>
-<td align="center">右移</td>
-<td align="center">A &gt;&gt; 2</td>
-<td align="center">0000 1111 (15)</td>
-<td align="center">除以 4</td>
-</tr>
-</tbody></table>
-<h1><span id="二-异或的性质">二、异或的性质</span></h1><p>异或是位运算中的重点操作，满足以下定律：</p>
-<ol>
-<li>归零律：x ^ x &#x3D; 0 (任何数与自己异或都是0)</li>
-<li>恒等律：x ^ 0 &#x3D; x (任何数与0异或保持不变)</li>
-<li>交换律与结合律：a ^ b ^ c &#x3D; a ^ c ^ b</li>
-</ol>
-<h1><span id="三-必背的高阶技巧">三、 必背的高阶技巧</span></h1><ol>
-<li><h2><span id="消除二进制中最低位的-1-brian-kernighan-算法">消除二进制中最低位的 1 (Brian Kernighan 算法)</span></h2></li>
-</ol>
-<ul>
-<li><strong>公式</strong>：<code>n &amp; (n - 1)</code></li>
-<li><strong>原理</strong>：<code>n-1</code> 会把 <code>n</code> 最右边的 1 变成 0，并将该位右边的所有 0 变成 1。再和 <code>n</code> 做与运算，那部分就全部抵消了。</li>
-<li><strong>应用</strong>：统计 1 的个数、判断是否为 2 的幂。</li>
-</ul>
-<p>Java</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 统计 1 的个数</span><br><span class="line">int count = 0;</span><br><span class="line">while (n != 0) &#123;</span><br><span class="line">    n = n &amp; (n - 1);</span><br><span class="line">    count++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2><span id="2-获取最低位的-1-lowbit">2. 获取最低位的 1 (Lowbit)</span></h2><ul>
-<li><strong>公式</strong>：<code>n &amp; -n</code></li>
-<li><strong>原理</strong>：利用补码特性，<code>-n</code> 实际上是 <code>~n + 1</code>。</li>
-<li><strong>示例</strong>：<code>x = 10100</code> -&gt; <code>lowbit = 00100</code></li>
-<li><strong>应用</strong>：树状数组（Fenwick Tree）、Diff 比较。</li>
-</ul>
-<ol start="3">
-<li><h2><span id="判断-n-是否是-2-的幂">判断 n 是否是 2 的幂</span></h2></li>
-</ol>
-<ul>
-<li><strong>公式</strong>：<code>n &gt; 0 &amp;&amp; (n &amp; (n - 1)) == 0</code></li>
-<li><strong>原理</strong>：2 的幂次在二进制中只有一个 1。消掉这个 1 后应该等于 0。</li>
-</ul>
-<h2><span id="4-异或实现变量交换不使用临时变量">4. 异或实现变量交换（不使用临时变量）</span></h2><ul>
-<li><p><strong>代码</strong>：</p>
-<p>Java</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a = a ^ b;</span><br><span class="line">b = a ^ b;</span><br><span class="line">a = a ^ b;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>评价</strong>：虽然很帅，但实际工程中不如 <code>int temp</code> 快（现代编译器优化），主要用于面试展示对性质的理解。</p>
-</li>
-</ul>
+    <title>如何处理服务器内存不足</title>
+    <url>/2025/03/17/%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%86%85%E5%AD%98%E4%B8%8D%E8%B6%B3/</url>
+    <content><![CDATA[<p>这个解决方法主要面向那些明明有还有磁盘空间的服务器，但在conda装载环境时报错，显示内存不足的情况。一言以蔽之，这个问题是默认安装环境的路径不对。<br> <span id="more"></span><br>首先用df -h查看内存，这里的vda1,vda2就是两个磁盘。小的那个类似系统C盘的定位，大的那个有1T，但是我们运行报错：ERROR: Could not install packages due to an OSError: [Errno 28] No space left on device<br><img src="/images/%E5%86%85%E5%AD%98.png" alt="内存" title="内存"><br>这是因为，conda的环境默认装到vda2去了.我们就需要用命令修改默认安装包和环境的路径，请注意替换里面的&#x2F;root&#x2F;为你更大的那个磁盘的路径：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mkdir -p /root/autodl-tmp/conda/pkgs </span><br><span class="line">conda config --add pkgs_dirs /root/autodl-tmp/conda/pkgs </span><br><span class="line">mkdir -p /root/autodl-tmp/conda/envs </span><br><span class="line">conda config --add envs_dirs /root/autodl-tmp/conda/envs</span><br></pre></td></tr></table></figure>
+<p>顺便一提，Mounted on下面就代表磁盘的路径，我这里是&#x2F;mnt&#x2F;data，就用&#x2F;mnt&#x2F;data替换&#x2F;root。<br>但是，有时候你在修改了这个都还是报错磁盘不足，这是因为你只修改了conda的,如果你用的pip命令就可能导致再次出错。这里我们指定 pip 的临时文件夹就可以了</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export TMPDIR=&quot;/mnt/data/temp/&quot;//有空间的那个磁盘下随便写一个文件路径</span><br><span class="line">mkdir -p $TMPDIR</span><br><span class="line">pip~</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>至此解决问题，成功下载</p>
 ]]></content>
-      <tags>
-        <tag>日常学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>优秀博文整理</title>
-    <url>/2025/07/06/%E4%BC%98%E7%A7%80%E5%8D%9A%E6%96%87%E6%95%B4%E7%90%86/</url>
-    <content><![CDATA[<p>​				记录一些我看过的优秀博文。</p>
-<span id="more"></span>
-
-<p>​				1. <a href="https://mp.weixin.qq.com/s/Ov2m6vht9I2tIEmZC_yeYg">【避坑指南！AnythingLLM本地知识库用的还好吗？】部署后必看（一）问错问题&#x3D;入天坑（附社区答复及本地存储文件夹解读）</a>   这一篇博文解释了本地知识库的一些使用问题，其实也可以扩展来说，也就是大模型处理数据库的方式， 其实也是一样的。——在【不是理解整篇文章，而是进行相似度检索这一点上】</p>
-]]></content>
-      <tags>
-        <tag>日常学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于智能体的看法</title>
-    <url>/2025/04/28/%E5%85%B3%E4%BA%8E%E6%99%BA%E8%83%BD%E4%BD%93%E7%9A%84%E7%9C%8B%E6%B3%95/</url>
-    <content><![CDATA[<p>感觉所谓的智能体，实际上是以往工作的整合。不过也确实很擅长</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>关于智能体的体验</title>
-    <url>/2025/05/02/%E5%85%B3%E4%BA%8E%E6%99%BA%E8%83%BD%E4%BD%93%E7%9A%84%E4%BD%93%E9%AA%8C/</url>
-    <content><![CDATA[<p>2025年是智能体的元年，这一观点常被各大厂商提及。我查找了以往他们对于智能体的一些观点。看来也确实如此。</p>
-<p>比较有说服力的是OPENAI的创始人萨鲁曼的说法，在之前的纽约时报里，我看到对于大模型的财报并不理想。其实这方面我认为DS也是有影响的，他们推出的开源低成本大模型极大地促进了市场对于大模型的开发热情，另一方OPENAI必须为此降低成本以吸引用户。他们API和付费订阅就因此没那么容易赚钱了。必须寻找一个突破口—–也就是智能体。</p>
-<p>可以看到他们对于这个智能体是很有信心的，他们甚至敢说赚1750亿。没有比这个更直观的了，另一方面是智能体的进展。编程智能体是最多的，然后是检索引擎智能体。不得不说，编程类智能体感觉会导致就业进一步严峻。我必须跟进学习这部分才行。</p>
-]]></content>
-      <tags>
-        <tag>日常记录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>排序算法</title>
-    <url>/2026/01/17/%E5%8A%9B%E6%89%A3hot100%E7%BB%83%E4%B9%A0/</url>
-    <content><![CDATA[<p>今天集中攻克了 7 道高频面试题。重点总结了 LRU 的 O(1) 实现细节、链表归并排序的断链技巧，以及回文串的中心扩散法。但本次的主题是再记忆排序算法，做一个排序算法的归类和理解。</p>
-<span id="more"></span>
-
-<h1><span id="一-核心算法速查表">一、核心算法速查表</span></h1><table>
-<thead>
-<tr>
-<th><strong>算法名称</strong></th>
-<th><strong>平均时间</strong></th>
-<th><strong>最坏时间</strong></th>
-<th><strong>最好时间</strong></th>
-<th><strong>空间复杂度</strong></th>
-<th><strong>稳定性</strong></th>
-<th><strong>备注 (面试金句)</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>冒泡排序</strong></td>
-<td>$O(n^2)$</td>
-<td>$O(n^2)$</td>
-<td>$O(n)$</td>
-<td>$O(1)$</td>
-<td>稳定</td>
-<td>教学意义大于实战，但需知道如何优化（Flag标志位）。</td>
-</tr>
-<tr>
-<td><strong>选择排序</strong></td>
-<td>$O(n^2)$</td>
-<td>$O(n^2)$</td>
-<td>$O(n^2)$</td>
-<td>$O(1)$</td>
-<td>不稳定</td>
-<td>无论数据好坏都是 $O(n^2)$，因为交换次数少，写操作敏感时可用。</td>
-</tr>
-<tr>
-<td><strong>插入排序</strong></td>
-<td>$O(n^2)$</td>
-<td>$O(n^2)$</td>
-<td>$O(n)$</td>
-<td>$O(1)$</td>
-<td>稳定</td>
-<td><strong>数据量小或基本有序时，效率极高（甚至优于快排）。</strong></td>
-</tr>
-<tr>
-<td><strong>希尔排序</strong></td>
-<td>$O(n^{1.3})$</td>
-<td>$O(n^2)$</td>
-<td>$O(n)$</td>
-<td>$O(1)$</td>
-<td>不稳定</td>
-<td>插入排序的改进版，打破了 $O(n^2)$ 的魔咒，但现代库函数较少用。</td>
-</tr>
-<tr>
-<td><strong>归并排序</strong></td>
-<td>$O(n \log n)$</td>
-<td>$O(n \log n)$</td>
-<td>$O(n \log n)$</td>
-<td>$O(n)$</td>
-<td>稳定</td>
-<td><strong>由于稳定且性能稳定，常用于对象排序（如 Java 的 <code>Arrays.sort</code> 对对象用归并）。</strong></td>
-</tr>
-<tr>
-<td><strong>快速排序</strong></td>
-<td>$O(n \log n)$</td>
-<td>$O(n^2)$</td>
-<td>$O(n \log n)$</td>
-<td>$O(\log n)$</td>
-<td>不稳定</td>
-<td><strong>综合性能之王</strong>。最坏情况可通过随机化 Pivot 避免。</td>
-</tr>
-<tr>
-<td><strong>堆排序</strong></td>
-<td>$O(n \log n)$</td>
-<td>$O(n \log n)$</td>
-<td>$O(n \log n)$</td>
-<td>$O(1)$</td>
-<td>不稳定</td>
-<td><strong>空间复杂度 $O(1)$ 的最强王者</strong>。常用于 Top K 问题。</td>
-</tr>
-<tr>
-<td><strong>计数排序</strong></td>
-<td>$O(n+k)$</td>
-<td>$O(n+k)$</td>
-<td>$O(n+k)$</td>
-<td>$O(n+k)$</td>
-<td>稳定</td>
-<td>牺牲空间换时间，仅适用于范围较小的整数。</td>
-</tr>
-</tbody></table>
-<h2><span id="11算法的稳定性">1.1算法的稳定性</span></h2><p>稳定：冒泡排序、插入排序、归并排序、基数排序（冒插归基稳定）</p>
-<p>不稳定：快速排序，希尔排序，选择排序，堆排序（快希选堆不稳定）</p>
-<h2><span id="二-算法原理解释">二、算法原理解释</span></h2><h2><span id="1冒泡排序">1.冒泡排序</span></h2><p><strong>核心逻辑</strong>：</p>
-<ol>
-<li>从头开始，两两比较，如果前一个比后一个大，就交换。</li>
-<li>一轮扫描结束后，<strong>最大值</strong>一定被移到了最后一位（就位）。</li>
-<li>重复上述过程，直到没有元素需要交换。</li>
-</ol>
-<h2><span id="2-选择排序">2. 选择排序</span></h2><p><strong>核心逻辑</strong>：</p>
-<ol>
-<li>在未排序序列中找到最小元素，存放到排序序列的起始位置。</li>
-<li>再从剩余未排序元素中继续寻找最小元素，然后放到已排序序列的末尾。</li>
-</ol>
-<h2><span id="3插入排序">3.插入排序</span></h2><p><strong>核心逻辑</strong>：</p>
-<ol>
-<li>将数组分为“已排序区间”和“未排序区间”。</li>
-<li>每次从未排序区间取出一个元素，在已排序区间从后往前扫描。</li>
-<li>如果已排序的元素比它大，就<strong>向后移动</strong>，直到找到合适的位置插入。</li>
-</ol>
-<h2><span id="4快速排序">4.快速排序</span></h2><p><strong>核心逻辑</strong>：</p>
-<ol>
-<li><strong>选基准</strong>：随便挑一个数（通常是第一个、最后一个或中间）作为 Pivot。</li>
-<li><strong>分区 (Partition)<strong>：把比 Pivot 小的扔左边，比 Pivot 大的扔右边。这一步做完，</strong>Pivot 就在它最终应该在的位置上了</strong>（这是快排最关键的性质）。</li>
-<li><strong>递归</strong>：对左右两边继续重复上述过程。</li>
-</ol>
-<h2><span id="5归并排序">5.归并排序</span></h2><p><strong>核心逻辑</strong>：</p>
-<ol>
-<li>**分 (Divide)**：递归地把当前序列平均分割成两半，直到子序列长度为 1（由一个元素组成的序列天然有序）。</li>
-<li>**治 (Conquer)**：将两个有序的子序列合并成一个有序序列（双指针法：谁小取谁，放入新数组）。</li>
-</ol>
-<p><strong>面试价值</strong>：它是唯一一个<strong>稳定</strong>且时间复杂度永远是 $O(n \log n)$ 的算法，常用于对象排序或外部排序（内存装不下时）。</p>
-<h2><span id="6堆排序">6.堆排序</span></h2><p><strong>核心逻辑</strong>：</p>
-<ol>
-<li><strong>建堆</strong>：把数组构建成一个<strong>大顶堆</strong>（根节点最大）。</li>
-<li><strong>交换</strong>：把堆顶（最大值）和数组最后一个元素交换（最大值归位）。</li>
-<li>**堆化 (Heapify)**：把剩下的 $n-1$ 个元素重新调整为大顶堆。</li>
-<li>重复步骤 2-3。</li>
-</ol>
-<p><strong>面试价值</strong>：不需要额外空间 ($O(1)$)，但因为内存跳跃访问（索引 $i$ 的孩子在 $2i$），缓存命中率不如快排，所以实战中比快排慢。</p>
-<p>图片例子来源：<a href="https://www.bilibili.com/video/BV1sek9YBELe/?spm_id_from=333.337.search-card.all.click&vd_source=ecbe42ffb25fea0da636165433fb75d6">4分钟学堆排序(手机动画版)_哔哩哔哩_bilibili</a></p>
-<p>1.将数组从左到右填入二叉树中</p>
-<p><img src="/2026/01/17/%E5%8A%9B%E6%89%A3hot100%E7%BB%83%E4%B9%A0/image-20260117154512059.png" alt="image-20260117154512059"></p>
-<p>2.调整为大根堆，方法是找到最后一个非叶子节点int()(9&#x2F;2-1)，如果子节点比他大，那就swap一下。直到自己到达叶子节点。最后从3，2，1，0的顺序依次调整。做成最大堆</p>
-<p><img src="/2026/01/17/%E5%8A%9B%E6%89%A3hot100%E7%BB%83%E4%B9%A0/image-20260117154722378.png" alt="image-20260117154722378"></p>
-<p>3.最大值通过首尾交换的方式出栈，接下来就是对【0，7】再次进行操作</p>
-<p><img src="/2026/01/17/%E5%8A%9B%E6%89%A3hot100%E7%BB%83%E4%B9%A0/image-20260117155026446.png" alt="image-20260117155026446"></p>
-<p><img src="/2026/01/17/%E5%8A%9B%E6%89%A3hot100%E7%BB%83%E4%B9%A0/image-20260117154957961.png" alt="image-20260117154957961"></p>
-<h2><span id="7希尔排序">7.希尔排序</span></h2><p><strong>核心逻辑</strong>：</p>
-<p>插入排序在处理大规模乱序数据时很慢（因为一次只能移动一位）。</p>
-<p>希尔排序先让数组中<strong>间隔为 Gap</strong> 的元素进行插入排序（宏观调控）。</p>
-<p>不断缩小 Gap，直到 Gap&#x3D;1，此时数组已经基本有序，最后做一次插入排序即可。</p>
-<h2><span id="8-基数排序">8. 基数排序</span></h2><p><strong>一句话原理</strong>：<strong>非比较排序</strong>。按位（个位、十位、百位…）进行分配和收集。</p>
-<p><strong>核心逻辑</strong>：</p>
-<ol>
-<li>准备 10 个桶（0-9）。</li>
-<li>先按<strong>个位</strong>数字，把元素扔进对应的桶里，然后按顺序倒出来（此时个位有序）。</li>
-<li>再按<strong>十位</strong>数字，把元素扔进桶里，倒出来。</li>
-<li>重复直到最高位。</li>
-</ol>
-<p><strong>要求</strong>：必须从低位到高位（LSD），且每一轮入桶必须使用<strong>稳定</strong>的排序算法（通常是计数排序的变种），否则高位的排序会打乱低位的顺序。</p>
-]]></content>
-      <tags>
-        <tag>日常学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>力扣学习记录lambda表达式</title>
-    <url>/2026/01/22/%E5%8A%9B%E6%89%A3%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
-    <content><![CDATA[<p>在做 LeetCode 347（前 K 个高频元素）时，我最开始的思路是简单的“统计频率 -&gt; 找出频率大于 k 的数”。但后来发现题目要求的是<strong>“频率最高的 k 个数”</strong>，这是一个经典的 Top K 问题。</p>
-<p>在这个过程中，我对 Java 的 <code>PriorityQueue</code>（优先队列）、Lambda 表达式以及堆排序的本质有了全新的认识。</p>
-<span id="more"></span>
-
-<p>先贴结果代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import java.util.*;</span><br><span class="line"></span><br><span class="line">class Solution &#123;</span><br><span class="line">    public int[] topKFrequent(int[] nums, int k) &#123;</span><br><span class="line">        // 1. 使用 HashMap 统计每个数字出现的频率</span><br><span class="line">        Map&lt;Integer, Integer&gt; counts = new HashMap&lt;&gt;();</span><br><span class="line">        for (int num : nums) &#123;</span><br><span class="line">            counts.put(num, counts.getOrDefault(num, 0) + 1);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // 2. 创建优先队列（小顶堆）</span><br><span class="line">        // 核心逻辑：(a, b) -&gt; counts.get(a) - counts.get(b)</span><br><span class="line">        // 含义：按照频率从小到大排。频率低的在堆顶，随时准备被踢走。</span><br><span class="line">        PriorityQueue&lt;Integer&gt; pq = new PriorityQueue&lt;&gt;((a, b) -&gt; counts.get(a) - counts.get(b));</span><br><span class="line"></span><br><span class="line">        // 3. 遍历 Map，维护一个大小为 k 的堆</span><br><span class="line">        for (int num : counts.keySet()) &#123;</span><br><span class="line">            pq.offer(num); // 入队</span><br><span class="line">            // 如果堆大了，就把频率最小的（堆顶）弹出去</span><br><span class="line">            if (pq.size() &gt; k) &#123;</span><br><span class="line">                pq.poll();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // 4. 输出结果</span><br><span class="line">        int[] res = new int[k];</span><br><span class="line">        for (int i = 0; i &lt; k; i++) &#123;</span><br><span class="line">            res[i] = pq.poll();</span><br><span class="line">        &#125;</span><br><span class="line">        return res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这个代码里面，我最开始很不理解，这一个确实是我以前没怎么见过，后来理解了这是一种特殊的增加规则的的方法。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">PriorityQueue&lt;Integer&gt; pq = new PriorityQueue&lt;&gt;((a, b) -&gt; counts.get(a) - counts.get(b));</span><br></pre></td></tr></table></figure>
-
-<p>这行代码并不只是为了“排序”，它是在<strong>“立规矩”</strong>。</p>
-<ul>
-<li>**<code>a</code> 和 <code>b</code>**：是队列里的数字（选手）。</li>
-<li>**<code>counts.get(...)</code>**：是比较的标准（看频率，不看数字本身）。</li>
-<li><strong>返回值</strong>：虽然写的是减法算式，但 Java 接收到的是一个<strong>整数（int）</strong>。<ul>
-<li>负数：<code>a</code> 轻（上浮&#x2F;排前面）。</li>
-<li>正数：<code>a</code> 重（下沉&#x2F;排后面）。</li>
-</ul>
-</li>
-</ul>
-<p>从而保证了每次add都会维护，把小数值给上浮。</p>
-<h2><span id="2comparator-万能口诀">2.Comparator 万能口诀</span></h2><p>根据学习，永远是写（a,b）根据目标效果，选择是a-b还是b-a</p>
-<table>
-<thead>
-<tr>
-<th><strong>目标效果</strong></th>
-<th><strong>核心写法</strong></th>
-<th><strong>记忆口诀</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>小</strong>数值在堆顶 &#x2F; 排前面</td>
-<td><code>a - b</code></td>
-<td><strong>前减后</strong>（我减你）</td>
-</tr>
-<tr>
-<td><strong>大</strong>数值在堆顶 &#x2F; 排前面</td>
-<td><code>b - a</code></td>
-<td><strong>后减前</strong>（你减我）</td>
-</tr>
-<tr>
-<td><strong>String 长度短</strong>在堆顶</td>
-<td><code>a.length() - b.length()</code></td>
-<td>前减后</td>
-</tr>
-<tr>
-<td><strong>String 字典序</strong>靠前</td>
-<td><code>a.compareTo(b)</code></td>
-<td>顺着比</td>
-</tr>
-</tbody></table>
-<p>而对于一些复杂的情况，我们可以在里面增加代码串。逻辑是一样的，返回的数值小于0，就是选择数对的A上浮</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(a, b) -&gt; &#123;</span><br><span class="line">    int freqCompare = counts.get(a) - counts.get(b);</span><br><span class="line">    if (freqCompare != 0) &#123;</span><br><span class="line">        return freqCompare; // 频率不同：按频率小顶堆（小的在顶）</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        // 频率相同：进入这里的瞬间，freqCompare 已经是 0 了，不能用了！</span><br><span class="line">        // 题目要求：数字大的在堆顶 -&gt; 大顶堆逻辑 -&gt; 后减前</span><br><span class="line">        return b - a;  // &lt;--- 这里才是正确答案</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2><span id="3扩展用法">3.扩展用法</span></h2><p>不止是这个小根堆，大根堆场景，我们还能用在别的地方：</p>
-<h3><span id="31-给数组x2f列表排序-arrayssort-x2f-collectionssort">3.1 给数组&#x2F;列表排序 (<code>Arrays.sort</code> &#x2F; <code>Collections.sort</code>)</span></h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">List&lt;String&gt; list = new ArrayList&lt;&gt;(Arrays.asList(&quot;apple&quot;, &quot;hi&quot;, &quot;banana&quot;));</span><br><span class="line"></span><br><span class="line">// 旧写法：Collections.sort(list, new Comparator...);</span><br><span class="line">// 新写法（Lambda）：</span><br><span class="line">list.sort((a, b) -&gt; a.length() - b.length()); </span><br><span class="line"></span><br><span class="line">System.out.println(list); // 输出 [hi, apple, banana]</span><br></pre></td></tr></table></figure>
-
-<h3><span id="32-给二维数组排序">3.2 给二维数组排序</span></h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// intervals 是个二维数组，里面的元素是 int[] (一维数组)</span><br><span class="line">// 所以这里的 a 和 b 代表的是每一行，即 &#123;1,3&#125; 和 &#123;2,6&#125;</span><br><span class="line">Arrays.sort(intervals, (a, b) -&gt; a[0] - b[0]);</span><br></pre></td></tr></table></figure>
-
-<h3><span id="33-自动排序的-map-和-set-treemap-x2f-treeset">3.3 自动排序的 Map 和 Set (<code>TreeMap</code> &#x2F; <code>TreeSet</code>)</span></h3><p>这两个数据结构和 <code>PriorityQueue</code> 是亲兄弟。</p>
-<ul>
-<li><code>PriorityQueue</code>：只保证<strong>堆顶</strong>是有序的。</li>
-<li><code>TreeMap</code> &#x2F; <code>TreeSet</code>：保证<strong>内部所有元素永远</strong>是有序的。</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 这里的 (a, b) 指的是 Key</span><br><span class="line">Map&lt;Integer, String&gt; map = new TreeMap&lt;&gt;((a, b) -&gt; b - a);</span><br><span class="line"></span><br><span class="line">map.put(1, &quot;A&quot;);</span><br><span class="line">map.put(3, &quot;B&quot;);</span><br><span class="line">map.put(2, &quot;C&quot;);</span><br><span class="line"></span><br><span class="line">// 遍历时，会自动按 Key 从大到小出：3 -&gt; 2 -&gt; 1</span><br><span class="line">for(Integer key : map.keySet()) &#123;</span><br><span class="line">    System.out.println(key); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2><span id="4-java-stream-流操作-max-min-sorted">4.  Java Stream 流操作 (<code>.max</code>, <code>.min</code>, <code>.sorted</code>)</span></h2><p>Java 8 的流式编程极其依赖这个写法。</p>
-<h4><span id="场景在一堆对象里找最的那一个">场景：在一堆对象里找“最…”的那一个</span></h4><p>假设你有一堆 <code>Student</code> 对象，想找<strong>分数最高</strong>的那个。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Student &#123; String name; int score; &#125;</span><br><span class="line">List&lt;Student&gt; students = ...;</span><br><span class="line"></span><br><span class="line">// 找最大值 (max)</span><br><span class="line">// 这里的 max 需要你告诉它：什么叫“大”？</span><br><span class="line">// 答：分数 (a.score - b.score) 越大，就越大</span><br><span class="line">Student bestStudent = students.stream()</span><br><span class="line">    .max((a, b) -&gt; a.score - b.score) </span><br><span class="line">    .get();</span><br></pre></td></tr></table></figure>
-
-<h2><span id="5总结">5.总结</span></h2><table>
-<thead>
-<tr>
-<th><strong>场景</strong></th>
-<th><strong>代码片段</strong></th>
-<th><strong>作用</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>优先队列</strong></td>
-<td><code>new PriorityQueue&lt;&gt;((a, b) -&gt; a - b)</code></td>
-<td>决定<strong>谁在堆顶</strong></td>
-</tr>
-<tr>
-<td><strong>数组排序</strong></td>
-<td><code>Arrays.sort(arr, (a, b) -&gt; a - b)</code></td>
-<td>决定<strong>谁排前面</strong></td>
-</tr>
-<tr>
-<td><strong>列表排序</strong></td>
-<td><code>list.sort((a, b) -&gt; a - b)</code></td>
-<td>决定<strong>谁排前面</strong></td>
-</tr>
-<tr>
-<td><strong>Tree结构</strong></td>
-<td><code>new TreeMap&lt;&gt;((a, b) -&gt; a - b)</code></td>
-<td>决定<strong>Key的存储顺序</strong></td>
-</tr>
-<tr>
-<td><strong>流操作</strong></td>
-<td><code>stream.max((a, b) -&gt; a - b)</code></td>
-<td>决定<strong>谁算最大值</strong></td>
-</tr>
-</tbody></table>
-]]></content>
-      <tags>
-        <tag>日常学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大模型是怎么做到长上下文扩展的</title>
-    <url>/2025/05/22/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%98%AF%E6%80%8E%E4%B9%88%E5%81%9A%E5%88%B0%E9%95%BF%E4%B8%8A%E4%B8%8B%E6%96%87%E6%89%A9%E5%B1%95%E7%9A%84/</url>
-    <content><![CDATA[<p>一直以来我都很疑惑，为什么大模型可以从4K学到8K又到128K呢，今天看来视频才有一些想法。<br> <span id="more"></span><br>1.大模型拟合结果依赖随机梯度算法，如果一次性输出128K的文本进行拟合，那就会对128K倍的权重进行拟合，考虑到自注意力计算矩阵是输入增长的平方。直接进行拟合导致的计算消耗是难以估计的。</p>
-<p>2.因此，我们就先让模型学习少量文本。这时候模型的参数已经得到一定的调整了，当我们再扩大这个文本长度时，他会有一个基准线在，就可以以那个基准为基础进行二次拟合。如果我们把8K的参数全部冻结，训练128K的文本矩阵加到8K的参数矩阵上去，那这个实际上就类似LORA了。这也是LORA微调的核心，基础大模型不动，少量修改附加参数矩阵。</p>
-<p>3.再一个增大模型上下文长度的方法就是数据分片了，学习完前面的内容再把学到的东西传递下去</p>
-<p>4.如果从架构入手也是可以的，比如经典的局部注意力+全局注意力的形式，这一技术我们可以在Gemma2到Gemma3的架构改进中看到。</p>
-]]></content>
-      <tags>
-        <tag>日常记录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>医疗助手大模型的微调</title>
-    <url>/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/</url>
-    <content><![CDATA[<p>在之前的博客助手大模型中，我感受到模型效果受参数影响极大，一些8b回答起来磕磕绊绊的问题，14b的模型就能顺利回答。固然模型的参数是一个要点，但我认为以后对于小模型的需求也不会减少，这就需要用微调的方式让模型垂直化，专业化。因此，我的下一个目标在大模型的微调上，由于我的课题和医疗方向比较相关的，这方面的微调数据集 (华佗GPT) 又有，因此，我计划从这方面入手，做出一个医疗领域的垂直优化大模型，旨在回答医疗知识，降低有害错误问题的发生率</p>
-<span id="more"></span>
-
-<h1><span id="1模型选择">1.模型选择</span></h1><h1><span id="2数据集选择">2.数据集选择</span></h1><p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828221748287.png" alt="image-20250828221748287"></p>
-<p>链接：<a href="https://huggingface.co/datasets?search=medical">https://huggingface.co/datasets?search=medical</a></p>
-<p>先确定目的，SFT阶段我们主要任务是让模型博学起来，能够理解医疗领域的术语、实体以及常见的对话模式就算成功，使用华佗GPT数据集，由香港中文大学（深圳）和深圳市大数据研究院联合开源了专用于医疗领域的复杂大模型。这样就使用他们给出的SFT数据集：<a href="https://huggingface.co/datasets/FreedomIntelligence/medical-o1-reasoning-SFT">FreedomIntelligence&#x2F;medical-o1-reasoning-SFT · Datasets at Hugging Face</a></p>
-<p>折磨了一下下完了，这里需要注意，安装前要先下两个库，然后用huggingface-cli下载会快很多：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install -U &quot;huggingface_hub[cli]&quot;</span><br><span class="line">#高速传输库 hf_transfer</span><br><span class="line">pip install -U hf_transfer</span><br></pre></td></tr></table></figure>
-
-<p>由于我的服务器内网限制严格，只能win上面安装，做了这两部我还要手动加上Path：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">WARNING: The scripts hf.exe... are installed in  &#x27;C:\Users\origin\AppData\Roaming\Python\Python312\Scripts&#x27;  which is not on PATH.</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828230911267.png" alt="image-20250828230911267"></p>
-<p>然后在新建造哪里输入上面的路径信息 <code>&#39;C:\Users\origin\AppData\Roaming\Python\Python312\Scripts&#39;</code> </p>
-<p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828231120276.png" alt="image-20250828231120276"></p>
-<p>重新启动后就可以正常下载了</p>
-<p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828225951739.png" alt="image-20250828225951739"></p>
-<h1><span id="参考资料">参考资料：</span></h1><p><a href="https://zhuanlan.zhihu.com/p/652615133">推荐收藏！23个医疗领域微调大模型微调及数据汇总！ - 知乎</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/15635537603">【论文解读】HuatuoGPT-o1：用CoT和RL增强医疗LLM的复杂推理能力 - 知乎</a></p>
-<p><a href="https://github.com/FreedomIntelligence/HuatuoGPT">FreedomIntelligence&#x2F;HuatuoGPT: HuatuoGPT, Towards Taming Language Models To Be a Doctor. (An Open Medical GPT)</a></p>
-]]></content>
-      <tags>
-        <tag>实习准备</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>图片优化思路</title>
-    <url>/2025/10/23/%E5%9B%BE%E7%89%87%E4%BC%98%E5%8C%96%E6%80%9D%E8%B7%AF/</url>
-    <content><![CDATA[<p>这一个部分还是需要仔细思考，想来应该也不止是用在图片优化上，我认为在更多的地方都是可以使用这个技术的。</p>
-<span id="more"></span>
-
-<h1><span id="一-图片查询优化">一、图片查询优化</span></h1><p>首先确定什么样的数据适合缓存：</p>
-<ol>
-<li>高频访问的数据：如系统首页、热门推荐内容等。</li>
-<li>计算成本较高的数据：如复杂查询结果、大量数据的统计结果。</li>
-<li>允许短时间延迟的数据：如不需要实时更新的排行榜、图片列表等。</li>
-</ol>
-<h2><span id="redis-分布式缓存">Redis 分布式缓存</span></h2><p>分布式是指将缓存数据储存在多台服务器上，以便在高并发场景下实现更高的吞吐量和容错性。也可以把同一份数据存储到多个服务器去，以实现数据的安全性.</p>
-<p>作为分布式缓存的主流方案，REDIS具备以下几个优势：</p>
-<ul>
-<li><p>高性能：基于内存操作，访问速度极快。<strong>单节点 Redis 的读写 QPS 可达 10w 次每秒！</strong>而且<strong>Redis 的核心网络I&#x2F;O和命令执行是单线程的</strong>，避免了多线程上下文切换和锁竞争所带来的巨大性能开销。——我的理解是单线程执行不是重点，这个线程运行的方式，只询问不等待才是重点。从而让Redis 具备了用一个线程同时处理成千上万个网络连接的能力。</p>
-</li>
-<li><p>丰富的数据结构：支持字符串、列表、集合、哈希、位图等，适用于各种数据结构存储。</p>
-</li>
-<li><p>分布式支持：<strong>高可用和高扩展</strong>可以通过 Redis Cluster 构建高可用、高性能的分布式缓存，还提供哨兵集群机制提升可用性、提供分片集群机制提高可扩展性。</p>
-<p>这里的可扩展性指的是系统应对“增长”的能力。可以是用户量暴增、数据量暴增、或请求量暴增。我们可以增加机器或者机器升级来解决</p>
-<p>高可用性指的是系统抵抗故障的能力，解决的核心手段是冗余</p>
-</li>
-</ul>
-<h2><span id="什么是-redis-cluster">什么是 Redis Cluster？</span></h2><p><strong>Redis Cluster (集群模式)</strong> 是 Redis 官方提供的<strong>分布式解决方案</strong>。</p>
-<p>它的核心目标是解决两个问题：</p>
-<ol>
-<li>**数据分片 (Sharding)**：将海量数据分散存储到多个 Redis 节点上，突破单台服务器的内存和性能瓶颈。</li>
-<li>**高可用 (High Availability)**：当集群中的某个主节点宕机时，它的从节点可以自动顶上，保证服务继续可用。</li>
-</ol>
-<p>为了实现这个目标，Redis Cluster 采用了“**哈希槽 (Hash Slot)**”的设计：</p>
-<ul>
-<li><strong>16384 个哈希槽</strong>：Redis Cluster 将整个数据库（逻辑上）分成了 16384 （2的14次方）个哈希槽。</li>
-<li><strong>Key 与槽的映射</strong>：当你存入一个 key 时，Redis 会用 <code>CRC16(key) % 16384</code> 算法计算这个 key 应该属于哪个槽。</li>
-<li><strong>槽与节点的分配</strong>：集群启动时，这 16384 个槽会被分配给集群中所有的**主节点 (Master)**。例如，3 个主节点，可能节点 A 负责 0-5500 槽，节点 B 负责 5501-11000 槽，节点 C 负责 11001-16383 槽。</li>
-<li><strong>高可用（主从）</strong>：每个主节点都会有至少一个<strong>从节点 (Slave)</strong> 来复制它的数据。当主节点 A 宕机，它的从节点 A1 会被集群选举为新的主节点，接管 0-5500 槽，服务不会中断。</li>
-<li><strong>去中心化</strong>：集群中的所有节点都互相连接（通过Gossip协议），它们都知道哪个槽由哪个节点负责。当客户端连接任意一个节点并尝试操作一个不归它管的 key 时，它会告诉客户端“请重定向到 XX 节点”，整个过程对客户端是透明的。</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th><strong>方案</strong></th>
-<th><strong>Memcached</strong></th>
-<th>**Redis **</th>
-<th><strong>Hazelcast</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>定位</strong></td>
-<td>纯内存对象缓存</td>
-<td>数据结构服务器</td>
-<td>内存数据网格 (IMDG)</td>
-</tr>
-<tr>
-<td><strong>数据结构</strong></td>
-<td>仅字符串 (Key-Value)</td>
-<td>丰富 (String, Hash, List, Set…)</td>
-<td>丰富 (Map, Queue, Set, Topic…)</td>
-</tr>
-<tr>
-<td><strong>持久化</strong></td>
-<td><strong>不支持</strong></td>
-<td>支持 (RDB &#x2F; AOF)</td>
-<td>支持</td>
-</tr>
-<tr>
-<td><strong>集群</strong></td>
-<td>客户端实现（简单）</td>
-<td>需专门配置 (Cluster &#x2F; Sentinel)</td>
-<td><strong>自动发现，P2P 组网</strong></td>
-</tr>
-<tr>
-<td><strong>核心优点</strong></td>
-<td>简单、高性能 (多线程 Get&#x2F;Set)</td>
-<td>功能全面、生态强大</td>
-<td>Java 原生、集群管理简单</td>
-</tr>
-<tr>
-<td><strong>适用场景</strong></td>
-<td>数据库查询、API 响应的纯缓存</td>
-<td>缓存、分布式锁、消息队列、计数器</td>
-<td>Java 微服务、分布式计算</td>
-</tr>
-</tbody></table>
-<p>顺便列一下都是数据库且用得比较多的MYSQL，这两个的一切区别就是存放位置，这直接导致了他们在性能，数据持久和用途上的差异：MySQL 遵循 ACID 原则，能保证事务的原子性和一致性，数据可靠性高；Redis专为高速缓存和实时操作设计‌。</p>
-<table>
-<thead>
-<tr>
-<th><strong>特性</strong></th>
-<th><strong>MySQL (关系型数据库)</strong></th>
-<th><strong>Redis (内存数据库)</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>存储位置</strong></td>
-<td><strong>磁盘 (Disk-based)</strong></td>
-<td><strong>内存 (In-Memory)</strong></td>
-</tr>
-<tr>
-<td><strong>性能&#x2F;速度</strong></td>
-<td>较慢（受限于磁盘 I&#x2F;O）</td>
-<td><strong>极快</strong>（受限于内存速度）</td>
-</tr>
-<tr>
-<td><strong>数据持久化</strong></td>
-<td><strong>强持久化</strong>（数据默认永久保存）</td>
-<td>弱持久化（默认是临时的，需配置 RDB&#x2F;AOF 才能重启后恢复）</td>
-</tr>
-<tr>
-<td><strong>数据模型</strong></td>
-<td>结构化 (表、行、列)，使用 <code>SQL</code></td>
-<td>键值对 (Key-Value)，支持丰富的数据结构 (String, Hash, List)</td>
-</tr>
-<tr>
-<td><strong>容量限制</strong></td>
-<td>巨大（受限于硬盘大小, TB 级）</td>
-<td>有限（受限于内存大小, GB 级）</td>
-</tr>
-<tr>
-<td><strong>主要角色</strong></td>
-<td><strong>“数据仓库” (System of Record)</strong></td>
-<td><strong>“高速缓存” (Cache) &#x2F; “工作台”</strong></td>
-</tr>
-</tbody></table>
-<p>自己测试了下，使用带缓存的查询，第一次是470ms，第二次是7ms。不使用带缓存的查询是50ms，第二次是10ms，之所以会有这种情况，是因为mysql也有自己的缓存。</p>
-<h1><span id="解决缓存常见问题">解决缓存常见问题</span></h1><p>使用缓存时，一般要注意下面几个问题：</p>
-<ol>
-<li>缓存击穿：某些 <strong>热点数据</strong> 在缓存过期后，大量请求直接打到数据库。</li>
-</ol>
-<p>​	解决方案：设置热点数据的超长过期时间，或使用互斥锁（如 Redisson）控制缓存刷新。</p>
-<ol start="2">
-<li>缓存穿透：用户频繁请求不存在的数据，导致大量的请求直接触发数据库查询。</li>
-</ol>
-<p>​	解决方案：对无效查询结果也进行缓存（如设置空值缓存），或者使用布隆过滤器。</p>
-<ol start="3">
-<li>缓存雪崩：大量缓存同时过期，导致请求打到数据库，系统崩溃。</li>
-</ol>
-<ol start="4">
-<li>缓存一致性:你在“写”（增、删、改）操作时，只更新了数据库，但<strong>忘记</strong>了去处理缓存。</li>
-</ol>
-<p>​	解决方案: 先更新数据库，再删除缓存</p>
-<table>
-<thead>
-<tr>
-<th align="center"><strong>问题</strong></th>
-<th align="center"><strong>现象</strong></th>
-<th align="center"><strong>解决方案</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><strong>缓存穿透</strong></td>
-<td align="center">查一个<strong>不存在</strong>的数据</td>
-<td align="center">1. 缓存空值  2. 布隆过滤器</td>
-</tr>
-<tr>
-<td align="center"><strong>缓存击穿</strong></td>
-<td align="center"><strong>一个热点</strong>数据过期</td>
-<td align="center">1. 分布式锁 (Mutex)  2. 逻辑过期</td>
-</tr>
-<tr>
-<td align="center"><strong>缓存雪崩</strong></td>
-<td align="center"><strong>一大片</strong>数据同时过期 &#x2F; Redis 宕机</td>
-<td align="center">1. <strong>随机过期时间</strong> (你已在用)  2. Redis 高可用 (集群&#x2F;哨兵)</td>
-</tr>
-<tr>
-<td align="center"><strong>缓存一致性</strong></td>
-<td align="center">数据库和缓存<strong>数据不同</strong></td>
-<td align="center">1. <strong>先更新数据库，再删除缓存</strong></td>
-</tr>
-</tbody></table>
-]]></content>
-      <tags>
-        <tag>就业准备</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大模型的演变趋势</title>
-    <url>/2025/05/14/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%BC%94%E5%8F%98%E8%B6%8B%E5%8A%BF/</url>
-    <content><![CDATA[<p>我认为大模型的趋势有俩，轻量化和多模态化。<br> <span id="more"></span><br>轻量化说的就是MOE和稀疏自注意力。大家都在往这个方向走。而且现在似乎再MOE这一点上已经达成一致了。考虑到MOE能够大幅度减少推理成本，这是很合理的。</p>
-<p>另一个问题是自注意力机制。最关键的这个部分反而是没有怎么改动的，从MHA,GQA,单个子注意力。这些都是缩减规模，但是性能肉眼可见的在掉，虽然分组倒是能行，但效果还是差了点。这一点来说DS的新注意力就很强了，MLA。和ROPE混合起来使用，保留了自注意力的效果还减少了计算量，明显的有在另辟蹊径。</p>
-<p>然后就是多模态化，道也不用多说。这些本质都是为了后续的硬件做服务。我感觉现在的大模型卷到一定程度，确实是都走向应用去了，就是大模型始终只能当辅助。</p>
-<p>虽然不好说这个时间能持续多久就是了</p>
-]]></content>
-      <tags>
-        <tag>日常记录</tag>
-      </tags>
   </entry>
   <entry>
     <title>大模型训练消耗显存</title>
@@ -2476,24 +2497,10 @@ class UserService &#123;
       </tags>
   </entry>
   <entry>
-    <title>大模型的输入</title>
-    <url>/2025/05/16/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%BE%93%E5%85%A5/</url>
-    <content><![CDATA[<p>虽然我以前就知道大模型的输入计算很坑，但还是没想到这么坑<br> <span id="more"></span><br>首先输入的文本【1234】【567】，输入【567】的时候之前的【1234】和模型对他的回答也会加进来。</p>
-<p>其次是联网功能，这玩意就牛逼了，上不封顶。就算是直接选择前面三个网页，也得是他去读了才行。麻了，同样的，这部分也要算你头上</p>
-<p>最后是提示词，你输入的格式规范之类的东西也得通过提示词 来实现，一样的，这个也是要Token的。这三样累计再一次，第二次开始的对话消耗就大的可怕，如果是使用智能体。这个消耗就更可怕了。大模型的规划可不是人类能理解的</p>
-]]></content>
-      <tags>
-        <tag>日常记录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何处理服务器内存不足</title>
-    <url>/2025/03/17/%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%86%85%E5%AD%98%E4%B8%8D%E8%B6%B3/</url>
-    <content><![CDATA[<p>这个解决方法主要面向那些明明有还有磁盘空间的服务器，但在conda装载环境时报错，显示内存不足的情况。一言以蔽之，这个问题是默认安装环境的路径不对。<br> <span id="more"></span><br>首先用df -h查看内存，这里的vda1,vda2就是两个磁盘。小的那个类似系统C盘的定位，大的那个有1T，但是我们运行报错：ERROR: Could not install packages due to an OSError: [Errno 28] No space left on device<br><img src="/images/%E5%86%85%E5%AD%98.png" alt="内存" title="内存"><br>这是因为，conda的环境默认装到vda2去了.我们就需要用命令修改默认安装包和环境的路径，请注意替换里面的&#x2F;root&#x2F;为你更大的那个磁盘的路径：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mkdir -p /root/autodl-tmp/conda/pkgs </span><br><span class="line">conda config --add pkgs_dirs /root/autodl-tmp/conda/pkgs </span><br><span class="line">mkdir -p /root/autodl-tmp/conda/envs </span><br><span class="line">conda config --add envs_dirs /root/autodl-tmp/conda/envs</span><br></pre></td></tr></table></figure>
-<p>顺便一提，Mounted on下面就代表磁盘的路径，我这里是&#x2F;mnt&#x2F;data，就用&#x2F;mnt&#x2F;data替换&#x2F;root。<br>但是，有时候你在修改了这个都还是报错磁盘不足，这是因为你只修改了conda的,如果你用的pip命令就可能导致再次出错。这里我们指定 pip 的临时文件夹就可以了</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export TMPDIR=&quot;/mnt/data/temp/&quot;//有空间的那个磁盘下随便写一个文件路径</span><br><span class="line">mkdir -p $TMPDIR</span><br><span class="line">pip~</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>至此解决问题，成功下载</p>
+    <title>如何让新创建的用户使用当前的conda</title>
+    <url>/2025/03/24/%E5%A6%82%E4%BD%95%E8%AE%A9%E6%96%B0%E5%88%9B%E5%BB%BA%E7%9A%84%E7%94%A8%E6%88%B7%E4%BD%BF%E7%94%A8%E5%BD%93%E5%89%8D%E7%9A%84conda/</url>
+    <content><![CDATA[<p>首先创建新用户到你的路径。然后设置密码<br>    sudo useradd &lt;用户名&gt; -m -d &lt;你的路径&gt; -s &#x2F;bin&#x2F;bash<br>    chown &lt;用户名&gt;:&lt;用户名&gt; -R &lt;你的路径&gt;<br>    passwd username</p>
+<p>然后复制.bashrc到自己的目录去，.bashrc可以在自己的目录里面找。激活前记得先cd到自己的新目录<br>    sudo cp .bashrc &#x2F;home&#x2F;newuser&#x2F;.bashrc<br>    source ~&#x2F;.bashrc<br>这里用你的旧用户的路径替换&lt;&#x2F;root&#x2F;conda&gt;<br>    chmod 755 &lt;&#x2F;root&#x2F;conda&gt;</p>
 ]]></content>
   </entry>
   <entry>
@@ -2568,13 +2575,6 @@ class UserService &#123;
       <tags>
         <tag>日常学习</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>如何让新创建的用户使用当前的conda</title>
-    <url>/2025/03/24/%E5%A6%82%E4%BD%95%E8%AE%A9%E6%96%B0%E5%88%9B%E5%BB%BA%E7%9A%84%E7%94%A8%E6%88%B7%E4%BD%BF%E7%94%A8%E5%BD%93%E5%89%8D%E7%9A%84conda/</url>
-    <content><![CDATA[<p>首先创建新用户到你的路径。然后设置密码<br>    sudo useradd &lt;用户名&gt; -m -d &lt;你的路径&gt; -s &#x2F;bin&#x2F;bash<br>    chown &lt;用户名&gt;:&lt;用户名&gt; -R &lt;你的路径&gt;<br>    passwd username</p>
-<p>然后复制.bashrc到自己的目录去，.bashrc可以在自己的目录里面找。激活前记得先cd到自己的新目录<br>    sudo cp .bashrc &#x2F;home&#x2F;newuser&#x2F;.bashrc<br>    source ~&#x2F;.bashrc<br>这里用你的旧用户的路径替换&lt;&#x2F;root&#x2F;conda&gt;<br>    chmod 755 &lt;&#x2F;root&#x2F;conda&gt;</p>
-]]></content>
   </entry>
   <entry>
     <title>总结学习maven</title>
@@ -2823,11 +2823,6 @@ class UserService &#123;
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new title  \\title换自己文章名</span><br><span class="line">hexo clean \\清理本地</span><br><span class="line">hexo g  </span><br><span class="line">hexo d  \\上传代码</span><br></pre></td></tr></table></figure>
 <p>此外学习了插入图片的技巧学习自博客<a href="https://zhuanlan.zhihu.com/p/265077468">插入图片教程</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>背包问题</title>
-    <url>/2026/01/18/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>知识拾遗</title>
@@ -3156,19 +3151,9 @@ class UserService &#123;
       </tags>
   </entry>
   <entry>
-    <title>通过Tailscale突破内网限制连接服务器</title>
-    <url>/2025/06/22/%E9%80%9A%E8%BF%87Tailscale%E7%AA%81%E7%A0%B4%E5%86%85%E7%BD%91%E9%99%90%E5%88%B6%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
-    <content><![CDATA[<p>一直以来苦恼于实验室的服务器不能够远程操作，在外实习会十分不方便，今天找到Tailscale可以解决这个问题。<br> <span id="more"></span><br>操作方式很简单</p>
-<p>1.登录Tailscale官网<a href="https://tailscale.com/download">Download | Tailscale</a>，下载win版本和linux版本。win版本一路确认下载就行，linux版本跟着官网走指令就行：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/noble.noarmor.gpg | sudo tee /usr/share/keyrings/tailscale-archive-keyring.gpg &gt;/dev/null</span><br><span class="line">curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/noble.tailscale-keyring.list | sudo tee /etc/apt/sources.list.d/tailscale.list</span><br><span class="line"></span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install tailscale</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2025/06/22/%E9%80%9A%E8%BF%87Tailscale%E7%AA%81%E7%A0%B4%E5%86%85%E7%BD%91%E9%99%90%E5%88%B6%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/image-20250622161758395.png" alt="image-20250622161758395"></p>
-<p>2.两边都安装好后，首先用<code>sudo tailscale up</code>进行身份验证，同样的，win这边也有个验证，使用同一个账号登录就行。到这一步，工作就基本完成了。</p>
-<p>3.最后是用<code>tailscale ip -4</code>查询你的地址，比如说是100.XX.X.XX。就正常按照SSH连接的方式登录服务器就行。以上</p>
-]]></content>
-      <tags>
-        <tag>日常积累</tag>
-      </tags>
+    <title>背包问题</title>
+    <url>/2026/01/18/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>随想杂谈</title>
@@ -3277,6 +3262,21 @@ class UserService &#123;
 ]]></content>
       <tags>
         <tag>日常学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>通过Tailscale突破内网限制连接服务器</title>
+    <url>/2025/06/22/%E9%80%9A%E8%BF%87Tailscale%E7%AA%81%E7%A0%B4%E5%86%85%E7%BD%91%E9%99%90%E5%88%B6%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[<p>一直以来苦恼于实验室的服务器不能够远程操作，在外实习会十分不方便，今天找到Tailscale可以解决这个问题。<br> <span id="more"></span><br>操作方式很简单</p>
+<p>1.登录Tailscale官网<a href="https://tailscale.com/download">Download | Tailscale</a>，下载win版本和linux版本。win版本一路确认下载就行，linux版本跟着官网走指令就行：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/noble.noarmor.gpg | sudo tee /usr/share/keyrings/tailscale-archive-keyring.gpg &gt;/dev/null</span><br><span class="line">curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/noble.tailscale-keyring.list | sudo tee /etc/apt/sources.list.d/tailscale.list</span><br><span class="line"></span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install tailscale</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2025/06/22/%E9%80%9A%E8%BF%87Tailscale%E7%AA%81%E7%A0%B4%E5%86%85%E7%BD%91%E9%99%90%E5%88%B6%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/image-20250622161758395.png" alt="image-20250622161758395"></p>
+<p>2.两边都安装好后，首先用<code>sudo tailscale up</code>进行身份验证，同样的，win这边也有个验证，使用同一个账号登录就行。到这一步，工作就基本完成了。</p>
+<p>3.最后是用<code>tailscale ip -4</code>查询你的地址，比如说是100.XX.X.XX。就正常按照SSH连接的方式登录服务器就行。以上</p>
+]]></content>
+      <tags>
+        <tag>日常积累</tag>
       </tags>
   </entry>
   <entry>

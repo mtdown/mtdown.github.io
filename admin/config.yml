@@ -1,0 +1,62 @@
+backend:
+  name: github
+  repo: mtdown/blog-source
+  branch: main
+  # GitHub Pages needs an OAuth proxy for Decap CMS login.
+  # After you deploy one, uncomment and fill these two lines:
+  # base_url: https://your-oauth-proxy.example.com
+  # auth_endpoint: auth
+
+publish_mode: simple
+media_folder: source/images/uploads
+public_folder: /images/uploads
+site_url: https://mtdown.top
+display_url: https://mtdown.top
+locale: zh_Hans
+
+collections:
+  - name: posts
+    label: 文章
+    label_singular: 文章
+    folder: source/_posts
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "{{year}}/{{month}}/{{day}}/{{slug}}/"
+    summary: "{{title}} - {{date}}"
+    fields:
+      - label: 标题
+        name: title
+        widget: string
+      - label: 发布日期
+        name: date
+        widget: datetime
+        format: "YYYY-MM-DD HH:mm:ss"
+        date_format: "YYYY-MM-DD"
+        time_format: "HH:mm:ss"
+      - label: 分类
+        name: categories
+        widget: list
+        required: false
+        field:
+          label: 分类
+          name: category
+          widget: string
+      - label: 标签
+        name: tags
+        widget: list
+        required: false
+        field:
+          label: 标签
+          name: tag
+          widget: string
+      - label: 开启评论
+        name: comments
+        widget: boolean
+        required: false
+        default: true
+      - label: 正文
+        name: body
+        widget: markdown
