@@ -30,40 +30,6 @@
       </tags>
   </entry>
   <entry>
-    <title>AI行业共识观后感</title>
-    <url>/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/</url>
-    <content><![CDATA[<p>​	如果不记笔记就等于没学，一定程度上我体会到这点了。现在记录下<a href="https://www.bilibili.com/video/BV1GXNfzSE1T/?spm_id_from=333.1007.tianma.1-1-1.click&vd_source=ecbe42ffb25fea0da636165433fb75d6">40页PPT记录2025年年中AI行业共识【视频播客】_哔哩哔哩_bilibili</a>的观后感。</p>
-<span id="more"></span>
-
-<h1><span id="1缺少评价ai大模型能力的数据集">1.缺少评价AI大模型能力的数据集</span></h1><p>​	根据他给出来的OPEN AI的研究显示现在的AI大模型数据集都做到很顶峰的级别，导致你没有办法判断AI模型的能力；其实这一点也有一些论文讨论过，就认为现在的大模型训练效果好有可能是没有做足够的数据去重，这些训练集上的好表现有可能是过拟合的结果。</p>
-<p>​	而根据自己的认识，这些模型基线的评测也有局限，做选择题，做多选题的多，评价答案的少。而评价答案生成能力，往往是直接拿另外一个大模型来打分。毕竟数据量那么大，不可能人工评估。我想这大概就是我们需要微调，让他更适合业务场景的原因之一——表现好的大模型有可能是过拟合的，表现好的大模型也不一定适配你的业务场景。当然，更多的我想还是私有知识库的问题。</p>
-<p> <img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623100757995.png" alt="大模型基准数据集能力"></p>
-<h1><span id="2模型的能力提升">2.模型的能力提升</span></h1><p>​	这个倒是常见了，就是模型的一个进化过程，从预训练堆积数据集，到GPT3.5注重模型的后训练，最后到RL强化学习阶段，让大模型自己更新自己的能力。从open ai 的RLHF,Anthorpic的RLAIF,斯坦福大学的DPO,DS的GRPO都是在搞这些。有意思的是，这些算法都是在RLHF的不同维度上做减法——减少同时训练的模型数量，用AI的数据代替人类的数据，也就是CAI。</p>
-<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623102821329.png" alt="image-20250623102821329"></p>
-<h1><span id="3开源也是行业趋势">3.开源也是行业趋势</span></h1><p>​	一定程度上我能理解开源可以增加技术迭代的速度，有人帮你踩坑，你肯定自己研发就有更多思路。但另一方面，我实在不太理解开源能带来哪些经济上的收益</p>
-<p>​	【今年最多的开源关注是智能体，然后是coding，最后是inference这样的基础设施】</p>
-<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623103404461.png" alt="image-20250623103404461"></p>
-<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623103647415.png" alt="image-20250623103647415"></p>
-<p>​	这个报告真是不错，由蚂蚁开源在 2025 年 5 月 27 日第十届技术日发布，源连接：<a href="https://antoss-landscape.my.canva.site/">https://antoss-landscape.my.canva.site</a></p>
-<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623111817694.png" alt="image-20250623111817694"></p>
-<h1><span id="4产品">4.产品</span></h1><p>​	趋势之一是有大量Agent应用产生，这个很常见。但是浏览器这个我还真是不太清楚。谷歌我记得有一个问题是被政府拆分啥的。夸克的AI高考报名，然后腾讯也在接近。</p>
-<p>​	这个也就是搜广推这三大业务吧，只是换上大模型作为核心。</p>
-<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623105428946.png" alt="image-20250623105428946"></p>
-<p>​	他提到运营上也很有意思：现在的环境允许发布的产品是内测阶段。就比如cursor，这个东西都一年多了，才推出1.0。不过，现在的用户能接受使用产品，等他的成长，但等成熟的产品出现后，再想做这个东西，一定就会面临没有用户愿意来，导致没有足够数据更新的困境吧</p>
-<p>​	这个榜单值得一看：</p>
-<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623110438759.png" alt="image-20250623110438759"></p>
-<p>​	今年是并购大年</p>
-<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623111158747.png" alt="image-20250623111158747"></p>
-<p>​	最后指出这个协议也是一个很好的发展机会，不过这玩意不是大公司真的能玩吗？</p>
-<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623111557903.png" alt="image-20250623111557903"></p>
-<h1><span id="参考资料">参考资料：</span></h1><p>1.<a href="https://www.bilibili.com/video/BV1GXNfzSE1T/?spm_id_from=333.1007.tianma.1-1-1.click&vd_source=ecbe42ffb25fea0da636165433fb75d6">40页PPT记录2025年年中AI行业共识【视频播客】_哔哩哔哩_bilibili</a></p>
-<p>2.<a href="https://blog.csdn.net/2401_85328934/article/details/148292625">蚂蚁开源最新报告：Agent 框架热潮褪去，大模型开发已经进入“生死局”_2025 模型开源开发 态全景与趋势-CSDN博客</a></p>
-]]></content>
-      <tags>
-        <tag>日常积累</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>APIfox功能学习</title>
     <url>/2025/07/02/APIfox%E5%8A%9F%E8%83%BD%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<p>​		学习大模型部署软件APIfox</p>
@@ -115,9 +81,38 @@
       </tags>
   </entry>
   <entry>
-    <title>Andrej Lets build GPT学习笔记</title>
-    <url>/2026/05/03/Andrej-Lets-build-GPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[]]></content>
+    <title>AI行业共识观后感</title>
+    <url>/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/</url>
+    <content><![CDATA[<p>​	如果不记笔记就等于没学，一定程度上我体会到这点了。现在记录下<a href="https://www.bilibili.com/video/BV1GXNfzSE1T/?spm_id_from=333.1007.tianma.1-1-1.click&vd_source=ecbe42ffb25fea0da636165433fb75d6">40页PPT记录2025年年中AI行业共识【视频播客】_哔哩哔哩_bilibili</a>的观后感。</p>
+<span id="more"></span>
+
+<h1><span id="1缺少评价ai大模型能力的数据集">1.缺少评价AI大模型能力的数据集</span></h1><p>​	根据他给出来的OPEN AI的研究显示现在的AI大模型数据集都做到很顶峰的级别，导致你没有办法判断AI模型的能力；其实这一点也有一些论文讨论过，就认为现在的大模型训练效果好有可能是没有做足够的数据去重，这些训练集上的好表现有可能是过拟合的结果。</p>
+<p>​	而根据自己的认识，这些模型基线的评测也有局限，做选择题，做多选题的多，评价答案的少。而评价答案生成能力，往往是直接拿另外一个大模型来打分。毕竟数据量那么大，不可能人工评估。我想这大概就是我们需要微调，让他更适合业务场景的原因之一——表现好的大模型有可能是过拟合的，表现好的大模型也不一定适配你的业务场景。当然，更多的我想还是私有知识库的问题。</p>
+<p> <img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623100757995.png" alt="大模型基准数据集能力"></p>
+<h1><span id="2模型的能力提升">2.模型的能力提升</span></h1><p>​	这个倒是常见了，就是模型的一个进化过程，从预训练堆积数据集，到GPT3.5注重模型的后训练，最后到RL强化学习阶段，让大模型自己更新自己的能力。从open ai 的RLHF,Anthorpic的RLAIF,斯坦福大学的DPO,DS的GRPO都是在搞这些。有意思的是，这些算法都是在RLHF的不同维度上做减法——减少同时训练的模型数量，用AI的数据代替人类的数据，也就是CAI。</p>
+<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623102821329.png" alt="image-20250623102821329"></p>
+<h1><span id="3开源也是行业趋势">3.开源也是行业趋势</span></h1><p>​	一定程度上我能理解开源可以增加技术迭代的速度，有人帮你踩坑，你肯定自己研发就有更多思路。但另一方面，我实在不太理解开源能带来哪些经济上的收益</p>
+<p>​	【今年最多的开源关注是智能体，然后是coding，最后是inference这样的基础设施】</p>
+<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623103404461.png" alt="image-20250623103404461"></p>
+<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623103647415.png" alt="image-20250623103647415"></p>
+<p>​	这个报告真是不错，由蚂蚁开源在 2025 年 5 月 27 日第十届技术日发布，源连接：<a href="https://antoss-landscape.my.canva.site/">https://antoss-landscape.my.canva.site</a></p>
+<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623111817694.png" alt="image-20250623111817694"></p>
+<h1><span id="4产品">4.产品</span></h1><p>​	趋势之一是有大量Agent应用产生，这个很常见。但是浏览器这个我还真是不太清楚。谷歌我记得有一个问题是被政府拆分啥的。夸克的AI高考报名，然后腾讯也在接近。</p>
+<p>​	这个也就是搜广推这三大业务吧，只是换上大模型作为核心。</p>
+<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623105428946.png" alt="image-20250623105428946"></p>
+<p>​	他提到运营上也很有意思：现在的环境允许发布的产品是内测阶段。就比如cursor，这个东西都一年多了，才推出1.0。不过，现在的用户能接受使用产品，等他的成长，但等成熟的产品出现后，再想做这个东西，一定就会面临没有用户愿意来，导致没有足够数据更新的困境吧</p>
+<p>​	这个榜单值得一看：</p>
+<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623110438759.png" alt="image-20250623110438759"></p>
+<p>​	今年是并购大年</p>
+<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623111158747.png" alt="image-20250623111158747"></p>
+<p>​	最后指出这个协议也是一个很好的发展机会，不过这玩意不是大公司真的能玩吗？</p>
+<p><img src="/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/image-20250623111557903.png" alt="image-20250623111557903"></p>
+<h1><span id="参考资料">参考资料：</span></h1><p>1.<a href="https://www.bilibili.com/video/BV1GXNfzSE1T/?spm_id_from=333.1007.tianma.1-1-1.click&vd_source=ecbe42ffb25fea0da636165433fb75d6">40页PPT记录2025年年中AI行业共识【视频播客】_哔哩哔哩_bilibili</a></p>
+<p>2.<a href="https://blog.csdn.net/2401_85328934/article/details/148292625">蚂蚁开源最新报告：Agent 框架热潮褪去，大模型开发已经进入“生死局”_2025 模型开源开发 态全景与趋势-CSDN博客</a></p>
+]]></content>
+      <tags>
+        <tag>日常积累</tag>
+      </tags>
   </entry>
   <entry>
     <title>Harness Engineering学习</title>
@@ -238,11 +233,9 @@
       </tags>
   </entry>
   <entry>
-    <title>HoVernet阅读体会</title>
-    <url>/2024/06/19/HoVernet%E9%98%85%E8%AF%BB%E4%BD%93%E4%BC%9A/</url>
-    <content><![CDATA[<p>HoVer-Trans: Anatomy-AwareHoVer-Transformer for ROI-Free Breast CancerDiagnosis in Ultrasound Images</p>
-<p>2023.6，医学1区top，采用BUSI数据集和UDIAT，新创造了GDPH&amp;SYSUCC数据集<br> <span id="more"></span><br>这篇文章的结构有VIT的意思，感觉医学图像处理本质是特化后的视觉图像模型</p>
-]]></content>
+    <title>Andrej Lets build GPT学习笔记</title>
+    <url>/2026/05/03/Andrej-Lets-build-GPT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>RAG扩展学习</title>
@@ -256,6 +249,13 @@
       <tags>
         <tag>日常学习</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>HoVernet阅读体会</title>
+    <url>/2024/06/19/HoVernet%E9%98%85%E8%AF%BB%E4%BD%93%E4%BC%9A/</url>
+    <content><![CDATA[<p>HoVer-Trans: Anatomy-AwareHoVer-Transformer for ROI-Free Breast CancerDiagnosis in Ultrasound Images</p>
+<p>2023.6，医学1区top，采用BUSI数据集和UDIAT，新创造了GDPH&amp;SYSUCC数据集<br> <span id="more"></span><br>这篇文章的结构有VIT的意思，感觉医学图像处理本质是特化后的视觉图像模型</p>
+]]></content>
   </entry>
   <entry>
     <title>SQL相关</title>
@@ -672,151 +672,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Vue Vben Admin 安装踩坑复盘：Windows + nvm 环境下 pnpm / catalog: 依赖问题</title>
-    <url>/2026/02/27/Vue-Vben-Admin-%E5%AE%89%E8%A3%85%E8%B8%A9%E5%9D%91%E5%A4%8D%E7%9B%98%EF%BC%9AWindows-nvm-%E7%8E%AF%E5%A2%83%E4%B8%8B-pnpm-catalog-%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h2><span id="背景">背景</span></h2><p>我准备使用 <strong>vue-vben-admin（Vue3 后台模板）</strong>作为 MotorHub 项目的管理后台。按照官方文档 clone 后执行安装：</p>
-<ul>
-<li><code>git clone https://github.com/vbenjs/vue-vben-admin.git</code></li>
-<li>文档要求：<code>pnpm install</code> &#x2F; <code>pnpm dev</code></li>
-</ul>
-<p>我的环境：</p>
-<ul>
-<li>Windows</li>
-<li>使用 <strong>nvm for windows</strong>（Node 安装路径在 <code>C:\nvm4w\nodejs</code>）</li>
-</ul>
-<hr>
-<h2><span id="报错-1pnpm-不是内部或外部命令">报错 1：<code>pnpm</code> 不是内部或外部命令</span></h2><p>在项目目录执行：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pnpm install</span><br></pre></td></tr></table></figure>
-
-<p>报错：</p>
-<blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;pnpm&#x27; 不是内部或外部命令，也不是可运行的程序或批处理文件。</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p>这意味着：系统找不到 pnpm 命令（没安装，或没进入 PATH）。</p>
-<hr>
-<h2><span id="报错-2npm-install-不支持-catalog">报错 2：<code>npm install</code> 不支持 <code>catalog:</code></span></h2><p>我尝试改用 npm 安装依赖：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
-<p>报错：</p>
-<blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm error Unsupported URL Type &quot;catalog:&quot;: catalog:</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p>原因：<strong>vue-vben-admin 的依赖里使用了 pnpm 支持的 <code>catalog:</code> 协议</strong>，npm 不认识，所以 npm 无法安装。<br> 结论：<strong>该项目必须用 pnpm（或对应生态工具）安装</strong>，npm 行不通。</p>
-<hr>
-<h2><span id="报错-3npm-i-g-pnpm-安装失败-eexist">报错 3：<code>npm i -g pnpm</code> 安装失败 EEXIST</span></h2><p>我尝试安装 pnpm：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i -g pnpm</span><br></pre></td></tr></table></figure>
-
-<p>报错：</p>
-<blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">EEXIST: file already exists ...\npm\pnpm</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p>但同时执行：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pnpm -v</span><br></pre></td></tr></table></figure>
-
-<p>仍然提示找不到 <code>pnpm</code>。</p>
-<p>这类情况通常表示：系统里存在 pnpm 的残留&#x2F;损坏 shim 或冲突文件，但 pnpm 命令并没有正确可用。</p>
-<hr>
-<h2><span id="关键排查确认-npm-的全局-prefix-与-path">关键排查：确认 npm 的全局 prefix 与 PATH</span></h2><p>先检查 npm 全局安装位置（prefix）：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm config get prefix</span><br></pre></td></tr></table></figure>
-
-<p>输出：</p>
-<blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">C:\Users\origin\AppData\Roaming\npm</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p>再检查 <code>where pnpm</code>：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">where pnpm</span><br></pre></td></tr></table></figure>
-
-<p>输出：</p>
-<blockquote>
-<p>找不到文件</p>
-</blockquote>
-<p>说明：pnpm 不在 PATH 或 shim 没生成。</p>
-<p>查看 prefix 目录内容：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dir C:\Users\origin\AppData\Roaming\npm</span><br></pre></td></tr></table></figure>
-
-<p>发现目录里有：</p>
-<ul>
-<li><code>corepack.cmd</code></li>
-<li><code>pnpm.ps1</code></li>
-<li><code>pnpx.ps1</code></li>
-<li>但没有 <code>pnpm.cmd</code></li>
-</ul>
-<p>这说明 pnpm 在 PowerShell shim 层面有残留，但 cmd 无法直接使用 <code>pnpm</code>，并且项目依赖安装仍然无法进行。</p>
-<hr>
-<h2><span id="最终解决方案使用-corepack-激活-pnpm">最终解决方案：使用 corepack 激活 pnpm</span></h2><p>因为 prefix 目录里已经存在 corepack，我最终采用 <strong>corepack 方式</strong>（不依赖自己手动装全局 pnpm）：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">corepack enable</span><br><span class="line">corepack prepare pnpm@9.15.0 --activate</span><br><span class="line">pnpm -v</span><br></pre></td></tr></table></figure>
-
-<p>当 <code>pnpm -v</code> 成功输出版本号后，说明 pnpm 已就绪。</p>
-<p>然后在项目目录执行：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pnpm install</span><br><span class="line">pnpm dev</span><br></pre></td></tr></table></figure>
-
-<p>项目即可正常启动。</p>
-<hr>
-<h2><span id="结论与经验">结论与经验</span></h2><ol>
-<li><strong>vue-vben-admin 使用 pnpm 特性（catalog:），npm 无法安装依赖</strong><br> 遇到 <code>Unsupported URL Type &quot;catalog:&quot;</code> 基本就说明必须换 pnpm&#x2F;yarn。</li>
-<li>Windows + nvm 环境下，全局工具经常出现 “安装了但命令不可用”<br> 重点检查：<ul>
-<li><code>npm config get prefix</code></li>
-<li><code>where pnpm</code></li>
-<li>prefix 目录是否在 PATH</li>
-</ul>
-</li>
-<li><strong>优先推荐 corepack 安装&#x2F;管理 pnpm</strong><br> 省去全局安装冲突，版本更可控：<ul>
-<li><code>corepack enable</code></li>
-<li><code>corepack prepare pnpm@xx --activate</code></li>
-</ul>
-</li>
-</ol>
-<hr>
-<h2><span id="可复制的一键命令windows">可复制的一键命令（Windows）</span></h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">corepack enable</span><br><span class="line">corepack prepare pnpm@9.15.0 --activate</span><br><span class="line">pnpm -v</span><br><span class="line">pnpm install</span><br><span class="line">pnpm dev</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>日常学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java封装</title>
-    <url>/2024/09/14/java%E5%B0%81%E8%A3%85/</url>
-    <content><![CDATA[<p>本文的目的在于复习一些学习JAVA过程时难以理解或者是忘却的部分，<br> <span id="more"></span><br>封装：这个部分比较好理解，其实就是设置个接口然后调用函数就行.目的在于保护一些私密的属性，只能用事先确定的函数进行修改，从而提高程序的安全性</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package train.com.example1;</span><br><span class="line"></span><br><span class="line">public class ex1 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Person person = new Person();</span><br><span class="line">        System.out.println(person.name);</span><br><span class="line">        System.out.println(person.getMoney());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Person&#123;</span><br><span class="line">    private int age=10;</span><br><span class="line">    protected int money=100;</span><br><span class="line">    public String name =&quot;小张&quot;;</span><br><span class="line">    int lucknumber=7;</span><br><span class="line">    public int getMoney() &#123;</span><br><span class="line">        return money;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这里面Person类的getMoney就算是最初级的封装，借此可以访问到被private限制，不能直接访问的类型。<br>访问修饰符格式如下：<br><img src="/images/%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6.png" alt="访问修饰符" title="访问修饰符"><br>比较需要注意的是这里面的包和类存在重叠的情况，对于文件：</p>
-<pre><code>class Dog&#123;
-    private String name=&quot;小黄&quot;;
-    public String getName() &#123;
-        return name;
-    &#125;
-&#125;
-
-class Dog2 extends Dog&#123;
-    String name=&quot;小小&quot;;
-    @Override
-    public String getName() &#123;
-        return super.name;
-    &#125;
-&#125;
-```这俩就是一类，且同包，当访问修饰符号为默认时，Dog2就能访问到父类的name，只会在私有的情况下报错。因此，当具备多个身份，即又是子类又是同包时，会采用同包的规则。
-</code></pre>
-]]></content>
-      <tags>
-        <tag>就业准备</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java多态</title>
-    <url>/2024/09/15/java%E5%A4%9A%E6%80%81/</url>
-    <content><![CDATA[<p>这个部分我觉得稍稍有点杂，毕竟函数，属性都存在多态。考虑到向上继承，向下继承这些，调用的顺序和麻烦程度都会递增。<br> <span id="more"></span></p>
-<h1><span id="方法的多态">方法的多态</span></h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Dog extends animal&#123;</span><br><span class="line">    private String food=&quot;骨头&quot;;</span><br><span class="line">    public Dog(String name, int age, String sex, String food) &#123;</span><br><span class="line">        super(name, age, sex);</span><br><span class="line">        this.food = food;</span><br><span class="line">    &#125;</span><br><span class="line">    public Dog(String name, int age, String sex) &#123;</span><br><span class="line">        super(name, age, sex);</span><br><span class="line">        //这里就使用了多态，通过参数的不同，调用同一个函数名但有不同的效果</span><br><span class="line">    &#125;</span><br><span class="line">    public String eat()&#123;</span><br><span class="line">        return food;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这里面的两个构造函数就是多态的一种，基于传参的多态<br>2024&#x2F;10&#x2F;2 21:19:13<br>关于编译类型增加细节<br>（1）一个对象的编译类型和运行类型可以不一致<br>（2）编译类型在定义对象时，就确定了，不能改<br>（3）运行类型是可以变的<br>（4）编译类型看定义时 &#x3D; 号的左边，运行类型看 &#x3D; 号右边。<br>（5）属性的值看编译类型，方法看运行<br>（6）继承会改变运行类型</p>
-<h1><span id="多态练习1">多态练习1</span></h1><p><img src="/images/%E5%A4%9A%E6%80%81.png" alt="练习题目" title="练习题"><br>对于代码：</p>
-<figure class="highlight plaintext"><figcaption><span>class PolyExercise02 &#123;</span></figcaption><table><tr><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Sub sub = new Sub();</span><br><span class="line">    System.out.println(sub.count);</span><br><span class="line">    sub.display();</span><br><span class="line">    Base b=sub;</span><br><span class="line">    System.out.println(b==sub);</span><br><span class="line">    System.out.println(b.count);</span><br><span class="line">    b.display();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>首先123都只是单纯地定义新类输出方法和属性，因此都是20.此时编译类型和运行类型都是sub</p>
-<figure class="highlight plaintext"><figcaption><span>sub </span></figcaption><table><tr><td class="code"><pre><span class="line">      System.out.println(sub.count);</span><br><span class="line">      sub.display();</span><br><span class="line">Base b=sub;</span><br></pre></td></tr></table></figure>
-<p>直到4进行了一次向上转型，此时b的编译类型Base，运行类型Sub，方法以Sub为准，属性以Base为准，因此我认为输出时false，10，20。结果如下图所示：<br><img src="/images/q2.png" alt="运行结果" title="结果"><br>对System.out.println(b&#x3D;&#x3D;sub)判断失误，原因是这里的&#x3D;&#x3D;判断对象是地址，代码：Base b&#x3D;sub 的对象赋值的本质是给了b和sub指向一个空间的地址。我姑且理解为以后在对两个对象进行判断时，考虑地址是否指向同一个东西<br>#多态练习2#<br>这里提到了个很重要的动态绑定机制，</p>
-]]></content>
-      <tags>
-        <tag>就业准备</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>http请求</title>
     <url>/2025/09/18/http%E8%AF%B7%E6%B1%82/</url>
     <content><![CDATA[<p>Http协议存在九种请求方式，GET,POST,PUT,PATCH,HEAD,OPTION,CONNECT,TRACE,DELETE.其中用的多的是GET,POST,PUT,HEAD</p>
@@ -1031,12 +886,145 @@ class Dog2 extends Dog&#123;
       </tags>
   </entry>
   <entry>
-    <title>“java算法题目”</title>
-    <url>/2025/09/09/java%E7%AE%97%E6%B3%95%E9%A2%98%E7%9B%AE/</url>
-    <content><![CDATA[<p>我觉得还是要给自己的算法题一些分类，这有利于我以后求职，也是自己梳理一下。我从力扣100一遍遍做，遇到什么就补充什么进去，今天先这样。</p>
-<span id="more"></span>
+    <title>Vue Vben Admin 安装踩坑复盘：Windows + nvm 环境下 pnpm / catalog: 依赖问题</title>
+    <url>/2026/02/27/Vue-Vben-Admin-%E5%AE%89%E8%A3%85%E8%B8%A9%E5%9D%91%E5%A4%8D%E7%9B%98%EF%BC%9AWindows-nvm-%E7%8E%AF%E5%A2%83%E4%B8%8B-pnpm-catalog-%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h2><span id="背景">背景</span></h2><p>我准备使用 <strong>vue-vben-admin（Vue3 后台模板）</strong>作为 MotorHub 项目的管理后台。按照官方文档 clone 后执行安装：</p>
+<ul>
+<li><code>git clone https://github.com/vbenjs/vue-vben-admin.git</code></li>
+<li>文档要求：<code>pnpm install</code> &#x2F; <code>pnpm dev</code></li>
+</ul>
+<p>我的环境：</p>
+<ul>
+<li>Windows</li>
+<li>使用 <strong>nvm for windows</strong>（Node 安装路径在 <code>C:\nvm4w\nodejs</code>）</li>
+</ul>
+<hr>
+<h2><span id="报错-1pnpm-不是内部或外部命令">报错 1：<code>pnpm</code> 不是内部或外部命令</span></h2><p>在项目目录执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pnpm install</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2025/09/09/java%E7%AE%97%E6%B3%95%E9%A2%98%E7%9B%AE/image-20250909181704696.png" alt="image-20250909181704696"></p>
+<p>报错：</p>
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;pnpm&#x27; 不是内部或外部命令，也不是可运行的程序或批处理文件。</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>这意味着：系统找不到 pnpm 命令（没安装，或没进入 PATH）。</p>
+<hr>
+<h2><span id="报错-2npm-install-不支持-catalog">报错 2：<code>npm install</code> 不支持 <code>catalog:</code></span></h2><p>我尝试改用 npm 安装依赖：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>报错：</p>
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm error Unsupported URL Type &quot;catalog:&quot;: catalog:</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>原因：<strong>vue-vben-admin 的依赖里使用了 pnpm 支持的 <code>catalog:</code> 协议</strong>，npm 不认识，所以 npm 无法安装。<br> 结论：<strong>该项目必须用 pnpm（或对应生态工具）安装</strong>，npm 行不通。</p>
+<hr>
+<h2><span id="报错-3npm-i-g-pnpm-安装失败-eexist">报错 3：<code>npm i -g pnpm</code> 安装失败 EEXIST</span></h2><p>我尝试安装 pnpm：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i -g pnpm</span><br></pre></td></tr></table></figure>
+
+<p>报错：</p>
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">EEXIST: file already exists ...\npm\pnpm</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>但同时执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pnpm -v</span><br></pre></td></tr></table></figure>
+
+<p>仍然提示找不到 <code>pnpm</code>。</p>
+<p>这类情况通常表示：系统里存在 pnpm 的残留&#x2F;损坏 shim 或冲突文件，但 pnpm 命令并没有正确可用。</p>
+<hr>
+<h2><span id="关键排查确认-npm-的全局-prefix-与-path">关键排查：确认 npm 的全局 prefix 与 PATH</span></h2><p>先检查 npm 全局安装位置（prefix）：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm config get prefix</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">C:\Users\origin\AppData\Roaming\npm</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>再检查 <code>where pnpm</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">where pnpm</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<blockquote>
+<p>找不到文件</p>
+</blockquote>
+<p>说明：pnpm 不在 PATH 或 shim 没生成。</p>
+<p>查看 prefix 目录内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dir C:\Users\origin\AppData\Roaming\npm</span><br></pre></td></tr></table></figure>
+
+<p>发现目录里有：</p>
+<ul>
+<li><code>corepack.cmd</code></li>
+<li><code>pnpm.ps1</code></li>
+<li><code>pnpx.ps1</code></li>
+<li>但没有 <code>pnpm.cmd</code></li>
+</ul>
+<p>这说明 pnpm 在 PowerShell shim 层面有残留，但 cmd 无法直接使用 <code>pnpm</code>，并且项目依赖安装仍然无法进行。</p>
+<hr>
+<h2><span id="最终解决方案使用-corepack-激活-pnpm">最终解决方案：使用 corepack 激活 pnpm</span></h2><p>因为 prefix 目录里已经存在 corepack，我最终采用 <strong>corepack 方式</strong>（不依赖自己手动装全局 pnpm）：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">corepack enable</span><br><span class="line">corepack prepare pnpm@9.15.0 --activate</span><br><span class="line">pnpm -v</span><br></pre></td></tr></table></figure>
+
+<p>当 <code>pnpm -v</code> 成功输出版本号后，说明 pnpm 已就绪。</p>
+<p>然后在项目目录执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pnpm install</span><br><span class="line">pnpm dev</span><br></pre></td></tr></table></figure>
+
+<p>项目即可正常启动。</p>
+<hr>
+<h2><span id="结论与经验">结论与经验</span></h2><ol>
+<li><strong>vue-vben-admin 使用 pnpm 特性（catalog:），npm 无法安装依赖</strong><br> 遇到 <code>Unsupported URL Type &quot;catalog:&quot;</code> 基本就说明必须换 pnpm&#x2F;yarn。</li>
+<li>Windows + nvm 环境下，全局工具经常出现 “安装了但命令不可用”<br> 重点检查：<ul>
+<li><code>npm config get prefix</code></li>
+<li><code>where pnpm</code></li>
+<li>prefix 目录是否在 PATH</li>
+</ul>
+</li>
+<li><strong>优先推荐 corepack 安装&#x2F;管理 pnpm</strong><br> 省去全局安装冲突，版本更可控：<ul>
+<li><code>corepack enable</code></li>
+<li><code>corepack prepare pnpm@xx --activate</code></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2><span id="可复制的一键命令windows">可复制的一键命令（Windows）</span></h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">corepack enable</span><br><span class="line">corepack prepare pnpm@9.15.0 --activate</span><br><span class="line">pnpm -v</span><br><span class="line">pnpm install</span><br><span class="line">pnpm dev</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>日常学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java多态</title>
+    <url>/2024/09/15/java%E5%A4%9A%E6%80%81/</url>
+    <content><![CDATA[<p>这个部分我觉得稍稍有点杂，毕竟函数，属性都存在多态。考虑到向上继承，向下继承这些，调用的顺序和麻烦程度都会递增。<br> <span id="more"></span></p>
+<h1><span id="方法的多态">方法的多态</span></h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Dog extends animal&#123;</span><br><span class="line">    private String food=&quot;骨头&quot;;</span><br><span class="line">    public Dog(String name, int age, String sex, String food) &#123;</span><br><span class="line">        super(name, age, sex);</span><br><span class="line">        this.food = food;</span><br><span class="line">    &#125;</span><br><span class="line">    public Dog(String name, int age, String sex) &#123;</span><br><span class="line">        super(name, age, sex);</span><br><span class="line">        //这里就使用了多态，通过参数的不同，调用同一个函数名但有不同的效果</span><br><span class="line">    &#125;</span><br><span class="line">    public String eat()&#123;</span><br><span class="line">        return food;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里面的两个构造函数就是多态的一种，基于传参的多态<br>2024&#x2F;10&#x2F;2 21:19:13<br>关于编译类型增加细节<br>（1）一个对象的编译类型和运行类型可以不一致<br>（2）编译类型在定义对象时，就确定了，不能改<br>（3）运行类型是可以变的<br>（4）编译类型看定义时 &#x3D; 号的左边，运行类型看 &#x3D; 号右边。<br>（5）属性的值看编译类型，方法看运行<br>（6）继承会改变运行类型</p>
+<h1><span id="多态练习1">多态练习1</span></h1><p><img src="/images/%E5%A4%9A%E6%80%81.png" alt="练习题目" title="练习题"><br>对于代码：</p>
+<figure class="highlight plaintext"><figcaption><span>class PolyExercise02 &#123;</span></figcaption><table><tr><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Sub sub = new Sub();</span><br><span class="line">    System.out.println(sub.count);</span><br><span class="line">    sub.display();</span><br><span class="line">    Base b=sub;</span><br><span class="line">    System.out.println(b==sub);</span><br><span class="line">    System.out.println(b.count);</span><br><span class="line">    b.display();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>首先123都只是单纯地定义新类输出方法和属性，因此都是20.此时编译类型和运行类型都是sub</p>
+<figure class="highlight plaintext"><figcaption><span>sub </span></figcaption><table><tr><td class="code"><pre><span class="line">      System.out.println(sub.count);</span><br><span class="line">      sub.display();</span><br><span class="line">Base b=sub;</span><br></pre></td></tr></table></figure>
+<p>直到4进行了一次向上转型，此时b的编译类型Base，运行类型Sub，方法以Sub为准，属性以Base为准，因此我认为输出时false，10，20。结果如下图所示：<br><img src="/images/q2.png" alt="运行结果" title="结果"><br>对System.out.println(b&#x3D;&#x3D;sub)判断失误，原因是这里的&#x3D;&#x3D;判断对象是地址，代码：Base b&#x3D;sub 的对象赋值的本质是给了b和sub指向一个空间的地址。我姑且理解为以后在对两个对象进行判断时，考虑地址是否指向同一个东西<br>#多态练习2#<br>这里提到了个很重要的动态绑定机制，</p>
+]]></content>
+      <tags>
+        <tag>就业准备</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java封装</title>
+    <url>/2024/09/14/java%E5%B0%81%E8%A3%85/</url>
+    <content><![CDATA[<p>本文的目的在于复习一些学习JAVA过程时难以理解或者是忘却的部分，<br> <span id="more"></span><br>封装：这个部分比较好理解，其实就是设置个接口然后调用函数就行.目的在于保护一些私密的属性，只能用事先确定的函数进行修改，从而提高程序的安全性</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package train.com.example1;</span><br><span class="line"></span><br><span class="line">public class ex1 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Person person = new Person();</span><br><span class="line">        System.out.println(person.name);</span><br><span class="line">        System.out.println(person.getMoney());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Person&#123;</span><br><span class="line">    private int age=10;</span><br><span class="line">    protected int money=100;</span><br><span class="line">    public String name =&quot;小张&quot;;</span><br><span class="line">    int lucknumber=7;</span><br><span class="line">    public int getMoney() &#123;</span><br><span class="line">        return money;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里面Person类的getMoney就算是最初级的封装，借此可以访问到被private限制，不能直接访问的类型。<br>访问修饰符格式如下：<br><img src="/images/%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6.png" alt="访问修饰符" title="访问修饰符"><br>比较需要注意的是这里面的包和类存在重叠的情况，对于文件：</p>
+<pre><code>class Dog&#123;
+    private String name=&quot;小黄&quot;;
+    public String getName() &#123;
+        return name;
+    &#125;
+&#125;
+
+class Dog2 extends Dog&#123;
+    String name=&quot;小小&quot;;
+    @Override
+    public String getName() &#123;
+        return super.name;
+    &#125;
+&#125;
+```这俩就是一类，且同包，当访问修饰符号为默认时，Dog2就能访问到父类的name，只会在私有的情况下报错。因此，当具备多个身份，即又是子类又是同包时，会采用同包的规则。
+</code></pre>
 ]]></content>
       <tags>
         <tag>就业准备</tag>
@@ -1105,6 +1093,29 @@ class Dog2 extends Dog&#123;
       </tags>
   </entry>
   <entry>
+    <title>java相关知识汇总</title>
+    <url>/2025/09/08/java%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E6%B1%87%E6%80%BB/</url>
+    <content><![CDATA[<p>根据java刷题知识路线归纳总结，以期能流畅背诵</p>
+<span id="more"></span>
+
+<h1><span id="1java基本语法与数据类型">1.java基本语法与数据类型</span></h1><h2><span id="11java的基本语法结构">1.1java的基本语法结构</span></h2><h2><span id="12基本数据类型与引用数据类型的区别">1.2基本数据类型与引用数据类型的区别</span></h2><h2><span id="13常用运算符的应用">1.3常用运算符的应用</span></h2>]]></content>
+      <tags>
+        <tag>就业准备</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>“java算法题目”</title>
+    <url>/2025/09/09/java%E7%AE%97%E6%B3%95%E9%A2%98%E7%9B%AE/</url>
+    <content><![CDATA[<p>我觉得还是要给自己的算法题一些分类，这有利于我以后求职，也是自己梳理一下。我从力扣100一遍遍做，遇到什么就补充什么进去，今天先这样。</p>
+<span id="more"></span>
+
+<p><img src="/2025/09/09/java%E7%AE%97%E6%B3%95%E9%A2%98%E7%9B%AE/image-20250909181704696.png" alt="image-20250909181704696"></p>
+]]></content>
+      <tags>
+        <tag>就业准备</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>java继承</title>
     <url>/2024/09/15/java%E7%BB%A7%E6%89%BF/</url>
     <content><![CDATA[<p>继承的作用是解决代码复用的问题，在公用属性的基础上进行添加特有的操作。<br> <span id="more"></span><br>写法如下：</p>
@@ -1117,17 +1128,6 @@ class Dog2 extends Dog&#123;
 <li>关于向下继承，只能是父类强制转化成子类，同一个父类的两个子类之间不能强制转化。</li>
 </ol>
 ]]></content>
-      <tags>
-        <tag>就业准备</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java相关知识汇总</title>
-    <url>/2025/09/08/java%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E6%B1%87%E6%80%BB/</url>
-    <content><![CDATA[<p>根据java刷题知识路线归纳总结，以期能流畅背诵</p>
-<span id="more"></span>
-
-<h1><span id="1java基本语法与数据类型">1.java基本语法与数据类型</span></h1><h2><span id="11java的基本语法结构">1.1java的基本语法结构</span></h2><h2><span id="12基本数据类型与引用数据类型的区别">1.2基本数据类型与引用数据类型的区别</span></h2><h2><span id="13常用运算符的应用">1.3常用运算符的应用</span></h2>]]></content>
       <tags>
         <tag>就业准备</tag>
       </tags>
@@ -1208,42 +1208,6 @@ class Dog2 extends Dog&#123;
 ]]></content>
       <tags>
         <tag>日常学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>langchain学习记录</title>
-    <url>/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<p>​			记录一下自己学习langchain的过程。首先是模型安装和部署。</p>
-<span id="more"></span>
-
-<h1><span id="1安装conda-环境">1.安装conda 环境</span></h1><p>​				这一步没啥好说的，首先登陆官网<a href="https://www.anaconda.com/download/success">Download Now | Anaconda</a>根据你的系统选择合适的本本，这里左边Distribution Installers是指图形界面安装程序，Miniconda Installers是命令行安装程序。根据自己习惯选就行。</p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250701195719017.png" alt="image-20250701195719017"></p>
-<p>​			安装完成后会有一个anaconda的界面，输入<code>conda --version</code>和<code>python --version</code>检查版本，这俩都是安装时自带的 Python 版本，Base表示你处于默认的激活环境，一般来说我们不会在这个环境下操作，而是自己创建一个。</p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250701200720245.png" alt="image-20250701200720245"></p>
-<p>​			创建的环境的命令是<code>conda create --name ml_env python=3.9,</code>意思是创建名为ml_env的环境，使用Python 3.9；然后使用<code>conda env list</code>可以检查你拥有的环境，<code>conda activate ml_env</code>表示激活ml_env环境。</p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250701201412106.png" alt="image-20250701201412106"></p>
-<p>​			创建好了新环境，我们就激活它，然后在那个环境里解决大模型的部署问题。</p>
-<h1><span id="2ollama部署qwen">2.ollama部署qwen</span></h1><p>​			这里就直接跟着教程走吧，登录官网<a href="https://ollama.com/library/qwen3:8b">qwen3:8b</a>，下载ollama，然后搜索你需要的模型，Qwen3会有一堆这样的模型和词条，你需要哪个版本就直接用那个版本下面的代码就行，首次运行他会自动给你下载：</p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702121036039.png" alt="image-20250702121036039"></p>
-<p>​			<code>ollama run qwen3:8b</code>这一步运行完后就能正常操作了。但这里需要注意一一点：ollama给你的模型基本都是量化后的，这是为了方便你本地运行：<img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702121239065.png" alt="image-20250702121239065"></p>
-<p>​			输入<code>curl http://localhost:11434/api/tags</code>代码，你也会看到<code>&quot;quantization_level&quot;:&quot;Q4_K_M&quot;&#125;</code>，这证明我们下载的是个四位量化的模型，全量的模型应该是：<code>quantize: none</code><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702122414057.png" alt="image-20250702122414057"></p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702122150980.png" alt="image-20250702122150980"></p>
-<p>​			如果你要使用全量化的模型，那就需要到huggingface这种模型网站去他们<a href="https://huggingface.co/Qwen/collections">Qwen (Qwen)</a>的GGUF格式文件，而这个可就要大得多了：</p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702134841259.png" alt="image-20250702134841259"></p>
-<p>​			此外，你还需要根据<a href="https://qwen.readthedocs.io/zh-cn/latest/run_locally/ollama.html">Ollama - Qwen</a>的流程创建文件：</p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702134931270.png" alt="image-20250702134931270"></p>
-<p>​				然后这里我们说一下ollama调用API时的几个默认接口：</p>
-<p>​				在本地部署时有个基础的：<a href="http://localhost:11434，然后根据你的需求，额外增加生成文本补全端点：POST">http://localhost:11434，然后根据你的需求，额外增加生成文本补全端点：POST</a> &#x2F;api&#x2F;generate；对话式交互端点：POST &#x2F;api&#x2F;chat；我们这里首先点开1.新建接口，换成POST，并填写<a href="http://localhost:11434/api/chat">http://localhost:11434/api/chat</a></p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250703205010332.png" alt="image-20250703205010332"></p>
-<p>​			然后我们这里就点击Body，选择里面的json格式，并参考这样的格式添加一个示例。请注意，json格式不支持注释，我这里是为了方便理解和后续替换对应的块。<img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250703205111334.png" alt="image-20250703205111334"></p>
-<p>​			这里面的流式传输需要额外说明一下，流式传输是一种将数据分割成多个连续的小块（chunk）实时传输的方式，如果你选择了流式传输，那他就会一个字一个字（Token）的给你反馈：<img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250703205346011.png" alt="image-20250703205346011"></p>
-<p>此外 ，关于这个部分，在我看的网课里面有一张很好的图概括：</p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250706232003714.png" alt="image-20250706232003714"></p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250706233801408.png" alt="image-20250706233801408"></p>
-<h1><span id="参考目录">参考目录</span></h1><p>1.<a href="https://ollama.com/blog/thinking">思考 ·Ollama 博客</a></p>
-]]></content>
-      <tags>
-        <tag>实习准备</tag>
       </tags>
   </entry>
   <entry>
@@ -1341,6 +1305,73 @@ public class Application &#123;
 ]]></content>
       <tags>
         <tag>实习准备</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>llama4看到的一些东西</title>
+    <url>/2025/05/12/llama4%E7%9C%8B%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E4%B8%9C%E8%A5%BF/</url>
+    <content><![CDATA[<p>带着有色眼镜果然容易看错一些东西，我对于llama就有不少误解。特此记录，警醒自己。<br> <span id="more"></span><br>我从没想过llama最大的开源模型之一会不支持中文。这一点实在是太过离谱了。但是对此也引发了我新的疑问：大语言模型的多语言能力是怎么来的呢？为什么没有中文的模型居然可以训练出中文语义呢？</p>
+<p>另一个震撼我的地方是llama4糟糕的图像识别能力，这代表他不能真的胜任多模态任务。我实在懒得加图，下次一定。然后这也是一个疑问：原生多模态大模型就一定比非原生多模态大模型好吗？</p>
+<p>阅读论文的过程中，我总是习惯性扫一眼就路过，但这是不行的。我需要边阅读，边弄大纲。最好的做法我认为是先去看网上的解读，然后带着一个基础认识自己去读一遍。虽然难免带上其他人的主观，但在我知识不足的现在，这一步是必要的。</p>
+]]></content>
+      <tags>
+        <tag>日常记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>langchain学习记录</title>
+    <url>/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p>​			记录一下自己学习langchain的过程。首先是模型安装和部署。</p>
+<span id="more"></span>
+
+<h1><span id="1安装conda-环境">1.安装conda 环境</span></h1><p>​				这一步没啥好说的，首先登陆官网<a href="https://www.anaconda.com/download/success">Download Now | Anaconda</a>根据你的系统选择合适的本本，这里左边Distribution Installers是指图形界面安装程序，Miniconda Installers是命令行安装程序。根据自己习惯选就行。</p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250701195719017.png" alt="image-20250701195719017"></p>
+<p>​			安装完成后会有一个anaconda的界面，输入<code>conda --version</code>和<code>python --version</code>检查版本，这俩都是安装时自带的 Python 版本，Base表示你处于默认的激活环境，一般来说我们不会在这个环境下操作，而是自己创建一个。</p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250701200720245.png" alt="image-20250701200720245"></p>
+<p>​			创建的环境的命令是<code>conda create --name ml_env python=3.9,</code>意思是创建名为ml_env的环境，使用Python 3.9；然后使用<code>conda env list</code>可以检查你拥有的环境，<code>conda activate ml_env</code>表示激活ml_env环境。</p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250701201412106.png" alt="image-20250701201412106"></p>
+<p>​			创建好了新环境，我们就激活它，然后在那个环境里解决大模型的部署问题。</p>
+<h1><span id="2ollama部署qwen">2.ollama部署qwen</span></h1><p>​			这里就直接跟着教程走吧，登录官网<a href="https://ollama.com/library/qwen3:8b">qwen3:8b</a>，下载ollama，然后搜索你需要的模型，Qwen3会有一堆这样的模型和词条，你需要哪个版本就直接用那个版本下面的代码就行，首次运行他会自动给你下载：</p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702121036039.png" alt="image-20250702121036039"></p>
+<p>​			<code>ollama run qwen3:8b</code>这一步运行完后就能正常操作了。但这里需要注意一一点：ollama给你的模型基本都是量化后的，这是为了方便你本地运行：<img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702121239065.png" alt="image-20250702121239065"></p>
+<p>​			输入<code>curl http://localhost:11434/api/tags</code>代码，你也会看到<code>&quot;quantization_level&quot;:&quot;Q4_K_M&quot;&#125;</code>，这证明我们下载的是个四位量化的模型，全量的模型应该是：<code>quantize: none</code><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702122414057.png" alt="image-20250702122414057"></p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702122150980.png" alt="image-20250702122150980"></p>
+<p>​			如果你要使用全量化的模型，那就需要到huggingface这种模型网站去他们<a href="https://huggingface.co/Qwen/collections">Qwen (Qwen)</a>的GGUF格式文件，而这个可就要大得多了：</p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702134841259.png" alt="image-20250702134841259"></p>
+<p>​			此外，你还需要根据<a href="https://qwen.readthedocs.io/zh-cn/latest/run_locally/ollama.html">Ollama - Qwen</a>的流程创建文件：</p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702134931270.png" alt="image-20250702134931270"></p>
+<p>​				然后这里我们说一下ollama调用API时的几个默认接口：</p>
+<p>​				在本地部署时有个基础的：<a href="http://localhost:11434，然后根据你的需求，额外增加生成文本补全端点：POST">http://localhost:11434，然后根据你的需求，额外增加生成文本补全端点：POST</a> &#x2F;api&#x2F;generate；对话式交互端点：POST &#x2F;api&#x2F;chat；我们这里首先点开1.新建接口，换成POST，并填写<a href="http://localhost:11434/api/chat">http://localhost:11434/api/chat</a></p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250703205010332.png" alt="image-20250703205010332"></p>
+<p>​			然后我们这里就点击Body，选择里面的json格式，并参考这样的格式添加一个示例。请注意，json格式不支持注释，我这里是为了方便理解和后续替换对应的块。<img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250703205111334.png" alt="image-20250703205111334"></p>
+<p>​			这里面的流式传输需要额外说明一下，流式传输是一种将数据分割成多个连续的小块（chunk）实时传输的方式，如果你选择了流式传输，那他就会一个字一个字（Token）的给你反馈：<img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250703205346011.png" alt="image-20250703205346011"></p>
+<p>此外 ，关于这个部分，在我看的网课里面有一张很好的图概括：</p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250706232003714.png" alt="image-20250706232003714"></p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250706233801408.png" alt="image-20250706233801408"></p>
+<h1><span id="参考目录">参考目录</span></h1><p>1.<a href="https://ollama.com/blog/thinking">思考 ·Ollama 博客</a></p>
+]]></content>
+      <tags>
+        <tag>实习准备</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>n8n项目试做</title>
+    <url>/2025/08/29/n8n%E9%A1%B9%E7%9B%AE%E8%AF%95%E5%81%9A/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>moe使用学习中</title>
+    <url>/2025/04/26/moe%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD/</url>
+    <content><![CDATA[<p>在这里更新下我对混合专家(mixture-of-experts, MoE)的理解：MOE是一种通过对Transformer的FNN处进行简化的方法。首先将FNN层分成N个专家，每次只激活需要的那个专家模型，这样推理的时候就能减少计算量到原来的1&#x2F;N。然后通过均衡训练的方法保证训练阶段每个专家模型都能充分训练。<br> <span id="more"></span><br>这样做的好处就是能够保障模型的可部署性和输出速度符合我们阅读速度的需求。毕竟你训练的时候不考虑成本，但是你推理的时候，总是要考虑这个问题的。</p>
+<p>不过，这只是一个浅显的认识。具体的内容我还得跟着视频学习，更新。<br>这个图总结得真好啊<br><img src="/2025/04/26/moe%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD/Moe%E5%8F%91%E5%B8%83%E6%A8%A1%E5%9E%8B.png" alt="图片"><br>##MOE的结构##<br>正如之前说过的，Moe会将FNN分为多个Expert专家模型,如何选择合适的专家模型就成为一个问题。在这里我们会采用一个门控机制，通过Softmax这样的算法将对专家模型的选择变成概率值，并根据这个将特征输入到合适的专家模型去。</p>
+<p>根据处理机制不同，就会分成三种类型（1）稀疏门控：只激活部分专家（2）稠密门控：激活全部专家（3）软门控（这个没看懂）.我想这个还是去看最新大模型有哪些架构就好<br><img src="/2025/04/26/moe%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD/Moe%E7%BB%93%E6%9E%84%E5%9B%BE1.png" alt="图片"><br><img src="/2025/04/26/moe%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD/Moe%E7%BB%93%E6%9E%84%E5%9B%BE2.png" alt="图片"><br>PS：<br>不得不说，博客一旦停下来就很难继续写，总之先以每两天更新一次为目标。此外，我觉得自己也该赶紧把评论功能加上去。虽然可能没人看就是了。</p>
+<p>B站的ZOMI酱大佬和他的项目真是太厉害了。</p>
+<h2><span id="参考学习文献">参考学习文献：</span></h2><blockquote>
+<p><a href="https://www.bilibili.com/video/BV1y7wZeeE96?spm_id_from=333.788.videopod.sections&vd_source=ecbe42ffb25fea0da636165433fb75d6">https://www.bilibili.com/video/BV1y7wZeeE96?spm_id_from=333.788.videopod.sections&amp;vd_source=ecbe42ffb25fea0da636165433fb75d6</a><br><a href="https://github.com/chenzomi12/AIInfra">https://github.com/chenzomi12/AIInfra</a></p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>未来日记</tag>
       </tags>
   </entry>
   <entry>
@@ -1496,35 +1527,15 @@ public class Application &#123;
       </tags>
   </entry>
   <entry>
-    <title>llama4看到的一些东西</title>
-    <url>/2025/05/12/llama4%E7%9C%8B%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E4%B8%9C%E8%A5%BF/</url>
-    <content><![CDATA[<p>带着有色眼镜果然容易看错一些东西，我对于llama就有不少误解。特此记录，警醒自己。<br> <span id="more"></span><br>我从没想过llama最大的开源模型之一会不支持中文。这一点实在是太过离谱了。但是对此也引发了我新的疑问：大语言模型的多语言能力是怎么来的呢？为什么没有中文的模型居然可以训练出中文语义呢？</p>
-<p>另一个震撼我的地方是llama4糟糕的图像识别能力，这代表他不能真的胜任多模态任务。我实在懒得加图，下次一定。然后这也是一个疑问：原生多模态大模型就一定比非原生多模态大模型好吗？</p>
-<p>阅读论文的过程中，我总是习惯性扫一眼就路过，但这是不行的。我需要边阅读，边弄大纲。最好的做法我认为是先去看网上的解读，然后带着一个基础认识自己去读一遍。虽然难免带上其他人的主观，但在我知识不足的现在，这一步是必要的。</p>
+    <title>taichinet阅读体会</title>
+    <url>/2024/06/18/taichinet%E9%98%85%E8%AF%BB%E4%BD%93%E4%BC%9A/</url>
+    <content><![CDATA[<p>TaiChiNet: Negative-Positive Cross-Attention Network for Breast Lesion Segmentation in Ultrasound Images</p>
+<p>2024.3，医学2区top，采用BUSI数据集和Dataset B<br> <span id="more"></span><br>关于乳腺癌的X光类型数据集，可以被看做是一个像素级的二分类问题，即一类像素病变，另一类表示正常。但由于其超声模式复杂，分割性能容易被削弱。<br>为了提高分割性能有两种研究方法：<br>    1.采用全局和局部注意力特征挖掘前景病变和正常背景——但由于两种背景的模式相似容易发生混淆，而类的不平和问题导致了分割性能的敏感性低下<br>    2.通过焦点损失单方面增强前景病变——聚焦于前景损害的方法单方面地获得损害前景中的真阳性的增加，但也导致包括分散区域的正常背景中的假阳性的增加</p>
+<p>提出的新方法：<br>    对前景病变和正常背景进行双边增强，然后进行交叉聚集。然后将乳腺病变分割作为负的正常-背景路径和正的前景-病变路径之间的相互监督任务，并把提出的网络负向正向交叉网络叫做太极网：1.其由两个u网组成，分别挖掘周围病变和正常背景的模式。并在两个U-Net的深层之间，设计了一个交叉注意模块，用于跨深层语义通道传递信息。2.此外，为了改善在相互监督下的特征表示，在传统分割约束的基础上，提出了负路径和正路径之间的互补损失来传递双边补充信息，其中骰子损失主要集中在单边增强上</p>
 ]]></content>
       <tags>
-        <tag>日常记录</tag>
+        <tag>-医学图像</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>moe使用学习中</title>
-    <url>/2025/04/26/moe%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD/</url>
-    <content><![CDATA[<p>在这里更新下我对混合专家(mixture-of-experts, MoE)的理解：MOE是一种通过对Transformer的FNN处进行简化的方法。首先将FNN层分成N个专家，每次只激活需要的那个专家模型，这样推理的时候就能减少计算量到原来的1&#x2F;N。然后通过均衡训练的方法保证训练阶段每个专家模型都能充分训练。<br> <span id="more"></span><br>这样做的好处就是能够保障模型的可部署性和输出速度符合我们阅读速度的需求。毕竟你训练的时候不考虑成本，但是你推理的时候，总是要考虑这个问题的。</p>
-<p>不过，这只是一个浅显的认识。具体的内容我还得跟着视频学习，更新。<br>这个图总结得真好啊<br><img src="/2025/04/26/moe%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD/Moe%E5%8F%91%E5%B8%83%E6%A8%A1%E5%9E%8B.png" alt="图片"><br>##MOE的结构##<br>正如之前说过的，Moe会将FNN分为多个Expert专家模型,如何选择合适的专家模型就成为一个问题。在这里我们会采用一个门控机制，通过Softmax这样的算法将对专家模型的选择变成概率值，并根据这个将特征输入到合适的专家模型去。</p>
-<p>根据处理机制不同，就会分成三种类型（1）稀疏门控：只激活部分专家（2）稠密门控：激活全部专家（3）软门控（这个没看懂）.我想这个还是去看最新大模型有哪些架构就好<br><img src="/2025/04/26/moe%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD/Moe%E7%BB%93%E6%9E%84%E5%9B%BE1.png" alt="图片"><br><img src="/2025/04/26/moe%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD/Moe%E7%BB%93%E6%9E%84%E5%9B%BE2.png" alt="图片"><br>PS：<br>不得不说，博客一旦停下来就很难继续写，总之先以每两天更新一次为目标。此外，我觉得自己也该赶紧把评论功能加上去。虽然可能没人看就是了。</p>
-<p>B站的ZOMI酱大佬和他的项目真是太厉害了。</p>
-<h2><span id="参考学习文献">参考学习文献：</span></h2><blockquote>
-<p><a href="https://www.bilibili.com/video/BV1y7wZeeE96?spm_id_from=333.788.videopod.sections&vd_source=ecbe42ffb25fea0da636165433fb75d6">https://www.bilibili.com/video/BV1y7wZeeE96?spm_id_from=333.788.videopod.sections&amp;vd_source=ecbe42ffb25fea0da636165433fb75d6</a><br><a href="https://github.com/chenzomi12/AIInfra">https://github.com/chenzomi12/AIInfra</a></p>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>未来日记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>n8n项目试做</title>
-    <url>/2025/08/29/n8n%E9%A1%B9%E7%9B%AE%E8%AF%95%E5%81%9A/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>node js基础</title>
@@ -1557,17 +1568,6 @@ public class Application &#123;
 ]]></content>
       <tags>
         <tag>日常记录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>taichinet阅读体会</title>
-    <url>/2024/06/18/taichinet%E9%98%85%E8%AF%BB%E4%BD%93%E4%BC%9A/</url>
-    <content><![CDATA[<p>TaiChiNet: Negative-Positive Cross-Attention Network for Breast Lesion Segmentation in Ultrasound Images</p>
-<p>2024.3，医学2区top，采用BUSI数据集和Dataset B<br> <span id="more"></span><br>关于乳腺癌的X光类型数据集，可以被看做是一个像素级的二分类问题，即一类像素病变，另一类表示正常。但由于其超声模式复杂，分割性能容易被削弱。<br>为了提高分割性能有两种研究方法：<br>    1.采用全局和局部注意力特征挖掘前景病变和正常背景——但由于两种背景的模式相似容易发生混淆，而类的不平和问题导致了分割性能的敏感性低下<br>    2.通过焦点损失单方面增强前景病变——聚焦于前景损害的方法单方面地获得损害前景中的真阳性的增加，但也导致包括分散区域的正常背景中的假阳性的增加</p>
-<p>提出的新方法：<br>    对前景病变和正常背景进行双边增强，然后进行交叉聚集。然后将乳腺病变分割作为负的正常-背景路径和正的前景-病变路径之间的相互监督任务，并把提出的网络负向正向交叉网络叫做太极网：1.其由两个u网组成，分别挖掘周围病变和正常背景的模式。并在两个U-Net的深层之间，设计了一个交叉注意模块，用于跨深层语义通道传递信息。2.此外，为了改善在相互监督下的特征表示，在传统分割约束的基础上，提出了负路径和正路径之间的互补损失来传递双边补充信息，其中骰子损失主要集中在单边增强上</p>
-]]></content>
-      <tags>
-        <tag>-医学图像</tag>
       </tags>
   </entry>
   <entry>
@@ -1804,6 +1804,17 @@ class UserService &#123;
       </tags>
   </entry>
   <entry>
+    <title>关于智能体的体验</title>
+    <url>/2025/05/02/%E5%85%B3%E4%BA%8E%E6%99%BA%E8%83%BD%E4%BD%93%E7%9A%84%E4%BD%93%E9%AA%8C/</url>
+    <content><![CDATA[<p>2025年是智能体的元年，这一观点常被各大厂商提及。我查找了以往他们对于智能体的一些观点。看来也确实如此。</p>
+<p>比较有说服力的是OPENAI的创始人萨鲁曼的说法，在之前的纽约时报里，我看到对于大模型的财报并不理想。其实这方面我认为DS也是有影响的，他们推出的开源低成本大模型极大地促进了市场对于大模型的开发热情，另一方OPENAI必须为此降低成本以吸引用户。他们API和付费订阅就因此没那么容易赚钱了。必须寻找一个突破口—–也就是智能体。</p>
+<p>可以看到他们对于这个智能体是很有信心的，他们甚至敢说赚1750亿。没有比这个更直观的了，另一方面是智能体的进展。编程智能体是最多的，然后是检索引擎智能体。不得不说，编程类智能体感觉会导致就业进一步严峻。我必须跟进学习这部分才行。</p>
+]]></content>
+      <tags>
+        <tag>日常记录</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>优秀博文整理</title>
     <url>/2025/07/06/%E4%BC%98%E7%A7%80%E5%8D%9A%E6%96%87%E6%95%B4%E7%90%86/</url>
     <content><![CDATA[<p>​				记录一些我看过的优秀博文。</p>
@@ -1813,17 +1824,6 @@ class UserService &#123;
 ]]></content>
       <tags>
         <tag>日常学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于智能体的体验</title>
-    <url>/2025/05/02/%E5%85%B3%E4%BA%8E%E6%99%BA%E8%83%BD%E4%BD%93%E7%9A%84%E4%BD%93%E9%AA%8C/</url>
-    <content><![CDATA[<p>2025年是智能体的元年，这一观点常被各大厂商提及。我查找了以往他们对于智能体的一些观点。看来也确实如此。</p>
-<p>比较有说服力的是OPENAI的创始人萨鲁曼的说法，在之前的纽约时报里，我看到对于大模型的财报并不理想。其实这方面我认为DS也是有影响的，他们推出的开源低成本大模型极大地促进了市场对于大模型的开发热情，另一方OPENAI必须为此降低成本以吸引用户。他们API和付费订阅就因此没那么容易赚钱了。必须寻找一个突破口—–也就是智能体。</p>
-<p>可以看到他们对于这个智能体是很有信心的，他们甚至敢说赚1750亿。没有比这个更直观的了，另一方面是智能体的进展。编程智能体是最多的，然后是检索引擎智能体。不得不说，编程类智能体感觉会导致就业进一步严峻。我必须跟进学习这部分才行。</p>
-]]></content>
-      <tags>
-        <tag>日常记录</tag>
       </tags>
   </entry>
   <entry>
@@ -1923,152 +1923,6 @@ class UserService &#123;
 ]]></content>
       <tags>
         <tag>日常学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于智能体的看法</title>
-    <url>/2025/04/28/%E5%85%B3%E4%BA%8E%E6%99%BA%E8%83%BD%E4%BD%93%E7%9A%84%E7%9C%8B%E6%B3%95/</url>
-    <content><![CDATA[<p>感觉所谓的智能体，实际上是以往工作的整合。不过也确实很擅长</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>力扣学习记录lambda表达式</title>
-    <url>/2026/01/22/%E5%8A%9B%E6%89%A3%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
-    <content><![CDATA[<p>在做 LeetCode 347（前 K 个高频元素）时，我最开始的思路是简单的“统计频率 -&gt; 找出频率大于 k 的数”。但后来发现题目要求的是<strong>“频率最高的 k 个数”</strong>，这是一个经典的 Top K 问题。</p>
-<p>在这个过程中，我对 Java 的 <code>PriorityQueue</code>（优先队列）、Lambda 表达式以及堆排序的本质有了全新的认识。</p>
-<span id="more"></span>
-
-<p>先贴结果代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import java.util.*;</span><br><span class="line"></span><br><span class="line">class Solution &#123;</span><br><span class="line">    public int[] topKFrequent(int[] nums, int k) &#123;</span><br><span class="line">        // 1. 使用 HashMap 统计每个数字出现的频率</span><br><span class="line">        Map&lt;Integer, Integer&gt; counts = new HashMap&lt;&gt;();</span><br><span class="line">        for (int num : nums) &#123;</span><br><span class="line">            counts.put(num, counts.getOrDefault(num, 0) + 1);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // 2. 创建优先队列（小顶堆）</span><br><span class="line">        // 核心逻辑：(a, b) -&gt; counts.get(a) - counts.get(b)</span><br><span class="line">        // 含义：按照频率从小到大排。频率低的在堆顶，随时准备被踢走。</span><br><span class="line">        PriorityQueue&lt;Integer&gt; pq = new PriorityQueue&lt;&gt;((a, b) -&gt; counts.get(a) - counts.get(b));</span><br><span class="line"></span><br><span class="line">        // 3. 遍历 Map，维护一个大小为 k 的堆</span><br><span class="line">        for (int num : counts.keySet()) &#123;</span><br><span class="line">            pq.offer(num); // 入队</span><br><span class="line">            // 如果堆大了，就把频率最小的（堆顶）弹出去</span><br><span class="line">            if (pq.size() &gt; k) &#123;</span><br><span class="line">                pq.poll();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // 4. 输出结果</span><br><span class="line">        int[] res = new int[k];</span><br><span class="line">        for (int i = 0; i &lt; k; i++) &#123;</span><br><span class="line">            res[i] = pq.poll();</span><br><span class="line">        &#125;</span><br><span class="line">        return res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这个代码里面，我最开始很不理解，这一个确实是我以前没怎么见过，后来理解了这是一种特殊的增加规则的的方法。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">PriorityQueue&lt;Integer&gt; pq = new PriorityQueue&lt;&gt;((a, b) -&gt; counts.get(a) - counts.get(b));</span><br></pre></td></tr></table></figure>
-
-<p>这行代码并不只是为了“排序”，它是在<strong>“立规矩”</strong>。</p>
-<ul>
-<li>**<code>a</code> 和 <code>b</code>**：是队列里的数字（选手）。</li>
-<li>**<code>counts.get(...)</code>**：是比较的标准（看频率，不看数字本身）。</li>
-<li><strong>返回值</strong>：虽然写的是减法算式，但 Java 接收到的是一个<strong>整数（int）</strong>。<ul>
-<li>负数：<code>a</code> 轻（上浮&#x2F;排前面）。</li>
-<li>正数：<code>a</code> 重（下沉&#x2F;排后面）。</li>
-</ul>
-</li>
-</ul>
-<p>从而保证了每次add都会维护，把小数值给上浮。</p>
-<h2><span id="2comparator-万能口诀">2.Comparator 万能口诀</span></h2><p>根据学习，永远是写（a,b）根据目标效果，选择是a-b还是b-a</p>
-<table>
-<thead>
-<tr>
-<th><strong>目标效果</strong></th>
-<th><strong>核心写法</strong></th>
-<th><strong>记忆口诀</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>小</strong>数值在堆顶 &#x2F; 排前面</td>
-<td><code>a - b</code></td>
-<td><strong>前减后</strong>（我减你）</td>
-</tr>
-<tr>
-<td><strong>大</strong>数值在堆顶 &#x2F; 排前面</td>
-<td><code>b - a</code></td>
-<td><strong>后减前</strong>（你减我）</td>
-</tr>
-<tr>
-<td><strong>String 长度短</strong>在堆顶</td>
-<td><code>a.length() - b.length()</code></td>
-<td>前减后</td>
-</tr>
-<tr>
-<td><strong>String 字典序</strong>靠前</td>
-<td><code>a.compareTo(b)</code></td>
-<td>顺着比</td>
-</tr>
-</tbody></table>
-<p>而对于一些复杂的情况，我们可以在里面增加代码串。逻辑是一样的，返回的数值小于0，就是选择数对的A上浮</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(a, b) -&gt; &#123;</span><br><span class="line">    int freqCompare = counts.get(a) - counts.get(b);</span><br><span class="line">    if (freqCompare != 0) &#123;</span><br><span class="line">        return freqCompare; // 频率不同：按频率小顶堆（小的在顶）</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        // 频率相同：进入这里的瞬间，freqCompare 已经是 0 了，不能用了！</span><br><span class="line">        // 题目要求：数字大的在堆顶 -&gt; 大顶堆逻辑 -&gt; 后减前</span><br><span class="line">        return b - a;  // &lt;--- 这里才是正确答案</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2><span id="3扩展用法">3.扩展用法</span></h2><p>不止是这个小根堆，大根堆场景，我们还能用在别的地方：</p>
-<h3><span id="31-给数组x2f列表排序-arrayssort-x2f-collectionssort">3.1 给数组&#x2F;列表排序 (<code>Arrays.sort</code> &#x2F; <code>Collections.sort</code>)</span></h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">List&lt;String&gt; list = new ArrayList&lt;&gt;(Arrays.asList(&quot;apple&quot;, &quot;hi&quot;, &quot;banana&quot;));</span><br><span class="line"></span><br><span class="line">// 旧写法：Collections.sort(list, new Comparator...);</span><br><span class="line">// 新写法（Lambda）：</span><br><span class="line">list.sort((a, b) -&gt; a.length() - b.length()); </span><br><span class="line"></span><br><span class="line">System.out.println(list); // 输出 [hi, apple, banana]</span><br></pre></td></tr></table></figure>
-
-<h3><span id="32-给二维数组排序">3.2 给二维数组排序</span></h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// intervals 是个二维数组，里面的元素是 int[] (一维数组)</span><br><span class="line">// 所以这里的 a 和 b 代表的是每一行，即 &#123;1,3&#125; 和 &#123;2,6&#125;</span><br><span class="line">Arrays.sort(intervals, (a, b) -&gt; a[0] - b[0]);</span><br></pre></td></tr></table></figure>
-
-<h3><span id="33-自动排序的-map-和-set-treemap-x2f-treeset">3.3 自动排序的 Map 和 Set (<code>TreeMap</code> &#x2F; <code>TreeSet</code>)</span></h3><p>这两个数据结构和 <code>PriorityQueue</code> 是亲兄弟。</p>
-<ul>
-<li><code>PriorityQueue</code>：只保证<strong>堆顶</strong>是有序的。</li>
-<li><code>TreeMap</code> &#x2F; <code>TreeSet</code>：保证<strong>内部所有元素永远</strong>是有序的。</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 这里的 (a, b) 指的是 Key</span><br><span class="line">Map&lt;Integer, String&gt; map = new TreeMap&lt;&gt;((a, b) -&gt; b - a);</span><br><span class="line"></span><br><span class="line">map.put(1, &quot;A&quot;);</span><br><span class="line">map.put(3, &quot;B&quot;);</span><br><span class="line">map.put(2, &quot;C&quot;);</span><br><span class="line"></span><br><span class="line">// 遍历时，会自动按 Key 从大到小出：3 -&gt; 2 -&gt; 1</span><br><span class="line">for(Integer key : map.keySet()) &#123;</span><br><span class="line">    System.out.println(key); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2><span id="4-java-stream-流操作-max-min-sorted">4.  Java Stream 流操作 (<code>.max</code>, <code>.min</code>, <code>.sorted</code>)</span></h2><p>Java 8 的流式编程极其依赖这个写法。</p>
-<h4><span id="场景在一堆对象里找最的那一个">场景：在一堆对象里找“最…”的那一个</span></h4><p>假设你有一堆 <code>Student</code> 对象，想找<strong>分数最高</strong>的那个。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Student &#123; String name; int score; &#125;</span><br><span class="line">List&lt;Student&gt; students = ...;</span><br><span class="line"></span><br><span class="line">// 找最大值 (max)</span><br><span class="line">// 这里的 max 需要你告诉它：什么叫“大”？</span><br><span class="line">// 答：分数 (a.score - b.score) 越大，就越大</span><br><span class="line">Student bestStudent = students.stream()</span><br><span class="line">    .max((a, b) -&gt; a.score - b.score) </span><br><span class="line">    .get();</span><br></pre></td></tr></table></figure>
-
-<h2><span id="5总结">5.总结</span></h2><table>
-<thead>
-<tr>
-<th><strong>场景</strong></th>
-<th><strong>代码片段</strong></th>
-<th><strong>作用</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>优先队列</strong></td>
-<td><code>new PriorityQueue&lt;&gt;((a, b) -&gt; a - b)</code></td>
-<td>决定<strong>谁在堆顶</strong></td>
-</tr>
-<tr>
-<td><strong>数组排序</strong></td>
-<td><code>Arrays.sort(arr, (a, b) -&gt; a - b)</code></td>
-<td>决定<strong>谁排前面</strong></td>
-</tr>
-<tr>
-<td><strong>列表排序</strong></td>
-<td><code>list.sort((a, b) -&gt; a - b)</code></td>
-<td>决定<strong>谁排前面</strong></td>
-</tr>
-<tr>
-<td><strong>Tree结构</strong></td>
-<td><code>new TreeMap&lt;&gt;((a, b) -&gt; a - b)</code></td>
-<td>决定<strong>Key的存储顺序</strong></td>
-</tr>
-<tr>
-<td><strong>流操作</strong></td>
-<td><code>stream.max((a, b) -&gt; a - b)</code></td>
-<td>决定<strong>谁算最大值</strong></td>
-</tr>
-</tbody></table>
-]]></content>
-      <tags>
-        <tag>日常学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>医疗助手大模型的微调</title>
-    <url>/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/</url>
-    <content><![CDATA[<p>在之前的博客助手大模型中，我感受到模型效果受参数影响极大，一些8b回答起来磕磕绊绊的问题，14b的模型就能顺利回答。固然模型的参数是一个要点，但我认为以后对于小模型的需求也不会减少，这就需要用微调的方式让模型垂直化，专业化。因此，我的下一个目标在大模型的微调上，由于我的课题和医疗方向比较相关的，这方面的微调数据集 (华佗GPT) 又有，因此，我计划从这方面入手，做出一个医疗领域的垂直优化大模型，旨在回答医疗知识，降低有害错误问题的发生率</p>
-<span id="more"></span>
-
-<h1><span id="1模型选择">1.模型选择</span></h1><h1><span id="2数据集选择">2.数据集选择</span></h1><p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828221748287.png" alt="image-20250828221748287"></p>
-<p>链接：<a href="https://huggingface.co/datasets?search=medical">https://huggingface.co/datasets?search=medical</a></p>
-<p>先确定目的，SFT阶段我们主要任务是让模型博学起来，能够理解医疗领域的术语、实体以及常见的对话模式就算成功，使用华佗GPT数据集，由香港中文大学（深圳）和深圳市大数据研究院联合开源了专用于医疗领域的复杂大模型。这样就使用他们给出的SFT数据集：<a href="https://huggingface.co/datasets/FreedomIntelligence/medical-o1-reasoning-SFT">FreedomIntelligence&#x2F;medical-o1-reasoning-SFT · Datasets at Hugging Face</a></p>
-<p>折磨了一下下完了，这里需要注意，安装前要先下两个库，然后用huggingface-cli下载会快很多：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install -U &quot;huggingface_hub[cli]&quot;</span><br><span class="line">#高速传输库 hf_transfer</span><br><span class="line">pip install -U hf_transfer</span><br></pre></td></tr></table></figure>
-
-<p>由于我的服务器内网限制严格，只能win上面安装，做了这两部我还要手动加上Path：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">WARNING: The scripts hf.exe... are installed in  &#x27;C:\Users\origin\AppData\Roaming\Python\Python312\Scripts&#x27;  which is not on PATH.</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828230911267.png" alt="image-20250828230911267"></p>
-<p>然后在新建造哪里输入上面的路径信息 <code>&#39;C:\Users\origin\AppData\Roaming\Python\Python312\Scripts&#39;</code> </p>
-<p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828231120276.png" alt="image-20250828231120276"></p>
-<p>重新启动后就可以正常下载了</p>
-<p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828225951739.png" alt="image-20250828225951739"></p>
-<h1><span id="参考资料">参考资料：</span></h1><p><a href="https://zhuanlan.zhihu.com/p/652615133">推荐收藏！23个医疗领域微调大模型微调及数据汇总！ - 知乎</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/15635537603">【论文解读】HuatuoGPT-o1：用CoT和RL增强医疗LLM的复杂推理能力 - 知乎</a></p>
-<p><a href="https://github.com/FreedomIntelligence/HuatuoGPT">FreedomIntelligence&#x2F;HuatuoGPT: HuatuoGPT, Towards Taming Language Models To Be a Doctor. (An Open Medical GPT)</a></p>
-]]></content>
-      <tags>
-        <tag>实习准备</tag>
       </tags>
   </entry>
   <entry>
@@ -2228,12 +2082,170 @@ class UserService &#123;
       </tags>
   </entry>
   <entry>
+    <title>关于智能体的看法</title>
+    <url>/2025/04/28/%E5%85%B3%E4%BA%8E%E6%99%BA%E8%83%BD%E4%BD%93%E7%9A%84%E7%9C%8B%E6%B3%95/</url>
+    <content><![CDATA[<p>感觉所谓的智能体，实际上是以往工作的整合。不过也确实很擅长</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>力扣学习记录lambda表达式</title>
+    <url>/2026/01/22/%E5%8A%9B%E6%89%A3%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+    <content><![CDATA[<p>在做 LeetCode 347（前 K 个高频元素）时，我最开始的思路是简单的“统计频率 -&gt; 找出频率大于 k 的数”。但后来发现题目要求的是<strong>“频率最高的 k 个数”</strong>，这是一个经典的 Top K 问题。</p>
+<p>在这个过程中，我对 Java 的 <code>PriorityQueue</code>（优先队列）、Lambda 表达式以及堆排序的本质有了全新的认识。</p>
+<span id="more"></span>
+
+<p>先贴结果代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import java.util.*;</span><br><span class="line"></span><br><span class="line">class Solution &#123;</span><br><span class="line">    public int[] topKFrequent(int[] nums, int k) &#123;</span><br><span class="line">        // 1. 使用 HashMap 统计每个数字出现的频率</span><br><span class="line">        Map&lt;Integer, Integer&gt; counts = new HashMap&lt;&gt;();</span><br><span class="line">        for (int num : nums) &#123;</span><br><span class="line">            counts.put(num, counts.getOrDefault(num, 0) + 1);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // 2. 创建优先队列（小顶堆）</span><br><span class="line">        // 核心逻辑：(a, b) -&gt; counts.get(a) - counts.get(b)</span><br><span class="line">        // 含义：按照频率从小到大排。频率低的在堆顶，随时准备被踢走。</span><br><span class="line">        PriorityQueue&lt;Integer&gt; pq = new PriorityQueue&lt;&gt;((a, b) -&gt; counts.get(a) - counts.get(b));</span><br><span class="line"></span><br><span class="line">        // 3. 遍历 Map，维护一个大小为 k 的堆</span><br><span class="line">        for (int num : counts.keySet()) &#123;</span><br><span class="line">            pq.offer(num); // 入队</span><br><span class="line">            // 如果堆大了，就把频率最小的（堆顶）弹出去</span><br><span class="line">            if (pq.size() &gt; k) &#123;</span><br><span class="line">                pq.poll();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // 4. 输出结果</span><br><span class="line">        int[] res = new int[k];</span><br><span class="line">        for (int i = 0; i &lt; k; i++) &#123;</span><br><span class="line">            res[i] = pq.poll();</span><br><span class="line">        &#125;</span><br><span class="line">        return res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个代码里面，我最开始很不理解，这一个确实是我以前没怎么见过，后来理解了这是一种特殊的增加规则的的方法。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">PriorityQueue&lt;Integer&gt; pq = new PriorityQueue&lt;&gt;((a, b) -&gt; counts.get(a) - counts.get(b));</span><br></pre></td></tr></table></figure>
+
+<p>这行代码并不只是为了“排序”，它是在<strong>“立规矩”</strong>。</p>
+<ul>
+<li>**<code>a</code> 和 <code>b</code>**：是队列里的数字（选手）。</li>
+<li>**<code>counts.get(...)</code>**：是比较的标准（看频率，不看数字本身）。</li>
+<li><strong>返回值</strong>：虽然写的是减法算式，但 Java 接收到的是一个<strong>整数（int）</strong>。<ul>
+<li>负数：<code>a</code> 轻（上浮&#x2F;排前面）。</li>
+<li>正数：<code>a</code> 重（下沉&#x2F;排后面）。</li>
+</ul>
+</li>
+</ul>
+<p>从而保证了每次add都会维护，把小数值给上浮。</p>
+<h2><span id="2comparator-万能口诀">2.Comparator 万能口诀</span></h2><p>根据学习，永远是写（a,b）根据目标效果，选择是a-b还是b-a</p>
+<table>
+<thead>
+<tr>
+<th><strong>目标效果</strong></th>
+<th><strong>核心写法</strong></th>
+<th><strong>记忆口诀</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>小</strong>数值在堆顶 &#x2F; 排前面</td>
+<td><code>a - b</code></td>
+<td><strong>前减后</strong>（我减你）</td>
+</tr>
+<tr>
+<td><strong>大</strong>数值在堆顶 &#x2F; 排前面</td>
+<td><code>b - a</code></td>
+<td><strong>后减前</strong>（你减我）</td>
+</tr>
+<tr>
+<td><strong>String 长度短</strong>在堆顶</td>
+<td><code>a.length() - b.length()</code></td>
+<td>前减后</td>
+</tr>
+<tr>
+<td><strong>String 字典序</strong>靠前</td>
+<td><code>a.compareTo(b)</code></td>
+<td>顺着比</td>
+</tr>
+</tbody></table>
+<p>而对于一些复杂的情况，我们可以在里面增加代码串。逻辑是一样的，返回的数值小于0，就是选择数对的A上浮</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(a, b) -&gt; &#123;</span><br><span class="line">    int freqCompare = counts.get(a) - counts.get(b);</span><br><span class="line">    if (freqCompare != 0) &#123;</span><br><span class="line">        return freqCompare; // 频率不同：按频率小顶堆（小的在顶）</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        // 频率相同：进入这里的瞬间，freqCompare 已经是 0 了，不能用了！</span><br><span class="line">        // 题目要求：数字大的在堆顶 -&gt; 大顶堆逻辑 -&gt; 后减前</span><br><span class="line">        return b - a;  // &lt;--- 这里才是正确答案</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2><span id="3扩展用法">3.扩展用法</span></h2><p>不止是这个小根堆，大根堆场景，我们还能用在别的地方：</p>
+<h3><span id="31-给数组x2f列表排序-arrayssort-x2f-collectionssort">3.1 给数组&#x2F;列表排序 (<code>Arrays.sort</code> &#x2F; <code>Collections.sort</code>)</span></h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">List&lt;String&gt; list = new ArrayList&lt;&gt;(Arrays.asList(&quot;apple&quot;, &quot;hi&quot;, &quot;banana&quot;));</span><br><span class="line"></span><br><span class="line">// 旧写法：Collections.sort(list, new Comparator...);</span><br><span class="line">// 新写法（Lambda）：</span><br><span class="line">list.sort((a, b) -&gt; a.length() - b.length()); </span><br><span class="line"></span><br><span class="line">System.out.println(list); // 输出 [hi, apple, banana]</span><br></pre></td></tr></table></figure>
+
+<h3><span id="32-给二维数组排序">3.2 给二维数组排序</span></h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// intervals 是个二维数组，里面的元素是 int[] (一维数组)</span><br><span class="line">// 所以这里的 a 和 b 代表的是每一行，即 &#123;1,3&#125; 和 &#123;2,6&#125;</span><br><span class="line">Arrays.sort(intervals, (a, b) -&gt; a[0] - b[0]);</span><br></pre></td></tr></table></figure>
+
+<h3><span id="33-自动排序的-map-和-set-treemap-x2f-treeset">3.3 自动排序的 Map 和 Set (<code>TreeMap</code> &#x2F; <code>TreeSet</code>)</span></h3><p>这两个数据结构和 <code>PriorityQueue</code> 是亲兄弟。</p>
+<ul>
+<li><code>PriorityQueue</code>：只保证<strong>堆顶</strong>是有序的。</li>
+<li><code>TreeMap</code> &#x2F; <code>TreeSet</code>：保证<strong>内部所有元素永远</strong>是有序的。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 这里的 (a, b) 指的是 Key</span><br><span class="line">Map&lt;Integer, String&gt; map = new TreeMap&lt;&gt;((a, b) -&gt; b - a);</span><br><span class="line"></span><br><span class="line">map.put(1, &quot;A&quot;);</span><br><span class="line">map.put(3, &quot;B&quot;);</span><br><span class="line">map.put(2, &quot;C&quot;);</span><br><span class="line"></span><br><span class="line">// 遍历时，会自动按 Key 从大到小出：3 -&gt; 2 -&gt; 1</span><br><span class="line">for(Integer key : map.keySet()) &#123;</span><br><span class="line">    System.out.println(key); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2><span id="4-java-stream-流操作-max-min-sorted">4.  Java Stream 流操作 (<code>.max</code>, <code>.min</code>, <code>.sorted</code>)</span></h2><p>Java 8 的流式编程极其依赖这个写法。</p>
+<h4><span id="场景在一堆对象里找最的那一个">场景：在一堆对象里找“最…”的那一个</span></h4><p>假设你有一堆 <code>Student</code> 对象，想找<strong>分数最高</strong>的那个。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Student &#123; String name; int score; &#125;</span><br><span class="line">List&lt;Student&gt; students = ...;</span><br><span class="line"></span><br><span class="line">// 找最大值 (max)</span><br><span class="line">// 这里的 max 需要你告诉它：什么叫“大”？</span><br><span class="line">// 答：分数 (a.score - b.score) 越大，就越大</span><br><span class="line">Student bestStudent = students.stream()</span><br><span class="line">    .max((a, b) -&gt; a.score - b.score) </span><br><span class="line">    .get();</span><br></pre></td></tr></table></figure>
+
+<h2><span id="5总结">5.总结</span></h2><table>
+<thead>
+<tr>
+<th><strong>场景</strong></th>
+<th><strong>代码片段</strong></th>
+<th><strong>作用</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>优先队列</strong></td>
+<td><code>new PriorityQueue&lt;&gt;((a, b) -&gt; a - b)</code></td>
+<td>决定<strong>谁在堆顶</strong></td>
+</tr>
+<tr>
+<td><strong>数组排序</strong></td>
+<td><code>Arrays.sort(arr, (a, b) -&gt; a - b)</code></td>
+<td>决定<strong>谁排前面</strong></td>
+</tr>
+<tr>
+<td><strong>列表排序</strong></td>
+<td><code>list.sort((a, b) -&gt; a - b)</code></td>
+<td>决定<strong>谁排前面</strong></td>
+</tr>
+<tr>
+<td><strong>Tree结构</strong></td>
+<td><code>new TreeMap&lt;&gt;((a, b) -&gt; a - b)</code></td>
+<td>决定<strong>Key的存储顺序</strong></td>
+</tr>
+<tr>
+<td><strong>流操作</strong></td>
+<td><code>stream.max((a, b) -&gt; a - b)</code></td>
+<td>决定<strong>谁算最大值</strong></td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>日常学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>医疗助手大模型的微调</title>
+    <url>/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/</url>
+    <content><![CDATA[<p>在之前的博客助手大模型中，我感受到模型效果受参数影响极大，一些8b回答起来磕磕绊绊的问题，14b的模型就能顺利回答。固然模型的参数是一个要点，但我认为以后对于小模型的需求也不会减少，这就需要用微调的方式让模型垂直化，专业化。因此，我的下一个目标在大模型的微调上，由于我的课题和医疗方向比较相关的，这方面的微调数据集 (华佗GPT) 又有，因此，我计划从这方面入手，做出一个医疗领域的垂直优化大模型，旨在回答医疗知识，降低有害错误问题的发生率</p>
+<span id="more"></span>
+
+<h1><span id="1模型选择">1.模型选择</span></h1><h1><span id="2数据集选择">2.数据集选择</span></h1><p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828221748287.png" alt="image-20250828221748287"></p>
+<p>链接：<a href="https://huggingface.co/datasets?search=medical">https://huggingface.co/datasets?search=medical</a></p>
+<p>先确定目的，SFT阶段我们主要任务是让模型博学起来，能够理解医疗领域的术语、实体以及常见的对话模式就算成功，使用华佗GPT数据集，由香港中文大学（深圳）和深圳市大数据研究院联合开源了专用于医疗领域的复杂大模型。这样就使用他们给出的SFT数据集：<a href="https://huggingface.co/datasets/FreedomIntelligence/medical-o1-reasoning-SFT">FreedomIntelligence&#x2F;medical-o1-reasoning-SFT · Datasets at Hugging Face</a></p>
+<p>折磨了一下下完了，这里需要注意，安装前要先下两个库，然后用huggingface-cli下载会快很多：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install -U &quot;huggingface_hub[cli]&quot;</span><br><span class="line">#高速传输库 hf_transfer</span><br><span class="line">pip install -U hf_transfer</span><br></pre></td></tr></table></figure>
+
+<p>由于我的服务器内网限制严格，只能win上面安装，做了这两部我还要手动加上Path：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">WARNING: The scripts hf.exe... are installed in  &#x27;C:\Users\origin\AppData\Roaming\Python\Python312\Scripts&#x27;  which is not on PATH.</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828230911267.png" alt="image-20250828230911267"></p>
+<p>然后在新建造哪里输入上面的路径信息 <code>&#39;C:\Users\origin\AppData\Roaming\Python\Python312\Scripts&#39;</code> </p>
+<p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828231120276.png" alt="image-20250828231120276"></p>
+<p>重新启动后就可以正常下载了</p>
+<p><img src="/2025/08/28/%E5%8C%BB%E7%96%97%E5%8A%A9%E6%89%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BE%AE%E8%B0%83/image-20250828225951739.png" alt="image-20250828225951739"></p>
+<h1><span id="参考资料">参考资料：</span></h1><p><a href="https://zhuanlan.zhihu.com/p/652615133">推荐收藏！23个医疗领域微调大模型微调及数据汇总！ - 知乎</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/15635537603">【论文解读】HuatuoGPT-o1：用CoT和RL增强医疗LLM的复杂推理能力 - 知乎</a></p>
+<p><a href="https://github.com/FreedomIntelligence/HuatuoGPT">FreedomIntelligence&#x2F;HuatuoGPT: HuatuoGPT, Towards Taming Language Models To Be a Doctor. (An Open Medical GPT)</a></p>
+]]></content>
+      <tags>
+        <tag>实习准备</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>大模型是怎么做到长上下文扩展的</title>
     <url>/2025/05/22/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%98%AF%E6%80%8E%E4%B9%88%E5%81%9A%E5%88%B0%E9%95%BF%E4%B8%8A%E4%B8%8B%E6%96%87%E6%89%A9%E5%B1%95%E7%9A%84/</url>
     <content><![CDATA[<p>一直以来我都很疑惑，为什么大模型可以从4K学到8K又到128K呢，今天看来视频才有一些想法。<br> <span id="more"></span><br>1.大模型拟合结果依赖随机梯度算法，如果一次性输出128K的文本进行拟合，那就会对128K倍的权重进行拟合，考虑到自注意力计算矩阵是输入增长的平方。直接进行拟合导致的计算消耗是难以估计的。</p>
 <p>2.因此，我们就先让模型学习少量文本。这时候模型的参数已经得到一定的调整了，当我们再扩大这个文本长度时，他会有一个基准线在，就可以以那个基准为基础进行二次拟合。如果我们把8K的参数全部冻结，训练128K的文本矩阵加到8K的参数矩阵上去，那这个实际上就类似LORA了。这也是LORA微调的核心，基础大模型不动，少量修改附加参数矩阵。</p>
 <p>3.再一个增大模型上下文长度的方法就是数据分片了，学习完前面的内容再把学到的东西传递下去</p>
 <p>4.如果从架构入手也是可以的，比如经典的局部注意力+全局注意力的形式，这一技术我们可以在Gemma2到Gemma3的架构改进中看到。</p>
+]]></content>
+      <tags>
+        <tag>日常记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大模型的演变趋势</title>
+    <url>/2025/05/14/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%BC%94%E5%8F%98%E8%B6%8B%E5%8A%BF/</url>
+    <content><![CDATA[<p>我认为大模型的趋势有俩，轻量化和多模态化。<br> <span id="more"></span><br>轻量化说的就是MOE和稀疏自注意力。大家都在往这个方向走。而且现在似乎再MOE这一点上已经达成一致了。考虑到MOE能够大幅度减少推理成本，这是很合理的。</p>
+<p>另一个问题是自注意力机制。最关键的这个部分反而是没有怎么改动的，从MHA,GQA,单个子注意力。这些都是缩减规模，但是性能肉眼可见的在掉，虽然分组倒是能行，但效果还是差了点。这一点来说DS的新注意力就很强了，MLA。和ROPE混合起来使用，保留了自注意力的效果还减少了计算量，明显的有在另辟蹊径。</p>
+<p>然后就是多模态化，道也不用多说。这些本质都是为了后续的硬件做服务。我感觉现在的大模型卷到一定程度，确实是都走向应用去了，就是大模型始终只能当辅助。</p>
+<p>虽然不好说这个时间能持续多久就是了</p>
 ]]></content>
       <tags>
         <tag>日常记录</tag>
@@ -2426,18 +2438,6 @@ class UserService &#123;
       </tags>
   </entry>
   <entry>
-    <title>大模型的演变趋势</title>
-    <url>/2025/05/14/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%BC%94%E5%8F%98%E8%B6%8B%E5%8A%BF/</url>
-    <content><![CDATA[<p>我认为大模型的趋势有俩，轻量化和多模态化。<br> <span id="more"></span><br>轻量化说的就是MOE和稀疏自注意力。大家都在往这个方向走。而且现在似乎再MOE这一点上已经达成一致了。考虑到MOE能够大幅度减少推理成本，这是很合理的。</p>
-<p>另一个问题是自注意力机制。最关键的这个部分反而是没有怎么改动的，从MHA,GQA,单个子注意力。这些都是缩减规模，但是性能肉眼可见的在掉，虽然分组倒是能行，但效果还是差了点。这一点来说DS的新注意力就很强了，MLA。和ROPE混合起来使用，保留了自注意力的效果还减少了计算量，明显的有在另辟蹊径。</p>
-<p>然后就是多模态化，道也不用多说。这些本质都是为了后续的硬件做服务。我感觉现在的大模型卷到一定程度，确实是都走向应用去了，就是大模型始终只能当辅助。</p>
-<p>虽然不好说这个时间能持续多久就是了</p>
-]]></content>
-      <tags>
-        <tag>日常记录</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>大模型训练消耗显存</title>
     <url>/2025/05/26/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E6%B6%88%E8%80%97%E6%98%BE%E5%AD%98/</url>
     <content><![CDATA[<blockquote>
@@ -2494,13 +2494,6 @@ class UserService &#123;
 <p>顺便一提，Mounted on下面就代表磁盘的路径，我这里是&#x2F;mnt&#x2F;data，就用&#x2F;mnt&#x2F;data替换&#x2F;root。<br>但是，有时候你在修改了这个都还是报错磁盘不足，这是因为你只修改了conda的,如果你用的pip命令就可能导致再次出错。这里我们指定 pip 的临时文件夹就可以了</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export TMPDIR=&quot;/mnt/data/temp/&quot;//有空间的那个磁盘下随便写一个文件路径</span><br><span class="line">mkdir -p $TMPDIR</span><br><span class="line">pip~</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>至此解决问题，成功下载</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>如何让新创建的用户使用当前的conda</title>
-    <url>/2025/03/24/%E5%A6%82%E4%BD%95%E8%AE%A9%E6%96%B0%E5%88%9B%E5%BB%BA%E7%9A%84%E7%94%A8%E6%88%B7%E4%BD%BF%E7%94%A8%E5%BD%93%E5%89%8D%E7%9A%84conda/</url>
-    <content><![CDATA[<p>首先创建新用户到你的路径。然后设置密码<br>    sudo useradd &lt;用户名&gt; -m -d &lt;你的路径&gt; -s &#x2F;bin&#x2F;bash<br>    chown &lt;用户名&gt;:&lt;用户名&gt; -R &lt;你的路径&gt;<br>    passwd username</p>
-<p>然后复制.bashrc到自己的目录去，.bashrc可以在自己的目录里面找。激活前记得先cd到自己的新目录<br>    sudo cp .bashrc &#x2F;home&#x2F;newuser&#x2F;.bashrc<br>    source ~&#x2F;.bashrc<br>这里用你的旧用户的路径替换&lt;&#x2F;root&#x2F;conda&gt;<br>    chmod 755 &lt;&#x2F;root&#x2F;conda&gt;</p>
 ]]></content>
   </entry>
   <entry>
@@ -2577,6 +2570,13 @@ class UserService &#123;
       </tags>
   </entry>
   <entry>
+    <title>如何让新创建的用户使用当前的conda</title>
+    <url>/2025/03/24/%E5%A6%82%E4%BD%95%E8%AE%A9%E6%96%B0%E5%88%9B%E5%BB%BA%E7%9A%84%E7%94%A8%E6%88%B7%E4%BD%BF%E7%94%A8%E5%BD%93%E5%89%8D%E7%9A%84conda/</url>
+    <content><![CDATA[<p>首先创建新用户到你的路径。然后设置密码<br>    sudo useradd &lt;用户名&gt; -m -d &lt;你的路径&gt; -s &#x2F;bin&#x2F;bash<br>    chown &lt;用户名&gt;:&lt;用户名&gt; -R &lt;你的路径&gt;<br>    passwd username</p>
+<p>然后复制.bashrc到自己的目录去，.bashrc可以在自己的目录里面找。激活前记得先cd到自己的新目录<br>    sudo cp .bashrc &#x2F;home&#x2F;newuser&#x2F;.bashrc<br>    source ~&#x2F;.bashrc<br>这里用你的旧用户的路径替换&lt;&#x2F;root&#x2F;conda&gt;<br>    chmod 755 &lt;&#x2F;root&#x2F;conda&gt;</p>
+]]></content>
+  </entry>
+  <entry>
     <title>总结学习maven</title>
     <url>/2025/08/13/%E6%80%BB%E7%BB%93%E5%AD%A6%E4%B9%A0maven/</url>
     <content><![CDATA[<p>因为我之前是使用python的多，这里说下我对maven学习后的一些理解。先下定义：maven的功能是编译java代码，在依赖管理方面使用pom.xml文件。不过和conda不同，maven管理环境依赖的方式是把需要的内容下载到一个本地仓库（.m2&#x2F;repository），然后根据pom.xml里面的需求调用需要的内容。</p>
@@ -2646,29 +2646,6 @@ class UserService &#123;
 ]]></content>
       <tags>
         <tag>日常记录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据结构面经准备</title>
-    <url>/2025/08/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%9D%A2%E7%BB%8F%E5%87%86%E5%A4%87/</url>
-    <content><![CDATA[<p>毕竟是计算机基本功，但时间远了还是容易忘记，这里记录下我认为有必要准备的数据结构知识。整个流程我大体按照考研那时的数据结构来，尽可能全面吧</p>
-<span id="more"></span>
-
-<h1><span id="1数据结构">1.数据结构</span></h1><h1><span id="1数组和链表">1.数组和链表</span></h1><p>数组</p>
-<ul>
-<li>定义：一块连续的内存空间，用于存储相同类型的元素。通过索引（下标）可以直接访问任意元素。</li>
-<li>优点：随机存储</li>
-<li>缺点：</li>
-</ul>
-<p>链表</p>
-<ul>
-<li>定义：</li>
-<li>优点：</li>
-<li>缺点：</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>面试准备</tag>
       </tags>
   </entry>
   <entry>
@@ -2804,6 +2781,37 @@ class UserService &#123;
       </tags>
   </entry>
   <entry>
+    <title>第一篇博客尝试</title>
+    <url>/2024/06/14/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E5%B0%9D%E8%AF%95/</url>
+    <content><![CDATA[<p>学习使用博客的技巧<br> <span id="more"></span><br>感谢知乎枫叶佬的文章，优化学习于：<a href="https://zhuanlan.zhihu.com/p/106060640">枫叶</a>,然后发文章的教程在：<a href="https://cloud.tencent.com/developer/article/1662733">腾讯云教程</a>,以作日后查询，简单说具体流程就是:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new title  \\title换自己文章名</span><br><span class="line">hexo clean \\清理本地</span><br><span class="line">hexo g  </span><br><span class="line">hexo d  \\上传代码</span><br></pre></td></tr></table></figure>
+<p>此外学习了插入图片的技巧学习自博客<a href="https://zhuanlan.zhihu.com/p/265077468">插入图片教程</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>数据结构面经准备</title>
+    <url>/2025/08/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%9D%A2%E7%BB%8F%E5%87%86%E5%A4%87/</url>
+    <content><![CDATA[<p>毕竟是计算机基本功，但时间远了还是容易忘记，这里记录下我认为有必要准备的数据结构知识。整个流程我大体按照考研那时的数据结构来，尽可能全面吧</p>
+<span id="more"></span>
+
+<h1><span id="1数据结构">1.数据结构</span></h1><h1><span id="1数组和链表">1.数组和链表</span></h1><p>数组</p>
+<ul>
+<li>定义：一块连续的内存空间，用于存储相同类型的元素。通过索引（下标）可以直接访问任意元素。</li>
+<li>优点：随机存储</li>
+<li>缺点：</li>
+</ul>
+<p>链表</p>
+<ul>
+<li>定义：</li>
+<li>优点：</li>
+<li>缺点：</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>面试准备</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>模型的参数计算方法</title>
     <url>/2025/05/05/%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%8F%82%E6%95%B0%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<p>整理一下学习到的模型的思路<br> <span id="more"></span><br>这里主要讨论以Trans为基础的大语言模型的参数计算方法。首先对于解码器架构的模型，大体是三部分：两个Emebedding层，QKV注意力层，全连接层。</p>
@@ -2814,6 +2822,77 @@ class UserService &#123;
 ]]></content>
       <tags>
         <tag>日常记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>给博客增加在线编辑能力的记录</title>
+    <url>/2026/07/16/%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%BE%91%E8%83%BD%E5%8A%9B%E7%9A%84%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p>这次对博客做了一次小改造：我希望它不只是一个需要在本地手动改文件、手动生成、手动发布的静态页面，而是能够有一个在线编辑入口。最后采用的方案是保留 Hexo 静态博客本身，再加上 Decap CMS、GitHub OAuth 和自动部署流程。</p>
+<span id="more"></span>
+
+<h2><span id="一开始的问题">一开始的问题</span></h2><p>我原来的博客本质上是一个静态站点。文章写在本地的 Markdown 文件里，Hexo 负责把这些 Markdown 生成网页，然后发布到 GitHub Pages。</p>
+<p>这种方式很稳定，也很适合个人博客，但缺点也很明显：</p>
+<ol>
+<li>每次写文章都要回到本地项目里改文件。</li>
+<li>如果换一台电脑，编辑体验就不方便。</li>
+<li>标签、分类这些内容虽然 Hexo 支持，但也需要自己手动维护。</li>
+<li>没有一个像后台一样的地方，可以直接新建、编辑、保存文章。</li>
+</ol>
+<p>所以这次的目标不是把博客改成完整的后端系统，而是加一个轻量的在线编辑能力。</p>
+<h2><span id="最后采用的方案">最后采用的方案</span></h2><p>这次选择的是 Decap CMS。它不是传统意义上的数据库后台，而是一个适合静态博客的内容管理工具。</p>
+<p>整个流程可以理解为：</p>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">访问博客后台 /admin/</span><br><span class="line">  -&gt; 使用 Decap CMS 编辑文章</span><br><span class="line">  -&gt; 通过 GitHub OAuth 登录</span><br><span class="line">  -&gt; 把文章保存到博客源码仓库</span><br><span class="line">  -&gt; GitHub Actions 自动构建 Hexo</span><br><span class="line">  -&gt; 发布到 GitHub Pages</span><br><span class="line">  -&gt; mtdown.top 更新</span><br></pre></td></tr></table></figure>
+
+<p>也就是说，博客最终仍然是静态网页，但是编辑文章这件事被搬到了浏览器里。</p>
+<h2><span id="我们具体做了什么">我们具体做了什么</span></h2><p>第一步是在博客里增加了一个后台入口：</p>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">https://mtdown.top/admin/</span><br></pre></td></tr></table></figure>
+
+<p>这个页面加载 Decap CMS。进入后可以看到文章列表，也可以新建文章、编辑标题、发布时间、标签、分类和正文。</p>
+<p>第二步是配置 Decap CMS，让它知道文章应该保存到哪里。这里连接的是博客源码仓库：</p>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">mtdown/blog-source</span><br></pre></td></tr></table></figure>
+
+<p>这一步很重要，因为在线编辑时修改的不是最终生成出来的网页，而是 Hexo 的源码。只有源码变了，后面才可以重新生成完整博客。</p>
+<p>第三步是处理 GitHub 登录。静态网页不能直接安全地保存 GitHub 的密钥，所以需要一个 OAuth 代理服务。这里用 Render 部署了一个小服务：</p>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">https://mtdown-blog-oauth.onrender.com</span><br></pre></td></tr></table></figure>
+
+<p>它负责完成 GitHub 授权。登录成功后，Decap CMS 才能代表我把文章保存回源码仓库。</p>
+<p>第四步是修改 GitHub OAuth App 的回调地址。这里一开始容易填错。正确的回调地址应该是 OAuth 代理服务自己的地址：</p>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">https://mtdown-blog-oauth.onrender.com/callback</span><br></pre></td></tr></table></figure>
+
+<p>而不是：</p>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">https://mtdown.top/callback</span><br></pre></td></tr></table></figure>
+
+<p>原因是 GitHub 登录完成后，需要先回到 Render 上的 OAuth 代理，由它完成最后的授权交换，再把结果交给博客后台。</p>
+<p>第五步是配置自动发布。以后只要后台保存文章，源码仓库产生变化，GitHub Actions 就会自动执行：</p>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">安装依赖</span><br><span class="line">生成 Hexo 静态文件</span><br><span class="line">发布到 mtdown.github.io</span><br><span class="line">更新 mtdown.top</span><br></pre></td></tr></table></figure>
+
+<p>这样编辑和发布就连起来了。</p>
+<h2><span id="这套方案的特点">这套方案的特点</span></h2><p>我觉得这套方案比较适合个人博客，因为它没有引入太重的后端。</p>
+<p>它的好处是：</p>
+<ol>
+<li>博客访问速度仍然是静态站的速度。</li>
+<li>不需要自己维护数据库。</li>
+<li>文章仍然是 Markdown 文件，长期可迁移。</li>
+<li>可以在浏览器里编辑文章，不必每次打开本地项目。</li>
+<li>GitHub 仍然保存完整历史记录，出问题可以追溯。</li>
+</ol>
+<p>它的限制也很清楚：</p>
+<ol>
+<li>登录依赖 GitHub OAuth。</li>
+<li>Render 免费服务可能会休眠，第一次打开登录会慢一点。</li>
+<li>自动发布依赖 GitHub Actions。</li>
+<li>这不是给所有访客使用的后台，只适合自己编辑内容。</li>
+</ol>
+<h2><span id="关于评论功能">关于评论功能</span></h2><p>这次暂时没有做评论功能。评论和在线编辑不一样，评论是给所有访客使用的交互能力，会涉及防垃圾评论、权限、存储和展示。</p>
+<p>如果以后要做评论，我更倾向于单独处理，比如使用 Giscus 这类基于 GitHub Discussions 的方案。这样可以避免自己维护数据库，也能保留静态博客的简单性。</p>
+<h2><span id="总结">总结</span></h2><p>这次改造让我对静态博客有了一个更清晰的认识：静态博客并不一定只能手动维护。它可以仍然保持静态发布，同时把编辑、授权、构建这些动作交给外部服务完成。</p>
+<p>最终得到的是一个比较轻量的内容管理流程：</p>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Hexo 负责生成博客</span><br><span class="line">Decap CMS 负责在线编辑</span><br><span class="line">GitHub 负责保存源码</span><br><span class="line">Render 负责登录授权</span><br><span class="line">GitHub Actions 负责自动发布</span><br><span class="line">GitHub Pages 负责展示网站</span><br></pre></td></tr></table></figure>
+
+<p>这样博客还是我的 Markdown 仓库，但编辑体验已经更接近一个真正的个人内容后台了。</p>
+]]></content>
+      <tags>
+        <tag>日常学习</tag>
       </tags>
   </entry>
   <entry>
@@ -3143,90 +3222,6 @@ class UserService &#123;
       </tags>
   </entry>
   <entry>
-    <title>第一篇博客尝试</title>
-    <url>/2024/06/14/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E5%B0%9D%E8%AF%95/</url>
-    <content><![CDATA[<p>学习使用博客的技巧<br> <span id="more"></span><br>感谢知乎枫叶佬的文章，优化学习于：<a href="https://zhuanlan.zhihu.com/p/106060640">枫叶</a>,然后发文章的教程在：<a href="https://cloud.tencent.com/developer/article/1662733">腾讯云教程</a>,以作日后查询，简单说具体流程就是:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new title  \\title换自己文章名</span><br><span class="line">hexo clean \\清理本地</span><br><span class="line">hexo g  </span><br><span class="line">hexo d  \\上传代码</span><br></pre></td></tr></table></figure>
-<p>此外学习了插入图片的技巧学习自博客<a href="https://zhuanlan.zhihu.com/p/265077468">插入图片教程</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>背包问题</title>
-    <url>/2026/01/18/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>给博客增加在线编辑能力的记录</title>
-    <url>/2026/07/16/%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%BE%91%E8%83%BD%E5%8A%9B%E7%9A%84%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<p>这次对博客做了一次小改造：我希望它不只是一个需要在本地手动改文件、手动生成、手动发布的静态页面，而是能够有一个在线编辑入口。最后采用的方案是保留 Hexo 静态博客本身，再加上 Decap CMS、GitHub OAuth 和自动部署流程。</p>
-<span id="more"></span>
-
-<h2><span id="一开始的问题">一开始的问题</span></h2><p>我原来的博客本质上是一个静态站点。文章写在本地的 Markdown 文件里，Hexo 负责把这些 Markdown 生成网页，然后发布到 GitHub Pages。</p>
-<p>这种方式很稳定，也很适合个人博客，但缺点也很明显：</p>
-<ol>
-<li>每次写文章都要回到本地项目里改文件。</li>
-<li>如果换一台电脑，编辑体验就不方便。</li>
-<li>标签、分类这些内容虽然 Hexo 支持，但也需要自己手动维护。</li>
-<li>没有一个像后台一样的地方，可以直接新建、编辑、保存文章。</li>
-</ol>
-<p>所以这次的目标不是把博客改成完整的后端系统，而是加一个轻量的在线编辑能力。</p>
-<h2><span id="最后采用的方案">最后采用的方案</span></h2><p>这次选择的是 Decap CMS。它不是传统意义上的数据库后台，而是一个适合静态博客的内容管理工具。</p>
-<p>整个流程可以理解为：</p>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">访问博客后台 /admin/</span><br><span class="line">  -&gt; 使用 Decap CMS 编辑文章</span><br><span class="line">  -&gt; 通过 GitHub OAuth 登录</span><br><span class="line">  -&gt; 把文章保存到博客源码仓库</span><br><span class="line">  -&gt; GitHub Actions 自动构建 Hexo</span><br><span class="line">  -&gt; 发布到 GitHub Pages</span><br><span class="line">  -&gt; mtdown.top 更新</span><br></pre></td></tr></table></figure>
-
-<p>也就是说，博客最终仍然是静态网页，但是编辑文章这件事被搬到了浏览器里。</p>
-<h2><span id="我们具体做了什么">我们具体做了什么</span></h2><p>第一步是在博客里增加了一个后台入口：</p>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">https://mtdown.top/admin/</span><br></pre></td></tr></table></figure>
-
-<p>这个页面加载 Decap CMS。进入后可以看到文章列表，也可以新建文章、编辑标题、发布时间、标签、分类和正文。</p>
-<p>第二步是配置 Decap CMS，让它知道文章应该保存到哪里。这里连接的是博客源码仓库：</p>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">mtdown/blog-source</span><br></pre></td></tr></table></figure>
-
-<p>这一步很重要，因为在线编辑时修改的不是最终生成出来的网页，而是 Hexo 的源码。只有源码变了，后面才可以重新生成完整博客。</p>
-<p>第三步是处理 GitHub 登录。静态网页不能直接安全地保存 GitHub 的密钥，所以需要一个 OAuth 代理服务。这里用 Render 部署了一个小服务：</p>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">https://mtdown-blog-oauth.onrender.com</span><br></pre></td></tr></table></figure>
-
-<p>它负责完成 GitHub 授权。登录成功后，Decap CMS 才能代表我把文章保存回源码仓库。</p>
-<p>第四步是修改 GitHub OAuth App 的回调地址。这里一开始容易填错。正确的回调地址应该是 OAuth 代理服务自己的地址：</p>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">https://mtdown-blog-oauth.onrender.com/callback</span><br></pre></td></tr></table></figure>
-
-<p>而不是：</p>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">https://mtdown.top/callback</span><br></pre></td></tr></table></figure>
-
-<p>原因是 GitHub 登录完成后，需要先回到 Render 上的 OAuth 代理，由它完成最后的授权交换，再把结果交给博客后台。</p>
-<p>第五步是配置自动发布。以后只要后台保存文章，源码仓库产生变化，GitHub Actions 就会自动执行：</p>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">安装依赖</span><br><span class="line">生成 Hexo 静态文件</span><br><span class="line">发布到 mtdown.github.io</span><br><span class="line">更新 mtdown.top</span><br></pre></td></tr></table></figure>
-
-<p>这样编辑和发布就连起来了。</p>
-<h2><span id="这套方案的特点">这套方案的特点</span></h2><p>我觉得这套方案比较适合个人博客，因为它没有引入太重的后端。</p>
-<p>它的好处是：</p>
-<ol>
-<li>博客访问速度仍然是静态站的速度。</li>
-<li>不需要自己维护数据库。</li>
-<li>文章仍然是 Markdown 文件，长期可迁移。</li>
-<li>可以在浏览器里编辑文章，不必每次打开本地项目。</li>
-<li>GitHub 仍然保存完整历史记录，出问题可以追溯。</li>
-</ol>
-<p>它的限制也很清楚：</p>
-<ol>
-<li>登录依赖 GitHub OAuth。</li>
-<li>Render 免费服务可能会休眠，第一次打开登录会慢一点。</li>
-<li>自动发布依赖 GitHub Actions。</li>
-<li>这不是给所有访客使用的后台，只适合自己编辑内容。</li>
-</ol>
-<h2><span id="关于评论功能">关于评论功能</span></h2><p>这次暂时没有做评论功能。评论和在线编辑不一样，评论是给所有访客使用的交互能力，会涉及防垃圾评论、权限、存储和展示。</p>
-<p>如果以后要做评论，我更倾向于单独处理，比如使用 Giscus 这类基于 GitHub Discussions 的方案。这样可以避免自己维护数据库，也能保留静态博客的简单性。</p>
-<h2><span id="总结">总结</span></h2><p>这次改造让我对静态博客有了一个更清晰的认识：静态博客并不一定只能手动维护。它可以仍然保持静态发布，同时把编辑、授权、构建这些动作交给外部服务完成。</p>
-<p>最终得到的是一个比较轻量的内容管理流程：</p>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Hexo 负责生成博客</span><br><span class="line">Decap CMS 负责在线编辑</span><br><span class="line">GitHub 负责保存源码</span><br><span class="line">Render 负责登录授权</span><br><span class="line">GitHub Actions 负责自动发布</span><br><span class="line">GitHub Pages 负责展示网站</span><br></pre></td></tr></table></figure>
-
-<p>这样博客还是我的 Markdown 仓库，但编辑体验已经更接近一个真正的个人内容后台了。</p>
-]]></content>
-      <tags>
-        <tag>日常学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>通过Tailscale突破内网限制连接服务器</title>
     <url>/2025/06/22/%E9%80%9A%E8%BF%87Tailscale%E7%AA%81%E7%A0%B4%E5%86%85%E7%BD%91%E9%99%90%E5%88%B6%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
     <content><![CDATA[<p>一直以来苦恼于实验室的服务器不能够远程操作，在外实习会十分不方便，今天找到Tailscale可以解决这个问题。<br> <span id="more"></span><br>操作方式很简单</p>
@@ -3242,113 +3237,9 @@ class UserService &#123;
       </tags>
   </entry>
   <entry>
-    <title>随想杂谈</title>
-    <url>/2025/08/21/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/</url>
-    <content><![CDATA[<p>每天学习的时候，看到一些东西，记录在word里面很容易就找不到，在这里做个备忘录。</p>
-<span id="more"></span>
-
-<h1><span id="17spring框架_哔哩哔哩_bilibili学习记录">1.学习记录</span></h1><h2><span id="11-spring框架入门">1.1 Spring框架入门</span></h2><p>Spring和Spring framework不是一个东西，Spirng实际上代表的是一整个生态体系。这里提到的Spring framework核心支持是依赖注入。web应用指的是Spring MVC</p>
-<p><img src="/2025/08/21/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/image-20250821114741035.png" alt="image-20250821114741035"></p>
-<p>Spring体系结构如下图：<img src="https://img2018.cnblogs.com/blog/480452/201903/480452-20190318225849216-2097896352.png" alt="img"></p>
-<p>然后在这个总结构中，最重要的就是这个IOC容器了。</p>
-<p><img src="/2025/08/21/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/image-20250821115252514.png" alt="image-20250821115252514"></p>
-<h2><span id="12-ioc控制了什么di是什么">1.2 IOC控制了什么，DI是什么？</span></h2><p>IOC的作用就是控制反转，从程序员创造一个对象到系统自己创造一个对象。IOC的提出是为了解决后期维护问题，降低代码和代码之间的耦合性。DI指的是依赖注入。</p>
-<p>结果就是由Spring这个框架来控制和管理对象：</p>
-<p><img src="/2025/08/21/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/image-20250821115715491.png" alt="image-20250821115715491"></p>
-<h2><span id="13-早期的spring的di和现在的di">1.3 早期的Spring的DI和现在的DI</span></h2><p>视频中，作者展示了一种注入方法，使用 <bean> 和 <property> 标签将对象注入。不过这种是比较早期的方法了（Spring1），现在我们是使用@Bean来进行注入。</property></bean></p>
-<p><img src="/2025/08/21/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/image-20250821131523893.png" alt="image-20250821131523893"></p>
-<p>更进一步的(Spring2)，就是用@Component结合Spring.xml配置文件</p>
-<p><img src="/2025/08/21/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/image-20250821142209695.png" alt="image-20250821142209695"></p>
-<p><img src="/2025/08/21/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/image-20250821142228058.png" alt="image-20250821142228058"></p>
-<p>剩下的变化没有一一列举，只给出了这样的表格：</p>
-<table>
-<thead>
-<tr>
-<th align="center">版本</th>
-<th align="left">版本特性</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Spring Framework 1.0</td>
-<td align="left">1. 所有代码都在一个项目中<br>2. 支持核心功能 IoC、AOP <br>3. 内置支持 Hibernate、iBatis 等第三方框架 <br>4. 对第三方技术简单封装，如：JDBC、Mail、事务等 5. 只支持 XML 配置方式</td>
-</tr>
-<tr>
-<td align="center">Spring Framework 2.0</td>
-<td align="left">1. 最重要的变化：支持注解配置 <br>2. 增加对 ehcache 支持<br> 3. 对 JMS (Java消息服务)、JMX (Java管理扩展) 等支持</td>
-</tr>
-<tr>
-<td align="center">Spring Framework 3.0</td>
-<td align="left">1. 支持 Java 类的配置 <br>2. 由原来的一个项目拆分成多个子模块 <br>3. 添加单元测试子模块</td>
-</tr>
-<tr>
-<td align="center">Spring Framework 4.0</td>
-<td align="left">1. 全面支持 Java 8 <br>2. 添加二级子项目 Spring MVC，基于 Servlet 3.0 开发 <br>3. 提供 WebSocket 支持 4. 引入 @RestController 等注解，增强对 Restful 的支持</td>
-</tr>
-<tr>
-<td align="center">Spring Framework 5.0</td>
-<td align="left">1. 最低环境要求 Java 8 <br>2. 日志整合：把原来 commons-logging 封装后变为 spring-jcl 模块 <br>3. 跨域更改：把原来的 JSONP 支持变更为修改响应头的 @CrossOrigin 注解 <br> 4. 响应式编程：添加二级子项目 WebFlux  <br>5. 使用 Kotlin (科特林) 进行函数式编程</td>
-</tr>
-<tr>
-<td align="center">Spring Framework 6.0</td>
-<td align="left">1. 最低环境要求 Java 17<br> 2. 加强对响应式编程支持：添加子模块 spring-r2dbc <br>3. 取消子模块 spring-orm-hibernate4，只保留 spring-orm，只支持 Hibernate5。</td>
-</tr>
-</tbody></table>
-<h3><span id="14componentbeanimport相关">1.4@Component，@Bean，@Import相关</span></h3><p>在Spring框架中最核心的注入方式有两种，一种是@Bean注入，另一种是@Component注入。其中，@Component有很多子注解，比如说@Service, @Repository, @Controller 等。这些都是属于功能更加细致化的产物.</p>
-<table>
-<thead>
-<tr>
-<th align="center">特性</th>
-<th align="center">@Component</th>
-<th align="center">@Bean</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">位置</td>
-<td align="center">写在类上面</td>
-<td align="center">写在方法上面你</td>
-</tr>
-<tr>
-<td align="center">控制类型</td>
-<td align="center">业务逻辑控制</td>
-<td align="center">对象创建（实例化）控制</td>
-</tr>
-<tr>
-<td align="center">控制内容</td>
-<td align="center">控制一个类<strong>能做什么</strong>，其内部方法的具体实现。</td>
-<td align="center">控制一个对象<strong>如何诞生</strong>，包括调用哪个构造函数、设置哪些属性、以及根据条件返回不同类型的实例</td>
-</tr>
-<tr>
-<td align="center">强大之处</td>
-<td align="center">对<strong>内部实现</strong>的100%掌控。</td>
-<td align="center">对<strong>创建过程</strong>的100%掌控。</td>
-</tr>
-</tbody></table>
-<p>当一个@Bean调用另一个时，会去容器中获取</p>
-<p><img src="/2025/08/21/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/image-20250822224626936.png" alt="image-20250822224626936"></p>
-<p>Import：1.标记一定是在一个类上面。2.标记的类必须是@Bean3.import引入的类分两种，普通的和不普通的：</p>
-<p><img src="/2025/08/21/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/image-20250823105010815.png" alt="image-20250823105010815"></p>
-<h2><span id="15-bean的示例化">1.5 @Bean的示例化</span></h2><p>没有指定，使用默认构造器实例化的情况：</p>
-<ol>
-<li>有多个构造函数时，使用无参构造器，如果没有无参构造器，就会报错</li>
-<li>如果只有一个构造函数，@Bean会自动实例化唯一的哪一个；</li>
-</ol>
-<p>使用实例工厂的情况：</p>
-<ol>
-<li>可以自由选择构造函数进行实例化</li>
-</ol>
-<p>使用FactoryBean的情况：</p>
-<ol>
-<li>FactoryBean是一个接口</li>
-<li>前提是有一个Bean，一旦Bean实现了FactoryBean，他就成为了一个特殊的Bean</li>
-<li>同样的，这种做法也可以自由选择构造函数</li>
-</ol>
-<h1><span id="参考文献">参考文献：</span></h1><p>1.<a href="https://www.bilibili.com/video/BV1MDKBzsEHq?spm_id_from=333.788.player.switch&vd_source=ecbe42ffb25fea0da636165433fb75d6&p=6">7.spring框架_哔哩哔哩_bilibili</a></p>
-<p>2.<a href="https://segmentfault.com/a/1190000041772218">java - 【架构视角】一篇文章带你彻底吃透Spring - 框架系列全解 - SegmentFault 思否</a></p>
-<p>3<a href="https://www.cnblogs.com/jingzh/p/19048033">AI框架之LangChain4j讲解 - 上善若泪 - 博客园</a></p>
-]]></content>
-      <tags>
-        <tag>日常学习</tag>
-      </tags>
+    <title>背包问题</title>
+    <url>/2026/01/18/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>问答记录</title>
@@ -3538,6 +3429,115 @@ class UserService &#123;
 ]]></content>
       <tags>
         <tag>就业准</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>随想杂谈</title>
+    <url>/2025/08/21/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/</url>
+    <content><![CDATA[<p>每天学习的时候，看到一些东西，记录在word里面很容易就找不到，在这里做个备忘录。</p>
+<span id="more"></span>
+
+<h1><span id="17spring框架_哔哩哔哩_bilibili学习记录">1.学习记录</span></h1><h2><span id="11-spring框架入门">1.1 Spring框架入门</span></h2><p>Spring和Spring framework不是一个东西，Spirng实际上代表的是一整个生态体系。这里提到的Spring framework核心支持是依赖注入。web应用指的是Spring MVC</p>
+<p><img src="/2025/08/21/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/image-20250821114741035.png" alt="image-20250821114741035"></p>
+<p>Spring体系结构如下图：<img src="https://img2018.cnblogs.com/blog/480452/201903/480452-20190318225849216-2097896352.png" alt="img"></p>
+<p>然后在这个总结构中，最重要的就是这个IOC容器了。</p>
+<p><img src="/2025/08/21/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/image-20250821115252514.png" alt="image-20250821115252514"></p>
+<h2><span id="12-ioc控制了什么di是什么">1.2 IOC控制了什么，DI是什么？</span></h2><p>IOC的作用就是控制反转，从程序员创造一个对象到系统自己创造一个对象。IOC的提出是为了解决后期维护问题，降低代码和代码之间的耦合性。DI指的是依赖注入。</p>
+<p>结果就是由Spring这个框架来控制和管理对象：</p>
+<p><img src="/2025/08/21/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/image-20250821115715491.png" alt="image-20250821115715491"></p>
+<h2><span id="13-早期的spring的di和现在的di">1.3 早期的Spring的DI和现在的DI</span></h2><p>视频中，作者展示了一种注入方法，使用 <bean> 和 <property> 标签将对象注入。不过这种是比较早期的方法了（Spring1），现在我们是使用@Bean来进行注入。</property></bean></p>
+<p><img src="/2025/08/21/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/image-20250821131523893.png" alt="image-20250821131523893"></p>
+<p>更进一步的(Spring2)，就是用@Component结合Spring.xml配置文件</p>
+<p><img src="/2025/08/21/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/image-20250821142209695.png" alt="image-20250821142209695"></p>
+<p><img src="/2025/08/21/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/image-20250821142228058.png" alt="image-20250821142228058"></p>
+<p>剩下的变化没有一一列举，只给出了这样的表格：</p>
+<table>
+<thead>
+<tr>
+<th align="center">版本</th>
+<th align="left">版本特性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Spring Framework 1.0</td>
+<td align="left">1. 所有代码都在一个项目中<br>2. 支持核心功能 IoC、AOP <br>3. 内置支持 Hibernate、iBatis 等第三方框架 <br>4. 对第三方技术简单封装，如：JDBC、Mail、事务等 5. 只支持 XML 配置方式</td>
+</tr>
+<tr>
+<td align="center">Spring Framework 2.0</td>
+<td align="left">1. 最重要的变化：支持注解配置 <br>2. 增加对 ehcache 支持<br> 3. 对 JMS (Java消息服务)、JMX (Java管理扩展) 等支持</td>
+</tr>
+<tr>
+<td align="center">Spring Framework 3.0</td>
+<td align="left">1. 支持 Java 类的配置 <br>2. 由原来的一个项目拆分成多个子模块 <br>3. 添加单元测试子模块</td>
+</tr>
+<tr>
+<td align="center">Spring Framework 4.0</td>
+<td align="left">1. 全面支持 Java 8 <br>2. 添加二级子项目 Spring MVC，基于 Servlet 3.0 开发 <br>3. 提供 WebSocket 支持 4. 引入 @RestController 等注解，增强对 Restful 的支持</td>
+</tr>
+<tr>
+<td align="center">Spring Framework 5.0</td>
+<td align="left">1. 最低环境要求 Java 8 <br>2. 日志整合：把原来 commons-logging 封装后变为 spring-jcl 模块 <br>3. 跨域更改：把原来的 JSONP 支持变更为修改响应头的 @CrossOrigin 注解 <br> 4. 响应式编程：添加二级子项目 WebFlux  <br>5. 使用 Kotlin (科特林) 进行函数式编程</td>
+</tr>
+<tr>
+<td align="center">Spring Framework 6.0</td>
+<td align="left">1. 最低环境要求 Java 17<br> 2. 加强对响应式编程支持：添加子模块 spring-r2dbc <br>3. 取消子模块 spring-orm-hibernate4，只保留 spring-orm，只支持 Hibernate5。</td>
+</tr>
+</tbody></table>
+<h3><span id="14componentbeanimport相关">1.4@Component，@Bean，@Import相关</span></h3><p>在Spring框架中最核心的注入方式有两种，一种是@Bean注入，另一种是@Component注入。其中，@Component有很多子注解，比如说@Service, @Repository, @Controller 等。这些都是属于功能更加细致化的产物.</p>
+<table>
+<thead>
+<tr>
+<th align="center">特性</th>
+<th align="center">@Component</th>
+<th align="center">@Bean</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">位置</td>
+<td align="center">写在类上面</td>
+<td align="center">写在方法上面你</td>
+</tr>
+<tr>
+<td align="center">控制类型</td>
+<td align="center">业务逻辑控制</td>
+<td align="center">对象创建（实例化）控制</td>
+</tr>
+<tr>
+<td align="center">控制内容</td>
+<td align="center">控制一个类<strong>能做什么</strong>，其内部方法的具体实现。</td>
+<td align="center">控制一个对象<strong>如何诞生</strong>，包括调用哪个构造函数、设置哪些属性、以及根据条件返回不同类型的实例</td>
+</tr>
+<tr>
+<td align="center">强大之处</td>
+<td align="center">对<strong>内部实现</strong>的100%掌控。</td>
+<td align="center">对<strong>创建过程</strong>的100%掌控。</td>
+</tr>
+</tbody></table>
+<p>当一个@Bean调用另一个时，会去容器中获取</p>
+<p><img src="/2025/08/21/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/image-20250822224626936.png" alt="image-20250822224626936"></p>
+<p>Import：1.标记一定是在一个类上面。2.标记的类必须是@Bean3.import引入的类分两种，普通的和不普通的：</p>
+<p><img src="/2025/08/21/%E9%9A%8F%E6%83%B3%E6%9D%82%E8%B0%88/image-20250823105010815.png" alt="image-20250823105010815"></p>
+<h2><span id="15-bean的示例化">1.5 @Bean的示例化</span></h2><p>没有指定，使用默认构造器实例化的情况：</p>
+<ol>
+<li>有多个构造函数时，使用无参构造器，如果没有无参构造器，就会报错</li>
+<li>如果只有一个构造函数，@Bean会自动实例化唯一的哪一个；</li>
+</ol>
+<p>使用实例工厂的情况：</p>
+<ol>
+<li>可以自由选择构造函数进行实例化</li>
+</ol>
+<p>使用FactoryBean的情况：</p>
+<ol>
+<li>FactoryBean是一个接口</li>
+<li>前提是有一个Bean，一旦Bean实现了FactoryBean，他就成为了一个特殊的Bean</li>
+<li>同样的，这种做法也可以自由选择构造函数</li>
+</ol>
+<h1><span id="参考文献">参考文献：</span></h1><p>1.<a href="https://www.bilibili.com/video/BV1MDKBzsEHq?spm_id_from=333.788.player.switch&vd_source=ecbe42ffb25fea0da636165433fb75d6&p=6">7.spring框架_哔哩哔哩_bilibili</a></p>
+<p>2.<a href="https://segmentfault.com/a/1190000041772218">java - 【架构视角】一篇文章带你彻底吃透Spring - 框架系列全解 - SegmentFault 思否</a></p>
+<p>3<a href="https://www.cnblogs.com/jingzh/p/19048033">AI框架之LangChain4j讲解 - 上善若泪 - 博客园</a></p>
+]]></content>
+      <tags>
+        <tag>日常学习</tag>
       </tags>
   </entry>
 </search>

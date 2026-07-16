@@ -20,28 +20,28 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"mtdown.top","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="记录下自己对于IOC容器的理解。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="从满汉全席到IOC容器">
-<meta property="og:url" content="http://example.com/2025/08/13/%E4%BB%8E%E6%BB%A1%E6%B1%89%E5%85%A8%E5%B8%AD%E5%88%B0IOC%E5%AE%B9%E5%99%A8/index.html">
+<meta property="og:url" content="https://mtdown.top/2025/08/13/%E4%BB%8E%E6%BB%A1%E6%B1%89%E5%85%A8%E5%B8%AD%E5%88%B0IOC%E5%AE%B9%E5%99%A8/index.html">
 <meta property="og:site_name" content="Nod Y Lle Delfrydol">
 <meta property="og:description" content="记录下自己对于IOC容器的理解。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2025/08/13/%E4%BB%8E%E6%BB%A1%E6%B1%89%E5%85%A8%E5%B8%AD%E5%88%B0IOC%E5%AE%B9%E5%99%A8/image-20250814142153471.png">
-<meta property="og:image" content="http://example.com/2025/08/13/%E4%BB%8E%E6%BB%A1%E6%B1%89%E5%85%A8%E5%B8%AD%E5%88%B0IOC%E5%AE%B9%E5%99%A8/image-20250814203055540.png">
-<meta property="og:image" content="http://example.com/2025/08/13/%E4%BB%8E%E6%BB%A1%E6%B1%89%E5%85%A8%E5%B8%AD%E5%88%B0IOC%E5%AE%B9%E5%99%A8/image-20250814203221804.png">
-<meta property="og:image" content="http://example.com/2025/08/13/%E4%BB%8E%E6%BB%A1%E6%B1%89%E5%85%A8%E5%B8%AD%E5%88%B0IOC%E5%AE%B9%E5%99%A8/image-20250814203551870.png">
+<meta property="og:image" content="https://mtdown.top/2025/08/13/%E4%BB%8E%E6%BB%A1%E6%B1%89%E5%85%A8%E5%B8%AD%E5%88%B0IOC%E5%AE%B9%E5%99%A8/image-20250814142153471.png">
+<meta property="og:image" content="https://mtdown.top/2025/08/13/%E4%BB%8E%E6%BB%A1%E6%B1%89%E5%85%A8%E5%B8%AD%E5%88%B0IOC%E5%AE%B9%E5%99%A8/image-20250814203055540.png">
+<meta property="og:image" content="https://mtdown.top/2025/08/13/%E4%BB%8E%E6%BB%A1%E6%B1%89%E5%85%A8%E5%B8%AD%E5%88%B0IOC%E5%AE%B9%E5%99%A8/image-20250814203221804.png">
+<meta property="og:image" content="https://mtdown.top/2025/08/13/%E4%BB%8E%E6%BB%A1%E6%B1%89%E5%85%A8%E5%B8%AD%E5%88%B0IOC%E5%AE%B9%E5%99%A8/image-20250814203551870.png">
 <meta property="article:published_time" content="2025-08-13T14:46:16.000Z">
 <meta property="article:modified_time" content="2025-08-14T13:04:08.906Z">
 <meta property="article:author" content="摄夜">
 <meta property="article:tag" content="日常学习">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2025/08/13/%E4%BB%8E%E6%BB%A1%E6%B1%89%E5%85%A8%E5%B8%AD%E5%88%B0IOC%E5%AE%B9%E5%99%A8/image-20250814142153471.png">
+<meta name="twitter:image" content="https://mtdown.top/2025/08/13/%E4%BB%8E%E6%BB%A1%E6%B1%89%E5%85%A8%E5%B8%AD%E5%88%B0IOC%E5%AE%B9%E5%99%A8/image-20250814142153471.png">
 
-<link rel="canonical" href="http://example.com/2025/08/13/%E4%BB%8E%E6%BB%A1%E6%B1%89%E5%85%A8%E5%B8%AD%E5%88%B0IOC%E5%AE%B9%E5%99%A8/">
+<link rel="canonical" href="https://mtdown.top/2025/08/13/%E4%BB%8E%E6%BB%A1%E6%B1%89%E5%85%A8%E5%B8%AD%E5%88%B0IOC%E5%AE%B9%E5%99%A8/">
 
 
 <script id="page-configurations">
@@ -221,7 +221,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/08/13/%E4%BB%8E%E6%BB%A1%E6%B1%89%E5%85%A8%E5%B8%AD%E5%88%B0IOC%E5%AE%B9%E5%99%A8/">
+    <link itemprop="mainEntityOfPage" href="https://mtdown.top/2025/08/13/%E4%BB%8E%E6%BB%A1%E6%B1%89%E5%85%A8%E5%B8%AD%E5%88%B0IOC%E5%AE%B9%E5%99%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/knight.jpg">
