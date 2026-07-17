@@ -8,5 +8,131 @@
   </head>
   <body>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      (function () {
+        function field(entry, name, fallback) {
+          var value = entry.getIn(['data', name]);
+          return value === undefined || value === null || value === '' ? fallback : value;
+        }
+
+        function assetUrl(props, value) {
+          if (!value) return '';
+          var asset = props.getAsset(value);
+          return asset ? asset.toString() : value;
+        }
+
+        var BackgroundPreview = createClass({
+          render: function () {
+            var entry = this.props.entry;
+            var bodyBackground = field(entry, 'body_background', '#f3f4f2');
+            var bodyImage = assetUrl(this.props, field(entry, 'body_background_image', ''));
+            var headerBackground = field(entry, 'header_background', '#263039');
+            var mainBackground = field(entry, 'main_background', 'transparent');
+            var contentBackground = field(entry, 'content_background', 'transparent');
+            var heroBackground = field(entry, 'home_hero_background', 'linear-gradient(135deg, rgba(255,255,255,.95), rgba(255,255,255,.68)), linear-gradient(120deg, #e9ece7, #d7e2e0 52%, #e9dfd3)');
+            var focusBackground = field(entry, 'home_focus_background', '#ffffff');
+            var cardBackground = field(entry, 'home_card_background', '#ffffff');
+            var postBackground = field(entry, 'post_page_background', '#ffffff');
+            var sidebarBackground = field(entry, 'sidebar_background', 'rgba(255,255,255,.92)');
+            var footerBackground = field(entry, 'footer_background', 'transparent');
+            var blockquoteBackground = field(entry, 'blockquote_background', '#f6f8f7');
+            var tagBackground = field(entry, 'tag_background', '#edf3f2');
+            var customCss = field(entry, 'custom_css', '');
+            var bodyStyle = {
+              background: bodyBackground,
+              backgroundImage: bodyImage ? 'url("' + bodyImage + '")' : 'none',
+              backgroundSize: field(entry, 'body_background_size', 'cover'),
+              backgroundPosition: field(entry, 'body_background_position', 'center center'),
+              backgroundRepeat: field(entry, 'body_background_repeat', 'no-repeat'),
+              backgroundAttachment: field(entry, 'body_background_attachment', 'fixed')
+            };
+
+            return h('div', { className: 'bg-preview-shell' },
+              h('style', {}, [
+                '.bg-preview-shell{min-height:100%;padding:24px;background:#eef1f3;color:#20262d;font-family:Inter,"Segoe UI","Microsoft YaHei",sans-serif;box-sizing:border-box}',
+                '.bg-preview-stage{overflow:hidden;border:1px solid #dfe5e7;border-radius:10px;box-shadow:0 16px 40px rgba(31,39,47,.12)}',
+                '.bg-preview-site{min-height:760px;background-color:' + bodyBackground + ';background-image:' + (bodyImage ? 'url("' + bodyImage + '")' : 'none') + ';background-size:' + field(entry, 'body_background_size', 'cover') + ';background-position:' + field(entry, 'body_background_position', 'center center') + ';background-repeat:' + field(entry, 'body_background_repeat', 'no-repeat') + ';background-attachment:' + field(entry, 'body_background_attachment', 'fixed') + '}',
+                '.bg-preview-header{padding:22px 28px;background:' + headerBackground + ';color:#edf3f4}',
+                '.bg-preview-title{font-size:22px;font-weight:800;margin:0 0 8px}',
+                '.bg-preview-menu{display:flex;gap:12px;font-size:13px;opacity:.86}',
+                '.bg-preview-main{padding:26px;background:' + mainBackground + '}',
+                '.bg-preview-layout{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:18px}',
+                '.bg-preview-content{background:' + contentBackground + '}',
+                '.bg-preview-hero{padding:30px;border:1px solid #dfe5e7;border-radius:8px;background:' + heroBackground + ';box-sizing:border-box}',
+                '.bg-preview-hero h1{margin:0 0 12px;font-size:30px;line-height:1.2}',
+                '.bg-preview-hero p{margin:0;color:#53606b;line-height:1.7}',
+                '.bg-preview-focus{margin-top:16px;padding:18px;border:1px solid #dfe5e7;border-radius:8px;background:' + focusBackground + '}',
+                '.bg-preview-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:16px}',
+                '.bg-preview-card{min-height:118px;padding:16px;border:1px solid #dfe5e7;border-radius:8px;background:' + cardBackground + ';box-sizing:border-box}',
+                '.bg-preview-card h3{margin:0 0 8px;font-size:17px}',
+                '.bg-preview-card p{margin:0;color:#65717c;font-size:13px;line-height:1.65}',
+                '.bg-preview-tag{display:inline-flex;margin-top:14px;padding:5px 10px;border-radius:999px;background:' + tagBackground + ';color:#456a62;font-size:12px;font-weight:800}',
+                '.bg-preview-post{margin-top:16px;padding:22px;border:1px solid #dfe5e7;border-radius:8px;background:' + postBackground + '}',
+                '.bg-preview-quote{margin:14px 0 0;padding:12px 14px;border-left:4px solid #55766f;background:' + blockquoteBackground + ';color:#53606b}',
+                '.bg-preview-sidebar{padding:16px;border:1px solid #dfe5e7;border-radius:8px;background:' + sidebarBackground + ';align-self:start}',
+                '.bg-preview-footer{padding:16px 28px;background:' + footerBackground + ';color:#65717c;font-size:12px}',
+                '.bg-preview-note{margin:0 0 14px;color:#65717c;font-size:13px}',
+                '@media(max-width:760px){.bg-preview-shell{padding:12px}.bg-preview-layout{grid-template-columns:1fr}.bg-preview-cards{grid-template-columns:1fr}}',
+                customCss
+              ].join('\n')),
+              h('p', { className: 'bg-preview-note' }, '右侧会随字段即时变化。保存后，Hexo 构建出来的线上站点会使用同一份配置。'),
+              h('div', { className: 'bg-preview-stage' },
+                h('div', { className: 'bg-preview-site', style: bodyStyle },
+                  h('div', { className: 'bg-preview-header' },
+                    h('div', { className: 'bg-preview-title' }, 'Nod Y Lle Delfrydol'),
+                    h('div', { className: 'bg-preview-menu' },
+                      h('span', {}, '首页'),
+                      h('span', {}, '归档'),
+                      h('span', {}, '标签'),
+                      h('span', {}, '关于')
+                    )
+                  ),
+                  h('div', { className: 'bg-preview-main' },
+                    h('div', { className: 'bg-preview-layout' },
+                      h('div', { className: 'bg-preview-content' },
+                        h('section', { className: 'bg-preview-hero' },
+                          h('h1', {}, '背景 DIY 即时预览'),
+                          h('p', {}, '这里模拟首页首屏区域，用来判断全站背景、Hero 背景、内容层级和可读性。')
+                        ),
+                        h('section', { className: 'bg-preview-focus' },
+                          h('strong', {}, '首页重点区域'),
+                          h('p', {}, '用于观察 focus 区域背景和整体页面背景之间的关系。')
+                        ),
+                        h('div', { className: 'bg-preview-cards' },
+                          h('article', { className: 'bg-preview-card' },
+                            h('h3', {}, '文章卡片'),
+                            h('p', {}, '用于预览首页文章列表卡片背景。'),
+                            h('span', { className: 'bg-preview-tag' }, '日常学习')
+                          ),
+                          h('article', { className: 'bg-preview-card' },
+                            h('h3', {}, '另一张卡片'),
+                            h('p', {}, '深色、图片、渐变背景都可以在这里先看一眼。'),
+                            h('span', { className: 'bg-preview-tag' }, 'DIY')
+                          )
+                        ),
+                        h('article', { className: 'bg-preview-post' },
+                          h('h2', {}, '文章页正文'),
+                          h('p', {}, '这里模拟文章页内容背景，方便判断长文阅读时是否舒服。'),
+                          h('blockquote', { className: 'bg-preview-quote' }, '引用块背景也可以单独配置。')
+                        )
+                      ),
+                      h('aside', { className: 'bg-preview-sidebar' },
+                        h('strong', {}, '侧边栏'),
+                        h('p', {}, '这里预览侧边栏背景。'),
+                        h('span', { className: 'bg-preview-tag' }, 'Profile')
+                      )
+                    )
+                  ),
+                  h('footer', { className: 'bg-preview-footer' }, '页脚背景预览')
+                )
+              )
+            );
+          }
+        });
+
+        CMS.registerPreviewTemplate('appearance', BackgroundPreview);
+        CMS.registerPreviewTemplate('background', BackgroundPreview);
+      })();
+    </script>
   </body>
 </html>
