@@ -1,35 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>AI编程工具学习</title>
-    <url>/2026/01/20/AI%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<p>记录一下在日常学习中看到的AI编程工具排名，之后自己使用了再来看是不是这样。2025&#x2F;12&#x2F;30</p>
-<span id="more"></span>
-
-<p>学习自UP<a href="https://www.bilibili.com/video/BV1jgvaBzEfK/?spm_id_from=333.337.search-card.all.click&vd_source=ecbe42ffb25fea0da636165433fb75d6">AI编程工具实战排名，谁是最好用的AI编程工具_哔哩哔哩_bilibili</a></p>
-<p>首先是分了四个档次，A,A+,S-S。首先来看A的</p>
-<h1><span id="一-a级">一、A级</span></h1><p><img src="/2026/01/20/AI%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/image-20260120151219669.png" alt="image-20260120151219669"></p>
-<h2><span id="1code-buddy">1.CODE BUDDY</span></h2><p>高级程度，非常全面，小程序生态开发继承很好</p>
-<h2><span id="2kiro">2.KIRO</span></h2><p>擅长从0到1的开发，但不适合做1-N的开发；他的SPEC对话方式比较重。应该是说这种修改量大</p>
-<h3><span id="3opencode">3.OPENCODE</span></h3><p>开源的，命令行开发工具</p>
-<h2><span id="二-a级">二、A+级</span></h2><p><img src="/2026/01/20/AI%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/image-20260120152421438.png" alt="image-20260120152421438"></p>
-<h2><span id="1windsurf">1.windsurf</span></h2><p>不温不火，高性价比，15美金，自己有SWE模型</p>
-<h2><span id="2droio">2.DROIO</span></h2><p>也有SPEC模式，只会出文档，但不改代码，支持SUBAGENT，交互界面最清晰</p>
-<h2><span id="3trae">3.TRAE</span></h2><p>Claude模型断供，存在多种功能。整个我使用过，效果确实很好，有Gemini3.0支持；不过普通模式效果不是很好。消耗的请求速度很快</p>
-<h2><span id="4warp">4.Warp</span></h2><p>也是终端命令行工具，能保存所有的终端命令</p>
-<h2><span id="三-s-级">三、S-级</span></h2><p><img src="/2026/01/20/AI%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/image-20260120152721485.png" alt="image-20260120152721485"></p>
-<h2><span id="1cursor">1.cursor</span></h2><p>生态做的好，是引领者</p>
-<h2><span id="2augment-code">2.augment code</span></h2><p>目前做大项目表现最好的AI工具，主要是代码索引能力强，就是Token消耗太快</p>
-<h2><span id="3google-antigravity">3.google antigravity</span></h2><p>windsurf里面迭代出来的，浏览器debug的使用有意思，被强烈推荐</p>
-<h2><span id="4openai-codex">4.OPENAI CODEX</span></h2><p>功能不是很好用，但是基础模型能力强。工具和交互差，但是GPT泰国好用</p>
-<h2><span id="四-s级">四、S级</span></h2><p><img src="/2026/01/20/AI%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/image-20260120153137165.png" alt="image-20260120153137165"></p>
-<p>1.claude code都很强，skii这样的工作流全部转化成他的skills了。只要模型支持ANthropic的协议</p>
-]]></content>
-      <tags>
-        <tag>日常学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>AI行业共识观后感</title>
     <url>/2025/06/23/AI%E8%A1%8C%E4%B8%9A%E5%85%B1%E8%AF%86%E8%A7%82%E5%90%8E%E6%84%9F/</url>
     <content><![CDATA[<p>​	如果不记笔记就等于没学，一定程度上我体会到这点了。现在记录下<a href="https://www.bilibili.com/video/BV1GXNfzSE1T/?spm_id_from=333.1007.tianma.1-1-1.click&vd_source=ecbe42ffb25fea0da636165433fb75d6">40页PPT记录2025年年中AI行业共识【视频播客】_哔哩哔哩_bilibili</a>的观后感。</p>
@@ -61,6 +32,86 @@
 ]]></content>
       <tags>
         <tag>日常积累</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>AI编程工具学习</title>
+    <url>/2026/01/20/AI%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<p>记录一下在日常学习中看到的AI编程工具排名，之后自己使用了再来看是不是这样。2025&#x2F;12&#x2F;30</p>
+<span id="more"></span>
+
+<p>学习自UP<a href="https://www.bilibili.com/video/BV1jgvaBzEfK/?spm_id_from=333.337.search-card.all.click&vd_source=ecbe42ffb25fea0da636165433fb75d6">AI编程工具实战排名，谁是最好用的AI编程工具_哔哩哔哩_bilibili</a></p>
+<p>首先是分了四个档次，A,A+,S-S。首先来看A的</p>
+<h1><span id="一-a级">一、A级</span></h1><p><img src="/2026/01/20/AI%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/image-20260120151219669.png" alt="image-20260120151219669"></p>
+<h2><span id="1code-buddy">1.CODE BUDDY</span></h2><p>高级程度，非常全面，小程序生态开发继承很好</p>
+<h2><span id="2kiro">2.KIRO</span></h2><p>擅长从0到1的开发，但不适合做1-N的开发；他的SPEC对话方式比较重。应该是说这种修改量大</p>
+<h3><span id="3opencode">3.OPENCODE</span></h3><p>开源的，命令行开发工具</p>
+<h2><span id="二-a级">二、A+级</span></h2><p><img src="/2026/01/20/AI%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/image-20260120152421438.png" alt="image-20260120152421438"></p>
+<h2><span id="1windsurf">1.windsurf</span></h2><p>不温不火，高性价比，15美金，自己有SWE模型</p>
+<h2><span id="2droio">2.DROIO</span></h2><p>也有SPEC模式，只会出文档，但不改代码，支持SUBAGENT，交互界面最清晰</p>
+<h2><span id="3trae">3.TRAE</span></h2><p>Claude模型断供，存在多种功能。整个我使用过，效果确实很好，有Gemini3.0支持；不过普通模式效果不是很好。消耗的请求速度很快</p>
+<h2><span id="4warp">4.Warp</span></h2><p>也是终端命令行工具，能保存所有的终端命令</p>
+<h2><span id="三-s-级">三、S-级</span></h2><p><img src="/2026/01/20/AI%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/image-20260120152721485.png" alt="image-20260120152721485"></p>
+<h2><span id="1cursor">1.cursor</span></h2><p>生态做的好，是引领者</p>
+<h2><span id="2augment-code">2.augment code</span></h2><p>目前做大项目表现最好的AI工具，主要是代码索引能力强，就是Token消耗太快</p>
+<h2><span id="3google-antigravity">3.google antigravity</span></h2><p>windsurf里面迭代出来的，浏览器debug的使用有意思，被强烈推荐</p>
+<h2><span id="4openai-codex">4.OPENAI CODEX</span></h2><p>功能不是很好用，但是基础模型能力强。工具和交互差，但是GPT泰国好用</p>
+<h2><span id="四-s级">四、S级</span></h2><p><img src="/2026/01/20/AI%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/image-20260120153137165.png" alt="image-20260120153137165"></p>
+<p>1.claude code都很强，skii这样的工作流全部转化成他的skills了。只要模型支持ANthropic的协议</p>
+]]></content>
+      <tags>
+        <tag>日常学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>APIfox功能学习</title>
+    <url>/2025/07/02/APIfox%E5%8A%9F%E8%83%BD%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<p>​		学习大模型部署软件APIfox</p>
+<span id="more"></span>
+
+<h1><span id="1为什么要使用apifox">1.为什么要使用APIfox</span></h1><p>​			其实主要是跟着教程在做，看到他使用APIfox来部署大模型，但是发现这个东西的功能比想象的强大。他自己给的说法是API优先的设计方式。</p>
+<p><img src="/2025/07/02/APIfox%E5%8A%9F%E8%83%BD%E5%AD%A6%E4%B9%A0/image-20250702204440052.png" alt="image-20250702204440052"></p>
+<h1><span id="2软件介绍">2.软件介绍</span></h1><p>​			首先是一级目录，软件左侧的团队<img src="/2025/07/02/APIfox%E5%8A%9F%E8%83%BD%E5%AD%A6%E4%B9%A0/image-20250702164432389.png" alt="image-20250702164432389"></p>
+<p>​				然后是二级目录的项目管理，这里的项目类型有三种，不太了解这个，查了一下有这样的一个表,这里我是使用的HTTP创建一个项目：</p>
+<p>​				HTTP &#x3D; 通用快递（什么都能运，速度慢）</p>
+<p>​				gRPC &#x3D; 冷链专车（运生鲜，快且专业）</p>
+<p>​				Dubbo &#x3D; 物流公司（不仅运输，还管仓储调度）</p>
+<table>
+<thead>
+<tr>
+<th><strong>项目类型</strong></th>
+<th><strong>协议基础</strong></th>
+<th><strong>数据格式</strong></th>
+<th><strong>核心能力</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>HTTP</strong></td>
+<td>应用层文本协议</td>
+<td>JSON&#x2F;XML&#x2F;文本</td>
+<td>通用 Web 通信，跨平台兼容性强</td>
+</tr>
+<tr>
+<td><strong>gRPC</strong></td>
+<td>基于 HTTP&#x2F;2 的二进制协议</td>
+<td>Protobuf（二进制）</td>
+<td>高性能、跨语言、支持流式通信</td>
+</tr>
+<tr>
+<td><strong>Dubbo</strong></td>
+<td>多协议支持（TCP&#x2F;HTTP2）</td>
+<td>二进制&#x2F;文本</td>
+<td>企业级服务治理（注册中心&#x2F;熔断等）</td>
+</tr>
+</tbody></table>
+<p><img src="/2025/07/02/APIfox%E5%8A%9F%E8%83%BD%E5%AD%A6%E4%B9%A0/image-20250702164517942.png" alt="image-20250702164517942"></p>
+<p>​				然后再他的主界面我们可以看到一个API HUB，这里面是他提供的开放 API 共享中心，汇总了相当一部分主流常规的API，不过</p>
+<p><img src="/2025/07/02/APIfox%E5%8A%9F%E8%83%BD%E5%AD%A6%E4%B9%A0/image-20250702182404744.png" alt="image-20250702182404744"></p>
+<h1><span id="参考目录">参考目录：</span></h1><p>1.<a href="https://www.bilibili.com/video/BV18e4y1x7hr/?spm_id_from=333.337.search-card.all.click&vd_source=ecbe42ffb25fea0da636165433fb75d6">【Apifox】工具介绍、常用功能分享及实操演示_哔哩哔哩_bilibili</a></p>
+<p>2.<a href="https://blog.csdn.net/qq_41099091/article/details/107319193">新手如何使用postman（新手使用，简单明了）_postman教程-CSDN博客</a></p>
+]]></content>
+      <tags>
+        <tag>实习准备</tag>
       </tags>
   </entry>
   <entry>
@@ -187,57 +238,6 @@
     <content><![CDATA[<p>HoVer-Trans: Anatomy-AwareHoVer-Transformer for ROI-Free Breast CancerDiagnosis in Ultrasound Images</p>
 <p>2023.6，医学1区top，采用BUSI数据集和UDIAT，新创造了GDPH&amp;SYSUCC数据集<br> <span id="more"></span><br>这篇文章的结构有VIT的意思，感觉医学图像处理本质是特化后的视觉图像模型</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>APIfox功能学习</title>
-    <url>/2025/07/02/APIfox%E5%8A%9F%E8%83%BD%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<p>​		学习大模型部署软件APIfox</p>
-<span id="more"></span>
-
-<h1><span id="1为什么要使用apifox">1.为什么要使用APIfox</span></h1><p>​			其实主要是跟着教程在做，看到他使用APIfox来部署大模型，但是发现这个东西的功能比想象的强大。他自己给的说法是API优先的设计方式。</p>
-<p><img src="/2025/07/02/APIfox%E5%8A%9F%E8%83%BD%E5%AD%A6%E4%B9%A0/image-20250702204440052.png" alt="image-20250702204440052"></p>
-<h1><span id="2软件介绍">2.软件介绍</span></h1><p>​			首先是一级目录，软件左侧的团队<img src="/2025/07/02/APIfox%E5%8A%9F%E8%83%BD%E5%AD%A6%E4%B9%A0/image-20250702164432389.png" alt="image-20250702164432389"></p>
-<p>​				然后是二级目录的项目管理，这里的项目类型有三种，不太了解这个，查了一下有这样的一个表,这里我是使用的HTTP创建一个项目：</p>
-<p>​				HTTP &#x3D; 通用快递（什么都能运，速度慢）</p>
-<p>​				gRPC &#x3D; 冷链专车（运生鲜，快且专业）</p>
-<p>​				Dubbo &#x3D; 物流公司（不仅运输，还管仓储调度）</p>
-<table>
-<thead>
-<tr>
-<th><strong>项目类型</strong></th>
-<th><strong>协议基础</strong></th>
-<th><strong>数据格式</strong></th>
-<th><strong>核心能力</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>HTTP</strong></td>
-<td>应用层文本协议</td>
-<td>JSON&#x2F;XML&#x2F;文本</td>
-<td>通用 Web 通信，跨平台兼容性强</td>
-</tr>
-<tr>
-<td><strong>gRPC</strong></td>
-<td>基于 HTTP&#x2F;2 的二进制协议</td>
-<td>Protobuf（二进制）</td>
-<td>高性能、跨语言、支持流式通信</td>
-</tr>
-<tr>
-<td><strong>Dubbo</strong></td>
-<td>多协议支持（TCP&#x2F;HTTP2）</td>
-<td>二进制&#x2F;文本</td>
-<td>企业级服务治理（注册中心&#x2F;熔断等）</td>
-</tr>
-</tbody></table>
-<p><img src="/2025/07/02/APIfox%E5%8A%9F%E8%83%BD%E5%AD%A6%E4%B9%A0/image-20250702164517942.png" alt="image-20250702164517942"></p>
-<p>​				然后再他的主界面我们可以看到一个API HUB，这里面是他提供的开放 API 共享中心，汇总了相当一部分主流常规的API，不过</p>
-<p><img src="/2025/07/02/APIfox%E5%8A%9F%E8%83%BD%E5%AD%A6%E4%B9%A0/image-20250702182404744.png" alt="image-20250702182404744"></p>
-<h1><span id="参考目录">参考目录：</span></h1><p>1.<a href="https://www.bilibili.com/video/BV18e4y1x7hr/?spm_id_from=333.337.search-card.all.click&vd_source=ecbe42ffb25fea0da636165433fb75d6">【Apifox】工具介绍、常用功能分享及实操演示_哔哩哔哩_bilibili</a></p>
-<p>2.<a href="https://blog.csdn.net/qq_41099091/article/details/107319193">新手如何使用postman（新手使用，简单明了）_postman教程-CSDN博客</a></p>
-]]></content>
-      <tags>
-        <tag>实习准备</tag>
-      </tags>
   </entry>
   <entry>
     <title>SQL相关</title>
@@ -654,105 +654,19 @@
       </tags>
   </entry>
   <entry>
-    <title>Vue Vben Admin 安装踩坑复盘：Windows + nvm 环境下 pnpm / catalog: 依赖问题</title>
-    <url>/2026/02/27/Vue-Vben-Admin-%E5%AE%89%E8%A3%85%E8%B8%A9%E5%9D%91%E5%A4%8D%E7%9B%98%EF%BC%9AWindows-nvm-%E7%8E%AF%E5%A2%83%E4%B8%8B-pnpm-catalog-%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h2><span id="背景">背景</span></h2><p>我准备使用 <strong>vue-vben-admin（Vue3 后台模板）</strong>作为 MotorHub 项目的管理后台。按照官方文档 clone 后执行安装：</p>
-<ul>
-<li><code>git clone https://github.com/vbenjs/vue-vben-admin.git</code></li>
-<li>文档要求：<code>pnpm install</code> &#x2F; <code>pnpm dev</code></li>
-</ul>
-<p>我的环境：</p>
-<ul>
-<li>Windows</li>
-<li>使用 <strong>nvm for windows</strong>（Node 安装路径在 <code>C:\nvm4w\nodejs</code>）</li>
-</ul>
-<hr>
-<h2><span id="报错-1pnpm-不是内部或外部命令">报错 1：<code>pnpm</code> 不是内部或外部命令</span></h2><p>在项目目录执行：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pnpm install</span><br></pre></td></tr></table></figure>
-
-<p>报错：</p>
-<blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;pnpm&#x27; 不是内部或外部命令，也不是可运行的程序或批处理文件。</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p>这意味着：系统找不到 pnpm 命令（没安装，或没进入 PATH）。</p>
-<hr>
-<h2><span id="报错-2npm-install-不支持-catalog">报错 2：<code>npm install</code> 不支持 <code>catalog:</code></span></h2><p>我尝试改用 npm 安装依赖：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
-<p>报错：</p>
-<blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm error Unsupported URL Type &quot;catalog:&quot;: catalog:</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p>原因：<strong>vue-vben-admin 的依赖里使用了 pnpm 支持的 <code>catalog:</code> 协议</strong>，npm 不认识，所以 npm 无法安装。<br> 结论：<strong>该项目必须用 pnpm（或对应生态工具）安装</strong>，npm 行不通。</p>
-<hr>
-<h2><span id="报错-3npm-i-g-pnpm-安装失败-eexist">报错 3：<code>npm i -g pnpm</code> 安装失败 EEXIST</span></h2><p>我尝试安装 pnpm：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i -g pnpm</span><br></pre></td></tr></table></figure>
-
-<p>报错：</p>
-<blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">EEXIST: file already exists ...\npm\pnpm</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p>但同时执行：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pnpm -v</span><br></pre></td></tr></table></figure>
-
-<p>仍然提示找不到 <code>pnpm</code>。</p>
-<p>这类情况通常表示：系统里存在 pnpm 的残留&#x2F;损坏 shim 或冲突文件，但 pnpm 命令并没有正确可用。</p>
-<hr>
-<h2><span id="关键排查确认-npm-的全局-prefix-与-path">关键排查：确认 npm 的全局 prefix 与 PATH</span></h2><p>先检查 npm 全局安装位置（prefix）：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm config get prefix</span><br></pre></td></tr></table></figure>
-
-<p>输出：</p>
-<blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">C:\Users\origin\AppData\Roaming\npm</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p>再检查 <code>where pnpm</code>：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">where pnpm</span><br></pre></td></tr></table></figure>
-
-<p>输出：</p>
-<blockquote>
-<p>找不到文件</p>
-</blockquote>
-<p>说明：pnpm 不在 PATH 或 shim 没生成。</p>
-<p>查看 prefix 目录内容：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dir C:\Users\origin\AppData\Roaming\npm</span><br></pre></td></tr></table></figure>
-
-<p>发现目录里有：</p>
-<ul>
-<li><code>corepack.cmd</code></li>
-<li><code>pnpm.ps1</code></li>
-<li><code>pnpx.ps1</code></li>
-<li>但没有 <code>pnpm.cmd</code></li>
-</ul>
-<p>这说明 pnpm 在 PowerShell shim 层面有残留，但 cmd 无法直接使用 <code>pnpm</code>，并且项目依赖安装仍然无法进行。</p>
-<hr>
-<h2><span id="最终解决方案使用-corepack-激活-pnpm">最终解决方案：使用 corepack 激活 pnpm</span></h2><p>因为 prefix 目录里已经存在 corepack，我最终采用 <strong>corepack 方式</strong>（不依赖自己手动装全局 pnpm）：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">corepack enable</span><br><span class="line">corepack prepare pnpm@9.15.0 --activate</span><br><span class="line">pnpm -v</span><br></pre></td></tr></table></figure>
-
-<p>当 <code>pnpm -v</code> 成功输出版本号后，说明 pnpm 已就绪。</p>
-<p>然后在项目目录执行：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pnpm install</span><br><span class="line">pnpm dev</span><br></pre></td></tr></table></figure>
-
-<p>项目即可正常启动。</p>
-<hr>
-<h2><span id="结论与经验">结论与经验</span></h2><ol>
-<li><strong>vue-vben-admin 使用 pnpm 特性（catalog:），npm 无法安装依赖</strong><br> 遇到 <code>Unsupported URL Type &quot;catalog:&quot;</code> 基本就说明必须换 pnpm&#x2F;yarn。</li>
-<li>Windows + nvm 环境下，全局工具经常出现 “安装了但命令不可用”<br> 重点检查：<ul>
-<li><code>npm config get prefix</code></li>
-<li><code>where pnpm</code></li>
-<li>prefix 目录是否在 PATH</li>
-</ul>
-</li>
-<li><strong>优先推荐 corepack 安装&#x2F;管理 pnpm</strong><br> 省去全局安装冲突，版本更可控：<ul>
-<li><code>corepack enable</code></li>
-<li><code>corepack prepare pnpm@xx --activate</code></li>
-</ul>
-</li>
-</ol>
-<hr>
-<h2><span id="可复制的一键命令windows">可复制的一键命令（Windows）</span></h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">corepack enable</span><br><span class="line">corepack prepare pnpm@9.15.0 --activate</span><br><span class="line">pnpm -v</span><br><span class="line">pnpm install</span><br><span class="line">pnpm dev</span><br></pre></td></tr></table></figure>
+    <title>java多态</title>
+    <url>/2024/09/15/java%E5%A4%9A%E6%80%81/</url>
+    <content><![CDATA[<p>这个部分我觉得稍稍有点杂，毕竟函数，属性都存在多态。考虑到向上继承，向下继承这些，调用的顺序和麻烦程度都会递增。<br> <span id="more"></span></p>
+<h1><span id="方法的多态">方法的多态</span></h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Dog extends animal&#123;</span><br><span class="line">    private String food=&quot;骨头&quot;;</span><br><span class="line">    public Dog(String name, int age, String sex, String food) &#123;</span><br><span class="line">        super(name, age, sex);</span><br><span class="line">        this.food = food;</span><br><span class="line">    &#125;</span><br><span class="line">    public Dog(String name, int age, String sex) &#123;</span><br><span class="line">        super(name, age, sex);</span><br><span class="line">        //这里就使用了多态，通过参数的不同，调用同一个函数名但有不同的效果</span><br><span class="line">    &#125;</span><br><span class="line">    public String eat()&#123;</span><br><span class="line">        return food;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里面的两个构造函数就是多态的一种，基于传参的多态<br>2024&#x2F;10&#x2F;2 21:19:13<br>关于编译类型增加细节<br>（1）一个对象的编译类型和运行类型可以不一致<br>（2）编译类型在定义对象时，就确定了，不能改<br>（3）运行类型是可以变的<br>（4）编译类型看定义时 &#x3D; 号的左边，运行类型看 &#x3D; 号右边。<br>（5）属性的值看编译类型，方法看运行<br>（6）继承会改变运行类型</p>
+<h1><span id="多态练习1">多态练习1</span></h1><p><img src="/images/%E5%A4%9A%E6%80%81.png" alt="练习题目" title="练习题"><br>对于代码：</p>
+<figure class="highlight plaintext"><figcaption><span>class PolyExercise02 &#123;</span></figcaption><table><tr><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Sub sub = new Sub();</span><br><span class="line">    System.out.println(sub.count);</span><br><span class="line">    sub.display();</span><br><span class="line">    Base b=sub;</span><br><span class="line">    System.out.println(b==sub);</span><br><span class="line">    System.out.println(b.count);</span><br><span class="line">    b.display();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>首先123都只是单纯地定义新类输出方法和属性，因此都是20.此时编译类型和运行类型都是sub</p>
+<figure class="highlight plaintext"><figcaption><span>sub </span></figcaption><table><tr><td class="code"><pre><span class="line">      System.out.println(sub.count);</span><br><span class="line">      sub.display();</span><br><span class="line">Base b=sub;</span><br></pre></td></tr></table></figure>
+<p>直到4进行了一次向上转型，此时b的编译类型Base，运行类型Sub，方法以Sub为准，属性以Base为准，因此我认为输出时false，10，20。结果如下图所示：<br><img src="/images/q2.png" alt="运行结果" title="结果"><br>对System.out.println(b&#x3D;&#x3D;sub)判断失误，原因是这里的&#x3D;&#x3D;判断对象是地址，代码：Base b&#x3D;sub 的对象赋值的本质是给了b和sub指向一个空间的地址。我姑且理解为以后在对两个对象进行判断时，考虑地址是否指向同一个东西<br>#多态练习2#<br>这里提到了个很重要的动态绑定机制，</p>
 ]]></content>
       <tags>
-        <tag>日常学习</tag>
+        <tag>就业准备</tag>
       </tags>
   </entry>
   <entry>
@@ -997,22 +911,6 @@ class Dog2 extends Dog&#123;
       </tags>
   </entry>
   <entry>
-    <title>java多态</title>
-    <url>/2024/09/15/java%E5%A4%9A%E6%80%81/</url>
-    <content><![CDATA[<p>这个部分我觉得稍稍有点杂，毕竟函数，属性都存在多态。考虑到向上继承，向下继承这些，调用的顺序和麻烦程度都会递增。<br> <span id="more"></span></p>
-<h1><span id="方法的多态">方法的多态</span></h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Dog extends animal&#123;</span><br><span class="line">    private String food=&quot;骨头&quot;;</span><br><span class="line">    public Dog(String name, int age, String sex, String food) &#123;</span><br><span class="line">        super(name, age, sex);</span><br><span class="line">        this.food = food;</span><br><span class="line">    &#125;</span><br><span class="line">    public Dog(String name, int age, String sex) &#123;</span><br><span class="line">        super(name, age, sex);</span><br><span class="line">        //这里就使用了多态，通过参数的不同，调用同一个函数名但有不同的效果</span><br><span class="line">    &#125;</span><br><span class="line">    public String eat()&#123;</span><br><span class="line">        return food;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这里面的两个构造函数就是多态的一种，基于传参的多态<br>2024&#x2F;10&#x2F;2 21:19:13<br>关于编译类型增加细节<br>（1）一个对象的编译类型和运行类型可以不一致<br>（2）编译类型在定义对象时，就确定了，不能改<br>（3）运行类型是可以变的<br>（4）编译类型看定义时 &#x3D; 号的左边，运行类型看 &#x3D; 号右边。<br>（5）属性的值看编译类型，方法看运行<br>（6）继承会改变运行类型</p>
-<h1><span id="多态练习1">多态练习1</span></h1><p><img src="/images/%E5%A4%9A%E6%80%81.png" alt="练习题目" title="练习题"><br>对于代码：</p>
-<figure class="highlight plaintext"><figcaption><span>class PolyExercise02 &#123;</span></figcaption><table><tr><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Sub sub = new Sub();</span><br><span class="line">    System.out.println(sub.count);</span><br><span class="line">    sub.display();</span><br><span class="line">    Base b=sub;</span><br><span class="line">    System.out.println(b==sub);</span><br><span class="line">    System.out.println(b.count);</span><br><span class="line">    b.display();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>首先123都只是单纯地定义新类输出方法和属性，因此都是20.此时编译类型和运行类型都是sub</p>
-<figure class="highlight plaintext"><figcaption><span>sub </span></figcaption><table><tr><td class="code"><pre><span class="line">      System.out.println(sub.count);</span><br><span class="line">      sub.display();</span><br><span class="line">Base b=sub;</span><br></pre></td></tr></table></figure>
-<p>直到4进行了一次向上转型，此时b的编译类型Base，运行类型Sub，方法以Sub为准，属性以Base为准，因此我认为输出时false，10，20。结果如下图所示：<br><img src="/images/q2.png" alt="运行结果" title="结果"><br>对System.out.println(b&#x3D;&#x3D;sub)判断失误，原因是这里的&#x3D;&#x3D;判断对象是地址，代码：Base b&#x3D;sub 的对象赋值的本质是给了b和sub指向一个空间的地址。我姑且理解为以后在对两个对象进行判断时，考虑地址是否指向同一个东西<br>#多态练习2#<br>这里提到了个很重要的动态绑定机制，</p>
-]]></content>
-      <tags>
-        <tag>就业准备</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>java开发记录</title>
     <url>/2025/10/01/java%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<p>这里记录的是我学习java的时候，了解到的一些细节的知识。这些内容会比较细碎</p>
@@ -1075,6 +973,108 @@ class Dog2 extends Dog&#123;
       </tags>
   </entry>
   <entry>
+    <title>Vue Vben Admin 安装踩坑复盘：Windows + nvm 环境下 pnpm / catalog: 依赖问题</title>
+    <url>/2026/02/27/Vue-Vben-Admin-%E5%AE%89%E8%A3%85%E8%B8%A9%E5%9D%91%E5%A4%8D%E7%9B%98%EF%BC%9AWindows-nvm-%E7%8E%AF%E5%A2%83%E4%B8%8B-pnpm-catalog-%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h2><span id="背景">背景</span></h2><p>我准备使用 <strong>vue-vben-admin（Vue3 后台模板）</strong>作为 MotorHub 项目的管理后台。按照官方文档 clone 后执行安装：</p>
+<ul>
+<li><code>git clone https://github.com/vbenjs/vue-vben-admin.git</code></li>
+<li>文档要求：<code>pnpm install</code> &#x2F; <code>pnpm dev</code></li>
+</ul>
+<p>我的环境：</p>
+<ul>
+<li>Windows</li>
+<li>使用 <strong>nvm for windows</strong>（Node 安装路径在 <code>C:\nvm4w\nodejs</code>）</li>
+</ul>
+<hr>
+<h2><span id="报错-1pnpm-不是内部或外部命令">报错 1：<code>pnpm</code> 不是内部或外部命令</span></h2><p>在项目目录执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pnpm install</span><br></pre></td></tr></table></figure>
+
+<p>报错：</p>
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;pnpm&#x27; 不是内部或外部命令，也不是可运行的程序或批处理文件。</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>这意味着：系统找不到 pnpm 命令（没安装，或没进入 PATH）。</p>
+<hr>
+<h2><span id="报错-2npm-install-不支持-catalog">报错 2：<code>npm install</code> 不支持 <code>catalog:</code></span></h2><p>我尝试改用 npm 安装依赖：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>报错：</p>
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm error Unsupported URL Type &quot;catalog:&quot;: catalog:</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>原因：<strong>vue-vben-admin 的依赖里使用了 pnpm 支持的 <code>catalog:</code> 协议</strong>，npm 不认识，所以 npm 无法安装。<br> 结论：<strong>该项目必须用 pnpm（或对应生态工具）安装</strong>，npm 行不通。</p>
+<hr>
+<h2><span id="报错-3npm-i-g-pnpm-安装失败-eexist">报错 3：<code>npm i -g pnpm</code> 安装失败 EEXIST</span></h2><p>我尝试安装 pnpm：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i -g pnpm</span><br></pre></td></tr></table></figure>
+
+<p>报错：</p>
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">EEXIST: file already exists ...\npm\pnpm</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>但同时执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pnpm -v</span><br></pre></td></tr></table></figure>
+
+<p>仍然提示找不到 <code>pnpm</code>。</p>
+<p>这类情况通常表示：系统里存在 pnpm 的残留&#x2F;损坏 shim 或冲突文件，但 pnpm 命令并没有正确可用。</p>
+<hr>
+<h2><span id="关键排查确认-npm-的全局-prefix-与-path">关键排查：确认 npm 的全局 prefix 与 PATH</span></h2><p>先检查 npm 全局安装位置（prefix）：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm config get prefix</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">C:\Users\origin\AppData\Roaming\npm</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>再检查 <code>where pnpm</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">where pnpm</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<blockquote>
+<p>找不到文件</p>
+</blockquote>
+<p>说明：pnpm 不在 PATH 或 shim 没生成。</p>
+<p>查看 prefix 目录内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dir C:\Users\origin\AppData\Roaming\npm</span><br></pre></td></tr></table></figure>
+
+<p>发现目录里有：</p>
+<ul>
+<li><code>corepack.cmd</code></li>
+<li><code>pnpm.ps1</code></li>
+<li><code>pnpx.ps1</code></li>
+<li>但没有 <code>pnpm.cmd</code></li>
+</ul>
+<p>这说明 pnpm 在 PowerShell shim 层面有残留，但 cmd 无法直接使用 <code>pnpm</code>，并且项目依赖安装仍然无法进行。</p>
+<hr>
+<h2><span id="最终解决方案使用-corepack-激活-pnpm">最终解决方案：使用 corepack 激活 pnpm</span></h2><p>因为 prefix 目录里已经存在 corepack，我最终采用 <strong>corepack 方式</strong>（不依赖自己手动装全局 pnpm）：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">corepack enable</span><br><span class="line">corepack prepare pnpm@9.15.0 --activate</span><br><span class="line">pnpm -v</span><br></pre></td></tr></table></figure>
+
+<p>当 <code>pnpm -v</code> 成功输出版本号后，说明 pnpm 已就绪。</p>
+<p>然后在项目目录执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pnpm install</span><br><span class="line">pnpm dev</span><br></pre></td></tr></table></figure>
+
+<p>项目即可正常启动。</p>
+<hr>
+<h2><span id="结论与经验">结论与经验</span></h2><ol>
+<li><strong>vue-vben-admin 使用 pnpm 特性（catalog:），npm 无法安装依赖</strong><br> 遇到 <code>Unsupported URL Type &quot;catalog:&quot;</code> 基本就说明必须换 pnpm&#x2F;yarn。</li>
+<li>Windows + nvm 环境下，全局工具经常出现 “安装了但命令不可用”<br> 重点检查：<ul>
+<li><code>npm config get prefix</code></li>
+<li><code>where pnpm</code></li>
+<li>prefix 目录是否在 PATH</li>
+</ul>
+</li>
+<li><strong>优先推荐 corepack 安装&#x2F;管理 pnpm</strong><br> 省去全局安装冲突，版本更可控：<ul>
+<li><code>corepack enable</code></li>
+<li><code>corepack prepare pnpm@xx --activate</code></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2><span id="可复制的一键命令windows">可复制的一键命令（Windows）</span></h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">corepack enable</span><br><span class="line">corepack prepare pnpm@9.15.0 --activate</span><br><span class="line">pnpm -v</span><br><span class="line">pnpm install</span><br><span class="line">pnpm dev</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>日常学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>java继承</title>
     <url>/2024/09/15/java%E7%BB%A7%E6%89%BF/</url>
     <content><![CDATA[<p>继承的作用是解决代码复用的问题，在公用属性的基础上进行添加特有的操作。<br> <span id="more"></span><br>写法如下：</p>
@@ -1089,6 +1089,42 @@ class Dog2 extends Dog&#123;
 ]]></content>
       <tags>
         <tag>就业准备</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>langchain学习记录</title>
+    <url>/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p>​			记录一下自己学习langchain的过程。首先是模型安装和部署。</p>
+<span id="more"></span>
+
+<h1><span id="1安装conda-环境">1.安装conda 环境</span></h1><p>​				这一步没啥好说的，首先登陆官网<a href="https://www.anaconda.com/download/success">Download Now | Anaconda</a>根据你的系统选择合适的本本，这里左边Distribution Installers是指图形界面安装程序，Miniconda Installers是命令行安装程序。根据自己习惯选就行。</p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250701195719017.png" alt="image-20250701195719017"></p>
+<p>​			安装完成后会有一个anaconda的界面，输入<code>conda --version</code>和<code>python --version</code>检查版本，这俩都是安装时自带的 Python 版本，Base表示你处于默认的激活环境，一般来说我们不会在这个环境下操作，而是自己创建一个。</p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250701200720245.png" alt="image-20250701200720245"></p>
+<p>​			创建的环境的命令是<code>conda create --name ml_env python=3.9,</code>意思是创建名为ml_env的环境，使用Python 3.9；然后使用<code>conda env list</code>可以检查你拥有的环境，<code>conda activate ml_env</code>表示激活ml_env环境。</p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250701201412106.png" alt="image-20250701201412106"></p>
+<p>​			创建好了新环境，我们就激活它，然后在那个环境里解决大模型的部署问题。</p>
+<h1><span id="2ollama部署qwen">2.ollama部署qwen</span></h1><p>​			这里就直接跟着教程走吧，登录官网<a href="https://ollama.com/library/qwen3:8b">qwen3:8b</a>，下载ollama，然后搜索你需要的模型，Qwen3会有一堆这样的模型和词条，你需要哪个版本就直接用那个版本下面的代码就行，首次运行他会自动给你下载：</p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702121036039.png" alt="image-20250702121036039"></p>
+<p>​			<code>ollama run qwen3:8b</code>这一步运行完后就能正常操作了。但这里需要注意一一点：ollama给你的模型基本都是量化后的，这是为了方便你本地运行：<img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702121239065.png" alt="image-20250702121239065"></p>
+<p>​			输入<code>curl http://localhost:11434/api/tags</code>代码，你也会看到<code>&quot;quantization_level&quot;:&quot;Q4_K_M&quot;&#125;</code>，这证明我们下载的是个四位量化的模型，全量的模型应该是：<code>quantize: none</code><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702122414057.png" alt="image-20250702122414057"></p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702122150980.png" alt="image-20250702122150980"></p>
+<p>​			如果你要使用全量化的模型，那就需要到huggingface这种模型网站去他们<a href="https://huggingface.co/Qwen/collections">Qwen (Qwen)</a>的GGUF格式文件，而这个可就要大得多了：</p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702134841259.png" alt="image-20250702134841259"></p>
+<p>​			此外，你还需要根据<a href="https://qwen.readthedocs.io/zh-cn/latest/run_locally/ollama.html">Ollama - Qwen</a>的流程创建文件：</p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702134931270.png" alt="image-20250702134931270"></p>
+<p>​				然后这里我们说一下ollama调用API时的几个默认接口：</p>
+<p>​				在本地部署时有个基础的：<a href="http://localhost:11434，然后根据你的需求，额外增加生成文本补全端点：POST">http://localhost:11434，然后根据你的需求，额外增加生成文本补全端点：POST</a> &#x2F;api&#x2F;generate；对话式交互端点：POST &#x2F;api&#x2F;chat；我们这里首先点开1.新建接口，换成POST，并填写<a href="http://localhost:11434/api/chat">http://localhost:11434/api/chat</a></p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250703205010332.png" alt="image-20250703205010332"></p>
+<p>​			然后我们这里就点击Body，选择里面的json格式，并参考这样的格式添加一个示例。请注意，json格式不支持注释，我这里是为了方便理解和后续替换对应的块。<img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250703205111334.png" alt="image-20250703205111334"></p>
+<p>​			这里面的流式传输需要额外说明一下，流式传输是一种将数据分割成多个连续的小块（chunk）实时传输的方式，如果你选择了流式传输，那他就会一个字一个字（Token）的给你反馈：<img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250703205346011.png" alt="image-20250703205346011"></p>
+<p>此外 ，关于这个部分，在我看的网课里面有一张很好的图概括：</p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250706232003714.png" alt="image-20250706232003714"></p>
+<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250706233801408.png" alt="image-20250706233801408"></p>
+<h1><span id="参考目录">参考目录</span></h1><p>1.<a href="https://ollama.com/blog/thinking">思考 ·Ollama 博客</a></p>
+]]></content>
+      <tags>
+        <tag>实习准备</tag>
       </tags>
   </entry>
   <entry>
@@ -1167,42 +1203,6 @@ class Dog2 extends Dog&#123;
 ]]></content>
       <tags>
         <tag>日常学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>langchain学习记录</title>
-    <url>/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<p>​			记录一下自己学习langchain的过程。首先是模型安装和部署。</p>
-<span id="more"></span>
-
-<h1><span id="1安装conda-环境">1.安装conda 环境</span></h1><p>​				这一步没啥好说的，首先登陆官网<a href="https://www.anaconda.com/download/success">Download Now | Anaconda</a>根据你的系统选择合适的本本，这里左边Distribution Installers是指图形界面安装程序，Miniconda Installers是命令行安装程序。根据自己习惯选就行。</p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250701195719017.png" alt="image-20250701195719017"></p>
-<p>​			安装完成后会有一个anaconda的界面，输入<code>conda --version</code>和<code>python --version</code>检查版本，这俩都是安装时自带的 Python 版本，Base表示你处于默认的激活环境，一般来说我们不会在这个环境下操作，而是自己创建一个。</p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250701200720245.png" alt="image-20250701200720245"></p>
-<p>​			创建的环境的命令是<code>conda create --name ml_env python=3.9,</code>意思是创建名为ml_env的环境，使用Python 3.9；然后使用<code>conda env list</code>可以检查你拥有的环境，<code>conda activate ml_env</code>表示激活ml_env环境。</p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250701201412106.png" alt="image-20250701201412106"></p>
-<p>​			创建好了新环境，我们就激活它，然后在那个环境里解决大模型的部署问题。</p>
-<h1><span id="2ollama部署qwen">2.ollama部署qwen</span></h1><p>​			这里就直接跟着教程走吧，登录官网<a href="https://ollama.com/library/qwen3:8b">qwen3:8b</a>，下载ollama，然后搜索你需要的模型，Qwen3会有一堆这样的模型和词条，你需要哪个版本就直接用那个版本下面的代码就行，首次运行他会自动给你下载：</p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702121036039.png" alt="image-20250702121036039"></p>
-<p>​			<code>ollama run qwen3:8b</code>这一步运行完后就能正常操作了。但这里需要注意一一点：ollama给你的模型基本都是量化后的，这是为了方便你本地运行：<img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702121239065.png" alt="image-20250702121239065"></p>
-<p>​			输入<code>curl http://localhost:11434/api/tags</code>代码，你也会看到<code>&quot;quantization_level&quot;:&quot;Q4_K_M&quot;&#125;</code>，这证明我们下载的是个四位量化的模型，全量的模型应该是：<code>quantize: none</code><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702122414057.png" alt="image-20250702122414057"></p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702122150980.png" alt="image-20250702122150980"></p>
-<p>​			如果你要使用全量化的模型，那就需要到huggingface这种模型网站去他们<a href="https://huggingface.co/Qwen/collections">Qwen (Qwen)</a>的GGUF格式文件，而这个可就要大得多了：</p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702134841259.png" alt="image-20250702134841259"></p>
-<p>​			此外，你还需要根据<a href="https://qwen.readthedocs.io/zh-cn/latest/run_locally/ollama.html">Ollama - Qwen</a>的流程创建文件：</p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250702134931270.png" alt="image-20250702134931270"></p>
-<p>​				然后这里我们说一下ollama调用API时的几个默认接口：</p>
-<p>​				在本地部署时有个基础的：<a href="http://localhost:11434，然后根据你的需求，额外增加生成文本补全端点：POST">http://localhost:11434，然后根据你的需求，额外增加生成文本补全端点：POST</a> &#x2F;api&#x2F;generate；对话式交互端点：POST &#x2F;api&#x2F;chat；我们这里首先点开1.新建接口，换成POST，并填写<a href="http://localhost:11434/api/chat">http://localhost:11434/api/chat</a></p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250703205010332.png" alt="image-20250703205010332"></p>
-<p>​			然后我们这里就点击Body，选择里面的json格式，并参考这样的格式添加一个示例。请注意，json格式不支持注释，我这里是为了方便理解和后续替换对应的块。<img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250703205111334.png" alt="image-20250703205111334"></p>
-<p>​			这里面的流式传输需要额外说明一下，流式传输是一种将数据分割成多个连续的小块（chunk）实时传输的方式，如果你选择了流式传输，那他就会一个字一个字（Token）的给你反馈：<img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250703205346011.png" alt="image-20250703205346011"></p>
-<p>此外 ，关于这个部分，在我看的网课里面有一张很好的图概括：</p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250706232003714.png" alt="image-20250706232003714"></p>
-<p><img src="/2025/07/01/langchain%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20250706233801408.png" alt="image-20250706233801408"></p>
-<h1><span id="参考目录">参考目录</span></h1><p>1.<a href="https://ollama.com/blog/thinking">思考 ·Ollama 博客</a></p>
-]]></content>
-      <tags>
-        <tag>实习准备</tag>
       </tags>
   </entry>
   <entry>
@@ -1493,17 +1493,6 @@ public class Application &#123;
       </tags>
   </entry>
   <entry>
-    <title>taichinet阅读体会</title>
-    <url>/2024/06/18/taichinet%E9%98%85%E8%AF%BB%E4%BD%93%E4%BC%9A/</url>
-    <content><![CDATA[<p>TaiChiNet: Negative-Positive Cross-Attention Network for Breast Lesion Segmentation in Ultrasound Images</p>
-<p>2024.3，医学2区top，采用BUSI数据集和Dataset B<br> <span id="more"></span><br>关于乳腺癌的X光类型数据集，可以被看做是一个像素级的二分类问题，即一类像素病变，另一类表示正常。但由于其超声模式复杂，分割性能容易被削弱。<br>为了提高分割性能有两种研究方法：<br>    1.采用全局和局部注意力特征挖掘前景病变和正常背景——但由于两种背景的模式相似容易发生混淆，而类的不平和问题导致了分割性能的敏感性低下<br>    2.通过焦点损失单方面增强前景病变——聚焦于前景损害的方法单方面地获得损害前景中的真阳性的增加，但也导致包括分散区域的正常背景中的假阳性的增加</p>
-<p>提出的新方法：<br>    对前景病变和正常背景进行双边增强，然后进行交叉聚集。然后将乳腺病变分割作为负的正常-背景路径和正的前景-病变路径之间的相互监督任务，并把提出的网络负向正向交叉网络叫做太极网：1.其由两个u网组成，分别挖掘周围病变和正常背景的模式。并在两个U-Net的深层之间，设计了一个交叉注意模块，用于跨深层语义通道传递信息。2.此外，为了改善在相互监督下的特征表示，在传统分割约束的基础上，提出了负路径和正路径之间的互补损失来传递双边补充信息，其中骰子损失主要集中在单边增强上</p>
-]]></content>
-      <tags>
-        <tag>-医学图像</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>qwen部署调用记录</title>
     <url>/2025/06/04/qwen%E9%83%A8%E7%BD%B2%E8%B0%83%E7%94%A8%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<p>之前试着用RAGFLOW搭建本地机器人，结果被微信狙击失败，QQ那边没弄好就结束了。现在我打算重新用Langchain搭建一次。参考</p>
@@ -1516,102 +1505,14 @@ public class Application &#123;
       </tags>
   </entry>
   <entry>
-    <title>位运算</title>
-    <url>/2026/01/18/%E4%BD%8D%E8%BF%90%E7%AE%97/</url>
-    <content><![CDATA[<h1><span id="一-位运算速查表">一、位运算速查表</span></h1><table>
-<thead>
-<tr>
-<th align="center">符号</th>
-<th align="center">描述</th>
-<th align="center">运算 (A ? B)</th>
-<th align="center">结果</th>
-<th align="center">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">&amp;</td>
-<td align="center">与</td>
-<td align="center">0011 1100 &amp; 0000 1101</td>
-<td align="center">0000 1100 (12)</td>
-<td align="center">同1为1</td>
-</tr>
-<tr>
-<td align="center">**&#96;</td>
-<td align="center">&#96;**</td>
-<td align="center">或</td>
-<td align="center">&#96;0011 1100</td>
-<td align="center">0000 1101&#96;</td>
-</tr>
-<tr>
-<td align="center">^</td>
-<td align="center">异或</td>
-<td align="center">0011 1100 ^ 0000 1101</td>
-<td align="center">0011 0001 (49)</td>
-<td align="center">同0异1</td>
-</tr>
-<tr>
-<td align="center">~</td>
-<td align="center">取反</td>
-<td align="center">~0011 1100</td>
-<td align="center">1100 0011</td>
-<td align="center">0变1，1变0</td>
-</tr>
-<tr>
-<td align="center">&lt;&lt;</td>
-<td align="center">左移</td>
-<td align="center">A &lt;&lt; 2</td>
-<td align="center">1111 0000 (240)</td>
-<td align="center">乘以 4</td>
-</tr>
-<tr>
-<td align="center">&gt;&gt;</td>
-<td align="center">右移</td>
-<td align="center">A &gt;&gt; 2</td>
-<td align="center">0000 1111 (15)</td>
-<td align="center">除以 4</td>
-</tr>
-</tbody></table>
-<h1><span id="二-异或的性质">二、异或的性质</span></h1><p>异或是位运算中的重点操作，满足以下定律：</p>
-<ol>
-<li>归零律：x ^ x &#x3D; 0 (任何数与自己异或都是0)</li>
-<li>恒等律：x ^ 0 &#x3D; x (任何数与0异或保持不变)</li>
-<li>交换律与结合律：a ^ b ^ c &#x3D; a ^ c ^ b</li>
-</ol>
-<h1><span id="三-必背的高阶技巧">三、 必背的高阶技巧</span></h1><ol>
-<li><h2><span id="消除二进制中最低位的-1-brian-kernighan-算法">消除二进制中最低位的 1 (Brian Kernighan 算法)</span></h2></li>
-</ol>
-<ul>
-<li><strong>公式</strong>：<code>n &amp; (n - 1)</code></li>
-<li><strong>原理</strong>：<code>n-1</code> 会把 <code>n</code> 最右边的 1 变成 0，并将该位右边的所有 0 变成 1。再和 <code>n</code> 做与运算，那部分就全部抵消了。</li>
-<li><strong>应用</strong>：统计 1 的个数、判断是否为 2 的幂。</li>
-</ul>
-<p>Java</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 统计 1 的个数</span><br><span class="line">int count = 0;</span><br><span class="line">while (n != 0) &#123;</span><br><span class="line">    n = n &amp; (n - 1);</span><br><span class="line">    count++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2><span id="2-获取最低位的-1-lowbit">2. 获取最低位的 1 (Lowbit)</span></h2><ul>
-<li><strong>公式</strong>：<code>n &amp; -n</code></li>
-<li><strong>原理</strong>：利用补码特性，<code>-n</code> 实际上是 <code>~n + 1</code>。</li>
-<li><strong>示例</strong>：<code>x = 10100</code> -&gt; <code>lowbit = 00100</code></li>
-<li><strong>应用</strong>：树状数组（Fenwick Tree）、Diff 比较。</li>
-</ul>
-<ol start="3">
-<li><h2><span id="判断-n-是否是-2-的幂">判断 n 是否是 2 的幂</span></h2></li>
-</ol>
-<ul>
-<li><strong>公式</strong>：<code>n &gt; 0 &amp;&amp; (n &amp; (n - 1)) == 0</code></li>
-<li><strong>原理</strong>：2 的幂次在二进制中只有一个 1。消掉这个 1 后应该等于 0。</li>
-</ul>
-<h2><span id="4-异或实现变量交换不使用临时变量">4. 异或实现变量交换（不使用临时变量）</span></h2><ul>
-<li><p><strong>代码</strong>：</p>
-<p>Java</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a = a ^ b;</span><br><span class="line">b = a ^ b;</span><br><span class="line">a = a ^ b;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>评价</strong>：虽然很帅，但实际工程中不如 <code>int temp</code> 快（现代编译器优化），主要用于面试展示对性质的理解。</p>
-</li>
-</ul>
+    <title>taichinet阅读体会</title>
+    <url>/2024/06/18/taichinet%E9%98%85%E8%AF%BB%E4%BD%93%E4%BC%9A/</url>
+    <content><![CDATA[<p>TaiChiNet: Negative-Positive Cross-Attention Network for Breast Lesion Segmentation in Ultrasound Images</p>
+<p>2024.3，医学2区top，采用BUSI数据集和Dataset B<br> <span id="more"></span><br>关于乳腺癌的X光类型数据集，可以被看做是一个像素级的二分类问题，即一类像素病变，另一类表示正常。但由于其超声模式复杂，分割性能容易被削弱。<br>为了提高分割性能有两种研究方法：<br>    1.采用全局和局部注意力特征挖掘前景病变和正常背景——但由于两种背景的模式相似容易发生混淆，而类的不平和问题导致了分割性能的敏感性低下<br>    2.通过焦点损失单方面增强前景病变——聚焦于前景损害的方法单方面地获得损害前景中的真阳性的增加，但也导致包括分散区域的正常背景中的假阳性的增加</p>
+<p>提出的新方法：<br>    对前景病变和正常背景进行双边增强，然后进行交叉聚集。然后将乳腺病变分割作为负的正常-背景路径和正的前景-病变路径之间的相互监督任务，并把提出的网络负向正向交叉网络叫做太极网：1.其由两个u网组成，分别挖掘周围病变和正常背景的模式。并在两个U-Net的深层之间，设计了一个交叉注意模块，用于跨深层语义通道传递信息。2.此外，为了改善在相互监督下的特征表示，在传统分割约束的基础上，提出了负路径和正路径之间的互补损失来传递双边补充信息，其中骰子损失主要集中在单边增强上</p>
 ]]></content>
       <tags>
-        <tag>日常学习</tag>
+        <tag>-医学图像</tag>
       </tags>
   </entry>
   <entry>
@@ -1848,112 +1749,99 @@ class UserService &#123;
       </tags>
   </entry>
   <entry>
-    <title>力扣学习记录lambda表达式</title>
-    <url>/2026/01/22/%E5%8A%9B%E6%89%A3%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
-    <content><![CDATA[<p>在做 LeetCode 347（前 K 个高频元素）时，我最开始的思路是简单的“统计频率 -&gt; 找出频率大于 k 的数”。但后来发现题目要求的是<strong>“频率最高的 k 个数”</strong>，这是一个经典的 Top K 问题。</p>
-<p>在这个过程中，我对 Java 的 <code>PriorityQueue</code>（优先队列）、Lambda 表达式以及堆排序的本质有了全新的认识。</p>
-<span id="more"></span>
-
-<p>先贴结果代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import java.util.*;</span><br><span class="line"></span><br><span class="line">class Solution &#123;</span><br><span class="line">    public int[] topKFrequent(int[] nums, int k) &#123;</span><br><span class="line">        // 1. 使用 HashMap 统计每个数字出现的频率</span><br><span class="line">        Map&lt;Integer, Integer&gt; counts = new HashMap&lt;&gt;();</span><br><span class="line">        for (int num : nums) &#123;</span><br><span class="line">            counts.put(num, counts.getOrDefault(num, 0) + 1);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // 2. 创建优先队列（小顶堆）</span><br><span class="line">        // 核心逻辑：(a, b) -&gt; counts.get(a) - counts.get(b)</span><br><span class="line">        // 含义：按照频率从小到大排。频率低的在堆顶，随时准备被踢走。</span><br><span class="line">        PriorityQueue&lt;Integer&gt; pq = new PriorityQueue&lt;&gt;((a, b) -&gt; counts.get(a) - counts.get(b));</span><br><span class="line"></span><br><span class="line">        // 3. 遍历 Map，维护一个大小为 k 的堆</span><br><span class="line">        for (int num : counts.keySet()) &#123;</span><br><span class="line">            pq.offer(num); // 入队</span><br><span class="line">            // 如果堆大了，就把频率最小的（堆顶）弹出去</span><br><span class="line">            if (pq.size() &gt; k) &#123;</span><br><span class="line">                pq.poll();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // 4. 输出结果</span><br><span class="line">        int[] res = new int[k];</span><br><span class="line">        for (int i = 0; i &lt; k; i++) &#123;</span><br><span class="line">            res[i] = pq.poll();</span><br><span class="line">        &#125;</span><br><span class="line">        return res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这个代码里面，我最开始很不理解，这一个确实是我以前没怎么见过，后来理解了这是一种特殊的增加规则的的方法。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">PriorityQueue&lt;Integer&gt; pq = new PriorityQueue&lt;&gt;((a, b) -&gt; counts.get(a) - counts.get(b));</span><br></pre></td></tr></table></figure>
-
-<p>这行代码并不只是为了“排序”，它是在<strong>“立规矩”</strong>。</p>
+    <title>位运算</title>
+    <url>/2026/01/18/%E4%BD%8D%E8%BF%90%E7%AE%97/</url>
+    <content><![CDATA[<h1><span id="一-位运算速查表">一、位运算速查表</span></h1><table>
+<thead>
+<tr>
+<th align="center">符号</th>
+<th align="center">描述</th>
+<th align="center">运算 (A ? B)</th>
+<th align="center">结果</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&amp;</td>
+<td align="center">与</td>
+<td align="center">0011 1100 &amp; 0000 1101</td>
+<td align="center">0000 1100 (12)</td>
+<td align="center">同1为1</td>
+</tr>
+<tr>
+<td align="center">**&#96;</td>
+<td align="center">&#96;**</td>
+<td align="center">或</td>
+<td align="center">&#96;0011 1100</td>
+<td align="center">0000 1101&#96;</td>
+</tr>
+<tr>
+<td align="center">^</td>
+<td align="center">异或</td>
+<td align="center">0011 1100 ^ 0000 1101</td>
+<td align="center">0011 0001 (49)</td>
+<td align="center">同0异1</td>
+</tr>
+<tr>
+<td align="center">~</td>
+<td align="center">取反</td>
+<td align="center">~0011 1100</td>
+<td align="center">1100 0011</td>
+<td align="center">0变1，1变0</td>
+</tr>
+<tr>
+<td align="center">&lt;&lt;</td>
+<td align="center">左移</td>
+<td align="center">A &lt;&lt; 2</td>
+<td align="center">1111 0000 (240)</td>
+<td align="center">乘以 4</td>
+</tr>
+<tr>
+<td align="center">&gt;&gt;</td>
+<td align="center">右移</td>
+<td align="center">A &gt;&gt; 2</td>
+<td align="center">0000 1111 (15)</td>
+<td align="center">除以 4</td>
+</tr>
+</tbody></table>
+<h1><span id="二-异或的性质">二、异或的性质</span></h1><p>异或是位运算中的重点操作，满足以下定律：</p>
+<ol>
+<li>归零律：x ^ x &#x3D; 0 (任何数与自己异或都是0)</li>
+<li>恒等律：x ^ 0 &#x3D; x (任何数与0异或保持不变)</li>
+<li>交换律与结合律：a ^ b ^ c &#x3D; a ^ c ^ b</li>
+</ol>
+<h1><span id="三-必背的高阶技巧">三、 必背的高阶技巧</span></h1><ol>
+<li><h2><span id="消除二进制中最低位的-1-brian-kernighan-算法">消除二进制中最低位的 1 (Brian Kernighan 算法)</span></h2></li>
+</ol>
 <ul>
-<li>**<code>a</code> 和 <code>b</code>**：是队列里的数字（选手）。</li>
-<li>**<code>counts.get(...)</code>**：是比较的标准（看频率，不看数字本身）。</li>
-<li><strong>返回值</strong>：虽然写的是减法算式，但 Java 接收到的是一个<strong>整数（int）</strong>。<ul>
-<li>负数：<code>a</code> 轻（上浮&#x2F;排前面）。</li>
-<li>正数：<code>a</code> 重（下沉&#x2F;排后面）。</li>
+<li><strong>公式</strong>：<code>n &amp; (n - 1)</code></li>
+<li><strong>原理</strong>：<code>n-1</code> 会把 <code>n</code> 最右边的 1 变成 0，并将该位右边的所有 0 变成 1。再和 <code>n</code> 做与运算，那部分就全部抵消了。</li>
+<li><strong>应用</strong>：统计 1 的个数、判断是否为 2 的幂。</li>
 </ul>
+<p>Java</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 统计 1 的个数</span><br><span class="line">int count = 0;</span><br><span class="line">while (n != 0) &#123;</span><br><span class="line">    n = n &amp; (n - 1);</span><br><span class="line">    count++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2><span id="2-获取最低位的-1-lowbit">2. 获取最低位的 1 (Lowbit)</span></h2><ul>
+<li><strong>公式</strong>：<code>n &amp; -n</code></li>
+<li><strong>原理</strong>：利用补码特性，<code>-n</code> 实际上是 <code>~n + 1</code>。</li>
+<li><strong>示例</strong>：<code>x = 10100</code> -&gt; <code>lowbit = 00100</code></li>
+<li><strong>应用</strong>：树状数组（Fenwick Tree）、Diff 比较。</li>
+</ul>
+<ol start="3">
+<li><h2><span id="判断-n-是否是-2-的幂">判断 n 是否是 2 的幂</span></h2></li>
+</ol>
+<ul>
+<li><strong>公式</strong>：<code>n &gt; 0 &amp;&amp; (n &amp; (n - 1)) == 0</code></li>
+<li><strong>原理</strong>：2 的幂次在二进制中只有一个 1。消掉这个 1 后应该等于 0。</li>
+</ul>
+<h2><span id="4-异或实现变量交换不使用临时变量">4. 异或实现变量交换（不使用临时变量）</span></h2><ul>
+<li><p><strong>代码</strong>：</p>
+<p>Java</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a = a ^ b;</span><br><span class="line">b = a ^ b;</span><br><span class="line">a = a ^ b;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>评价</strong>：虽然很帅，但实际工程中不如 <code>int temp</code> 快（现代编译器优化），主要用于面试展示对性质的理解。</p>
 </li>
 </ul>
-<p>从而保证了每次add都会维护，把小数值给上浮。</p>
-<h2><span id="2comparator-万能口诀">2.Comparator 万能口诀</span></h2><p>根据学习，永远是写（a,b）根据目标效果，选择是a-b还是b-a</p>
-<table>
-<thead>
-<tr>
-<th><strong>目标效果</strong></th>
-<th><strong>核心写法</strong></th>
-<th><strong>记忆口诀</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>小</strong>数值在堆顶 &#x2F; 排前面</td>
-<td><code>a - b</code></td>
-<td><strong>前减后</strong>（我减你）</td>
-</tr>
-<tr>
-<td><strong>大</strong>数值在堆顶 &#x2F; 排前面</td>
-<td><code>b - a</code></td>
-<td><strong>后减前</strong>（你减我）</td>
-</tr>
-<tr>
-<td><strong>String 长度短</strong>在堆顶</td>
-<td><code>a.length() - b.length()</code></td>
-<td>前减后</td>
-</tr>
-<tr>
-<td><strong>String 字典序</strong>靠前</td>
-<td><code>a.compareTo(b)</code></td>
-<td>顺着比</td>
-</tr>
-</tbody></table>
-<p>而对于一些复杂的情况，我们可以在里面增加代码串。逻辑是一样的，返回的数值小于0，就是选择数对的A上浮</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(a, b) -&gt; &#123;</span><br><span class="line">    int freqCompare = counts.get(a) - counts.get(b);</span><br><span class="line">    if (freqCompare != 0) &#123;</span><br><span class="line">        return freqCompare; // 频率不同：按频率小顶堆（小的在顶）</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        // 频率相同：进入这里的瞬间，freqCompare 已经是 0 了，不能用了！</span><br><span class="line">        // 题目要求：数字大的在堆顶 -&gt; 大顶堆逻辑 -&gt; 后减前</span><br><span class="line">        return b - a;  // &lt;--- 这里才是正确答案</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2><span id="3扩展用法">3.扩展用法</span></h2><p>不止是这个小根堆，大根堆场景，我们还能用在别的地方：</p>
-<h3><span id="31-给数组x2f列表排序-arrayssort-x2f-collectionssort">3.1 给数组&#x2F;列表排序 (<code>Arrays.sort</code> &#x2F; <code>Collections.sort</code>)</span></h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">List&lt;String&gt; list = new ArrayList&lt;&gt;(Arrays.asList(&quot;apple&quot;, &quot;hi&quot;, &quot;banana&quot;));</span><br><span class="line"></span><br><span class="line">// 旧写法：Collections.sort(list, new Comparator...);</span><br><span class="line">// 新写法（Lambda）：</span><br><span class="line">list.sort((a, b) -&gt; a.length() - b.length()); </span><br><span class="line"></span><br><span class="line">System.out.println(list); // 输出 [hi, apple, banana]</span><br></pre></td></tr></table></figure>
-
-<h3><span id="32-给二维数组排序">3.2 给二维数组排序</span></h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// intervals 是个二维数组，里面的元素是 int[] (一维数组)</span><br><span class="line">// 所以这里的 a 和 b 代表的是每一行，即 &#123;1,3&#125; 和 &#123;2,6&#125;</span><br><span class="line">Arrays.sort(intervals, (a, b) -&gt; a[0] - b[0]);</span><br></pre></td></tr></table></figure>
-
-<h3><span id="33-自动排序的-map-和-set-treemap-x2f-treeset">3.3 自动排序的 Map 和 Set (<code>TreeMap</code> &#x2F; <code>TreeSet</code>)</span></h3><p>这两个数据结构和 <code>PriorityQueue</code> 是亲兄弟。</p>
-<ul>
-<li><code>PriorityQueue</code>：只保证<strong>堆顶</strong>是有序的。</li>
-<li><code>TreeMap</code> &#x2F; <code>TreeSet</code>：保证<strong>内部所有元素永远</strong>是有序的。</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 这里的 (a, b) 指的是 Key</span><br><span class="line">Map&lt;Integer, String&gt; map = new TreeMap&lt;&gt;((a, b) -&gt; b - a);</span><br><span class="line"></span><br><span class="line">map.put(1, &quot;A&quot;);</span><br><span class="line">map.put(3, &quot;B&quot;);</span><br><span class="line">map.put(2, &quot;C&quot;);</span><br><span class="line"></span><br><span class="line">// 遍历时，会自动按 Key 从大到小出：3 -&gt; 2 -&gt; 1</span><br><span class="line">for(Integer key : map.keySet()) &#123;</span><br><span class="line">    System.out.println(key); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2><span id="4-java-stream-流操作-max-min-sorted">4.  Java Stream 流操作 (<code>.max</code>, <code>.min</code>, <code>.sorted</code>)</span></h2><p>Java 8 的流式编程极其依赖这个写法。</p>
-<h4><span id="场景在一堆对象里找最的那一个">场景：在一堆对象里找“最…”的那一个</span></h4><p>假设你有一堆 <code>Student</code> 对象，想找<strong>分数最高</strong>的那个。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Student &#123; String name; int score; &#125;</span><br><span class="line">List&lt;Student&gt; students = ...;</span><br><span class="line"></span><br><span class="line">// 找最大值 (max)</span><br><span class="line">// 这里的 max 需要你告诉它：什么叫“大”？</span><br><span class="line">// 答：分数 (a.score - b.score) 越大，就越大</span><br><span class="line">Student bestStudent = students.stream()</span><br><span class="line">    .max((a, b) -&gt; a.score - b.score) </span><br><span class="line">    .get();</span><br></pre></td></tr></table></figure>
-
-<h2><span id="5总结">5.总结</span></h2><table>
-<thead>
-<tr>
-<th><strong>场景</strong></th>
-<th><strong>代码片段</strong></th>
-<th><strong>作用</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>优先队列</strong></td>
-<td><code>new PriorityQueue&lt;&gt;((a, b) -&gt; a - b)</code></td>
-<td>决定<strong>谁在堆顶</strong></td>
-</tr>
-<tr>
-<td><strong>数组排序</strong></td>
-<td><code>Arrays.sort(arr, (a, b) -&gt; a - b)</code></td>
-<td>决定<strong>谁排前面</strong></td>
-</tr>
-<tr>
-<td><strong>列表排序</strong></td>
-<td><code>list.sort((a, b) -&gt; a - b)</code></td>
-<td>决定<strong>谁排前面</strong></td>
-</tr>
-<tr>
-<td><strong>Tree结构</strong></td>
-<td><code>new TreeMap&lt;&gt;((a, b) -&gt; a - b)</code></td>
-<td>决定<strong>Key的存储顺序</strong></td>
-</tr>
-<tr>
-<td><strong>流操作</strong></td>
-<td><code>stream.max((a, b) -&gt; a - b)</code></td>
-<td>决定<strong>谁算最大值</strong></td>
-</tr>
-</tbody></table>
 ]]></content>
       <tags>
         <tag>日常学习</tag>
@@ -2113,6 +2001,130 @@ class UserService &#123;
 ]]></content>
       <tags>
         <tag>日常学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>力扣学习记录lambda表达式</title>
+    <url>/2026/01/22/%E5%8A%9B%E6%89%A3%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+    <content><![CDATA[<p>在做 LeetCode 347（前 K 个高频元素）时，我最开始的思路是简单的“统计频率 -&gt; 找出频率大于 k 的数”。但后来发现题目要求的是<strong>“频率最高的 k 个数”</strong>，这是一个经典的 Top K 问题。</p>
+<p>在这个过程中，我对 Java 的 <code>PriorityQueue</code>（优先队列）、Lambda 表达式以及堆排序的本质有了全新的认识。</p>
+<span id="more"></span>
+
+<p>先贴结果代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import java.util.*;</span><br><span class="line"></span><br><span class="line">class Solution &#123;</span><br><span class="line">    public int[] topKFrequent(int[] nums, int k) &#123;</span><br><span class="line">        // 1. 使用 HashMap 统计每个数字出现的频率</span><br><span class="line">        Map&lt;Integer, Integer&gt; counts = new HashMap&lt;&gt;();</span><br><span class="line">        for (int num : nums) &#123;</span><br><span class="line">            counts.put(num, counts.getOrDefault(num, 0) + 1);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // 2. 创建优先队列（小顶堆）</span><br><span class="line">        // 核心逻辑：(a, b) -&gt; counts.get(a) - counts.get(b)</span><br><span class="line">        // 含义：按照频率从小到大排。频率低的在堆顶，随时准备被踢走。</span><br><span class="line">        PriorityQueue&lt;Integer&gt; pq = new PriorityQueue&lt;&gt;((a, b) -&gt; counts.get(a) - counts.get(b));</span><br><span class="line"></span><br><span class="line">        // 3. 遍历 Map，维护一个大小为 k 的堆</span><br><span class="line">        for (int num : counts.keySet()) &#123;</span><br><span class="line">            pq.offer(num); // 入队</span><br><span class="line">            // 如果堆大了，就把频率最小的（堆顶）弹出去</span><br><span class="line">            if (pq.size() &gt; k) &#123;</span><br><span class="line">                pq.poll();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // 4. 输出结果</span><br><span class="line">        int[] res = new int[k];</span><br><span class="line">        for (int i = 0; i &lt; k; i++) &#123;</span><br><span class="line">            res[i] = pq.poll();</span><br><span class="line">        &#125;</span><br><span class="line">        return res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个代码里面，我最开始很不理解，这一个确实是我以前没怎么见过，后来理解了这是一种特殊的增加规则的的方法。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">PriorityQueue&lt;Integer&gt; pq = new PriorityQueue&lt;&gt;((a, b) -&gt; counts.get(a) - counts.get(b));</span><br></pre></td></tr></table></figure>
+
+<p>这行代码并不只是为了“排序”，它是在<strong>“立规矩”</strong>。</p>
+<ul>
+<li>**<code>a</code> 和 <code>b</code>**：是队列里的数字（选手）。</li>
+<li>**<code>counts.get(...)</code>**：是比较的标准（看频率，不看数字本身）。</li>
+<li><strong>返回值</strong>：虽然写的是减法算式，但 Java 接收到的是一个<strong>整数（int）</strong>。<ul>
+<li>负数：<code>a</code> 轻（上浮&#x2F;排前面）。</li>
+<li>正数：<code>a</code> 重（下沉&#x2F;排后面）。</li>
+</ul>
+</li>
+</ul>
+<p>从而保证了每次add都会维护，把小数值给上浮。</p>
+<h2><span id="2comparator-万能口诀">2.Comparator 万能口诀</span></h2><p>根据学习，永远是写（a,b）根据目标效果，选择是a-b还是b-a</p>
+<table>
+<thead>
+<tr>
+<th><strong>目标效果</strong></th>
+<th><strong>核心写法</strong></th>
+<th><strong>记忆口诀</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>小</strong>数值在堆顶 &#x2F; 排前面</td>
+<td><code>a - b</code></td>
+<td><strong>前减后</strong>（我减你）</td>
+</tr>
+<tr>
+<td><strong>大</strong>数值在堆顶 &#x2F; 排前面</td>
+<td><code>b - a</code></td>
+<td><strong>后减前</strong>（你减我）</td>
+</tr>
+<tr>
+<td><strong>String 长度短</strong>在堆顶</td>
+<td><code>a.length() - b.length()</code></td>
+<td>前减后</td>
+</tr>
+<tr>
+<td><strong>String 字典序</strong>靠前</td>
+<td><code>a.compareTo(b)</code></td>
+<td>顺着比</td>
+</tr>
+</tbody></table>
+<p>而对于一些复杂的情况，我们可以在里面增加代码串。逻辑是一样的，返回的数值小于0，就是选择数对的A上浮</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(a, b) -&gt; &#123;</span><br><span class="line">    int freqCompare = counts.get(a) - counts.get(b);</span><br><span class="line">    if (freqCompare != 0) &#123;</span><br><span class="line">        return freqCompare; // 频率不同：按频率小顶堆（小的在顶）</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        // 频率相同：进入这里的瞬间，freqCompare 已经是 0 了，不能用了！</span><br><span class="line">        // 题目要求：数字大的在堆顶 -&gt; 大顶堆逻辑 -&gt; 后减前</span><br><span class="line">        return b - a;  // &lt;--- 这里才是正确答案</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2><span id="3扩展用法">3.扩展用法</span></h2><p>不止是这个小根堆，大根堆场景，我们还能用在别的地方：</p>
+<h3><span id="31-给数组x2f列表排序-arrayssort-x2f-collectionssort">3.1 给数组&#x2F;列表排序 (<code>Arrays.sort</code> &#x2F; <code>Collections.sort</code>)</span></h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">List&lt;String&gt; list = new ArrayList&lt;&gt;(Arrays.asList(&quot;apple&quot;, &quot;hi&quot;, &quot;banana&quot;));</span><br><span class="line"></span><br><span class="line">// 旧写法：Collections.sort(list, new Comparator...);</span><br><span class="line">// 新写法（Lambda）：</span><br><span class="line">list.sort((a, b) -&gt; a.length() - b.length()); </span><br><span class="line"></span><br><span class="line">System.out.println(list); // 输出 [hi, apple, banana]</span><br></pre></td></tr></table></figure>
+
+<h3><span id="32-给二维数组排序">3.2 给二维数组排序</span></h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// intervals 是个二维数组，里面的元素是 int[] (一维数组)</span><br><span class="line">// 所以这里的 a 和 b 代表的是每一行，即 &#123;1,3&#125; 和 &#123;2,6&#125;</span><br><span class="line">Arrays.sort(intervals, (a, b) -&gt; a[0] - b[0]);</span><br></pre></td></tr></table></figure>
+
+<h3><span id="33-自动排序的-map-和-set-treemap-x2f-treeset">3.3 自动排序的 Map 和 Set (<code>TreeMap</code> &#x2F; <code>TreeSet</code>)</span></h3><p>这两个数据结构和 <code>PriorityQueue</code> 是亲兄弟。</p>
+<ul>
+<li><code>PriorityQueue</code>：只保证<strong>堆顶</strong>是有序的。</li>
+<li><code>TreeMap</code> &#x2F; <code>TreeSet</code>：保证<strong>内部所有元素永远</strong>是有序的。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 这里的 (a, b) 指的是 Key</span><br><span class="line">Map&lt;Integer, String&gt; map = new TreeMap&lt;&gt;((a, b) -&gt; b - a);</span><br><span class="line"></span><br><span class="line">map.put(1, &quot;A&quot;);</span><br><span class="line">map.put(3, &quot;B&quot;);</span><br><span class="line">map.put(2, &quot;C&quot;);</span><br><span class="line"></span><br><span class="line">// 遍历时，会自动按 Key 从大到小出：3 -&gt; 2 -&gt; 1</span><br><span class="line">for(Integer key : map.keySet()) &#123;</span><br><span class="line">    System.out.println(key); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2><span id="4-java-stream-流操作-max-min-sorted">4.  Java Stream 流操作 (<code>.max</code>, <code>.min</code>, <code>.sorted</code>)</span></h2><p>Java 8 的流式编程极其依赖这个写法。</p>
+<h4><span id="场景在一堆对象里找最的那一个">场景：在一堆对象里找“最…”的那一个</span></h4><p>假设你有一堆 <code>Student</code> 对象，想找<strong>分数最高</strong>的那个。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Student &#123; String name; int score; &#125;</span><br><span class="line">List&lt;Student&gt; students = ...;</span><br><span class="line"></span><br><span class="line">// 找最大值 (max)</span><br><span class="line">// 这里的 max 需要你告诉它：什么叫“大”？</span><br><span class="line">// 答：分数 (a.score - b.score) 越大，就越大</span><br><span class="line">Student bestStudent = students.stream()</span><br><span class="line">    .max((a, b) -&gt; a.score - b.score) </span><br><span class="line">    .get();</span><br></pre></td></tr></table></figure>
+
+<h2><span id="5总结">5.总结</span></h2><table>
+<thead>
+<tr>
+<th><strong>场景</strong></th>
+<th><strong>代码片段</strong></th>
+<th><strong>作用</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>优先队列</strong></td>
+<td><code>new PriorityQueue&lt;&gt;((a, b) -&gt; a - b)</code></td>
+<td>决定<strong>谁在堆顶</strong></td>
+</tr>
+<tr>
+<td><strong>数组排序</strong></td>
+<td><code>Arrays.sort(arr, (a, b) -&gt; a - b)</code></td>
+<td>决定<strong>谁排前面</strong></td>
+</tr>
+<tr>
+<td><strong>列表排序</strong></td>
+<td><code>list.sort((a, b) -&gt; a - b)</code></td>
+<td>决定<strong>谁排前面</strong></td>
+</tr>
+<tr>
+<td><strong>Tree结构</strong></td>
+<td><code>new TreeMap&lt;&gt;((a, b) -&gt; a - b)</code></td>
+<td>决定<strong>Key的存储顺序</strong></td>
+</tr>
+<tr>
+<td><strong>流操作</strong></td>
+<td><code>stream.max((a, b) -&gt; a - b)</code></td>
+<td>决定<strong>谁算最大值</strong></td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>日常学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大模型是怎么做到长上下文扩展的</title>
+    <url>/2025/05/22/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%98%AF%E6%80%8E%E4%B9%88%E5%81%9A%E5%88%B0%E9%95%BF%E4%B8%8A%E4%B8%8B%E6%96%87%E6%89%A9%E5%B1%95%E7%9A%84/</url>
+    <content><![CDATA[<p>一直以来我都很疑惑，为什么大模型可以从4K学到8K又到128K呢，今天看来视频才有一些想法。<br> <span id="more"></span><br>1.大模型拟合结果依赖随机梯度算法，如果一次性输出128K的文本进行拟合，那就会对128K倍的权重进行拟合，考虑到自注意力计算矩阵是输入增长的平方。直接进行拟合导致的计算消耗是难以估计的。</p>
+<p>2.因此，我们就先让模型学习少量文本。这时候模型的参数已经得到一定的调整了，当我们再扩大这个文本长度时，他会有一个基准线在，就可以以那个基准为基础进行二次拟合。如果我们把8K的参数全部冻结，训练128K的文本矩阵加到8K的参数矩阵上去，那这个实际上就类似LORA了。这也是LORA微调的核心，基础大模型不动，少量修改附加参数矩阵。</p>
+<p>3.再一个增大模型上下文长度的方法就是数据分片了，学习完前面的内容再把学到的东西传递下去</p>
+<p>4.如果从架构入手也是可以的，比如经典的局部注意力+全局注意力的形式，这一技术我们可以在Gemma2到Gemma3的架构改进中看到。</p>
+]]></content>
+      <tags>
+        <tag>日常记录</tag>
       </tags>
   </entry>
   <entry>
@@ -2319,12 +2331,11 @@ class UserService &#123;
       </tags>
   </entry>
   <entry>
-    <title>大模型是怎么做到长上下文扩展的</title>
-    <url>/2025/05/22/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%98%AF%E6%80%8E%E4%B9%88%E5%81%9A%E5%88%B0%E9%95%BF%E4%B8%8A%E4%B8%8B%E6%96%87%E6%89%A9%E5%B1%95%E7%9A%84/</url>
-    <content><![CDATA[<p>一直以来我都很疑惑，为什么大模型可以从4K学到8K又到128K呢，今天看来视频才有一些想法。<br> <span id="more"></span><br>1.大模型拟合结果依赖随机梯度算法，如果一次性输出128K的文本进行拟合，那就会对128K倍的权重进行拟合，考虑到自注意力计算矩阵是输入增长的平方。直接进行拟合导致的计算消耗是难以估计的。</p>
-<p>2.因此，我们就先让模型学习少量文本。这时候模型的参数已经得到一定的调整了，当我们再扩大这个文本长度时，他会有一个基准线在，就可以以那个基准为基础进行二次拟合。如果我们把8K的参数全部冻结，训练128K的文本矩阵加到8K的参数矩阵上去，那这个实际上就类似LORA了。这也是LORA微调的核心，基础大模型不动，少量修改附加参数矩阵。</p>
-<p>3.再一个增大模型上下文长度的方法就是数据分片了，学习完前面的内容再把学到的东西传递下去</p>
-<p>4.如果从架构入手也是可以的，比如经典的局部注意力+全局注意力的形式，这一技术我们可以在Gemma2到Gemma3的架构改进中看到。</p>
+    <title>大模型的输入</title>
+    <url>/2025/05/16/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%BE%93%E5%85%A5/</url>
+    <content><![CDATA[<p>虽然我以前就知道大模型的输入计算很坑，但还是没想到这么坑<br> <span id="more"></span><br>首先输入的文本【1234】【567】，输入【567】的时候之前的【1234】和模型对他的回答也会加进来。</p>
+<p>其次是联网功能，这玩意就牛逼了，上不封顶。就算是直接选择前面三个网页，也得是他去读了才行。麻了，同样的，这部分也要算你头上</p>
+<p>最后是提示词，你输入的格式规范之类的东西也得通过提示词 来实现，一样的，这个也是要Token的。这三样累计再一次，第二次开始的对话消耗就大的可怕，如果是使用智能体。这个消耗就更可怕了。大模型的规划可不是人类能理解的</p>
 ]]></content>
       <tags>
         <tag>日常记录</tag>
@@ -2337,17 +2348,6 @@ class UserService &#123;
 <p>另一个问题是自注意力机制。最关键的这个部分反而是没有怎么改动的，从MHA,GQA,单个子注意力。这些都是缩减规模，但是性能肉眼可见的在掉，虽然分组倒是能行，但效果还是差了点。这一点来说DS的新注意力就很强了，MLA。和ROPE混合起来使用，保留了自注意力的效果还减少了计算量，明显的有在另辟蹊径。</p>
 <p>然后就是多模态化，道也不用多说。这些本质都是为了后续的硬件做服务。我感觉现在的大模型卷到一定程度，确实是都走向应用去了，就是大模型始终只能当辅助。</p>
 <p>虽然不好说这个时间能持续多久就是了</p>
-]]></content>
-      <tags>
-        <tag>日常记录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大模型的输入</title>
-    <url>/2025/05/16/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%BE%93%E5%85%A5/</url>
-    <content><![CDATA[<p>虽然我以前就知道大模型的输入计算很坑，但还是没想到这么坑<br> <span id="more"></span><br>首先输入的文本【1234】【567】，输入【567】的时候之前的【1234】和模型对他的回答也会加进来。</p>
-<p>其次是联网功能，这玩意就牛逼了，上不封顶。就算是直接选择前面三个网页，也得是他去读了才行。麻了，同样的，这部分也要算你头上</p>
-<p>最后是提示词，你输入的格式规范之类的东西也得通过提示词 来实现，一样的，这个也是要Token的。这三样累计再一次，第二次开始的对话消耗就大的可怕，如果是使用智能体。这个消耗就更可怕了。大模型的规划可不是人类能理解的</p>
 ]]></content>
       <tags>
         <tag>日常记录</tag>
@@ -2403,6 +2403,13 @@ class UserService &#123;
       </tags>
   </entry>
   <entry>
+    <title>如何让新创建的用户使用当前的conda</title>
+    <url>/2025/03/24/%E5%A6%82%E4%BD%95%E8%AE%A9%E6%96%B0%E5%88%9B%E5%BB%BA%E7%9A%84%E7%94%A8%E6%88%B7%E4%BD%BF%E7%94%A8%E5%BD%93%E5%89%8D%E7%9A%84conda/</url>
+    <content><![CDATA[<p>首先创建新用户到你的路径。然后设置密码<br>    sudo useradd &lt;用户名&gt; -m -d &lt;你的路径&gt; -s &#x2F;bin&#x2F;bash<br>    chown &lt;用户名&gt;:&lt;用户名&gt; -R &lt;你的路径&gt;<br>    passwd username</p>
+<p>然后复制.bashrc到自己的目录去，.bashrc可以在自己的目录里面找。激活前记得先cd到自己的新目录<br>    sudo cp .bashrc &#x2F;home&#x2F;newuser&#x2F;.bashrc<br>    source ~&#x2F;.bashrc<br>这里用你的旧用户的路径替换&lt;&#x2F;root&#x2F;conda&gt;<br>    chmod 755 &lt;&#x2F;root&#x2F;conda&gt;</p>
+]]></content>
+  </entry>
+  <entry>
     <title>如何处理服务器内存不足</title>
     <url>/2025/03/17/%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%86%85%E5%AD%98%E4%B8%8D%E8%B6%B3/</url>
     <content><![CDATA[<p>这个解决方法主要面向那些明明有还有磁盘空间的服务器，但在conda装载环境时报错，显示内存不足的情况。一言以蔽之，这个问题是默认安装环境的路径不对。<br> <span id="more"></span><br>首先用df -h查看内存，这里的vda1,vda2就是两个磁盘。小的那个类似系统C盘的定位，大的那个有1T，但是我们运行报错：ERROR: Could not install packages due to an OSError: [Errno 28] No space left on device<br><img src="/images/%E5%86%85%E5%AD%98.png" alt="内存" title="内存"><br>这是因为，conda的环境默认装到vda2去了.我们就需要用命令修改默认安装包和环境的路径，请注意替换里面的&#x2F;root&#x2F;为你更大的那个磁盘的路径：</p>
@@ -2410,13 +2417,6 @@ class UserService &#123;
 <p>顺便一提，Mounted on下面就代表磁盘的路径，我这里是&#x2F;mnt&#x2F;data，就用&#x2F;mnt&#x2F;data替换&#x2F;root。<br>但是，有时候你在修改了这个都还是报错磁盘不足，这是因为你只修改了conda的,如果你用的pip命令就可能导致再次出错。这里我们指定 pip 的临时文件夹就可以了</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export TMPDIR=&quot;/mnt/data/temp/&quot;//有空间的那个磁盘下随便写一个文件路径</span><br><span class="line">mkdir -p $TMPDIR</span><br><span class="line">pip~</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>至此解决问题，成功下载</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>如何让新创建的用户使用当前的conda</title>
-    <url>/2025/03/24/%E5%A6%82%E4%BD%95%E8%AE%A9%E6%96%B0%E5%88%9B%E5%BB%BA%E7%9A%84%E7%94%A8%E6%88%B7%E4%BD%BF%E7%94%A8%E5%BD%93%E5%89%8D%E7%9A%84conda/</url>
-    <content><![CDATA[<p>首先创建新用户到你的路径。然后设置密码<br>    sudo useradd &lt;用户名&gt; -m -d &lt;你的路径&gt; -s &#x2F;bin&#x2F;bash<br>    chown &lt;用户名&gt;:&lt;用户名&gt; -R &lt;你的路径&gt;<br>    passwd username</p>
-<p>然后复制.bashrc到自己的目录去，.bashrc可以在自己的目录里面找。激活前记得先cd到自己的新目录<br>    sudo cp .bashrc &#x2F;home&#x2F;newuser&#x2F;.bashrc<br>    source ~&#x2F;.bashrc<br>这里用你的旧用户的路径替换&lt;&#x2F;root&#x2F;conda&gt;<br>    chmod 755 &lt;&#x2F;root&#x2F;conda&gt;</p>
 ]]></content>
   </entry>
   <entry>
@@ -2544,47 +2544,6 @@ class UserService &#123;
 ]]></content>
       <tags>
         <tag>日常学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我对大模型框架改进的看法</title>
-    <url>/2025/05/08/%E6%88%91%E5%AF%B9%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%A1%86%E6%9E%B6%E6%94%B9%E8%BF%9B%E7%9A%84%E7%9C%8B%E6%B3%95/</url>
-    <content><![CDATA[<p>东西不记就容易忘掉，总之先记录下现在看llama系列模型改进的想法<br> <span id="more"></span><br>llama1的改动包括三个：ROPE,RMSnorm前置和SWIGLU。</p>
-<p>ROPE我还真是不看不知道，我一直以为位置编码都是加算embedding，结果这个相对位置编码是在对QKV做操作，同样的，ROPE也是计算出来的，所以可以适应变长的输入。然后是RMSnorm，贴一下归一化的定义：</p>
-<blockquote>
-<p>当两个值之间的差异较小时与较大时，评估值（例如 MSE，均方误差）可能会有很大差异。在 MSE 中，如果出现较大的值，梯度可能会变得极大，从而使学习变得不稳定</p>
-</blockquote>
-<p>我看到的一个说法是前置归一化能节约计算资源，这是因为数据在输入前是更不均匀的。RMS就仅使用均方根（RMS），传统的LayerNorm 相比，后者需要一次数据扫描来计算均值，另一次来计算方差。RMSNorm 通过维持非零均值而不与 0 对齐均值，帮助解决梯度消失问题。在早期周期中比 LayerNorm 维持更高的梯度范数。另一个原因是节省内存，这个结合我看到的在模型使用不同精度的数据，我想应该还真的是有这部分的作用，是DSV3吗，我有点记不得了。</p>
-<p>再然后就是使用了SWIGLU，这个方法就是保留了0以下的数值，捕捉的信息更多。</p>
-<p>然后就是llama2了，我感觉这个模型基本没啥大变化，虽然说是用了GQA，但也就这一点了。事实上由于GQA本身的性质，虽然能加速训练，但也一定会导致信息丢失的。我怀疑它通过大量增加训练数据（+40%）就是为了补偿这中间的损失</p>
-<p>不过llama2提出的训练数据质量决定SFT模型上限多重要的。另外和GPT相比，他明显投入的资源更多，在方方面面都有测评，肤色，宗教，性别这些。不过我说是投入更多，实际上我们看不到他对标的GPT3.5在安全上的努力有多少，毕竟是没有公布的东西。</p>
-<p>参考资料<br><a href="https://blog.csdn.net/star_nwe/article/details/145283201" title="详解大模型中的LayerNorm和RMSNorm">https://blog.csdn.net/star_nwe&#x2F;article&#x2F;details&#x2F;145283201</a></p>
-]]></content>
-      <tags>
-        <tag>日常记录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据结构面经准备</title>
-    <url>/2025/08/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%9D%A2%E7%BB%8F%E5%87%86%E5%A4%87/</url>
-    <content><![CDATA[<p>毕竟是计算机基本功，但时间远了还是容易忘记，这里记录下我认为有必要准备的数据结构知识。整个流程我大体按照考研那时的数据结构来，尽可能全面吧</p>
-<span id="more"></span>
-
-<h1><span id="1数据结构">1.数据结构</span></h1><h1><span id="1数组和链表">1.数组和链表</span></h1><p>数组</p>
-<ul>
-<li>定义：一块连续的内存空间，用于存储相同类型的元素。通过索引（下标）可以直接访问任意元素。</li>
-<li>优点：随机存储</li>
-<li>缺点：</li>
-</ul>
-<p>链表</p>
-<ul>
-<li>定义：</li>
-<li>优点：</li>
-<li>缺点：</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>面试准备</tag>
       </tags>
   </entry>
   <entry>
@@ -2720,6 +2679,24 @@ class UserService &#123;
       </tags>
   </entry>
   <entry>
+    <title>我对大模型框架改进的看法</title>
+    <url>/2025/05/08/%E6%88%91%E5%AF%B9%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%A1%86%E6%9E%B6%E6%94%B9%E8%BF%9B%E7%9A%84%E7%9C%8B%E6%B3%95/</url>
+    <content><![CDATA[<p>东西不记就容易忘掉，总之先记录下现在看llama系列模型改进的想法<br> <span id="more"></span><br>llama1的改动包括三个：ROPE,RMSnorm前置和SWIGLU。</p>
+<p>ROPE我还真是不看不知道，我一直以为位置编码都是加算embedding，结果这个相对位置编码是在对QKV做操作，同样的，ROPE也是计算出来的，所以可以适应变长的输入。然后是RMSnorm，贴一下归一化的定义：</p>
+<blockquote>
+<p>当两个值之间的差异较小时与较大时，评估值（例如 MSE，均方误差）可能会有很大差异。在 MSE 中，如果出现较大的值，梯度可能会变得极大，从而使学习变得不稳定</p>
+</blockquote>
+<p>我看到的一个说法是前置归一化能节约计算资源，这是因为数据在输入前是更不均匀的。RMS就仅使用均方根（RMS），传统的LayerNorm 相比，后者需要一次数据扫描来计算均值，另一次来计算方差。RMSNorm 通过维持非零均值而不与 0 对齐均值，帮助解决梯度消失问题。在早期周期中比 LayerNorm 维持更高的梯度范数。另一个原因是节省内存，这个结合我看到的在模型使用不同精度的数据，我想应该还真的是有这部分的作用，是DSV3吗，我有点记不得了。</p>
+<p>再然后就是使用了SWIGLU，这个方法就是保留了0以下的数值，捕捉的信息更多。</p>
+<p>然后就是llama2了，我感觉这个模型基本没啥大变化，虽然说是用了GQA，但也就这一点了。事实上由于GQA本身的性质，虽然能加速训练，但也一定会导致信息丢失的。我怀疑它通过大量增加训练数据（+40%）就是为了补偿这中间的损失</p>
+<p>不过llama2提出的训练数据质量决定SFT模型上限多重要的。另外和GPT相比，他明显投入的资源更多，在方方面面都有测评，肤色，宗教，性别这些。不过我说是投入更多，实际上我们看不到他对标的GPT3.5在安全上的努力有多少，毕竟是没有公布的东西。</p>
+<p>参考资料<br><a href="https://blog.csdn.net/star_nwe/article/details/145283201" title="详解大模型中的LayerNorm和RMSNorm">https://blog.csdn.net/star_nwe&#x2F;article&#x2F;details&#x2F;145283201</a></p>
+]]></content>
+      <tags>
+        <tag>日常记录</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>模型的参数计算方法</title>
     <url>/2025/05/05/%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%8F%82%E6%95%B0%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<p>整理一下学习到的模型的思路<br> <span id="more"></span><br>这里主要讨论以Trans为基础的大语言模型的参数计算方法。首先对于解码器架构的模型，大体是三部分：两个Emebedding层，QKV注意力层，全连接层。</p>
@@ -2730,6 +2707,29 @@ class UserService &#123;
 ]]></content>
       <tags>
         <tag>日常记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构面经准备</title>
+    <url>/2025/08/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%9D%A2%E7%BB%8F%E5%87%86%E5%A4%87/</url>
+    <content><![CDATA[<p>毕竟是计算机基本功，但时间远了还是容易忘记，这里记录下我认为有必要准备的数据结构知识。整个流程我大体按照考研那时的数据结构来，尽可能全面吧</p>
+<span id="more"></span>
+
+<h1><span id="1数据结构">1.数据结构</span></h1><h1><span id="1数组和链表">1.数组和链表</span></h1><p>数组</p>
+<ul>
+<li>定义：一块连续的内存空间，用于存储相同类型的元素。通过索引（下标）可以直接访问任意元素。</li>
+<li>优点：随机存储</li>
+<li>缺点：</li>
+</ul>
+<p>链表</p>
+<ul>
+<li>定义：</li>
+<li>优点：</li>
+<li>缺点：</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>面试准备</tag>
       </tags>
   </entry>
   <entry>
@@ -3059,21 +3059,6 @@ class UserService &#123;
       </tags>
   </entry>
   <entry>
-    <title>通过Tailscale突破内网限制连接服务器</title>
-    <url>/2025/06/22/%E9%80%9A%E8%BF%87Tailscale%E7%AA%81%E7%A0%B4%E5%86%85%E7%BD%91%E9%99%90%E5%88%B6%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
-    <content><![CDATA[<p>一直以来苦恼于实验室的服务器不能够远程操作，在外实习会十分不方便，今天找到Tailscale可以解决这个问题。<br> <span id="more"></span><br>操作方式很简单</p>
-<p>1.登录Tailscale官网<a href="https://tailscale.com/download">Download | Tailscale</a>，下载win版本和linux版本。win版本一路确认下载就行，linux版本跟着官网走指令就行：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/noble.noarmor.gpg | sudo tee /usr/share/keyrings/tailscale-archive-keyring.gpg &gt;/dev/null</span><br><span class="line">curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/noble.tailscale-keyring.list | sudo tee /etc/apt/sources.list.d/tailscale.list</span><br><span class="line"></span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install tailscale</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2025/06/22/%E9%80%9A%E8%BF%87Tailscale%E7%AA%81%E7%A0%B4%E5%86%85%E7%BD%91%E9%99%90%E5%88%B6%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/image-20250622161758395.png" alt="image-20250622161758395"></p>
-<p>2.两边都安装好后，首先用<code>sudo tailscale up</code>进行身份验证，同样的，win这边也有个验证，使用同一个账号登录就行。到这一步，工作就基本完成了。</p>
-<p>3.最后是用<code>tailscale ip -4</code>查询你的地址，比如说是100.XX.X.XX。就正常按照SSH连接的方式登录服务器就行。以上</p>
-]]></content>
-      <tags>
-        <tag>日常积累</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>给博客增加在线编辑能力的记录</title>
     <url>/2026/07/16/%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%BE%91%E8%83%BD%E5%8A%9B%E7%9A%84%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<p>这次对博客做了一次小改造：我希望它不只是一个需要在本地手动改文件、手动生成、手动发布的静态页面，而是能够有一个在线编辑入口。最后采用的方案是保留 Hexo 静态博客本身，再加上 Decap CMS、GitHub OAuth 和自动部署流程。</p>
@@ -3142,6 +3127,21 @@ class UserService &#123;
 ]]></content>
       <tags>
         <tag>日常学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>通过Tailscale突破内网限制连接服务器</title>
+    <url>/2025/06/22/%E9%80%9A%E8%BF%87Tailscale%E7%AA%81%E7%A0%B4%E5%86%85%E7%BD%91%E9%99%90%E5%88%B6%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[<p>一直以来苦恼于实验室的服务器不能够远程操作，在外实习会十分不方便，今天找到Tailscale可以解决这个问题。<br> <span id="more"></span><br>操作方式很简单</p>
+<p>1.登录Tailscale官网<a href="https://tailscale.com/download">Download | Tailscale</a>，下载win版本和linux版本。win版本一路确认下载就行，linux版本跟着官网走指令就行：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/noble.noarmor.gpg | sudo tee /usr/share/keyrings/tailscale-archive-keyring.gpg &gt;/dev/null</span><br><span class="line">curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/noble.tailscale-keyring.list | sudo tee /etc/apt/sources.list.d/tailscale.list</span><br><span class="line"></span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install tailscale</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2025/06/22/%E9%80%9A%E8%BF%87Tailscale%E7%AA%81%E7%A0%B4%E5%86%85%E7%BD%91%E9%99%90%E5%88%B6%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/image-20250622161758395.png" alt="image-20250622161758395"></p>
+<p>2.两边都安装好后，首先用<code>sudo tailscale up</code>进行身份验证，同样的，win这边也有个验证，使用同一个账号登录就行。到这一步，工作就基本完成了。</p>
+<p>3.最后是用<code>tailscale ip -4</code>查询你的地址，比如说是100.XX.X.XX。就正常按照SSH连接的方式登录服务器就行。以上</p>
+]]></content>
+      <tags>
+        <tag>日常积累</tag>
       </tags>
   </entry>
   <entry>
@@ -3438,6 +3438,171 @@ class UserService &#123;
 <h1><span id="参考文献">参考文献：</span></h1><p>1.<a href="https://www.bilibili.com/video/BV1MDKBzsEHq?spm_id_from=333.788.player.switch&vd_source=ecbe42ffb25fea0da636165433fb75d6&p=6">7.spring框架_哔哩哔哩_bilibili</a></p>
 <p>2.<a href="https://segmentfault.com/a/1190000041772218">java - 【架构视角】一篇文章带你彻底吃透Spring - 框架系列全解 - SegmentFault 思否</a></p>
 <p>3<a href="https://www.cnblogs.com/jingzh/p/19048033">AI框架之LangChain4j讲解 - 上善若泪 - 博客园</a></p>
+]]></content>
+      <tags>
+        <tag>日常学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Codex 使用技巧总结</title>
+    <url>/2026/07/17/Codex%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<p>这篇文章整理一次和 Codex 使用方式有关的讨论。重点不是介绍某个单点功能，而是总结一套更高效的协作方法：什么时候直接说需求，什么时候准备 Markdown 文件，什么时候给截图、源码或本地服务，以及怎样让 Codex 在长任务里持续推进。</p>
+<span id="more"></span>
+
+<h2><span id="1-skill-是什么怎么调用">1. Skill 是什么，怎么调用</span></h2><p>Codex 里有一类能力可以理解成 Skill，也就是针对某类任务预置的工作流程。例如写作前可以先构思，修 bug 时可以按调试流程推进，处理 PDF、PPT、GitHub、浏览器页面时也有对应的能力。</p>
+<p>调用 Skill 不需要加 <code>/</code>。可以直接用自然语言说：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">用 brainstorming 帮我想几个方案。</span><br><span class="line">用 systematic-debugging 帮我排查这个 bug。</span><br><span class="line">用 pdf 读这个文件并总结。</span><br><span class="line">用 powerpoint-slides 做一份演示文稿。</span><br><span class="line">用 openai-docs 查一下 OpenAI API 的最新用法。</span><br></pre></td></tr></table></figure>
+
+<p>也可以不点名。只要任务明显匹配某类能力，Codex 会根据任务自动选择合适的流程。</p>
+<p>比较推荐的表达方式是：先说目标，再说约束，最后说验收标准。例如：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">请帮我重构这个页面的结构。</span><br><span class="line"></span><br><span class="line">要求：</span><br><span class="line"><span class="bullet">-</span> 保持现有品牌色</span><br><span class="line"><span class="bullet">-</span> 不要改后端接口</span><br><span class="line"><span class="bullet">-</span> 移动端不能重叠</span><br><span class="line"><span class="bullet">-</span> 完成后请打开本地页面检查</span><br></pre></td></tr></table></figure>
+
+<p>这样比单纯说“帮我优化一下”更容易得到稳定结果。</p>
+<h2><span id="2-合格的提示词模板">2. 合格的提示词模板</span></h2><p>高质量提示词不一定要很长，但最好结构清楚。Markdown 的 <code>##</code> 分区很适合写提示词，因为它能把任务拆成模型容易理解的几块。</p>
+<p>一个通用模板可以这样写：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line"><span class="section">## 目标</span></span><br><span class="line">你要完成什么任务？最终结果应该是什么？</span><br><span class="line"></span><br><span class="line"><span class="section">## 背景</span></span><br><span class="line">相关上下文、业务场景、受众、已有材料。</span><br><span class="line"></span><br><span class="line"><span class="section">## 输入</span></span><br><span class="line">我会提供哪些内容？例如文本、代码、数据、链接、文件。</span><br><span class="line"></span><br><span class="line"><span class="section">## 要求</span></span><br><span class="line"><span class="bullet">-</span> 必须满足的要求 1</span><br><span class="line"><span class="bullet">-</span> 必须满足的要求 2</span><br><span class="line"><span class="bullet">-</span> 必须满足的要求 3</span><br><span class="line"></span><br><span class="line"><span class="section">## 约束</span></span><br><span class="line"><span class="bullet">-</span> 不要做什么</span><br><span class="line"><span class="bullet">-</span> 需要避免什么</span><br><span class="line"><span class="bullet">-</span> 必须保持什么风格</span><br><span class="line"></span><br><span class="line"><span class="section">## 输出格式</span></span><br><span class="line">希望结果长什么样，例如 Markdown、表格、JSON、代码块或分步骤说明。</span><br><span class="line"></span><br><span class="line"><span class="section">## 判断标准</span></span><br><span class="line">什么样算完成得好？</span><br><span class="line"></span><br><span class="line"><span class="section">## 如果信息不足</span></span><br><span class="line">先问我关键问题，或者基于合理假设继续。</span><br></pre></td></tr></table></figure>
+
+<p>如果只是日常使用，可以用更短的版本：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line"><span class="section">## 任务</span></span><br><span class="line">帮我……</span><br><span class="line"></span><br><span class="line"><span class="section">## 背景</span></span><br><span class="line">这是给……使用，目的是……</span><br><span class="line"></span><br><span class="line"><span class="section">## 要求</span></span><br><span class="line"><span class="bullet">-</span> …</span><br><span class="line"><span class="bullet">-</span> …</span><br><span class="line"></span><br><span class="line"><span class="section">## 输出</span></span><br><span class="line">请用……格式输出。</span><br><span class="line"></span><br><span class="line"><span class="section">## 注意</span></span><br><span class="line">如果缺少信息，请先问我；不要自行编造。</span><br></pre></td></tr></table></figure>
+
+<p>提示词的关键不是格式漂亮，而是让 Codex 明确知道：要做什么、依据什么做、有哪些限制、最终输出成什么样。</p>
+<h2><span id="3-直接写-markdown还是上传-md-文件">3. 直接写 Markdown，还是上传 <code>.md</code> 文件</span></h2><p>如果内容较短，直接在聊天里写 Markdown 更方便。比如一次性问题、简单提示词、几百字的草稿、轻量需求说明，都适合直接粘贴。</p>
+<p>如果内容较长，或者后续需要反复迭代，最好整理成 <code>.md</code> 文件。比如项目说明、产品需求、长期任务记录、知识库、规范文档、长提示词，都更适合放在文件里。</p>
+<p>可以按这个原则判断：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line"><span class="section">## 简单任务</span></span><br><span class="line">直接粘贴 Markdown。</span><br><span class="line"></span><br><span class="line"><span class="section">## 正式文档</span></span><br><span class="line">发 .md 文件。</span><br><span class="line"></span><br><span class="line"><span class="section">## 复杂项目</span></span><br><span class="line">发 .md 文件，并在聊天里说明你想让我做什么。</span><br></pre></td></tr></table></figure>
+
+<p>比较理想的组合是：文件负责保存长期上下文，聊天负责描述当前动作。例如：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">请阅读 docs/project-brief.md 和 docs/todo.md。</span><br><span class="line">继续完成 todo.md 里的下一个任务，完成后更新任务状态。</span><br></pre></td></tr></table></figure>
+
+<p>这样可以减少重复沟通，也能避免长任务把对话上下文塞满。</p>
+<h2><span id="4-网页-截图和图片类任务怎么准备">4. 网页、截图和图片类任务怎么准备</span></h2><p>如果想修改一个网页，但自己无法准确描述问题，最好的材料通常是截图、网页地址、源码三者之一，或者组合提供。</p>
+<p>不同目的对应的材料不同：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line"><span class="section">## 只分析页面</span></span><br><span class="line">截图或 URL 通常够用。</span><br><span class="line"></span><br><span class="line"><span class="section">## 想让我真正改网页</span></span><br><span class="line">最好提供项目源码，或者至少提供 HTML、CSS、JS 和 assets 文件夹。</span><br><span class="line"></span><br><span class="line"><span class="section">## 说不清哪里有问题</span></span><br><span class="line">发截图，并写一句模糊目标也可以，例如“这里看起来不专业，请帮我重构结构”。</span><br><span class="line"></span><br><span class="line"><span class="section">## 想精确说明修改位置</span></span><br><span class="line">在截图上圈出区域，标注“这里要改”“这里不要动”。</span><br></pre></td></tr></table></figure>
+
+<p>如果页面是静态页面，可以给类似这样的结构：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">index.html</span><br><span class="line">styles.css</span><br><span class="line">script.js</span><br><span class="line">assets/</span><br></pre></td></tr></table></figure>
+
+<p>如果是 React、Vue、Next.js 等项目，给项目源码会更好。单独下载一个 HTML 文件有时不够，因为样式、图片、脚本可能都在外部资源里。</p>
+<p>如果想从图片里获得信息，可以直接上传图片，然后说明要提取什么：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">请从这张截图里提取：</span><br><span class="line"><span class="bullet">1.</span> 页面有哪些主要模块</span><br><span class="line"><span class="bullet">2.</span> 每个模块的大致作用</span><br><span class="line"><span class="bullet">3.</span> 哪些地方视觉层级混乱</span><br><span class="line"><span class="bullet">4.</span> 给出一个更好的布局方案</span><br></pre></td></tr></table></figure>
+
+<p>或者：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">请把图片里的文字整理成 Markdown 表格，并标出你不确定的内容。</span><br></pre></td></tr></table></figure>
+
+<p>图片适合用来表达“我说不清楚，但我能给你看”的情况。源码适合用来完成真正的修改。</p>
+<h2><span id="5-需要登录的网站怎么处理">5. 需要登录的网站怎么处理</span></h2><p>对于需要登录的网站，最推荐的方式是：用户自己完成登录，Codex 查看登录后的页面。</p>
+<p>不要直接把真实密码、验证码、银行卡信息、私密 token 或管理员凭据发给 Codex。更安全的做法是：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">我会先在内置浏览器里登录。</span><br><span class="line">登录后请你：</span><br><span class="line"><span class="bullet">1.</span> 检查这个页面结构</span><br><span class="line"><span class="bullet">2.</span> 找出体验问题</span><br><span class="line"><span class="bullet">3.</span> 给出改版方案</span><br><span class="line"><span class="bullet">4.</span> 如果源码在本地，请同步修改</span><br></pre></td></tr></table></figure>
+
+<p>如果是测试环境，可以提供权限最小的临时账号，用完后删除或改密。如果只是分析页面结构，也可以用截图、录屏、导出的 HTML 或复制页面内容来替代真实登录。</p>
+<p>遇到 SSO、短信验证码、扫码登录、设备证书这类情况，通常由用户自己完成认证，Codex 再继续处理认证后的页面。</p>
+<h2><span id="6-内网-vpn-和-ip-限制页面">6. 内网、VPN 和 IP 限制页面</span></h2><p>如果 Codex app 的内置浏览器运行在本机，而本机已经连接企业网络或 VPN，那么它通常会使用当前电脑的网络环境。因此，遇到 IP 白名单、内网页面或企业 VPN 限制时，内置浏览器有机会像普通浏览器一样访问。</p>
+<p>但有一个关键点：Codex 不会自动看见用户主浏览器里的页面。</p>
+<p>Codex 能看的通常是：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> 用户上传的截图</span><br><span class="line"><span class="bullet">-</span> 用户复制的页面内容</span><br><span class="line"><span class="bullet">-</span> Codex app 内置浏览器里打开的页面</span><br><span class="line"><span class="bullet">-</span> 本地项目运行出来的页面</span><br></pre></td></tr></table></figure>
+
+<p>也就是说，如果用户在 Chrome 或 Edge 里打开了内网页面，Codex 不会自动看到。更好的做法是让 Codex 用内置浏览器打开地址，用户在内置浏览器里完成登录，然后 Codex 继续查看和操作。</p>
+<p>可以这样描述任务：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">我已经连接企业 VPN。</span><br><span class="line">请用内置浏览器打开这个内网页面：……</span><br><span class="line">我会自己完成登录。</span><br><span class="line">登录后请你帮我分析页面结构，并给出修改建议。</span><br></pre></td></tr></table></figure>
+
+<p>企业环境还可能有浏览器指纹、安全插件、设备证书、代理策略等限制。如果内置浏览器打不开，但用户自己的浏览器可以打开，就用截图、录屏、复制内容或本地源码替代。</p>
+<h2><span id="7-本地服务-docker-和-redis">7. 本地服务、Docker 和 Redis</span></h2><p>本地启动的服务，Codex 一般通过两种方式接触：命令行和浏览器。</p>
+<p>命令行适合检查：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> 服务是否运行</span><br><span class="line"><span class="bullet">-</span> 端口是否监听</span><br><span class="line"><span class="bullet">-</span> Docker 容器状态</span><br><span class="line"><span class="bullet">-</span> 日志输出</span><br><span class="line"><span class="bullet">-</span> 本地接口是否能调用</span><br><span class="line"><span class="bullet">-</span> Redis、数据库、消息队列等中间件是否可连接</span><br></pre></td></tr></table></figure>
+
+<p>浏览器适合检查：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> 本地前端页面</span><br><span class="line"><span class="bullet">-</span> 管理后台</span><br><span class="line"><span class="bullet">-</span> 可视化控制台</span><br><span class="line"><span class="bullet">-</span> 页面布局和交互</span><br></pre></td></tr></table></figure>
+
+<p>以 Docker 里的 Redis 为例，如果容器把端口映射到了宿主机，例如 <code>6379:6379</code>，Codex 通常可以尝试连接：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">localhost:6379</span><br><span class="line">127.0.0.1:6379</span><br></pre></td></tr></table></figure>
+
+<p>如果没有映射端口，可以通过 Docker 命令查看容器、网络和日志。若 Redis 需要密码，最好使用测试密码或本地环境变量，不要提供真实敏感凭据。</p>
+<p>对于本地网页服务，可以直接说：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">本地服务启动在 http://localhost:3000。</span><br><span class="line">请帮我打开页面，检查布局和交互问题。</span><br></pre></td></tr></table></figure>
+
+<p>对于后端接口，可以说：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">请检查本地 API 服务是否正常，并调用几个关键接口验证返回结果。</span><br></pre></td></tr></table></figure>
+
+<h2><span id="8-长任务如何避免上下文爆炸">8. 长任务如何避免上下文爆炸</span></h2><p>长任务不要把所有信息都塞进聊天窗口。更好的做法是把长期信息沉淀到文件里，让对话只负责当前决策。</p>
+<p>可以准备一个项目说明文件：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">docs/project-brief.md</span><br></pre></td></tr></table></figure>
+
+<p>里面放稳定信息：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line"><span class="section">## 项目目标</span></span><br><span class="line"></span><br><span class="line"><span class="section">## 当前状态</span></span><br><span class="line"></span><br><span class="line"><span class="section">## 技术栈</span></span><br><span class="line"></span><br><span class="line"><span class="section">## 文件结构</span></span><br><span class="line"></span><br><span class="line"><span class="section">## 关键约束</span></span><br><span class="line"></span><br><span class="line"><span class="section">## 已知问题</span></span><br><span class="line"></span><br><span class="line"><span class="section">## 术语表</span></span><br><span class="line"></span><br><span class="line"><span class="section">## 决策记录</span></span><br></pre></td></tr></table></figure>
+
+<p>如果任务更复杂，可以拆成几个文件：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">docs/</span><br><span class="line">  project-brief.md      # 项目总览</span><br><span class="line">  requirements.md       # 需求</span><br><span class="line">  decisions.md          # 已做决策</span><br><span class="line">  todo.md               # 当前任务清单</span><br><span class="line">  notes.md              # 临时发现</span><br></pre></td></tr></table></figure>
+
+<p>每一轮只需要告诉 Codex：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">请根据 docs/project-brief.md 和 docs/todo.md，继续处理下一个任务。</span><br></pre></td></tr></table></figure>
+
+<p>也可以让 Codex 维护状态文件：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">这是一个长期任务。请你在 work/task-state.md 中维护：</span><br><span class="line"><span class="bullet">-</span> 当前目标</span><br><span class="line"><span class="bullet">-</span> 已完成事项</span><br><span class="line"><span class="bullet">-</span> 未完成事项</span><br><span class="line"><span class="bullet">-</span> 关键决策</span><br><span class="line"><span class="bullet">-</span> 下次继续时需要知道的上下文</span><br></pre></td></tr></table></figure>
+
+<p>这样即使对话变长，也可以重新读取文件继续推进。</p>
+<h2><span id="9-推荐的-codex-协作方式">9. 推荐的 Codex 协作方式</span></h2><p>最容易发挥 Codex 能力的方式，不是把每一步都拆成很细的操作命令，而是给出目标、材料、约束和验收标准。</p>
+<p>一个好请求可以长这样：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line"><span class="section">## 目标</span></span><br><span class="line">帮我把这个页面改得更适合后台管理系统。</span><br><span class="line"></span><br><span class="line"><span class="section">## 材料</span></span><br><span class="line">源码在当前项目里，本地服务可以启动。</span><br><span class="line"></span><br><span class="line"><span class="section">## 要求</span></span><br><span class="line"><span class="bullet">-</span> 保持现有接口不变</span><br><span class="line"><span class="bullet">-</span> 优先修复结构混乱和移动端重叠</span><br><span class="line"><span class="bullet">-</span> 不要做营销风格的大 Hero</span><br><span class="line"><span class="bullet">-</span> 完成后打开本地页面检查</span><br><span class="line"></span><br><span class="line"><span class="section">## 验收标准</span></span><br><span class="line"><span class="bullet">-</span> 桌面端和移动端主要内容不重叠</span><br><span class="line"><span class="bullet">-</span> 导航、筛选、列表操作都能正常使用</span><br><span class="line"><span class="bullet">-</span> 给我说明改了哪些文件</span><br></pre></td></tr></table></figure>
+
+<p>如果是代码任务，可以直接让 Codex 端到端处理：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">请你自己阅读项目，找到相关入口，完成修改，运行测试，并总结结果。</span><br></pre></td></tr></table></figure>
+
+<p>如果是写作任务，可以给受众和语气：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">请把这段讨论整理成一篇博客。</span><br><span class="line"></span><br><span class="line">要求：</span><br><span class="line"><span class="bullet">-</span> 面向普通开发者</span><br><span class="line"><span class="bullet">-</span> 语气自然</span><br><span class="line"><span class="bullet">-</span> 少讲内部实现，多给操作建议</span><br><span class="line"><span class="bullet">-</span> 输出为 Hexo Markdown 博文</span><br></pre></td></tr></table></figure>
+
+<p>如果是排错任务，可以给现象和复现方式：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">页面点击保存后没有反应。</span><br><span class="line">请你按调试流程排查：</span><br><span class="line"><span class="bullet">-</span> 先复现问题</span><br><span class="line"><span class="bullet">-</span> 再看控制台和接口</span><br><span class="line"><span class="bullet">-</span> 找到根因后修复</span><br><span class="line"><span class="bullet">-</span> 最后验证保存功能正常</span><br></pre></td></tr></table></figure>
+
+<h2><span id="10-快速参考清单">10. 快速参考清单</span></h2><p>不知道该给 Codex 什么材料时，可以按下面这张表判断：</p>
+<table>
+<thead>
+<tr>
+<th>任务类型</th>
+<th>最好提供什么</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>写文章、总结、改提示词</td>
+<td>直接粘贴 Markdown 或提供 <code>.md</code> 文件</td>
+</tr>
+<tr>
+<td>长期项目</td>
+<td><code>project-brief.md</code>、<code>todo.md</code>、<code>decisions.md</code></td>
+</tr>
+<tr>
+<td>分析网页布局</td>
+<td>截图、URL、录屏</td>
+</tr>
+<tr>
+<td>修改网页</td>
+<td>项目源码、HTML、CSS、JS、assets</td>
+</tr>
+<tr>
+<td>需要登录的网站</td>
+<td>用户自己登录后的内置浏览器页面，或截图&#x2F;录屏</td>
+</tr>
+<tr>
+<td>内网页面</td>
+<td>在连接 VPN 后用内置浏览器打开，或提供截图</td>
+</tr>
+<tr>
+<td>本地 Web 服务</td>
+<td>本地 URL，例如 <code>http://localhost:3000</code></td>
+</tr>
+<tr>
+<td>Docker&#x2F;Redis&#x2F;数据库</td>
+<td>容器配置、端口、日志、测试账号或测试密码</td>
+</tr>
+<tr>
+<td>修 bug</td>
+<td>现象、复现步骤、期望行为、错误日志</td>
+</tr>
+<tr>
+<td>长任务继续推进</td>
+<td>状态文件和当前目标</td>
+</tr>
+</tbody></table>
+<p>一句话总结：把 Codex 当成一个能读文件、看页面、跑命令、改代码、做验证的协作伙伴。简单任务直接说，复杂任务给文件；看不清的问题给截图，要真实修改就给源码；长任务把记忆写进 Markdown，让对话只负责推进下一步。</p>
 ]]></content>
       <tags>
         <tag>日常学习</tag>

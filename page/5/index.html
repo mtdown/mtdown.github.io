@@ -476,7 +476,7 @@
       </div>
       <dl>
         <div>
-          <dt>46</dt>
+          <dt>47</dt>
           <dd>文章</dd>
         </div>
         <div>
@@ -510,6 +510,82 @@
     <h2>最近文章</h2>
     <span>按发布时间更新</span>
   </div>
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mtdown.top/2025/03/24/%E5%A6%82%E4%BD%95%E8%AE%A9%E6%96%B0%E5%88%9B%E5%BB%BA%E7%9A%84%E7%94%A8%E6%88%B7%E4%BD%BF%E7%94%A8%E5%BD%93%E5%89%8D%E7%9A%84conda/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/knight.jpg">
+      <meta itemprop="name" content="摄夜">
+      <meta itemprop="description" content="相信的心就是你的魔法">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nod Y Lle Delfrydol">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2025/03/24/%E5%A6%82%E4%BD%95%E8%AE%A9%E6%96%B0%E5%88%9B%E5%BB%BA%E7%9A%84%E7%94%A8%E6%88%B7%E4%BD%BF%E7%94%A8%E5%BD%93%E5%89%8D%E7%9A%84conda/" class="post-title-link" itemprop="url">如何让新创建的用户使用当前的conda</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2025-03-24 19:52:14 / 修改时间：19:57:54" itemprop="dateCreated datePublished" datetime="2025-03-24T19:52:14+08:00">2025-03-24</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>376</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>首先创建新用户到你的路径。然后设置密码<br>    sudo useradd &lt;用户名&gt; -m -d &lt;你的路径&gt; -s &#x2F;bin&#x2F;bash<br>    chown &lt;用户名&gt;:&lt;用户名&gt; -R &lt;你的路径&gt;<br>    passwd username</p>
+<p>然后复制.bashrc到自己的目录去，.bashrc可以在自己的目录里面找。激活前记得先cd到自己的新目录<br>    sudo cp .bashrc &#x2F;home&#x2F;newuser&#x2F;.bashrc<br>    source ~&#x2F;.bashrc<br>这里用你的旧用户的路径替换&lt;&#x2F;root&#x2F;conda&gt;<br>    chmod 755 &lt;&#x2F;root&#x2F;conda&gt;</p>
+
+      
+    </div>
+
+    
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+  
+
       
   
   
@@ -1092,7 +1168,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">46</span>
+          <span class="site-state-item-count">47</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1143,12 +1219,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">94k</span>
+    <span title="站点总字数">99k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:26</span>
+    <span title="站点阅读时长">1:30</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>

@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-bounce.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mtdown.top","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="这篇文章整理一次和 Codex 使用方式有关的讨论。重点不是介绍某个单点功能，而是总结一套更高效的协作方法：什么时候直接说需求，什么时候准备 Markdown 文件，什么时候给截图、源码或本地服务，以及怎样让 Codex 在长任务里持续推进。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Codex 使用技巧总结">
+<meta property="og:url" content="https://mtdown.top/2026/07/17/Codex%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="Nod Y Lle Delfrydol">
+<meta property="og:description" content="这篇文章整理一次和 Codex 使用方式有关的讨论。重点不是介绍某个单点功能，而是总结一套更高效的协作方法：什么时候直接说需求，什么时候准备 Markdown 文件，什么时候给截图、源码或本地服务，以及怎样让 Codex 在长任务里持续推进。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-07-17T08:51:59.000Z">
+<meta property="article:modified_time" content="2026-07-17T08:57:53.777Z">
+<meta property="article:author" content="摄夜">
+<meta property="article:tag" content="日常学习">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://mtdown.top/2026/07/17/Codex%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Codex 使用技巧总结 | Nod Y Lle Delfrydol</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  
+<link rel="stylesheet" href="/css/chat-widget.css">
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Nod Y Lle Delfrydol</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">朝着理想之路前进</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mtdown.top/2026/07/17/Codex%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/knight.jpg">
+      <meta itemprop="name" content="摄夜">
+      <meta itemprop="description" content="相信的心就是你的魔法">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nod Y Lle Delfrydol">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Codex 使用技巧总结
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2026-07-17 16:51:59 / 修改时间：16:57:53" itemprop="dateCreated datePublished" datetime="2026-07-17T16:51:59+08:00">2026-07-17</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.8k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>这篇文章整理一次和 Codex 使用方式有关的讨论。重点不是介绍某个单点功能，而是总结一套更高效的协作方法：什么时候直接说需求，什么时候准备 Markdown 文件，什么时候给截图、源码或本地服务，以及怎样让 Codex 在长任务里持续推进。</p>
+<span id="more"></span>
+
+<h2><span id="1-skill-是什么怎么调用">1. Skill 是什么，怎么调用</span></h2><p>Codex 里有一类能力可以理解成 Skill，也就是针对某类任务预置的工作流程。例如写作前可以先构思，修 bug 时可以按调试流程推进，处理 PDF、PPT、GitHub、浏览器页面时也有对应的能力。</p>
+<p>调用 Skill 不需要加 <code>/</code>。可以直接用自然语言说：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">用 brainstorming 帮我想几个方案。</span><br><span class="line">用 systematic-debugging 帮我排查这个 bug。</span><br><span class="line">用 pdf 读这个文件并总结。</span><br><span class="line">用 powerpoint-slides 做一份演示文稿。</span><br><span class="line">用 openai-docs 查一下 OpenAI API 的最新用法。</span><br></pre></td></tr></table></figure>
+
+<p>也可以不点名。只要任务明显匹配某类能力，Codex 会根据任务自动选择合适的流程。</p>
+<p>比较推荐的表达方式是：先说目标，再说约束，最后说验收标准。例如：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">请帮我重构这个页面的结构。</span><br><span class="line"></span><br><span class="line">要求：</span><br><span class="line"><span class="bullet">-</span> 保持现有品牌色</span><br><span class="line"><span class="bullet">-</span> 不要改后端接口</span><br><span class="line"><span class="bullet">-</span> 移动端不能重叠</span><br><span class="line"><span class="bullet">-</span> 完成后请打开本地页面检查</span><br></pre></td></tr></table></figure>
+
+<p>这样比单纯说“帮我优化一下”更容易得到稳定结果。</p>
+<h2><span id="2-合格的提示词模板">2. 合格的提示词模板</span></h2><p>高质量提示词不一定要很长，但最好结构清楚。Markdown 的 <code>##</code> 分区很适合写提示词，因为它能把任务拆成模型容易理解的几块。</p>
+<p>一个通用模板可以这样写：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">## 目标</span></span><br><span class="line">你要完成什么任务？最终结果应该是什么？</span><br><span class="line"></span><br><span class="line"><span class="section">## 背景</span></span><br><span class="line">相关上下文、业务场景、受众、已有材料。</span><br><span class="line"></span><br><span class="line"><span class="section">## 输入</span></span><br><span class="line">我会提供哪些内容？例如文本、代码、数据、链接、文件。</span><br><span class="line"></span><br><span class="line"><span class="section">## 要求</span></span><br><span class="line"><span class="bullet">-</span> 必须满足的要求 1</span><br><span class="line"><span class="bullet">-</span> 必须满足的要求 2</span><br><span class="line"><span class="bullet">-</span> 必须满足的要求 3</span><br><span class="line"></span><br><span class="line"><span class="section">## 约束</span></span><br><span class="line"><span class="bullet">-</span> 不要做什么</span><br><span class="line"><span class="bullet">-</span> 需要避免什么</span><br><span class="line"><span class="bullet">-</span> 必须保持什么风格</span><br><span class="line"></span><br><span class="line"><span class="section">## 输出格式</span></span><br><span class="line">希望结果长什么样，例如 Markdown、表格、JSON、代码块或分步骤说明。</span><br><span class="line"></span><br><span class="line"><span class="section">## 判断标准</span></span><br><span class="line">什么样算完成得好？</span><br><span class="line"></span><br><span class="line"><span class="section">## 如果信息不足</span></span><br><span class="line">先问我关键问题，或者基于合理假设继续。</span><br></pre></td></tr></table></figure>
+
+<p>如果只是日常使用，可以用更短的版本：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">## 任务</span></span><br><span class="line">帮我……</span><br><span class="line"></span><br><span class="line"><span class="section">## 背景</span></span><br><span class="line">这是给……使用，目的是……</span><br><span class="line"></span><br><span class="line"><span class="section">## 要求</span></span><br><span class="line"><span class="bullet">-</span> …</span><br><span class="line"><span class="bullet">-</span> …</span><br><span class="line"></span><br><span class="line"><span class="section">## 输出</span></span><br><span class="line">请用……格式输出。</span><br><span class="line"></span><br><span class="line"><span class="section">## 注意</span></span><br><span class="line">如果缺少信息，请先问我；不要自行编造。</span><br></pre></td></tr></table></figure>
+
+<p>提示词的关键不是格式漂亮，而是让 Codex 明确知道：要做什么、依据什么做、有哪些限制、最终输出成什么样。</p>
+<h2><span id="3-直接写-markdown还是上传-md-文件">3. 直接写 Markdown，还是上传 <code>.md</code> 文件</span></h2><p>如果内容较短，直接在聊天里写 Markdown 更方便。比如一次性问题、简单提示词、几百字的草稿、轻量需求说明，都适合直接粘贴。</p>
+<p>如果内容较长，或者后续需要反复迭代，最好整理成 <code>.md</code> 文件。比如项目说明、产品需求、长期任务记录、知识库、规范文档、长提示词，都更适合放在文件里。</p>
+<p>可以按这个原则判断：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">## 简单任务</span></span><br><span class="line">直接粘贴 Markdown。</span><br><span class="line"></span><br><span class="line"><span class="section">## 正式文档</span></span><br><span class="line">发 .md 文件。</span><br><span class="line"></span><br><span class="line"><span class="section">## 复杂项目</span></span><br><span class="line">发 .md 文件，并在聊天里说明你想让我做什么。</span><br></pre></td></tr></table></figure>
+
+<p>比较理想的组合是：文件负责保存长期上下文，聊天负责描述当前动作。例如：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">请阅读 docs/project-brief.md 和 docs/todo.md。</span><br><span class="line">继续完成 todo.md 里的下一个任务，完成后更新任务状态。</span><br></pre></td></tr></table></figure>
+
+<p>这样可以减少重复沟通，也能避免长任务把对话上下文塞满。</p>
+<h2><span id="4-网页-截图和图片类任务怎么准备">4. 网页、截图和图片类任务怎么准备</span></h2><p>如果想修改一个网页，但自己无法准确描述问题，最好的材料通常是截图、网页地址、源码三者之一，或者组合提供。</p>
+<p>不同目的对应的材料不同：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">## 只分析页面</span></span><br><span class="line">截图或 URL 通常够用。</span><br><span class="line"></span><br><span class="line"><span class="section">## 想让我真正改网页</span></span><br><span class="line">最好提供项目源码，或者至少提供 HTML、CSS、JS 和 assets 文件夹。</span><br><span class="line"></span><br><span class="line"><span class="section">## 说不清哪里有问题</span></span><br><span class="line">发截图，并写一句模糊目标也可以，例如“这里看起来不专业，请帮我重构结构”。</span><br><span class="line"></span><br><span class="line"><span class="section">## 想精确说明修改位置</span></span><br><span class="line">在截图上圈出区域，标注“这里要改”“这里不要动”。</span><br></pre></td></tr></table></figure>
+
+<p>如果页面是静态页面，可以给类似这样的结构：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">index.html</span><br><span class="line">styles.css</span><br><span class="line">script.js</span><br><span class="line">assets/</span><br></pre></td></tr></table></figure>
+
+<p>如果是 React、Vue、Next.js 等项目，给项目源码会更好。单独下载一个 HTML 文件有时不够，因为样式、图片、脚本可能都在外部资源里。</p>
+<p>如果想从图片里获得信息，可以直接上传图片，然后说明要提取什么：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">请从这张截图里提取：</span><br><span class="line"><span class="bullet">1.</span> 页面有哪些主要模块</span><br><span class="line"><span class="bullet">2.</span> 每个模块的大致作用</span><br><span class="line"><span class="bullet">3.</span> 哪些地方视觉层级混乱</span><br><span class="line"><span class="bullet">4.</span> 给出一个更好的布局方案</span><br></pre></td></tr></table></figure>
+
+<p>或者：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">请把图片里的文字整理成 Markdown 表格，并标出你不确定的内容。</span><br></pre></td></tr></table></figure>
+
+<p>图片适合用来表达“我说不清楚，但我能给你看”的情况。源码适合用来完成真正的修改。</p>
+<h2><span id="5-需要登录的网站怎么处理">5. 需要登录的网站怎么处理</span></h2><p>对于需要登录的网站，最推荐的方式是：用户自己完成登录，Codex 查看登录后的页面。</p>
+<p>不要直接把真实密码、验证码、银行卡信息、私密 token 或管理员凭据发给 Codex。更安全的做法是：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">我会先在内置浏览器里登录。</span><br><span class="line">登录后请你：</span><br><span class="line"><span class="bullet">1.</span> 检查这个页面结构</span><br><span class="line"><span class="bullet">2.</span> 找出体验问题</span><br><span class="line"><span class="bullet">3.</span> 给出改版方案</span><br><span class="line"><span class="bullet">4.</span> 如果源码在本地，请同步修改</span><br></pre></td></tr></table></figure>
+
+<p>如果是测试环境，可以提供权限最小的临时账号，用完后删除或改密。如果只是分析页面结构，也可以用截图、录屏、导出的 HTML 或复制页面内容来替代真实登录。</p>
+<p>遇到 SSO、短信验证码、扫码登录、设备证书这类情况，通常由用户自己完成认证，Codex 再继续处理认证后的页面。</p>
+<h2><span id="6-内网-vpn-和-ip-限制页面">6. 内网、VPN 和 IP 限制页面</span></h2><p>如果 Codex app 的内置浏览器运行在本机，而本机已经连接企业网络或 VPN，那么它通常会使用当前电脑的网络环境。因此，遇到 IP 白名单、内网页面或企业 VPN 限制时，内置浏览器有机会像普通浏览器一样访问。</p>
+<p>但有一个关键点：Codex 不会自动看见用户主浏览器里的页面。</p>
+<p>Codex 能看的通常是：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> 用户上传的截图</span><br><span class="line"><span class="bullet">-</span> 用户复制的页面内容</span><br><span class="line"><span class="bullet">-</span> Codex app 内置浏览器里打开的页面</span><br><span class="line"><span class="bullet">-</span> 本地项目运行出来的页面</span><br></pre></td></tr></table></figure>
+
+<p>也就是说，如果用户在 Chrome 或 Edge 里打开了内网页面，Codex 不会自动看到。更好的做法是让 Codex 用内置浏览器打开地址，用户在内置浏览器里完成登录，然后 Codex 继续查看和操作。</p>
+<p>可以这样描述任务：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">我已经连接企业 VPN。</span><br><span class="line">请用内置浏览器打开这个内网页面：……</span><br><span class="line">我会自己完成登录。</span><br><span class="line">登录后请你帮我分析页面结构，并给出修改建议。</span><br></pre></td></tr></table></figure>
+
+<p>企业环境还可能有浏览器指纹、安全插件、设备证书、代理策略等限制。如果内置浏览器打不开，但用户自己的浏览器可以打开，就用截图、录屏、复制内容或本地源码替代。</p>
+<h2><span id="7-本地服务-docker-和-redis">7. 本地服务、Docker 和 Redis</span></h2><p>本地启动的服务，Codex 一般通过两种方式接触：命令行和浏览器。</p>
+<p>命令行适合检查：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> 服务是否运行</span><br><span class="line"><span class="bullet">-</span> 端口是否监听</span><br><span class="line"><span class="bullet">-</span> Docker 容器状态</span><br><span class="line"><span class="bullet">-</span> 日志输出</span><br><span class="line"><span class="bullet">-</span> 本地接口是否能调用</span><br><span class="line"><span class="bullet">-</span> Redis、数据库、消息队列等中间件是否可连接</span><br></pre></td></tr></table></figure>
+
+<p>浏览器适合检查：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> 本地前端页面</span><br><span class="line"><span class="bullet">-</span> 管理后台</span><br><span class="line"><span class="bullet">-</span> 可视化控制台</span><br><span class="line"><span class="bullet">-</span> 页面布局和交互</span><br></pre></td></tr></table></figure>
+
+<p>以 Docker 里的 Redis 为例，如果容器把端口映射到了宿主机，例如 <code>6379:6379</code>，Codex 通常可以尝试连接：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">localhost:6379</span><br><span class="line">127.0.0.1:6379</span><br></pre></td></tr></table></figure>
+
+<p>如果没有映射端口，可以通过 Docker 命令查看容器、网络和日志。若 Redis 需要密码，最好使用测试密码或本地环境变量，不要提供真实敏感凭据。</p>
+<p>对于本地网页服务，可以直接说：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">本地服务启动在 http://localhost:3000。</span><br><span class="line">请帮我打开页面，检查布局和交互问题。</span><br></pre></td></tr></table></figure>
+
+<p>对于后端接口，可以说：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">请检查本地 API 服务是否正常，并调用几个关键接口验证返回结果。</span><br></pre></td></tr></table></figure>
+
+<h2><span id="8-长任务如何避免上下文爆炸">8. 长任务如何避免上下文爆炸</span></h2><p>长任务不要把所有信息都塞进聊天窗口。更好的做法是把长期信息沉淀到文件里，让对话只负责当前决策。</p>
+<p>可以准备一个项目说明文件：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docs/project-brief.md</span><br></pre></td></tr></table></figure>
+
+<p>里面放稳定信息：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">## 项目目标</span></span><br><span class="line"></span><br><span class="line"><span class="section">## 当前状态</span></span><br><span class="line"></span><br><span class="line"><span class="section">## 技术栈</span></span><br><span class="line"></span><br><span class="line"><span class="section">## 文件结构</span></span><br><span class="line"></span><br><span class="line"><span class="section">## 关键约束</span></span><br><span class="line"></span><br><span class="line"><span class="section">## 已知问题</span></span><br><span class="line"></span><br><span class="line"><span class="section">## 术语表</span></span><br><span class="line"></span><br><span class="line"><span class="section">## 决策记录</span></span><br></pre></td></tr></table></figure>
+
+<p>如果任务更复杂，可以拆成几个文件：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docs/</span><br><span class="line">  project-brief.md      # 项目总览</span><br><span class="line">  requirements.md       # 需求</span><br><span class="line">  decisions.md          # 已做决策</span><br><span class="line">  todo.md               # 当前任务清单</span><br><span class="line">  notes.md              # 临时发现</span><br></pre></td></tr></table></figure>
+
+<p>每一轮只需要告诉 Codex：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">请根据 docs/project-brief.md 和 docs/todo.md，继续处理下一个任务。</span><br></pre></td></tr></table></figure>
+
+<p>也可以让 Codex 维护状态文件：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">这是一个长期任务。请你在 work/task-state.md 中维护：</span><br><span class="line"><span class="bullet">-</span> 当前目标</span><br><span class="line"><span class="bullet">-</span> 已完成事项</span><br><span class="line"><span class="bullet">-</span> 未完成事项</span><br><span class="line"><span class="bullet">-</span> 关键决策</span><br><span class="line"><span class="bullet">-</span> 下次继续时需要知道的上下文</span><br></pre></td></tr></table></figure>
+
+<p>这样即使对话变长，也可以重新读取文件继续推进。</p>
+<h2><span id="9-推荐的-codex-协作方式">9. 推荐的 Codex 协作方式</span></h2><p>最容易发挥 Codex 能力的方式，不是把每一步都拆成很细的操作命令，而是给出目标、材料、约束和验收标准。</p>
+<p>一个好请求可以长这样：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">## 目标</span></span><br><span class="line">帮我把这个页面改得更适合后台管理系统。</span><br><span class="line"></span><br><span class="line"><span class="section">## 材料</span></span><br><span class="line">源码在当前项目里，本地服务可以启动。</span><br><span class="line"></span><br><span class="line"><span class="section">## 要求</span></span><br><span class="line"><span class="bullet">-</span> 保持现有接口不变</span><br><span class="line"><span class="bullet">-</span> 优先修复结构混乱和移动端重叠</span><br><span class="line"><span class="bullet">-</span> 不要做营销风格的大 Hero</span><br><span class="line"><span class="bullet">-</span> 完成后打开本地页面检查</span><br><span class="line"></span><br><span class="line"><span class="section">## 验收标准</span></span><br><span class="line"><span class="bullet">-</span> 桌面端和移动端主要内容不重叠</span><br><span class="line"><span class="bullet">-</span> 导航、筛选、列表操作都能正常使用</span><br><span class="line"><span class="bullet">-</span> 给我说明改了哪些文件</span><br></pre></td></tr></table></figure>
+
+<p>如果是代码任务，可以直接让 Codex 端到端处理：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">请你自己阅读项目，找到相关入口，完成修改，运行测试，并总结结果。</span><br></pre></td></tr></table></figure>
+
+<p>如果是写作任务，可以给受众和语气：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">请把这段讨论整理成一篇博客。</span><br><span class="line"></span><br><span class="line">要求：</span><br><span class="line"><span class="bullet">-</span> 面向普通开发者</span><br><span class="line"><span class="bullet">-</span> 语气自然</span><br><span class="line"><span class="bullet">-</span> 少讲内部实现，多给操作建议</span><br><span class="line"><span class="bullet">-</span> 输出为 Hexo Markdown 博文</span><br></pre></td></tr></table></figure>
+
+<p>如果是排错任务，可以给现象和复现方式：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">页面点击保存后没有反应。</span><br><span class="line">请你按调试流程排查：</span><br><span class="line"><span class="bullet">-</span> 先复现问题</span><br><span class="line"><span class="bullet">-</span> 再看控制台和接口</span><br><span class="line"><span class="bullet">-</span> 找到根因后修复</span><br><span class="line"><span class="bullet">-</span> 最后验证保存功能正常</span><br></pre></td></tr></table></figure>
+
+<h2><span id="10-快速参考清单">10. 快速参考清单</span></h2><p>不知道该给 Codex 什么材料时，可以按下面这张表判断：</p>
+<table>
+<thead>
+<tr>
+<th>任务类型</th>
+<th>最好提供什么</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>写文章、总结、改提示词</td>
+<td>直接粘贴 Markdown 或提供 <code>.md</code> 文件</td>
+</tr>
+<tr>
+<td>长期项目</td>
+<td><code>project-brief.md</code>、<code>todo.md</code>、<code>decisions.md</code></td>
+</tr>
+<tr>
+<td>分析网页布局</td>
+<td>截图、URL、录屏</td>
+</tr>
+<tr>
+<td>修改网页</td>
+<td>项目源码、HTML、CSS、JS、assets</td>
+</tr>
+<tr>
+<td>需要登录的网站</td>
+<td>用户自己登录后的内置浏览器页面，或截图&#x2F;录屏</td>
+</tr>
+<tr>
+<td>内网页面</td>
+<td>在连接 VPN 后用内置浏览器打开，或提供截图</td>
+</tr>
+<tr>
+<td>本地 Web 服务</td>
+<td>本地 URL，例如 <code>http://localhost:3000</code></td>
+</tr>
+<tr>
+<td>Docker&#x2F;Redis&#x2F;数据库</td>
+<td>容器配置、端口、日志、测试账号或测试密码</td>
+</tr>
+<tr>
+<td>修 bug</td>
+<td>现象、复现步骤、期望行为、错误日志</td>
+</tr>
+<tr>
+<td>长任务继续推进</td>
+<td>状态文件和当前目标</td>
+</tr>
+</tbody></table>
+<p>一句话总结：把 Codex 当成一个能读文件、看页面、跑命令、改代码、做验证的协作伙伴。简单任务直接说，复杂任务给文件；看不清的问题给截图，要真实修改就给源码；长任务把记忆写进 Markdown，让对话只负责推进下一步。</p>
+
+    </div>
+
+    
+    
+    
+    
+        <div>
+          <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+        </div>
+    
+  <div class="comments giscus-comments" id="giscus-comments">
+  </div>
+
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/" rel="tag"># 日常学习</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2026/07/16/%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%BE%91%E8%83%BD%E5%8A%9B%E7%9A%84%E8%AE%B0%E5%BD%95/" rel="prev" title="给博客增加在线编辑能力的记录">
+      <i class="fa fa-chevron-left"></i> 给博客增加在线编辑能力的记录
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC82MDg3Mi8zNzM0Mg=="></div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">1. Skill 是什么，怎么调用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">2. 合格的提示词模板</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">3. 直接写 Markdown，还是上传 .md 文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">4. 网页、截图和图片类任务怎么准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">5. 需要登录的网站怎么处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.</span> <span class="nav-text">6. 内网、VPN 和 IP 限制页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.</span> <span class="nav-text">7. 本地服务、Docker 和 Redis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.</span> <span class="nav-text">8. 长任务如何避免上下文爆炸</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">9.</span> <span class="nav-text">9. 推荐的 Codex 协作方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.</span> <span class="nav-text">10. 快速参考清单</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="摄夜"
+      src="/images/knight.jpg">
+  <p class="site-author-name" itemprop="name">摄夜</p>
+  <div class="site-description" itemprop="description">相信的心就是你的魔法</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">47</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/mtdown" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;mtdown" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:2336107524@qq.com" title="E-Mail → mailto:2336107524@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2024 – 
+  <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">摄夜</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">99k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:30</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+
+<button id="chat-toggle-button">AI 助手</button>
+  <div id="chat-widget-container" class="hidden">
+      <div id="chat-widget-header">
+          <h3>mtdown.top AI 助手</h3>
+          <button id="chat-close-button">&times;</button>
+      </div>
+      <div id="chat-messages">
+          <div class="message ai-message">你好！我是博主的AI助手，有什么可以帮您？</div>
+      </div>
+      <form id="chat-form">
+          <input type="text" id="chat-input" placeholder="输入您的问题..." autocomplete="off">
+          <button type="submit">发送</button>
+      </form>
+  </div>
+
+<script src="/js/chat-widget.js"></script>
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='255,0,0' opacity='0.5' zIndex='-1' count='120' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+});
+</script>
+
+
+
+</body>
+</html>
