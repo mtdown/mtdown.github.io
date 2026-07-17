@@ -58,3 +58,93 @@ collections:
       - label: 正文
         name: body
         widget: markdown
+  - name: appearance
+    label: 站点外观
+    files:
+      - name: background
+        label: 背景 DIY
+        file: source/_data/background.yml
+        fields:
+          - label: 启用背景配置
+            name: enabled
+            widget: boolean
+            default: true
+          - label: 全站背景
+            name: body_background
+            widget: string
+            required: false
+            hint: "支持颜色、CSS 变量、渐变或完整 background 值，例如 #f3f4f2 或 linear-gradient(...)"
+          - label: 全站背景图片
+            name: body_background_image
+            widget: image
+            required: false
+            hint: "可上传图片；留空则不用图片背景。"
+          - label: 背景图片尺寸
+            name: body_background_size
+            widget: select
+            required: false
+            options: ["cover", "contain", "auto", "100% auto", "auto 100%"]
+          - label: 背景图片位置
+            name: body_background_position
+            widget: string
+            required: false
+            hint: "例如 center center、top center、left top"
+          - label: 背景图片重复
+            name: body_background_repeat
+            widget: select
+            required: false
+            options: ["no-repeat", "repeat", "repeat-x", "repeat-y"]
+          - label: 背景滚动方式
+            name: body_background_attachment
+            widget: select
+            required: false
+            options: ["fixed", "scroll", "local"]
+          - label: 顶部导航背景
+            name: header_background
+            widget: string
+            required: false
+          - label: 主页面背景
+            name: main_background
+            widget: string
+            required: false
+          - label: 内容外层背景
+            name: content_background
+            widget: string
+            required: false
+          - label: 首页 Hero 背景
+            name: home_hero_background
+            widget: string
+            required: false
+          - label: 首页重点区域背景
+            name: home_focus_background
+            widget: string
+            required: false
+          - label: 首页文章卡片背景
+            name: home_card_background
+            widget: string
+            required: false
+          - label: 文章页正文背景
+            name: post_page_background
+            widget: string
+            required: false
+          - label: 侧边栏背景
+            name: sidebar_background
+            widget: string
+            required: false
+          - label: 页脚背景
+            name: footer_background
+            widget: string
+            required: false
+          - label: 引用块背景
+            name: blockquote_background
+            widget: string
+            required: false
+          - label: 标签背景
+            name: tag_background
+            widget: string
+            required: false
+          - label: 高级自定义 CSS
+            name: custom_css
+            widget: text
+            required: false
+            hint: "想改更多地方时，在这里直接写 CSS。"
